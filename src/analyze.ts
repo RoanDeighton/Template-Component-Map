@@ -81,10 +81,19 @@ function contentFingerprint($el: cheerio.Cheerio<any>): string {
   const hasForm = $el.find("form,input,textarea,select").length > 0;
   const hasMedia = $el.find("video,iframe,canvas,svg").length > 0;
 
+  // Images/links are bucketed coarsely (has-any vs none) rather than by
+  // exact count: within one component TYPE (e.g. an FAQ list), the exact
+  // number of images/links usually just reflects how much content that
+  // particular instance happens to hold (a longer answer with more inline
+  // links), not a different kind of component — three FAQ sections with
+  // 4, 6, and 12 links are still the same FAQ component. Heading count and
+  // element count are kept at finer granularity since they're a much better
+  // proxy for actual structural role (h:1 hero vs h:4+ list-of-items vs
+  // h:0 plain block).
   return [
     tag,
-    `img:${bucket(imageCount, [1, 3, 8])}`,
-    `a:${bucket(linkCount, [3, 8, 20])}`,
+    `img:${imageCount > 0 ? 1 : 0}`,
+    `a:${linkCount > 0 ? 1 : 0}`,
     `h:${bucket(headingCount, [1, 3])}`,
     `els:${bucket(elementCount, [15, 50, 150])}`,
     `form:${hasForm ? 1 : 0}`,
@@ -119,6 +128,19 @@ function buildOutline($: cheerio.CheerioAPI, styles: StyleSample[], blankFlags: 
     const $child = $(child);
     const tag = (child as any).tagName;
     if (!tag || tag === "script" || tag === "style") return;
+
+    // Skip genuinely empty elements: no text, no images/links/headings, no
+    // descendants at all. These are typically implementation noise — scroll-
+    // trigger anchors or animation spacer divs some component libraries
+    // insert (e.g. Revolut's own design system does this) — not real
+    // content sections, and documenting them as "components" is actively
+    // misleading rather than merely imprecise.
+    const isEmpty =
+      $child.find("*").length === 0 &&
+      $child.find("img,a,h1,h2,h3,h4,h5,h6").length === 0 &&
+      $child.text().replace(/\s+/g, "").length === 0;
+    if (isEmpty) return;
+
     entries.push(makeEntry($, $child, `main>${i}`, styleByPath, blankByPath));
   });
 
