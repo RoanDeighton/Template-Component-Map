@@ -6,12 +6,12 @@ import { loadRobots, isAllowed, RobotsInfo } from "./lib/robots.js";
 import { normalizeUrl, isSameSite, looksLikeAsset, slugFromUrl } from "./lib/urls.js";
 import { groupUrlsByPattern } from "./lib/patternGroup.js";
 import { dismissCookieBanner } from "./lib/cookies.js";
-import { settleLazyImages } from "./lib/lazyLoad.js";
 import { sampleStyles } from "./lib/styleSample.js";
-import { cropToWidth } from "./lib/screenshot.js";
+import { captureStitchedScreenshot } from "./lib/stitchedScreenshot.js";
 import { flagBlankSections } from "./lib/flagBlankSections.js";
 
 const CAPTURE_WIDTH = 1440;
+const CAPTURE_VIEWPORT_HEIGHT = 900;
 
 interface Options {
   url: string;
@@ -313,7 +313,7 @@ async function main() {
 
   const usedSlugs = new Set<string>();
   const capturedPages: any[] = [];
-  const context = await browser.newContext({ userAgent: options.userAgent, viewport: { width: CAPTURE_WIDTH, height: 900 } });
+  const context = await browser.newContext({ userAgent: options.userAgent, viewport: { width: CAPTURE_WIDTH, height: CAPTURE_VIEWPORT_HEIGHT } });
 
   await withConcurrency(finalCaptureList, options.concurrency, async ({ url, pattern }) => {
     let slug = slugFromUrl(url);
@@ -329,36 +329,41 @@ async function main() {
 
     const page = await context.newPage();
     try {
-      // Some pages have persistent background polling that never lets
-      // "networkidle" settle within budget; a single retry resolves most of
-      // those rather than logging a real page as a false capture failure.
+      // "networkidle" (zero network activity for 500ms) is unreliable on
+      // modern sites with chat widgets, analytics beacons, or live-updating
+      // content (price tickers etc.) — some pages never go fully idle, which
+      // reads as a capture failure even though the page loaded fine. "load"
+      // (the standard DOM load event) is far more robust; settleLazyImages
+      // below handles waiting for images regardless of the wait strategy
+      // used here. Keep one retry for genuine transient network blips.
       let response;
       try {
-        response = await page.goto(url, { waitUntil: "networkidle", timeout: 30000 });
+        response = await page.goto(url, { waitUntil: "load", timeout: 30000 });
       } catch {
-        response = await page.goto(url, { waitUntil: "networkidle", timeout: 30000 });
+        response = await page.goto(url, { waitUntil: "load", timeout: 30000 });
       }
       if (!response || response.status() >= 400) {
         throw new Error(`HTTP ${response?.status() ?? "no response"}`);
       }
+      // Brief buffer for client-side hydration/rendering that happens after
+      // the "load" event on JS-heavy sites, before we start interacting.
+      await page.waitForTimeout(1000);
       await dismissCookieBanner(page);
-      await settleLazyImages(page);
       const title = await page.title();
 
-      // Some sites have real horizontal-overflow layout bugs (a carousel row
-      // that isn't clipped, widening the whole document), which makes a plain
-      // fullPage:true screenshot follow the document's inflated scrollWidth
-      // instead of the intended viewport width. We deliberately do NOT try to
-      // fix this by resizing the viewport (breaks vh-sized sections) or by
-      // injecting overflow-x:hidden CSS (breaks position:sticky descendants,
-      // which scroll-driven "storytelling" sections commonly rely on). Both
-      // alter the live page and can silently break rendering. Instead: leave
-      // the page completely untouched, capture it as-is, and crop the result
-      // to the intended width afterward — a pure post-process with zero risk
-      // of changing what actually rendered.
+      // Deliberately not `page.screenshot({ fullPage: true })`: that renders
+      // the whole page in one pass at an artificially page-height-tall
+      // viewport, which breaks position:sticky and scroll-triggered reveal
+      // animations (they resolve against that fake viewport, not a real
+      // one) — a known, general limitation of Chromium full-page capture,
+      // not specific to any one site. Scrolling for real in normal-viewport
+      // increments and stitching the results together is always correct,
+      // since each slice is genuinely how the page renders when a visitor
+      // scrolls there — and it also sidesteps any real horizontal-overflow
+      // layout bugs a page might have, since a normal screenshot is always
+      // exactly viewport-width regardless of the document's scrollWidth.
       const screenshotPath = path.join(pageDir, "screenshot.png");
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      await cropToWidth(screenshotPath, CAPTURE_WIDTH);
+      await captureStitchedScreenshot(page, screenshotPath, CAPTURE_WIDTH, CAPTURE_VIEWPORT_HEIGHT);
       const html = await page.content();
       await fs.writeFile(path.join(pageDir, "page.html"), html, "utf-8");
 

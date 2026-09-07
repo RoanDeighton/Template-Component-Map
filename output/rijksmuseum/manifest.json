@@ -1,6 +1,6 @@
 {
   "startUrl": "https://www.rijksmuseum.nl/nl",
-  "crawledAt": "2026-09-07T09:44:10.697Z",
+  "crawledAt": "2026-09-07T12:56:06.273Z",
   "options": {
     "url": "https://www.rijksmuseum.nl/nl",
     "output": "output/rijksmuseum",
@@ -46,7 +46,7 @@
       "screenshot": "pages/nl/screenshot.png",
       "html": "pages/nl/page.html",
       "styles": "pages/nl/styles.json",
-      "capturedAt": "2026-09-07T09:44:06.848Z",
+      "capturedAt": "2026-09-07T12:55:42.333Z",
       "blankSectionFlags": []
     },
     {
@@ -57,7 +57,7 @@
       "screenshot": "pages/nl-zien-en-doen/screenshot.png",
       "html": "pages/nl-zien-en-doen/page.html",
       "styles": "pages/nl-zien-en-doen/styles.json",
-      "capturedAt": "2026-09-07T09:44:08.217Z",
+      "capturedAt": "2026-09-07T12:55:48.628Z",
       "blankSectionFlags": []
     },
     {
@@ -68,16 +68,8 @@
       "screenshot": "pages/nl-bezoek/screenshot.png",
       "html": "pages/nl-bezoek/page.html",
       "styles": "pages/nl-bezoek/styles.json",
-      "capturedAt": "2026-09-07T09:44:10.666Z",
-      "blankSectionFlags": [
-        {
-          "path": "main>2",
-          "classes": "carousel-wrapper",
-          "top": 1243,
-          "height": 4903,
-          "note": "4903px tall section renders as near-uniform color (stddev 40.7) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
-        }
-      ]
+      "capturedAt": "2026-09-07T12:56:06.237Z",
+      "blankSectionFlags": []
     }
   ]
 }

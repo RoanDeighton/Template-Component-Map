@@ -42,10 +42,6 @@ Since every page in this test happens to be structurally distinct, each one prod
 | [Category Link Grid](components/category-link-grid.md) | Agenda |
 | [Scroll-Driven Image Carousel](components/scroll-driven-carousel.md) | Visitor Info |
 
-## Known capture limitation
-
-One component — the [Scroll-Driven Image Carousel](components/scroll-driven-carousel.md) on the Visitor Info page — uses `position: sticky` to drive a scroll-linked reveal animation. Full-page screenshot compositing can't represent this correctly (a well-known limitation shared by Playwright/Puppeteer, not specific to this tool): the crawler now automatically flags any unusually tall section that renders as near-blank so it's visible in the output rather than silently missing. The underlying HTML markup was still captured correctly and used for this component's description.
-
 ## Site identity, at a glance
 
 Pulled from actual computed styles, not estimated from screenshots:

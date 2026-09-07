@@ -1,5 +1,5 @@
 {
-  "analyzedAt": "2026-09-07T09:45:00.639Z",
+  "analyzedAt": "2026-09-07T12:56:11.779Z",
   "input": "output/rijksmuseum",
   "totalPages": 3,
   "totalTemplates": 3,
@@ -423,7 +423,7 @@
           "classes": "carousel-wrapper",
           "primaryClass": "carousel-wrapper",
           "heading": null,
-          "textSnippet": "",
+          "textSnippet": "800 jaar Nederlandse geschiedenis in één gebouw De Eregalerij: met meesterwerken van Rembrandt, Vermeer en Frans Hals Altijd gratis toegang t/m 18 jaar Honderde",
           "linkCount": 0,
           "imageCount": 16,
           "style": {
@@ -443,8 +443,8 @@
             "width": 1440,
             "height": 4903
           },
-          "isBlankFlagged": true,
-          "blankNote": "4903px tall section renders as near-uniform color (stddev 40.7) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+          "isBlankFlagged": false,
+          "blankNote": null
         },
         {
           "path": "main>3",
@@ -452,7 +452,7 @@
           "classes": "carousel-wrapper",
           "primaryClass": "carousel-wrapper",
           "heading": "Ongetwijfeld het mooiste museum ter wereld. Als je in Amsterdam bent moet dat je eerste bezoek zijn.",
-          "textSnippet": "Ongetwijfeld het mooiste museum ter wereld. Als je in Amsterdam bent moet dat je eerste bezoek zijn. Tripadvisor, ***** 1 | 2 HET MUSEUM WAT JE MINIMAAL EEN KEE",
+          "textSnippet": "Ongetwijfeld het mooiste museum ter wereld. Als je in Amsterdam bent moet dat je eerste bezoek zijn. Tripadvisor, ***** 2 | 2 HET MUSEUM WAT JE MINIMAAL EEN KEE",
           "linkCount": 0,
           "imageCount": 4,
           "style": {
