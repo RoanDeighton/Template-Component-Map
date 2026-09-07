@@ -31,6 +31,7 @@ interface OutlineEntry {
   tag: string;
   classes: string;
   primaryClass: string;
+  fingerprint: string;
   heading: string | null;
   textSnippet: string;
   linkCount: number;
@@ -47,12 +48,48 @@ interface PageAnalysis {
   title: string;
   screenshot: string;
   outline: OutlineEntry[];
-  signature: string[]; // main>* primaryClass tokens only, used for clustering
+  signature: string[]; // main>* content fingerprints, used for clustering
 }
 
 function primaryClassOf(classAttr: string): string {
   const tokens = classAttr.split(/\s+/).filter(Boolean);
   return tokens[0] || "";
+}
+
+function bucket(n: number, edges: number[]): string {
+  const labels = ["0", ...edges.map((e, i) => (i === 0 ? `1-${e}` : `${edges[i - 1] + 1}-${e}`)), `${edges[edges.length - 1] + 1}+`];
+  if (n === 0) return labels[0];
+  for (let i = 0; i < edges.length; i++) if (n <= edges[i]) return labels[i + 1];
+  return labels[labels.length - 1];
+}
+
+// A structural fingerprint built from actual DOM content shape — tag,
+// image/link/heading counts, element count, notable media — rather than CSS
+// class names. Class-based matching (the previous approach) works for sites
+// with semantic class names, but breaks on CSS-in-JS design systems
+// (styled-components, Emotion, etc.), where nearly every layout wrapper
+// shares the same generic base class (e.g. "Box-abc123") and the real
+// differentiation lives in an auto-generated hash class that varies per
+// build and can't be matched on reliably. Content shape is framework-
+// agnostic: it doesn't care what the classes are called, only what's there.
+function contentFingerprint($el: cheerio.Cheerio<any>): string {
+  const tag = (($el.get(0) as any)?.tagName || "").toLowerCase();
+  const imageCount = $el.find("img").length;
+  const linkCount = $el.find("a").length;
+  const headingCount = $el.find("h1,h2,h3,h4,h5,h6").length;
+  const elementCount = $el.find("*").length;
+  const hasForm = $el.find("form,input,textarea,select").length > 0;
+  const hasMedia = $el.find("video,iframe,canvas,svg").length > 0;
+
+  return [
+    tag,
+    `img:${bucket(imageCount, [1, 3, 8])}`,
+    `a:${bucket(linkCount, [3, 8, 20])}`,
+    `h:${bucket(headingCount, [1, 3])}`,
+    `els:${bucket(elementCount, [15, 50, 150])}`,
+    `form:${hasForm ? 1 : 0}`,
+    `media:${hasMedia ? 1 : 0}`,
+  ].join("|");
 }
 
 function textSnippetOf($el: cheerio.Cheerio<any>): string {
@@ -107,6 +144,7 @@ function makeEntry(
     tag: (($el.get(0) as any)?.tagName || "").toLowerCase(),
     classes,
     primaryClass: primaryClassOf(classes),
+    fingerprint: contentFingerprint($el),
     heading: headingOf($, $el),
     textSnippet: note ? "" : textSnippetOf($el),
     linkCount: $el.find("a").length,
@@ -153,20 +191,32 @@ function clusterPages(pages: PageAnalysis[], threshold = 0.5): TemplateCluster[]
 interface CanonicalComponent {
   key: string;
   tag: string;
+  classesSeen: string[];
   occurrences: { pageSlug: string; path: string; heading: string | null }[];
 }
 
+function regionOf(path: string): "header" | "footer" | "main" {
+  if (path === "header") return "header";
+  if (path === "footer") return "footer";
+  return "main";
+}
+
 // Reconciles components across the whole site (not just within one template
-// cluster): entries sharing the same primary class token are treated as the
+// cluster): entries sharing the same content fingerprint are treated as the
 // same canonical component, since the same block type (e.g. a full-width
 // image+text block) commonly appears across multiple different templates.
+// Keyed by fingerprint (not CSS class — see contentFingerprint's comment)
+// plus a coarse region (header/footer/main), so a header and footer that
+// happen to have a similar shape (few links, no images) don't merge.
 function reconcileComponents(pages: PageAnalysis[]): CanonicalComponent[] {
   const byKey = new Map<string, CanonicalComponent>();
   for (const page of pages) {
     for (const entry of page.outline) {
-      const key = entry.primaryClass || `${entry.tag}:${entry.path}`;
-      if (!byKey.has(key)) byKey.set(key, { key, tag: entry.tag, occurrences: [] });
-      byKey.get(key)!.occurrences.push({ pageSlug: page.slug, path: entry.path, heading: entry.heading });
+      const key = `${regionOf(entry.path)}:${entry.fingerprint}`;
+      if (!byKey.has(key)) byKey.set(key, { key, tag: entry.tag, classesSeen: [], occurrences: [] });
+      const component = byKey.get(key)!;
+      if (entry.primaryClass && !component.classesSeen.includes(entry.primaryClass)) component.classesSeen.push(entry.primaryClass);
+      component.occurrences.push({ pageSlug: page.slug, path: entry.path, heading: entry.heading });
     }
   }
   return Array.from(byKey.values());
@@ -185,7 +235,7 @@ async function main() {
     const $ = cheerio.load(html);
 
     const outline = buildOutline($, styles, p.blankSectionFlags || []);
-    const signature = outline.filter((e) => e.path.startsWith("main>")).map((e) => e.primaryClass);
+    const signature = outline.filter((e) => e.path.startsWith("main>")).map((e) => e.fingerprint);
 
     pages.push({
       slug: p.slug,
