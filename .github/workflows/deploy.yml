@@ -1,4 +1,4 @@
-name: Deploy site inventory to GitHub Pages
+name: Deploy site inventories to GitHub Pages
 
 on:
   push:
@@ -17,10 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      # Which output/<SITE>/ folder to build. Change this (or turn it into a
-      # matrix) once there's more than one inventoried site to deploy.
-      SITE: rijksmuseum
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,14 +24,40 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - name: Build VitePress site
-        run: npm run site:build
-        env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+
+      # GitHub Pages serves exactly one site per repo, but this repo can hold
+      # many site inventories (output/<site>/). So: build every site that has
+      # generated content into its own subfolder of one combined deploy
+      # (…/<repo>/<site>/), plus a small landing page linking to each. This
+      # requires zero workflow changes when a new site inventory is added —
+      # it's discovered automatically from the output/ folder.
+      - name: Build every site inventory
+        run: |
+          set -e
+          mkdir -p combined-dist
+          echo "<!doctype html><meta charset=utf-8><title>Site Inventories</title>" > combined-dist/index.html
+          echo "<body style='font-family:system-ui,sans-serif;max-width:640px;margin:4rem auto;padding:0 1rem'>" >> combined-dist/index.html
+          echo "<h1>Site Inventories</h1><ul>" >> combined-dist/index.html
+
+          for dir in output/*/; do
+            site="$(basename "$dir")"
+            if [ ! -f "${dir}content/overview.md" ]; then
+              echo "skip $site (no content/overview.md)"
+              continue
+            fi
+            echo "building $site"
+            SITE="$site" BASE_PATH="/${{ github.event.repository.name }}/$site/" npm run site:build
+            mkdir -p "combined-dist/$site"
+            cp -r "output/$site/site-dist/." "combined-dist/$site/"
+            echo "<li><a href=\"./$site/\">$site</a></li>" >> combined-dist/index.html
+          done
+
+          echo "</ul></body>" >> combined-dist/index.html
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: output/${{ env.SITE }}/site-dist
+          path: combined-dist
 
   deploy:
     needs: build
