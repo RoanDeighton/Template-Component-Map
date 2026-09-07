@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+
+# Crawl output: keep content/ (site docs) and pages/*/screenshot.png +
+# crop-*.png (referenced by content), drop the large raw capture files that
+# nothing needs at hosting time.
+output/*/pages/*/page.html
+output/*/pages/*/styles.json
+output/*/site-dist/
+site-template/.vitepress/cache/
+

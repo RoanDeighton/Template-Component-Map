@@ -1,0 +1,27 @@
+{
+  "name": "site-inventory-tool",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "crawl": "tsx src/crawl.ts",
+    "analyze": "tsx src/analyze.ts",
+    "site:dev": "vitepress dev site-template",
+    "site:build": "vitepress build site-template"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "commander": "^12.1.0",
+    "fast-xml-parser": "^4.5.0",
+    "playwright": "^1.48.0",
+    "robots-parser": "^3.0.1",
+    "sharp": "^0.35.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitepress": "^1.6.4",
+    "wrangler": "^4.129.0"
+  }
+}
