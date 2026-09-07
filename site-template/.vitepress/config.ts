@@ -50,12 +50,22 @@ function sidebarSection(subdir: string, base: string) {
 const pagesSidebarItems = sidebarSection("pages", "/pages");
 const componentsSidebarItems = sidebarSection("components", "/components");
 
+// GitHub Pages serves a project site from https://<user>.github.io/<repo>/ —
+// VitePress needs to know that subpath or every asset/link 404s. The deploy
+// workflow sets BASE_PATH to "/<repo>/" at build time; local dev/build with
+// no BASE_PATH set defaults to root, which is correct for local preview.
+const BASE_PATH = process.env.BASE_PATH || "/";
+
 export default defineConfig({
   title: meta.title,
   description: meta.description,
+  base: BASE_PATH,
   srcDir: outputRoot,
   outDir: path.resolve(outputRoot, "site-dist"),
-  cleanUrls: true,
+  // Deliberately NOT cleanUrls: true — that relies on the host rewriting
+  // extension-less URLs to their .html file (works on Cloudflare, not on
+  // GitHub Pages, which serves static files literally). Default output
+  // (page.html, linked as page.html) works on any static host.
   rewrites: (id) => {
     if (id === "content/overview.md") return "index.md";
     if (id.startsWith("content/")) return id.slice("content/".length);
