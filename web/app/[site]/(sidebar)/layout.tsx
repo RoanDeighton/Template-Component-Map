@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
-import { listComponents, listPages, listSites } from "@/lib/content";
+import { isFunctionalComponent, listComponents, listPages, listSites } from "@/lib/content";
 
 export function generateStaticParams() {
   return listSites().map((site) => ({ site }));
@@ -15,6 +15,7 @@ export default async function SidebarLayout(props: LayoutProps<"/[site]">) {
     slug: c.slug,
     title: c.title,
     href: `/${site}/components/${c.slug}`,
+    functional: isFunctionalComponent(c.title),
   }));
   const pageLinks = listPages(site).map((p) => ({
     slug: p.slug,

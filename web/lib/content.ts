@@ -287,7 +287,7 @@ const FUNCTIONAL_COMPONENT_PATTERNS: RegExp[] = [
   /\blanguage\s*switch(er)?\b/i,
 ];
 
-function isFunctionalComponent(title: string): boolean {
+export function isFunctionalComponent(title: string): boolean {
   return FUNCTIONAL_COMPONENT_PATTERNS.some((pattern) => pattern.test(title));
 }
 

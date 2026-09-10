@@ -17,6 +17,7 @@ export interface SidebarLink {
   slug: string;
   title: string;
   href: string;
+  functional?: boolean;
 }
 
 function NavGroup({ label, links, pathname }: { label?: string; links: SidebarLink[]; pathname: string }) {
@@ -70,12 +71,22 @@ export function AppSidebar({
       ? [{ slug: "overview", title: "Overview", href: `/${site}/pages` }]
       : [{ slug: "overview", title: "Overview", href: `/${site}/components` }];
 
+  const functionalLinks = componentLinks.filter((c) => c.functional);
+  const editorialLinks = componentLinks.filter((c) => !c.functional);
+
   return (
     <Sidebar collapsible="none" className="border-r-0 bg-transparent">
       <SidebarContent className="relative pt-10 after:absolute after:inset-y-0 after:right-0 after:w-px after:bg-gradient-to-b after:from-transparent after:via-border after:to-transparent">
         <NavGroup links={overview} pathname={pathname} />
         {section === "components" ? (
-          <NavGroup label={`Components (${componentLinks.length})`} links={componentLinks} pathname={pathname} />
+          <>
+            {functionalLinks.length > 0 && (
+              <NavGroup label={`Functional (${functionalLinks.length})`} links={functionalLinks} pathname={pathname} />
+            )}
+            {editorialLinks.length > 0 && (
+              <NavGroup label={`Editorial (${editorialLinks.length})`} links={editorialLinks} pathname={pathname} />
+            )}
+          </>
         ) : (
           <NavGroup label={`Pages (${pageLinks.length})`} links={pageLinks} pathname={pathname} />
         )}
