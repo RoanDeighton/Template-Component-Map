@@ -151,7 +151,7 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
                       onMouseLeave={handleRowMouseLeave}
                     />
                     <HoverCardContent
-                      className="w-72 bg-[#f1f1f1] p-0"
+                      className="w-72 overflow-hidden bg-[#f1f1f1] p-0 ring-0"
                       side="right"
                       align="start"
                       sideOffset={8}
@@ -161,7 +161,7 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={row.previewImage} alt={row.title} className="max-h-full max-w-full object-contain" />
                       </div>
-                      <p className="bg-[#e1e1e1] p-2.5 text-sm font-medium text-foreground">{row.title}</p>
+                      <p className="bg-[#e7e7e7] p-2.5 text-sm font-medium text-foreground">{row.title}</p>
                     </HoverCardContent>
                   </HoverCard>
                 ) : (
