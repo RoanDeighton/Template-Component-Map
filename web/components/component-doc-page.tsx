@@ -3,7 +3,7 @@ import { ExternalLink } from "lucide-react";
 import { TableOfContents } from "@/components/table-of-contents";
 import { DocNavArrows, type AdjacentDoc } from "@/components/doc-nav-arrows";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import type { ComponentDetailDoc } from "@/lib/content";
+import { isFunctionalComponent, type ComponentDetailDoc } from "@/lib/content";
 
 export function ComponentDocPage({
   doc,
@@ -15,6 +15,11 @@ export function ComponentDocPage({
   next?: AdjacentDoc | null;
 }) {
   const showNav = prev !== undefined || next !== undefined;
+  // Amount (how many pages use this component) isn't shown for functional
+  // components — header, footer, nav, and the like are on every page by
+  // definition, so the count never says anything a reader doesn't already
+  // know from the component's own description.
+  const showAmount = !isFunctionalComponent(doc.title);
 
   // Mirrors render order below: whatever headings live inside the doc's
   // own prose come first, then the three structural sections that always
@@ -41,6 +46,12 @@ export function ComponentDocPage({
               <span className="font-semibold text-foreground">Class: </span>
               <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs">{doc.class}</code>
             </p>
+            {showAmount && (
+              <p className="text-sm">
+                <span className="font-semibold text-foreground">Amount: </span>
+                <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs">{doc.usedOn.length}</code>
+              </p>
+            )}
           </div>
 
           <div

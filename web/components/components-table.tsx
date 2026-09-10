@@ -47,9 +47,14 @@ function SortButton({
   );
 }
 
-export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
-  const [sortKey, setSortKey] = useState<SortKey>("title");
-  const [sortDir, setSortDir] = useState<SortDir>("asc");
+export function ComponentsTable({ rows, showAmount = true }: { rows: ComponentTableRow[]; showAmount?: boolean }) {
+  // Amount (page count) is the default sort — most-used components lead —
+  // except where that column isn't shown at all (functional components,
+  // which are on every page by definition, so a count wouldn't
+  // distinguish between them); there, alphabetical by title is the only
+  // sort that means anything.
+  const [sortKey, setSortKey] = useState<SortKey>(showAmount ? "pages" : "title");
+  const [sortDir, setSortDir] = useState<SortDir>(showAmount ? "desc" : "asc");
   // Only one row can be hovered at a time, so one shared bit of state is
   // enough. The preview opens after a short dwell (HOVER_DELAY) once the
   // cursor stops moving, closes immediately on any further movement, and
@@ -100,9 +105,9 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
     <div className="my-6 overflow-hidden rounded-lg border border-border/60 [&_[data-slot=table-container]]:overflow-visible [&_tr]:border-border/60">
       <Table className="table-fixed">
         <colgroup>
-          <col className="w-[45%]" />
-          <col className="w-[40%]" />
-          <col className="w-[15%]" />
+          <col className={showAmount ? "w-[45%]" : "w-[55%]"} />
+          <col className={showAmount ? "w-[40%]" : "w-[45%]"} />
+          {showAmount && <col className="w-[15%]" />}
         </colgroup>
         <TableHeader>
           <TableRow className="hover:bg-transparent">
@@ -122,15 +127,17 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
                 onClick={() => toggleSort("class")}
               />
             </TableHead>
-            <TableHead className="h-12 px-4 text-right">
-              <SortButton
-                label="Pages"
-                active={sortKey === "pages"}
-                dir={sortDir}
-                onClick={() => toggleSort("pages")}
-                className="-mr-3 ml-0"
-              />
-            </TableHead>
+            {showAmount && (
+              <TableHead className="h-12 px-4 text-right">
+                <SortButton
+                  label="Amount"
+                  active={sortKey === "pages"}
+                  dir={sortDir}
+                  onClick={() => toggleSort("pages")}
+                  className="-mr-3 ml-0"
+                />
+              </TableHead>
+            )}
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -172,7 +179,7 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
               <TableCell className="whitespace-normal px-4 py-3">
                 <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs">{row.class}</code>
               </TableCell>
-              <TableCell className="px-4 py-3 text-right tabular-nums">{row.pages}</TableCell>
+              {showAmount && <TableCell className="px-4 py-3 text-right tabular-nums">{row.pages}</TableCell>}
             </TableRow>
           ))}
         </TableBody>

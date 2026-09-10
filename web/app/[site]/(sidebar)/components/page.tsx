@@ -48,21 +48,21 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
             </div>
             <div className="prose prose-sm prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: doc.beforeHtml }} />
           </div>
-          {/* Functional: the site's structural chrome (header, footer, nav,
-              cookie bar, search, ...) — the same handful of things reused
-              around every page. Editorial: everything else, the blocks
-              used to actually build a page's content. Only shown when at
-              least one component matches — see isFunctionalComponent() in
-              lib/content.ts for the (hardcoded) category patterns. */}
+          {/* Functional: header, footer, nav, cookie bar, search, ... — the
+              same handful of things reused around every page. Editorial:
+              everything else, the blocks used to actually build a page's
+              content. Only shown when at least one component matches —
+              see isFunctionalComponent() in lib/content.ts for the
+              (hardcoded) category patterns. */}
           {functionalRows.length > 0 && (
             <section className="space-y-4">
               <h2 id="functional-components" className="text-xl font-semibold tracking-tight text-foreground">
                 Functional
               </h2>
               <p className="text-sm text-muted-foreground">
-                Structural chrome reused around every page: header, footer, navigation, and the like.
+                Header, footer, navigation, and other elements reused on every page.
               </p>
-              <ComponentsTable rows={functionalRows} />
+              <ComponentsTable rows={functionalRows} showAmount={false} />
             </section>
           )}
           {editorialRows.length > 0 && (

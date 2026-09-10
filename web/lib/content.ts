@@ -164,15 +164,23 @@ export function listPages(site: string) {
 }
 
 // listComponents() sorted the same way the sidebar (and the overview
-// table's default sort) groups them — functional first, then editorial,
-// alphabetical within each group — so "next" from Overview, and every
-// component's own prev/next, walks in the order a reader actually sees
-// them in the sidebar rather than a flat alphabetical list that cuts
-// across the two groups.
+// table's default sort) groups them — functional first, then editorial —
+// so "next" from Overview, and every component's own prev/next, walks in
+// the order a reader actually sees them in the sidebar rather than a flat
+// alphabetical list that cuts across the two groups.
+//
+// Within editorial, most-used-first (by usedOn count) so the components
+// that show up across the most pages lead the list; within functional,
+// alphabetical, since those are structural elements every page uses by
+// definition — a usage count wouldn't distinguish between them.
 export function orderedComponents(site: string) {
   const list = listComponents(site);
-  const functional = list.filter((c) => isFunctionalComponent(c.title));
-  const editorial = list.filter((c) => !isFunctionalComponent(c.title));
+  const functional = list
+    .filter((c) => isFunctionalComponent(c.title))
+    .sort((a, b) => a.title.localeCompare(b.title));
+  const editorial = list
+    .filter((c) => !isFunctionalComponent(c.title))
+    .sort((a, b) => getComponentUsedOnCount(site, b.slug) - getComponentUsedOnCount(site, a.slug) || a.title.localeCompare(b.title));
   return [...functional, ...editorial];
 }
 
@@ -271,8 +279,8 @@ export interface ComponentTableRow {
   functional: boolean;
 }
 
-// Functional components are the site's structural chrome — the same
-// handful of things every site has, reused around whatever content sits
+// Functional components are the same handful of structural elements every
+// site has (header, footer, nav, ...), reused around whatever content sits
 // between them — as opposed to editorial components, the building blocks
 // used to actually compose a page. This is a fixed, hardcoded set of
 // categories (not derived from the crawl data, e.g. "used on every page")
@@ -302,6 +310,18 @@ const FUNCTIONAL_COMPONENT_PATTERNS: RegExp[] = [
 
 export function isFunctionalComponent(title: string): boolean {
   return FUNCTIONAL_COMPONENT_PATTERNS.some((pattern) => pattern.test(title));
+}
+
+// How many pages use a component — read straight from its own `usedOn`
+// frontmatter rather than kept as a separately hand-maintained number
+// (components/overview.md's markdown table used to carry its own "Pages"
+// count, which could and did drift out of sync with usedOn). One number,
+// one source: this is also what drives the "used more often first" sort.
+function getComponentUsedOnCount(site: string, slug: string): number {
+  const mdPath = path.join(OUTPUT_ROOT, site, "content", "components", `${slug}.md`);
+  if (!fs.existsSync(mdPath)) return 0;
+  const { data } = matter(fs.readFileSync(mdPath, "utf-8"));
+  return Array.isArray(data.usedOn) ? data.usedOn.length : 0;
 }
 
 // The component's first example image (see the `examples` frontmatter
@@ -360,7 +380,7 @@ export function getComponentsTable(site: string): ComponentsTable | null {
       .split("|")
       .slice(1, -1)
       .map((c) => c.trim());
-    const [cls, titleCell, pagesCell] = cells;
+    const [cls, titleCell] = cells;
     const linkMatch = titleCell.match(/\[(.*?)\]\((.*?)\)/);
     const slug = linkMatch ? linkMatch[2].replace(/\.md$/, "") : "";
     const title = linkMatch ? linkMatch[1] : titleCell;
@@ -368,7 +388,7 @@ export function getComponentsTable(site: string): ComponentsTable | null {
       class: cls,
       title,
       href: `/${site}/components/${slug}`,
-      pages: Number(pagesCell),
+      pages: slug ? getComponentUsedOnCount(site, slug) : 0,
       previewImage: slug ? getComponentPreviewImage(site, slug) : null,
       functional: isFunctionalComponent(title),
     };
