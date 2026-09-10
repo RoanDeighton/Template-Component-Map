@@ -29,9 +29,9 @@ export default async function OverviewPage(props: PageProps<"/[site]">) {
           <div className="flex gap-16">
             <div className="min-w-0 flex-1">
               <article className="mx-auto max-w-3xl">
-                <div className="prose prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: beforeHtml }} />
+                <div className="prose prose-sm prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: beforeHtml }} />
                 <HomeStats stats={stats} />
-                <div className="prose prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: afterHtml }} />
+                <div className="prose prose-sm prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: afterHtml }} />
               </article>
             </div>
             {/* Always reserve this column's width — see doc-page.tsx for why. */}

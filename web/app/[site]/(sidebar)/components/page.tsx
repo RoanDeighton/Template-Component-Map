@@ -46,7 +46,7 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
                 />
               )}
             </div>
-            <div className="prose prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: doc.beforeHtml }} />
+            <div className="prose prose-sm prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: doc.beforeHtml }} />
           </div>
           {/* Functional: the site's structural chrome (header, footer, nav,
               cookie bar, search, ...) — the same handful of things reused
@@ -74,7 +74,7 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
               <ComponentsTable rows={editorialRows} />
             </section>
           )}
-          <div className="prose prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: doc.afterHtml }} />
+          <div className="prose prose-sm prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: doc.afterHtml }} />
         </article>
       </div>
       {/* Always reserve this column's width — see doc-page.tsx for why. */}

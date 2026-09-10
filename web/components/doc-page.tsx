@@ -28,7 +28,7 @@ export function DocPage({
             {showNav && <DocNavArrows prev={prev ?? null} next={next ?? null} />}
           </div>
           <div
-            className="prose prose-neutral dark:prose-invert"
+            className="prose prose-sm prose-neutral dark:prose-invert"
             dangerouslySetInnerHTML={{ __html: doc.html }}
           />
         </article>
