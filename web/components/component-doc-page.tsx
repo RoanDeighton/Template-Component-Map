@@ -49,44 +49,46 @@ export function ComponentDocPage({
           />
 
           {doc.examples.length > 0 && (
-            <section className="space-y-12">
+            <section className="space-y-4">
               <h2 id="example" className="text-xl font-semibold tracking-tight text-foreground">
                 {doc.examples.length > 1 ? "Examples" : "Example"}
               </h2>
-              {doc.examples.map((example) => (
-                <div key={example.image} className="space-y-4">
-                  {example.label && <p className="text-sm font-medium text-foreground">{example.label}</p>}
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={example.image}
-                    alt={example.label ? `${doc.title}, ${example.label}` : `${doc.title} example`}
-                    className="max-w-full rounded-lg border"
-                  />
-                  {example.capturedFrom && (
-                    <p className="text-sm text-muted-foreground">
-                      Captured live from{" "}
-                      {example.capturedFrom.liveUrl ? (
-                        <a
-                          href={example.capturedFrom.liveUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1 text-foreground underline underline-offset-4"
-                        >
-                          {example.capturedFrom.title}
-                          <ExternalLink className="size-3" />
-                        </a>
-                      ) : (
-                        <span className="text-foreground">{example.capturedFrom.title}</span>
-                      )}
-                      {". See the "}
-                      <Link href={example.capturedFrom.href} className="text-foreground underline underline-offset-4">
-                        {example.capturedFrom.title} page
-                      </Link>{" "}
-                      in this inventory.
-                    </p>
-                  )}
-                </div>
-              ))}
+              <div className="space-y-12">
+                {doc.examples.map((example) => (
+                  <div key={example.image} className="space-y-4">
+                    {example.label && <p className="text-sm font-medium text-foreground">{example.label}</p>}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={example.image}
+                      alt={example.label ? `${doc.title}, ${example.label}` : `${doc.title} example`}
+                      className="max-w-full rounded-lg border"
+                    />
+                    {example.capturedFrom && (
+                      <p className="text-sm text-muted-foreground">
+                        Captured live from{" "}
+                        {example.capturedFrom.liveUrl ? (
+                          <a
+                            href={example.capturedFrom.liveUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1 text-foreground underline underline-offset-4"
+                          >
+                            {example.capturedFrom.title}
+                            <ExternalLink className="size-3" />
+                          </a>
+                        ) : (
+                          <span className="text-foreground">{example.capturedFrom.title}</span>
+                        )}
+                        {". See the "}
+                        <Link href={example.capturedFrom.href} className="text-foreground underline underline-offset-4">
+                          {example.capturedFrom.title} page
+                        </Link>{" "}
+                        in this inventory.
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
             </section>
           )}
 
