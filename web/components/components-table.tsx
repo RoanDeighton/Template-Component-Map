@@ -102,16 +102,11 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
         </TableHeader>
         <TableBody>
           {sortedRows.map((row) => (
-            <TableRow key={row.href}>
-              <TableCell className="whitespace-normal px-4 py-3">
+            <TableRow key={row.href} className="relative">
+              <TableCell className="whitespace-normal px-4 py-3 text-muted-foreground">
                 {row.previewImage ? (
                   <HoverCard>
-                    <HoverCardTrigger
-                      render={<Link href={row.href} />}
-                      className="block text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      {row.title}
-                    </HoverCardTrigger>
+                    <HoverCardTrigger render={<Link href={row.href} />} className="absolute inset-0" />
                     <HoverCardContent className="w-72 p-0" side="right" align="start">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -123,10 +118,9 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
                     </HoverCardContent>
                   </HoverCard>
                 ) : (
-                  <Link href={row.href} className="block text-muted-foreground transition-colors hover:text-foreground">
-                    {row.title}
-                  </Link>
+                  <Link href={row.href} className="absolute inset-0" />
                 )}
+                {row.title}
               </TableCell>
               <TableCell className="whitespace-normal px-4 py-3">{row.class}</TableCell>
               <TableCell className="px-4 py-3 text-right tabular-nums">{row.pages}</TableCell>
