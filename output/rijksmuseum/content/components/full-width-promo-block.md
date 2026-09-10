@@ -21,10 +21,10 @@ cmsFields:
   - name: ctaUrl
     type: link
     required: true
-    description: Destination the entire block links through to — an exhibition, story, or feature page.
+    description: Destination the entire block links through to, an exhibition, story, or feature page.
 ---
 
-A full-bleed background image with a short eyebrow label and headline overlaid in the bottom-left corner, the entire block acting as one link through to an exhibition, story, or feature. No body copy — this component is a visual entry point, not a content container.
+A full-bleed background image with a short eyebrow label and headline overlaid in the bottom-left corner, the entire block acting as one link through to an exhibition, story, or feature. No body copy: this component is a visual entry point, not a content container.
 
 Three instances on the homepage, including a hero variant. Examples seen: the homepage hero ("RIJKSMUSEUM" wordmark over *The Night Watch*), a "Families en kinderen" promo, and a "Fiep Westendorp" exhibition promo.
 

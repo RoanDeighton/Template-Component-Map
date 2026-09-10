@@ -1,5 +1,5 @@
 ---
-title: Rijksmuseum — Site Inventory Overview
+title: "Rijksmuseum: Site Inventory Overview"
 ---
 
 <p class="eyebrow">Component inventory</p>
@@ -10,7 +10,7 @@ title: Rijksmuseum — Site Inventory Overview
 
 <!-- stat-blocks -->
 
-<p class="callout"><strong>Test run.</strong> This is a small, hand-picked 3-page run (homepage, "Bezoek & tickets", "Agenda") used to validate the pipeline before running it across the full site — the numbers above reflect only these 3 pages, not the whole site. Since every page in this test happens to be structurally distinct, each one produced its own template; a larger run would show actual template reuse (e.g. individual exhibition pages, collection object pages).</p>
+<p class="callout"><strong>Test run.</strong> This is a small, hand-picked 3-page run (homepage, "Bezoek & tickets", "Agenda") used to validate the pipeline before running it across the full site. The numbers above reflect only these 3 pages, not the whole site. Since every page in this test happens to be structurally distinct, each one produced its own template; a larger run would show actual template reuse (e.g. individual exhibition pages, collection object pages).</p>
 
 ## How this was made
 
@@ -18,7 +18,7 @@ title: Rijksmuseum — Site Inventory Overview
   <li>
     <div>
       <p class="step-title">Crawl the site</p>
-      <p class="step-body">Discover its pages, group ones that look alike by URL pattern, and sample a few from each group instead of visiting every single one — capturing a screenshot of each page kept.</p>
+      <p class="step-body">Discover its pages, group similar ones by URL pattern, and sample a few from each group instead of visiting every page. Each sampled page gets a screenshot.</p>
     </div>
   </li>
   <li>
@@ -30,7 +30,7 @@ title: Rijksmuseum — Site Inventory Overview
   <li>
     <div>
       <p class="step-title">Document what's there</p>
-      <p class="step-body">Turn that structural breakdown into the write-ups you're reading in this inventory — what each template and component actually is, what it holds, and how it varies. This part is done by hand, working from the captured screenshots.</p>
+      <p class="step-body">Turn that structural breakdown into the write-ups you're reading in this inventory: what each template and component actually is, what it holds, and how it varies. This part is done by hand, working from the captured screenshots.</p>
     </div>
   </li>
   <li>

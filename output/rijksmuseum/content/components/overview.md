@@ -1,10 +1,10 @@
 ---
-title: Rijksmuseum — Components
+title: "Rijksmuseum: Components"
 ---
 
 # Components (11)
 
-- **Class**: the component's own name as used on the site, its CSS class where the markup gives it one, otherwise its element (noted as such)
+- **Class**: the component's CSS class, or its HTML element if the markup doesn't give it a class
 - **UX Title**: the descriptive name used throughout this inventory
 - **Pages**: how many of the sampled pages use it
 

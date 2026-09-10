@@ -22,7 +22,7 @@ cmsFields:
   - name: pricing
     type: object
     required: false
-    description: "Compact pricing summary (e.g. \"Volwassenen €25 / t/m 18 jaar Gratis\") — only seen on the Visitor Info variant."
+    description: "Compact pricing summary (e.g. \"Volwassenen €25 / t/m 18 jaar Gratis\"), only seen on the Visitor Info variant."
   - name: secondaryLinkLabel
     type: string
     required: false
@@ -37,4 +37,4 @@ Full-width banner used at the top of interior (non-homepage) pages: a full-bleed
 
 ## Variants observed
 
-- On the **Visitor Info** page, this component also carries a compact pricing summary box (e.g. "Volwassenen €25 / t/m 18 jaar Gratis") and a secondary link ("Praktische informatie") docked beside the intro text — the **Agenda** page's instance is plainer, title + subtitle only, no pricing box. Worth confirming with a larger sample whether the pricing box is specific to ticketed/visit-related pages or a general optional slot in this component.
+- On the **Visitor Info** page, this component also carries a compact pricing summary box (e.g. "Volwassenen €25 / t/m 18 jaar Gratis") and a secondary link ("Praktische informatie") docked beside the intro text. The **Agenda** page's instance is plainer: title and subtitle only, no pricing box. Worth confirming with a larger sample whether the pricing box is specific to ticketed/visit-related pages or a general optional slot in this component.
