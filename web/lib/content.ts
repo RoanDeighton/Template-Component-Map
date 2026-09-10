@@ -38,13 +38,18 @@ export interface ContentDoc {
 // disk (e.g. "../../pages/nl/crop-header.png" from content/components/).
 // The browser has no such filesystem — it needs an absolute URL under
 // /assets/<site>/..., which public/assets/<site> is symlinked to serve
-// (see public/assets/README or the symlink itself).
+// (see public/assets/README or the symlink itself). These are plain <img>
+// src strings, not Next <Link>/<Image> elements, so — unlike internal
+// links — they don't get GitHub Pages' basePath prefix for free; it has to
+// be added by hand here (same NEXT_BASE_PATH the build sets in
+// next.config.ts).
 function resolveAssetSrc(site: string, mdFileDir: string, src: string): string {
   if (/^(https?:)?\/\//.test(src)) return src;
   const absoluteFsPath = path.resolve(mdFileDir, src);
   const siteRoot = path.join(OUTPUT_ROOT, site);
   const relativeToSite = path.relative(siteRoot, absoluteFsPath).split(path.sep).join("/");
-  return `/assets/${site}/${relativeToSite}`;
+  const basePath = process.env.NEXT_BASE_PATH ?? "";
+  return `${basePath}/assets/${site}/${relativeToSite}`;
 }
 
 function rehypeRewriteImages({ site, mdFileDir }: { site: string; mdFileDir: string }) {
