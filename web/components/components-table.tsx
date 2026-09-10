@@ -150,13 +150,17 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
                       onMouseMove={(e: React.MouseEvent) => handleRowMouseMove(row.href, e)}
                       onMouseLeave={handleRowMouseLeave}
                     />
-                    <HoverCardContent className="w-72 p-0" side="right" align="start" anchor={cursorAnchor}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={row.previewImage}
-                        alt={row.title}
-                        className="aspect-video w-full rounded-t-lg border-b object-cover"
-                      />
+                    <HoverCardContent
+                      className="w-72 bg-[#f1f1f1] p-0"
+                      side="right"
+                      align="start"
+                      sideOffset={8}
+                      anchor={cursorAnchor}
+                    >
+                      <div className="flex aspect-video items-center justify-center p-3">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={row.previewImage} alt={row.title} className="max-h-full max-w-full object-contain" />
+                      </div>
                       <p className="p-2.5 text-sm font-medium text-foreground">{row.title}</p>
                     </HoverCardContent>
                   </HoverCard>
