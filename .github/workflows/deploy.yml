@@ -35,7 +35,14 @@ jobs:
         run: |
           set -e
           mkdir -p combined-dist
-          echo "<!doctype html><meta charset=utf-8><title>Site Inventories</title>" > combined-dist/index.html
+
+          # Unlisted, not indexed: reachable by direct link, kept out of
+          # search engines. robots.txt covers the whole deploy (landing page
+          # + every per-site subfolder); the per-site VitePress builds also
+          # carry a matching <meta name="robots"> tag (see site-template/.vitepress/config.ts).
+          printf 'User-agent: *\nDisallow: /\n' > combined-dist/robots.txt
+
+          echo "<!doctype html><meta charset=utf-8><title>Site Inventories</title><meta name=robots content='noindex, nofollow'>" > combined-dist/index.html
           echo "<body style='font-family:system-ui,sans-serif;max-width:640px;margin:4rem auto;padding:0 1rem'>" >> combined-dist/index.html
           echo "<h1>Site Inventories</h1><ul>" >> combined-dist/index.html
 

@@ -62,6 +62,12 @@ export default defineConfig({
   base: BASE_PATH,
   srcDir: outputRoot,
   outDir: path.resolve(outputRoot, "site-dist"),
+  // Keeps every generated page out of search indexes (unlisted: reachable by
+  // direct link, not crawled/listed) without any hosting change. The
+  // matching robots.txt for the actual deployed site lives in
+  // .github/workflows/deploy.yml, since the real deploy root (combined-dist)
+  // is assembled by that workflow, not by this per-site VitePress build.
+  head: [["meta", { name: "robots", content: "noindex, nofollow" }]],
   // Deliberately NOT cleanUrls: true — that relies on the host rewriting
   // extension-less URLs to their .html file (works on Cloudflare, not on
   // GitHub Pages, which serves static files literally). Default output
