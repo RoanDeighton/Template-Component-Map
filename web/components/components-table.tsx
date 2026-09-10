@@ -84,12 +84,17 @@ export function ComponentsTable({ rows, showAmount = true }: { rows: ComponentTa
     setOpenHref(null);
   }
 
+  // Ties always break alphabetically by title, in both directions — sorting
+  // descending should reorder by the sort key, not flip the tie order too,
+  // which a naive "sort ascending, then reverse the whole array" would do.
+  // This is also what orderedComponents() (lib/content.ts) uses for the
+  // sidebar, so the two stay in the same order.
   const sortedRows = useMemo(() => {
-    const sorted = [...rows].sort((a, b) => {
-      if (sortKey === "pages") return a.pages - b.pages;
-      return a[sortKey].localeCompare(b[sortKey]);
+    const dir = sortDir === "asc" ? 1 : -1;
+    return [...rows].sort((a, b) => {
+      const primary = sortKey === "pages" ? a.pages - b.pages : a[sortKey].localeCompare(b[sortKey]);
+      return primary !== 0 ? primary * dir : a.title.localeCompare(b.title);
     });
-    return sortDir === "asc" ? sorted : sorted.reverse();
   }, [rows, sortKey, sortDir]);
 
   function toggleSort(key: SortKey) {
@@ -105,9 +110,9 @@ export function ComponentsTable({ rows, showAmount = true }: { rows: ComponentTa
     <div className="my-6 overflow-hidden rounded-lg border border-border/60 [&_[data-slot=table-container]]:overflow-visible [&_tr]:border-border/60">
       <Table className="table-fixed">
         <colgroup>
-          <col className={showAmount ? "w-[45%]" : "w-[55%]"} />
-          <col className={showAmount ? "w-[40%]" : "w-[45%]"} />
-          {showAmount && <col className="w-[15%]" />}
+          <col className="w-[45%]" />
+          <col className="w-[40%]" />
+          <col className="w-[15%]" />
         </colgroup>
         <TableHeader>
           <TableRow className="hover:bg-transparent">
@@ -127,8 +132,8 @@ export function ComponentsTable({ rows, showAmount = true }: { rows: ComponentTa
                 onClick={() => toggleSort("class")}
               />
             </TableHead>
-            {showAmount && (
-              <TableHead className="h-12 px-4 text-right">
+            <TableHead className="h-12 px-4 text-right">
+              {showAmount && (
                 <SortButton
                   label="Amount"
                   active={sortKey === "pages"}
@@ -136,8 +141,8 @@ export function ComponentsTable({ rows, showAmount = true }: { rows: ComponentTa
                   onClick={() => toggleSort("pages")}
                   className="-mr-3 ml-0"
                 />
-              </TableHead>
-            )}
+              )}
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -179,7 +184,7 @@ export function ComponentsTable({ rows, showAmount = true }: { rows: ComponentTa
               <TableCell className="whitespace-normal px-4 py-3">
                 <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs">{row.class}</code>
               </TableCell>
-              {showAmount && <TableCell className="px-4 py-3 text-right tabular-nums">{row.pages}</TableCell>}
+              <TableCell className="px-4 py-3 text-right tabular-nums">{showAmount && row.pages}</TableCell>
             </TableRow>
           ))}
         </TableBody>
