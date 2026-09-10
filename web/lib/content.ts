@@ -164,7 +164,10 @@ export function listPages(site: string) {
 }
 
 // Previous/next within a doc list, by slug — used for the prev/next
-// arrows next to a doc's title.
+// arrows next to a doc's title. The Overview page is treated as the
+// (virtual) item before the first component/page, so the first doc's
+// "prev" arrow goes back to Overview instead of being disabled; the last
+// doc's "next" arrow has nothing after it and stays disabled.
 export function getAdjacentDocs(
   site: string,
   kind: "components" | "pages",
@@ -176,7 +179,8 @@ export function getAdjacentDocs(
     const d = list[idx];
     return d ? { slug: d.slug, title: d.title, href: `/${site}/${kind}/${d.slug}` } : null;
   };
-  return { prev: i > 0 ? at(i - 1) : null, next: i >= 0 && i < list.length - 1 ? at(i + 1) : null };
+  const overview = { slug: "overview", title: "Overview", href: `/${site}/${kind}` };
+  return { prev: i > 0 ? at(i - 1) : overview, next: i >= 0 && i < list.length - 1 ? at(i + 1) : null };
 }
 
 export interface SearchItem {

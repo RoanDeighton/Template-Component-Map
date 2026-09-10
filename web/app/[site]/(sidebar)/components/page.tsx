@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { TableOfContents } from "@/components/table-of-contents";
 import { ComponentsTable } from "@/components/components-table";
 import { DocNavArrows } from "@/components/doc-nav-arrows";
-import { getComponentsTable, listSites } from "@/lib/content";
+import { getComponentsTable, listComponents, listSites } from "@/lib/content";
 
 export function generateStaticParams() {
   return listSites().map((site) => ({ site }));
@@ -13,7 +13,10 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
   const doc = getComponentsTable(site);
   if (!doc) notFound();
 
-  const first = doc.rows[0];
+  // The same list (and order) getAdjacentDocs() uses for every component
+  // doc's own prev/next, so Overview → first → ... → last → (disabled)
+  // forms one consistent chain rather than two independently-ordered ones.
+  const first = listComponents(site)[0];
 
   return (
     <div className="flex gap-16">
@@ -24,7 +27,7 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
             {first && (
               <DocNavArrows
                 prev={null}
-                next={{ slug: first.href, title: first.title, href: first.href }}
+                next={{ slug: first.slug, title: first.title, href: `/${site}/components/${first.slug}` }}
               />
             )}
           </div>
