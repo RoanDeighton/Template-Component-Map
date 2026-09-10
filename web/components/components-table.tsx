@@ -161,7 +161,7 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={row.previewImage} alt={row.title} className="max-h-full max-w-full object-contain" />
                       </div>
-                      <p className="p-2.5 text-sm font-medium text-foreground">{row.title}</p>
+                      <p className="bg-[#d1d1d1] p-2.5 text-sm font-medium text-foreground">{row.title}</p>
                     </HoverCardContent>
                   </HoverCard>
                 ) : (
