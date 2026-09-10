@@ -98,7 +98,12 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
 
   return (
     <div className="my-6 overflow-hidden rounded-lg border border-border/60 [&_[data-slot=table-container]]:overflow-visible [&_tr]:border-border/60">
-      <Table>
+      <Table className="table-fixed">
+        <colgroup>
+          <col className="w-[45%]" />
+          <col className="w-[40%]" />
+          <col className="w-[15%]" />
+        </colgroup>
         <TableHeader>
           <TableRow className="hover:bg-transparent">
             <TableHead className="h-12 px-4">
