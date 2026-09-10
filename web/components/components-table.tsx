@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowDown, ArrowUp } from "lucide-react";
 import {
@@ -50,6 +50,34 @@ function SortButton({
 export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
   const [sortKey, setSortKey] = useState<SortKey>("title");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
+  // Only one row can be hovered at a time, so one shared bit of state is
+  // enough. The preview opens after a short dwell (HOVER_DELAY) once the
+  // cursor stops moving, closes immediately on any further movement, and
+  // (re)anchors to wherever the cursor was when it settled — driven
+  // entirely by hand rather than the HoverCard's own built-in hover-intent,
+  // which only knows "opened" vs "closed", not "closes again on movement."
+  const HOVER_DELAY = 350;
+  const [openHref, setOpenHref] = useState<string | null>(null);
+  const [cursor, setCursor] = useState<{ x: number; y: number } | null>(null);
+  const dwellTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cursorAnchor = cursor
+    ? { getBoundingClientRect: () => new DOMRect(cursor.x, cursor.y, 0, 0) }
+    : undefined;
+
+  function handleRowMouseMove(href: string, e: React.MouseEvent) {
+    const { clientX: x, clientY: y } = e;
+    if (dwellTimeout.current) clearTimeout(dwellTimeout.current);
+    setOpenHref((current) => (current === href ? null : current));
+    dwellTimeout.current = setTimeout(() => {
+      setCursor({ x, y });
+      setOpenHref(href);
+    }, HOVER_DELAY);
+  }
+
+  function handleRowMouseLeave() {
+    if (dwellTimeout.current) clearTimeout(dwellTimeout.current);
+    setOpenHref(null);
+  }
 
   const sortedRows = useMemo(() => {
     const sorted = [...rows].sort((a, b) => {
@@ -105,9 +133,19 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
             <TableRow key={row.href} className="relative">
               <TableCell className="whitespace-normal px-4 py-3 text-muted-foreground">
                 {row.previewImage ? (
-                  <HoverCard>
-                    <HoverCardTrigger render={<Link href={row.href} prefetch={false} />} className="absolute inset-0" />
-                    <HoverCardContent className="w-72 p-0" side="right" align="start">
+                  <HoverCard
+                    open={openHref === row.href}
+                    onOpenChange={(next) => {
+                      if (!next) setOpenHref((current) => (current === row.href ? null : current));
+                    }}
+                  >
+                    <HoverCardTrigger
+                      render={<Link href={row.href} prefetch={false} />}
+                      className="absolute inset-0"
+                      onMouseMove={(e: React.MouseEvent) => handleRowMouseMove(row.href, e)}
+                      onMouseLeave={handleRowMouseLeave}
+                    />
+                    <HoverCardContent className="w-72 p-0" side="right" align="start" anchor={cursorAnchor}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={row.previewImage}
