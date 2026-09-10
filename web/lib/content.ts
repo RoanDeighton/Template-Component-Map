@@ -255,6 +255,40 @@ export interface ComponentTableRow {
   href: string;
   pages: number;
   previewImage: string | null;
+  functional: boolean;
+}
+
+// Functional components are the site's structural chrome — the same
+// handful of things every site has, reused around whatever content sits
+// between them — as opposed to editorial components, the building blocks
+// used to actually compose a page. This is a fixed, hardcoded set of
+// categories (not derived from the crawl data, e.g. "used on every page")
+// so the same kinds of components always land as functional regardless of
+// how many pages happened to get sampled. Matched against a component's UX
+// Title; a title matching none of these is editorial.
+//
+// "site header" (not bare "header") deliberately excludes things like
+// "Page Header Banner" — an editorial banner that merely has "header" in
+// its name — while still matching "Site Header / Navigation": the header
+// *is* the site's navigation, one category, not two.
+const FUNCTIONAL_COMPONENT_PATTERNS: RegExp[] = [
+  /\btop\s*bar\b/i,
+  /\bsite\s+header\b/i,
+  /\bnavigation\b/i,
+  /\bnav\s*bar\b/i,
+  /\bcookie\s*(bar|banner|consent|notice)\b/i,
+  /\bfly[\s-]?out\b/i,
+  /\bmega\s*menu\b/i,
+  /\bsearch\b/i,
+  /\bback\s*(link|to\s*top)\b/i,
+  /\bbreadcrumbs?\b/i,
+  /\b(site\s+)?footer\b/i,
+  /\bskip\s*(link|to\s*content)\b/i,
+  /\blanguage\s*switch(er)?\b/i,
+];
+
+function isFunctionalComponent(title: string): boolean {
+  return FUNCTIONAL_COMPONENT_PATTERNS.some((pattern) => pattern.test(title));
 }
 
 // The first image referenced in a component's own doc — its captured
@@ -316,12 +350,14 @@ export function getComponentsTable(site: string): ComponentsTable | null {
     const [cls, titleCell, pagesCell] = cells;
     const linkMatch = titleCell.match(/\[(.*?)\]\((.*?)\)/);
     const slug = linkMatch ? linkMatch[2].replace(/\.md$/, "") : "";
+    const title = linkMatch ? linkMatch[1] : titleCell;
     return {
       class: cls,
-      title: linkMatch ? linkMatch[1] : titleCell,
+      title,
       href: `/${site}/components/${slug}`,
       pages: Number(pagesCell),
       previewImage: slug ? getComponentPreviewImage(site, slug) : null,
+      functional: isFunctionalComponent(title),
     };
   });
 

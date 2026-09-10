@@ -18,6 +18,14 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
   // forms one consistent chain rather than two independently-ordered ones.
   const first = listComponents(site)[0];
 
+  const functionalRows = doc.rows.filter((r) => r.functional);
+  const editorialRows = doc.rows.filter((r) => !r.functional);
+  const headings = [
+    ...(functionalRows.length > 0 ? [{ id: "functional-components", text: "Functional", level: 2 as const }] : []),
+    ...(editorialRows.length > 0 ? [{ id: "editorial-components", text: "Editorial", level: 2 as const }] : []),
+    ...doc.headings,
+  ];
+
   return (
     <div className="flex gap-16">
       <div className="min-w-0 flex-1">
@@ -32,13 +40,38 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
             )}
           </div>
           <div className="prose prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: doc.beforeHtml }} />
-          <ComponentsTable rows={doc.rows} />
+          {/* Functional: the site's structural chrome (header, footer, nav,
+              cookie bar, search, ...) — the same handful of things reused
+              around every page. Editorial: everything else, the blocks
+              used to actually build a page's content. Only shown when at
+              least one component matches — see isFunctionalComponent() in
+              lib/content.ts for the (hardcoded) category patterns. */}
+          {functionalRows.length > 0 && (
+            <section className="space-y-4">
+              <h2 id="functional-components" className="text-2xl font-semibold tracking-tight text-foreground">
+                Functional
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                Structural chrome reused around every page — header, footer, navigation, and the like.
+              </p>
+              <ComponentsTable rows={functionalRows} />
+            </section>
+          )}
+          {editorialRows.length > 0 && (
+            <section className="space-y-4">
+              <h2 id="editorial-components" className="text-2xl font-semibold tracking-tight text-foreground">
+                Editorial
+              </h2>
+              <p className="text-sm text-muted-foreground">The building blocks used to compose a page&apos;s own content.</p>
+              <ComponentsTable rows={editorialRows} />
+            </section>
+          )}
           <div className="prose prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: doc.afterHtml }} />
         </article>
       </div>
-      {doc.headings.length > 0 && (
+      {headings.length > 0 && (
         <aside className="hidden w-56 shrink-0 xl:block">
-          <TableOfContents headings={doc.headings} />
+          <TableOfContents headings={headings} />
         </aside>
       )}
     </div>
