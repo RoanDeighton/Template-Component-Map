@@ -3,10 +3,10 @@ title: Rijksmuseum — Site Inventory Overview
 ---
 
 <script setup>
-// The figma-native-v2 design system defines no dark-mode tokens, so this
-// page forces the whole site shell (nav included) to light while it's
-// open — not just this content card — otherwise you get a white card
-// stranded in a dark shell, which reads as broken rather than deliberate.
+// This page's defined style has no dark-mode tokens, so it forces the
+// whole site shell (nav included) to light while it's open — not just
+// this content card — otherwise you get a white card stranded in a dark
+// shell, which reads as broken rather than deliberate.
 import { useData } from "vitepress";
 import { onMounted, onUnmounted, watch } from "vue";
 
@@ -28,7 +28,7 @@ onUnmounted(() => {
 });
 </script>
 
-<div class="figma-home">
+<div class="homepage">
 
 <p class="eyebrow">Component inventory</p>
 
