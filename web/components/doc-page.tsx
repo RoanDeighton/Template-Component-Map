@@ -24,7 +24,7 @@ export function DocPage({
             itself. */}
         <article className="mx-auto max-w-3xl space-y-12">
           <div className="flex items-center justify-between gap-4">
-            <h1 className="text-3xl font-semibold tracking-tight text-foreground">{doc.title}</h1>
+            <h1 className="text-2xl font-semibold tracking-tight text-foreground">{doc.title}</h1>
             {showNav && <DocNavArrows prev={prev ?? null} next={next ?? null} />}
           </div>
           <div

@@ -38,7 +38,7 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
         <article className="mx-auto max-w-3xl space-y-12">
           <div className="space-y-6">
             <div className="flex items-center justify-between gap-4">
-              <h1 className="text-3xl font-semibold tracking-tight text-foreground">{doc.title}</h1>
+              <h1 className="text-2xl font-semibold tracking-tight text-foreground">{doc.title}</h1>
               {first && (
                 <DocNavArrows
                   prev={null}
@@ -56,7 +56,7 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
               lib/content.ts for the (hardcoded) category patterns. */}
           {functionalRows.length > 0 && (
             <section className="space-y-4">
-              <h2 id="functional-components" className="text-2xl font-semibold tracking-tight text-foreground">
+              <h2 id="functional-components" className="text-xl font-semibold tracking-tight text-foreground">
                 Functional
               </h2>
               <p className="text-sm text-muted-foreground">
@@ -67,7 +67,7 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
           )}
           {editorialRows.length > 0 && (
             <section className="space-y-4">
-              <h2 id="editorial-components" className="text-2xl font-semibold tracking-tight text-foreground">
+              <h2 id="editorial-components" className="text-xl font-semibold tracking-tight text-foreground">
                 Editorial
               </h2>
               <p className="text-sm text-muted-foreground">The building blocks used to compose a page&apos;s own content.</p>

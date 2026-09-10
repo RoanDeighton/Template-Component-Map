@@ -149,21 +149,24 @@
 /* Full type scale in use, one token per size — every text-* utility and
    every .prose heading in the app maps to one of these (Tailwind's own
    built-in --text-* scale, referenced explicitly here rather than left to
-   Typography's independent em-based sizing, so the two can't drift apart):
+   Typography's independent em-based sizing, so the two can't drift apart).
+   Headings step down at the same ~0.8 ratio each level (24 -> 20 matches
+   the 30 -> 24 the scale replaced), one clear step at a time rather than
+   every level being its own arbitrary size:
      --text-xs   12px  sidebar links, "On This Page" TOC, table sort headers
      --text-sm   14px  body UI text — nav links, table cells, search (default)
      --text-base 16px  prose body copy
-     --text-xl   20px  (unused — no h3 content exists yet)
-     --text-2xl  24px  page <h1> ("Pages (3)"), .prose h2
-     --text-3xl  30px  home stat-card numbers, .prose h1 (site name, e.g. "Rijksmuseum")
+     --text-xl   20px  sub-headers — .prose h2, Functional/Editorial h2
+     --text-2xl  24px  page <h1> (every page title, home included, "Pages (3)"'s size)
+     --text-3xl  30px  home stat-card numbers
      --text-4xl  36px  (unused) */
 .prose :where(h1) {
-  font-size: var(--text-3xl) !important;
-  line-height: var(--text-3xl--line-height) !important;
-}
-.prose :where(h2) {
   font-size: var(--text-2xl) !important;
   line-height: var(--text-2xl--line-height) !important;
+}
+.prose :where(h2) {
+  font-size: var(--text-xl) !important;
+  line-height: var(--text-xl--line-height) !important;
 }
 
 /* Content-authored classes from the overview.md pipeline (see
