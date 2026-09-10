@@ -67,7 +67,14 @@ export default defineConfig({
   // matching robots.txt for the actual deployed site lives in
   // .github/workflows/deploy.yml, since the real deploy root (combined-dist)
   // is assembled by that workflow, not by this per-site VitePress build.
-  head: [["meta", { name: "robots", content: "noindex, nofollow" }]],
+  head: [
+    ["meta", { name: "robots", content: "noindex, nofollow" }],
+    // Only used within the .figma-home scoped test styles (custom.css) —
+    // doesn't change the default font anywhere else on the site.
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" }],
+    ["link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" }],
+  ],
   // Deliberately NOT cleanUrls: true — that relies on the host rewriting
   // extension-less URLs to their .html file (works on Cloudflare, not on
   // GitHub Pages, which serves static files literally). Default output

@@ -1,0 +1,197 @@
+/* Homepage pieces (eyebrow, stat blocks, "how this was made" steps, site
+   identity list) — a direct translation of the figma-native-v2 design
+   system's tokens (monochrome palette, Inter only, sentence case, 4px
+   spacing scale, 8px/4px radius, structural-only borders) onto this site's
+   overview page. This is the one shared presentation layer for every site
+   inventory (see site-template/.vitepress/config.ts) — no per-site/brand
+   styling, only the content differs. That system defines no dark-mode
+   tokens, so this block intentionally always renders light regardless of
+   the site's own dark-mode toggle. Token values live in tokens.css —
+   every var(--fg-*) below reads from there. */
+
+.figma-home {
+  font-family: var(--fg-font);
+  background: var(--fg-canvas);
+  color: var(--fg-text);
+  padding: var(--fg-space-12) var(--fg-space-8);
+  border-radius: var(--fg-radius-md);
+}
+
+.figma-home p {
+  font-family: inherit;
+  color: var(--fg-text);
+}
+
+.figma-home .eyebrow {
+  font-size: var(--fg-size-label);
+  font-weight: var(--fg-weight-body);
+  letter-spacing: var(--fg-tracking);
+  text-transform: none;
+  color: var(--fg-text);
+  opacity: var(--fg-opacity-muted);
+  margin: 0 0 var(--fg-space-2);
+}
+
+.figma-home h1 {
+  font-family: inherit;
+  font-weight: var(--fg-weight-heading);
+  font-size: var(--fg-size-h1);
+  line-height: var(--fg-leading-tight);
+  letter-spacing: var(--fg-tracking);
+  color: var(--fg-text);
+  border: none;
+  margin: 0 0 var(--fg-space-4);
+}
+
+.figma-home .stats-line {
+  font-size: var(--fg-size-body);
+  font-weight: var(--fg-weight-body);
+  line-height: var(--fg-leading-tight);
+  opacity: var(--fg-opacity-muted);
+}
+
+.figma-home .stat-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--fg-space-6);
+  margin: var(--fg-space-8) 0;
+}
+
+.figma-home .stat-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fg-space-1);
+  background: var(--fg-canvas);
+  border: 1px solid var(--fg-border);
+  border-radius: var(--fg-radius-md);
+  padding: var(--fg-space-6);
+  text-decoration: none !important;
+}
+
+.figma-home .stat-block:hover {
+  background: var(--fg-surface-1);
+  border-color: var(--fg-border);
+}
+
+.figma-home .stat-block-count {
+  font-size: var(--fg-size-h3);
+  font-weight: var(--fg-weight-heading);
+  color: var(--fg-text);
+  opacity: 1;
+}
+
+.figma-home .stat-block-label {
+  font-size: var(--fg-size-ui);
+  font-weight: var(--fg-weight-body);
+  color: var(--fg-text);
+  opacity: var(--fg-opacity-muted);
+}
+
+.figma-home .callout {
+  font-size: var(--fg-size-ui);
+  line-height: var(--fg-leading-relaxed);
+  opacity: var(--fg-opacity-muted);
+  border-left: 2px solid var(--fg-border);
+  padding-left: var(--fg-space-4);
+  margin: var(--fg-space-8) 0;
+}
+
+.figma-home .callout strong {
+  font-weight: var(--fg-weight-heading);
+  opacity: 1;
+  color: var(--fg-text);
+}
+
+.figma-home h2 {
+  font-family: inherit;
+  font-weight: var(--fg-weight-heading);
+  font-size: var(--fg-size-h3);
+  line-height: var(--fg-leading-tight);
+  letter-spacing: var(--fg-tracking);
+  color: var(--fg-text);
+  border: none;
+  padding: 0;
+  margin: var(--fg-space-12) 0 var(--fg-space-6);
+}
+
+.figma-home .how-steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--fg-space-6);
+}
+
+.figma-home .how-steps li {
+  counter-increment: step;
+  display: flex;
+  gap: var(--fg-space-4);
+  align-items: flex-start;
+}
+
+.figma-home .how-steps li::before {
+  content: counter(step);
+  flex: none;
+  width: var(--fg-chip-size);
+  height: var(--fg-chip-size);
+  border-radius: var(--fg-radius-sm);
+  background: var(--fg-surface-1);
+  color: var(--fg-text);
+  font-size: var(--fg-size-label);
+  font-weight: var(--fg-weight-heading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.figma-home .how-steps .step-title {
+  font-size: var(--fg-size-ui);
+  font-weight: var(--fg-weight-heading);
+  color: var(--fg-text);
+  margin: 0 0 var(--fg-space-1);
+}
+
+.figma-home .how-steps .step-body {
+  font-size: var(--fg-size-ui);
+  font-weight: var(--fg-weight-body);
+  line-height: var(--fg-leading-relaxed);
+  opacity: var(--fg-opacity-muted);
+  margin: 0;
+}
+
+.figma-home .identity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--fg-space-4);
+}
+
+.figma-home .identity-list li {
+  font-size: var(--fg-size-ui);
+  line-height: var(--fg-leading-relaxed);
+  opacity: var(--fg-opacity-muted);
+}
+
+.figma-home .identity-list strong {
+  font-weight: var(--fg-weight-heading);
+  opacity: 1;
+  color: var(--fg-text);
+  margin-right: var(--fg-space-1);
+}
+
+.figma-home code {
+  /* !important throughout: VitePress's default ":not(pre) > code" inline
+     code styling (Shiki syntax colors) otherwise outranks a single class
+     selector here. */
+  font-family: inherit !important;
+  font-size: var(--fg-size-ui) !important;
+  font-weight: var(--fg-weight-body) !important;
+  background: var(--fg-surface-1) !important;
+  color: var(--fg-text) !important;
+  border-radius: var(--fg-radius-sm) !important;
+  padding: var(--fg-space-1) var(--fg-space-2) !important;
+}

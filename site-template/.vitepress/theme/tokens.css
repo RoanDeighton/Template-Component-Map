@@ -1,0 +1,43 @@
+/* Design tokens for the homepage's figma-native-v2 translation (see
+   custom.css for the actual component rules that consume these). Scoped
+   under .figma-home rather than :root — this is that one design system's
+   palette/scale, not a site-wide brand, and it shouldn't leak into the
+   rest of VitePress's default theme. Change a value here once; every rule
+   in custom.css that reads the same token picks it up automatically. */
+
+.figma-home {
+  /* Color */
+  --fg-text: #1f1f1f;
+  --fg-canvas: #ffffff;
+  --fg-surface-1: #f1f1f1;
+  --fg-border: #d1d1d1;
+  --fg-opacity-muted: 0.6; /* mirrors 03_TOKENS.md's TEXT_60 */
+
+  /* Type — mirrors 03_TOKENS.md's WEIGHT_BODY/WEIGHT_HEADING and type scale */
+  --fg-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --fg-weight-body: 400;
+  --fg-weight-heading: 600;
+  --fg-size-label: 12px; /* labels, badges, meta (minimum) */
+  --fg-size-ui: 14px;    /* UI text, secondary body */
+  --fg-size-body: 16px;  /* body default */
+  --fg-size-h3: 32px;    /* sub-section */
+  --fg-size-h1: 64px;    /* H1 editorial */
+  --fg-tracking: 0;
+  --fg-leading-tight: 1.2;    /* headings, single-line UI text */
+  --fg-leading-relaxed: 1.5;  /* multi-line body copy */
+
+  /* Spacing — mirrors 03_TOKENS.md's 4px base scale */
+  --fg-space-1: 4px;
+  --fg-space-2: 8px;
+  --fg-space-4: 16px;
+  --fg-space-6: 24px;
+  --fg-space-8: 32px;
+  --fg-space-12: 48px;
+
+  /* Radius — mirrors 03_TOKENS.md */
+  --fg-radius-sm: 4px;
+  --fg-radius-md: 8px;
+
+  /* Component — the numbered step chip in "how this was made" */
+  --fg-chip-size: 24px;
+}
