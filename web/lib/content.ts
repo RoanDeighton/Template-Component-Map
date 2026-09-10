@@ -1,0 +1,324 @@
+import fs from "node:fs";
+import path from "node:path";
+import matter from "gray-matter";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
+import rehypeStringify from "rehype-stringify";
+import { visit } from "unist-util-visit";
+
+// The crawler/analyzer pipeline (src/crawl.ts, src/analyze.ts) writes its
+// output here — this app is a read-only frontend over that same data,
+// never a copy of it.
+const OUTPUT_ROOT = path.resolve(process.cwd(), "..", "output");
+
+export interface SiteMeta {
+  slug: string;
+  title: string;
+  description: string;
+}
+
+export interface Heading {
+  id: string;
+  text: string;
+  level: 2 | 3;
+}
+
+export interface ContentDoc {
+  slug: string;
+  title: string;
+  html: string;
+  headings: Heading[];
+}
+
+// Markdown image paths are relative to the .md file's own location on
+// disk (e.g. "../../pages/nl/crop-header.png" from content/components/).
+// The browser has no such filesystem — it needs an absolute URL under
+// /assets/<site>/..., which public/assets/<site> is symlinked to serve
+// (see public/assets/README or the symlink itself).
+function resolveAssetSrc(site: string, mdFileDir: string, src: string): string {
+  if (/^(https?:)?\/\//.test(src)) return src;
+  const absoluteFsPath = path.resolve(mdFileDir, src);
+  const siteRoot = path.join(OUTPUT_ROOT, site);
+  const relativeToSite = path.relative(siteRoot, absoluteFsPath).split(path.sep).join("/");
+  return `/assets/${site}/${relativeToSite}`;
+}
+
+function rehypeRewriteImages({ site, mdFileDir }: { site: string; mdFileDir: string }) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (tree: any) => {
+    visit(tree, "element", (node: any) => {
+      if (node.tagName !== "img") return;
+      const src = node.properties?.src;
+      if (typeof src !== "string") return;
+      node.properties.src = resolveAssetSrc(site, mdFileDir, src);
+    });
+  };
+}
+
+// Collects h2/h3 (id already assigned by rehype-slug, which must run
+// before this) into `out` for the "On this page" TOC — same idea as
+// VitePress's own outline: { level: [2, 3] }.
+function rehypeCollectHeadings(out: Heading[]) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (tree: any) => {
+    visit(tree, "element", (node: any) => {
+      if (node.tagName !== "h2" && node.tagName !== "h3") return;
+      const id = node.properties?.id;
+      if (typeof id !== "string") return;
+      const text = node.children
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .filter((c: any) => c.type === "text")
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .map((c: any) => c.value)
+        .join("");
+      out.push({ id, text, level: node.tagName === "h2" ? 2 : 3 });
+    });
+  };
+}
+
+// Drops the content's own leading "# Title" — used where the title is
+// rendered separately (e.g. alongside DocNavArrows) so it doesn't appear
+// twice.
+function rehypeStripFirstHeading() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (tree: any) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const idx = tree.children.findIndex((n: any) => n.type === "element" && n.tagName === "h1");
+    if (idx !== -1) tree.children.splice(idx, 1);
+  };
+}
+
+function markdownToHtml(
+  markdown: string,
+  site: string,
+  mdFileDir: string,
+  options: { stripFirstHeading?: boolean } = {},
+): { html: string; headings: Heading[] } {
+  const headings: Heading[] = [];
+  const pipeline = unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeRewriteImages, { site, mdFileDir })
+    .use(rehypeSlug)
+    .use(rehypeCollectHeadings, headings);
+  if (options.stripFirstHeading) pipeline.use(rehypeStripFirstHeading);
+  const file = pipeline.use(rehypeStringify).processSync(markdown);
+  return { html: String(file), headings };
+}
+
+export function listSites(): string[] {
+  if (!fs.existsSync(OUTPUT_ROOT)) return [];
+  return fs
+    .readdirSync(OUTPUT_ROOT, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && fs.existsSync(path.join(OUTPUT_ROOT, d.name, "content", "overview.md")))
+    .map((d) => d.name)
+    .sort();
+}
+
+export function getSiteMeta(site: string): SiteMeta {
+  const siteJsonPath = path.join(OUTPUT_ROOT, site, "site.json");
+  const fallback = { title: site, description: "" };
+  const meta = fs.existsSync(siteJsonPath) ? JSON.parse(fs.readFileSync(siteJsonPath, "utf-8")) : fallback;
+  return { slug: site, title: meta.title ?? site, description: meta.description ?? "" };
+}
+
+function docsInDir(site: string, subdir: "components" | "pages"): { slug: string; title: string }[] {
+  const dir = path.join(OUTPUT_ROOT, site, "content", subdir);
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".md") && f !== "overview.md")
+    .sort()
+    .map((f) => {
+      const slug = f.replace(/\.md$/, "");
+      const { data } = matter(fs.readFileSync(path.join(dir, f), "utf-8"));
+      const fallback = slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+      return { slug, title: data.title ?? fallback };
+    });
+}
+
+export function listComponents(site: string) {
+  return docsInDir(site, "components");
+}
+
+export function listPages(site: string) {
+  return docsInDir(site, "pages");
+}
+
+// Previous/next within a doc list, by slug — used for the prev/next
+// arrows next to a doc's title.
+export function getAdjacentDocs(
+  site: string,
+  kind: "components" | "pages",
+  slug: string,
+): { prev: { slug: string; title: string; href: string } | null; next: { slug: string; title: string; href: string } | null } {
+  const list = kind === "components" ? listComponents(site) : listPages(site);
+  const i = list.findIndex((d) => d.slug === slug);
+  const at = (idx: number) => {
+    const d = list[idx];
+    return d ? { slug: d.slug, title: d.title, href: `/${site}/${kind}/${d.slug}` } : null;
+  };
+  return { prev: i > 0 ? at(i - 1) : null, next: i >= 0 && i < list.length - 1 ? at(i + 1) : null };
+}
+
+export interface SearchItem {
+  title: string;
+  href: string;
+  group: "Home" | "Components" | "Pages";
+}
+
+export function getSearchIndex(site: string): SearchItem[] {
+  const items: SearchItem[] = [{ title: "Home", href: `/${site}`, group: "Home" }];
+  items.push(
+    { title: "All components", href: `/${site}/components`, group: "Components" },
+    ...listComponents(site).map((c): SearchItem => ({
+      title: c.title,
+      href: `/${site}/components/${c.slug}`,
+      group: "Components",
+    })),
+  );
+  items.push(
+    { title: "All pages", href: `/${site}/pages`, group: "Pages" },
+    ...listPages(site).map((p): SearchItem => ({
+      title: p.title,
+      href: `/${site}/pages/${p.slug}`,
+      group: "Pages",
+    })),
+  );
+  return items;
+}
+
+function readDoc(mdPath: string, site: string, options: { stripFirstHeading?: boolean } = {}): ContentDoc {
+  const raw = fs.readFileSync(mdPath, "utf-8");
+  const { data, content } = matter(raw);
+  const slug = path.basename(mdPath, ".md");
+  const { html, headings } = markdownToHtml(content, site, path.dirname(mdPath), options);
+  return { slug, title: data.title ?? slug, html, headings };
+}
+
+export function getOverview(site: string): ContentDoc {
+  return readDoc(path.join(OUTPUT_ROOT, site, "content", "overview.md"), site);
+}
+
+// Splits the overview doc around the "<!-- stat-blocks -->" marker so the
+// homepage can render a real React stat-card component there (real counts,
+// real Next.js links) instead of the raw HTML that lived in that spot for
+// the old VitePress version. Both halves go through the normal markdown
+// pipeline independently; their headings are merged back into one list for
+// the TOC.
+export function getOverviewSplit(site: string): { beforeHtml: string; afterHtml: string; headings: Heading[] } {
+  const mdPath = path.join(OUTPUT_ROOT, site, "content", "overview.md");
+  const raw = fs.readFileSync(mdPath, "utf-8");
+  const { content } = matter(raw);
+  const marker = "<!-- stat-blocks -->";
+  const idx = content.indexOf(marker);
+  const mdFileDir = path.dirname(mdPath);
+  if (idx === -1) {
+    const { html, headings } = markdownToHtml(content, site, mdFileDir);
+    return { beforeHtml: html, afterHtml: "", headings };
+  }
+  const before = markdownToHtml(content.slice(0, idx), site, mdFileDir);
+  const after = markdownToHtml(content.slice(idx + marker.length), site, mdFileDir);
+  return { beforeHtml: before.html, afterHtml: after.html, headings: [...before.headings, ...after.headings] };
+}
+
+export function getComponentsOverview(site: string): ContentDoc | null {
+  const p = path.join(OUTPUT_ROOT, site, "content", "components", "overview.md");
+  return fs.existsSync(p) ? readDoc(p, site) : null;
+}
+
+export interface ComponentTableRow {
+  class: string;
+  title: string;
+  href: string;
+  pages: number;
+  previewImage: string | null;
+}
+
+// The first image referenced in a component's own doc — its captured
+// screenshot — used as a small preview thumbnail in the components table's
+// hover card. Reads just the raw markdown rather than running the full
+// remark/rehype pipeline, since that's all a single image src needs.
+function getComponentPreviewImage(site: string, slug: string): string | null {
+  const mdPath = path.join(OUTPUT_ROOT, site, "content", "components", `${slug}.md`);
+  if (!fs.existsSync(mdPath)) return null;
+  const raw = fs.readFileSync(mdPath, "utf-8");
+  const { content } = matter(raw);
+  const match = content.match(/!\[[^\]]*\]\(([^)]+)\)/);
+  if (!match) return null;
+  return resolveAssetSrc(site, path.dirname(mdPath), match[1]);
+}
+
+export interface ComponentsTable {
+  title: string;
+  beforeHtml: string;
+  rows: ComponentTableRow[];
+  afterHtml: string;
+  headings: Heading[];
+}
+
+// Parses the "| Class | UX Title | Pages |" markdown table out of
+// components/overview.md into structured rows for the real shadcn <Table>,
+// keeping everything else (the intro bullets, the "## Notes" section) as
+// normal prose HTML around it.
+export function getComponentsTable(site: string): ComponentsTable | null {
+  const mdPath = path.join(OUTPUT_ROOT, site, "content", "components", "overview.md");
+  if (!fs.existsSync(mdPath)) return null;
+  const raw = fs.readFileSync(mdPath, "utf-8");
+  const { content } = matter(raw);
+  const mdFileDir = path.dirname(mdPath);
+
+  const lines = content.split("\n");
+  const tableStart = lines.findIndex((l) => l.trim().startsWith("| Class"));
+  if (tableStart === -1) {
+    const { html, headings } = markdownToHtml(content, site, mdFileDir, { stripFirstHeading: true });
+    return { title: "Components (0)", beforeHtml: html, rows: [], afterHtml: "", headings };
+  }
+
+  let tableEnd = tableStart + 2;
+  while (tableEnd < lines.length && lines[tableEnd].trim().startsWith("|")) tableEnd++;
+
+  const rows: ComponentTableRow[] = lines.slice(tableStart + 2, tableEnd).map((line) => {
+    const cells = line
+      .split("|")
+      .slice(1, -1)
+      .map((c) => c.trim());
+    const [cls, titleCell, pagesCell] = cells;
+    const linkMatch = titleCell.match(/\[(.*?)\]\((.*?)\)/);
+    const slug = linkMatch ? linkMatch[2].replace(/\.md$/, "") : "";
+    return {
+      class: cls,
+      title: linkMatch ? linkMatch[1] : titleCell,
+      href: `/${site}/components/${slug}`,
+      pages: Number(pagesCell),
+      previewImage: slug ? getComponentPreviewImage(site, slug) : null,
+    };
+  });
+
+  const before = markdownToHtml(lines.slice(0, tableStart).join("\n"), site, mdFileDir, { stripFirstHeading: true });
+  const after = markdownToHtml(lines.slice(tableEnd).join("\n"), site, mdFileDir);
+
+  return {
+    title: `Components (${rows.length})`,
+    beforeHtml: before.html,
+    rows,
+    afterHtml: after.html,
+    headings: [...before.headings, ...after.headings],
+  };
+}
+
+export function getComponentDoc(site: string, slug: string): ContentDoc | null {
+  const p = path.join(OUTPUT_ROOT, site, "content", "components", `${slug}.md`);
+  return fs.existsSync(p) ? readDoc(p, site, { stripFirstHeading: true }) : null;
+}
+
+export function getPageDoc(site: string, slug: string): ContentDoc | null {
+  const p = path.join(OUTPUT_ROOT, site, "content", "pages", `${slug}.md`);
+  return fs.existsSync(p) ? readDoc(p, site, { stripFirstHeading: true }) : null;
+}

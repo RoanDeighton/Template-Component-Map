@@ -2,50 +2,13 @@
 title: Rijksmuseum — Site Inventory Overview
 ---
 
-<script setup>
-// This page's defined style has no dark-mode tokens, so it forces the
-// whole site shell (nav included) to light while it's open — not just
-// this content card — otherwise you get a white card stranded in a dark
-// shell, which reads as broken rather than deliberate.
-import { useData } from "vitepress";
-import { onMounted, onUnmounted, watch } from "vue";
-
-const { isDark } = useData();
-let previous = false;
-
-onMounted(() => {
-  previous = isDark.value;
-  isDark.value = false;
-});
-
-const stopWatch = watch(isDark, (v) => {
-  if (v) isDark.value = false;
-});
-
-onUnmounted(() => {
-  stopWatch();
-  isDark.value = previous;
-});
-</script>
-
-<div class="homepage">
-
 <p class="eyebrow">Component inventory</p>
 
 # Rijksmuseum
 
 <p class="stats-line">3 captured pages, distilled into 3 unique layout templates and 10 reusable components.</p>
 
-<div class="stat-blocks">
-  <a class="stat-block" href="components/overview.html">
-    <span class="stat-block-count">10</span>
-    <span class="stat-block-label">Components</span>
-  </a>
-  <a class="stat-block" href="pages/agenda-listing.html">
-    <span class="stat-block-count">3</span>
-    <span class="stat-block-label">Pages</span>
-  </a>
-</div>
+<!-- stat-blocks -->
 
 <p class="callout"><strong>Test run.</strong> This is a small, hand-picked 3-page run (homepage, "Bezoek & tickets", "Agenda") used to validate the pipeline before running it across the full site — the numbers above reflect only these 3 pages, not the whole site. Since every page in this test happens to be structurally distinct, each one produced its own template; a larger run would show actual template reuse (e.g. individual exhibition pages, collection object pages).</p>
 
@@ -87,5 +50,3 @@ Pulled from actual computed styles, not estimated from screenshots:
   <li><strong>Body text color:</strong> white (<code>rgb(255,255,255)</code>) on dark/image backgrounds throughout the pages sampled</li>
   <li><strong>Footer background:</strong> solid black (<code>rgb(0,0,0)</code>)</li>
 </ul>
-
-</div>
