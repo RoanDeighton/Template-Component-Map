@@ -16,7 +16,13 @@ export function DocPage({
   return (
     <div className="flex gap-16">
       <div className="min-w-0 flex-1">
-        <article className="mx-auto max-w-3xl space-y-6">
+        {/* space-y-12 (48px) between the title group and the content group,
+            matching both the components overview page's group spacing and
+            .prose h2's own 48px top margin — one consistent "gap between
+            logical groups" value across the app rather than a smaller one
+            here that reads as tighter than the sections within the content
+            itself. */}
+        <article className="mx-auto max-w-3xl space-y-12">
           <div className="flex items-center justify-between gap-4">
             <h1 className="text-3xl font-semibold tracking-tight text-foreground">{doc.title}</h1>
             {showNav && <DocNavArrows prev={prev ?? null} next={next ?? null} />}

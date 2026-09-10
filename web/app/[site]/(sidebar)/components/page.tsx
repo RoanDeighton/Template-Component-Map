@@ -29,17 +29,24 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
   return (
     <div className="flex gap-16">
       <div className="min-w-0 flex-1">
-        <article className="mx-auto max-w-3xl space-y-6">
-          <div className="flex items-center justify-between gap-4">
-            <h1 className="text-3xl font-semibold tracking-tight text-foreground">{doc.title}</h1>
-            {first && (
-              <DocNavArrows
-                prev={null}
-                next={{ slug: first.slug, title: first.title, href: `/${site}/components/${first.slug}` }}
-              />
-            )}
+        {/* Each direct child of this article is one logical group (title +
+            intro copy, Functional, Editorial, Notes) — the larger space-y-12
+            between them reads as a section break; each group's own tighter
+            internal spacing (space-y-4/6) keeps its own heading/body/list
+            read as one unit. */}
+        <article className="mx-auto max-w-3xl space-y-12">
+          <div className="space-y-6">
+            <div className="flex items-center justify-between gap-4">
+              <h1 className="text-3xl font-semibold tracking-tight text-foreground">{doc.title}</h1>
+              {first && (
+                <DocNavArrows
+                  prev={null}
+                  next={{ slug: first.slug, title: first.title, href: `/${site}/components/${first.slug}` }}
+                />
+              )}
+            </div>
+            <div className="prose prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: doc.beforeHtml }} />
           </div>
-          <div className="prose prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: doc.beforeHtml }} />
           {/* Functional: the site's structural chrome (header, footer, nav,
               cookie bar, search, ...) — the same handful of things reused
               around every page. Editorial: everything else, the blocks
