@@ -2,7 +2,7 @@
 title: Rijksmuseum — Components
 ---
 
-# Components (10)
+# Components (11)
 
 - **Class**: the component's own name as used on the site, its CSS class where the markup gives it one, otherwise its element (noted as such)
 - **UX Title**: the descriptive name used throughout this inventory
@@ -11,6 +11,7 @@ title: Rijksmuseum — Components
 | Class | UX Title | Pages |
 |---|---|---|
 | link-section | [Category Link Grid](category-link-grid.md) | 1 |
+| cookie-consent-bar | [Cookie Bar](cookie-bar.md) | 1 |
 | block-full-width-overflow | [Full-Width Promo Block](full-width-promo-block.md) | 1 |
 | whatson-highlights | [Highlights Carousel](highlights-carousel.md) | 1 |
 | page-header block-full-width-overflow | [Page Header Banner](page-header-banner.md) | 2 |

@@ -315,6 +315,14 @@ async function main() {
   const capturedPages: any[] = [];
   const context = await browser.newContext({ userAgent: options.userAgent, viewport: { width: CAPTURE_WIDTH, height: CAPTURE_VIEWPORT_HEIGHT } });
 
+  // The context (and its cookies) is shared across every captured page, so
+  // the banner only ever appears once — on whichever page happens to load
+  // first — after which it's dismissed for the rest of the run. Claim the
+  // capture optimistically before the (concurrent) dismiss call so two
+  // pages can't both try; release the claim if nothing was actually there
+  // so a later page still gets a chance.
+  let cookieBannerClaimed = false;
+
   await withConcurrency(finalCaptureList, options.concurrency, async ({ url, pattern }) => {
     let slug = slugFromUrl(url);
     let n = 2;
@@ -348,7 +356,11 @@ async function main() {
       // Brief buffer for client-side hydration/rendering that happens after
       // the "load" event on JS-heavy sites, before we start interacting.
       await page.waitForTimeout(1000);
-      await dismissCookieBanner(page);
+      const wantsCookieScreenshot = !cookieBannerClaimed;
+      if (wantsCookieScreenshot) cookieBannerClaimed = true;
+      const cookieBannerScreenshotPath = wantsCookieScreenshot ? path.join(pageDir, "cookie-bar.png") : undefined;
+      const { screenshotTaken: cookieBannerCaptured } = await dismissCookieBanner(page, cookieBannerScreenshotPath);
+      if (wantsCookieScreenshot && !cookieBannerCaptured) cookieBannerClaimed = false;
       const title = await page.title();
 
       // Deliberately not `page.screenshot({ fullPage: true })`: that renders
@@ -382,7 +394,9 @@ async function main() {
         styles: `pages/${slug}/styles.json`,
         capturedAt: new Date().toISOString(),
         blankSectionFlags,
+        ...(cookieBannerCaptured ? { cookieBannerScreenshot: `pages/${slug}/cookie-bar.png` } : {}),
       });
+      if (cookieBannerCaptured) console.log(`    captured cookie banner: pages/${slug}/cookie-bar.png`);
       console.log(`  captured: ${url}`);
       for (const flag of blankSectionFlags) {
         console.log(`    ⚠ ${flag.path} (.${flag.classes.split(" ")[0]}): ${flag.note}`);
