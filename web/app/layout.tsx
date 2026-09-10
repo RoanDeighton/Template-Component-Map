@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Site Inventory",
   description: "Component inventories generated from real sites.",
+  // Reachable by direct link only, kept out of search engines — matches
+  // the previous VitePress deploy's policy (see robots.txt).
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

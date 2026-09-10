@@ -1,4 +1,4 @@
-name: Deploy site inventories to GitHub Pages
+name: Deploy site inventory to GitHub Pages
 
 on:
   push:
@@ -23,48 +23,26 @@ jobs:
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: web/package-lock.json
       - run: npm ci
+        working-directory: web
 
-      # GitHub Pages serves exactly one site per repo, but this repo can hold
-      # many site inventories (output/<site>/). So: build every site that has
-      # generated content into its own subfolder of one combined deploy
-      # (…/<repo>/<site>/), plus a small landing page linking to each. This
-      # requires zero workflow changes when a new site inventory is added —
-      # it's discovered automatically from the output/ folder.
-      - name: Build every site inventory
-        run: |
-          set -e
-          mkdir -p combined-dist
-
-          # Unlisted, not indexed: reachable by direct link, kept out of
-          # search engines. robots.txt covers the whole deploy (landing page
-          # + every per-site subfolder); the per-site VitePress builds also
-          # carry a matching <meta name="robots"> tag (see site-template/.vitepress/config.ts).
-          printf 'User-agent: *\nDisallow: /\n' > combined-dist/robots.txt
-
-          echo "<!doctype html><meta charset=utf-8><title>Site Inventories</title><meta name=robots content='noindex, nofollow'>" > combined-dist/index.html
-          echo "<body style='font-family:system-ui,sans-serif;max-width:640px;margin:4rem auto;padding:0 1rem'>" >> combined-dist/index.html
-          echo "<h1>Site Inventories</h1><ul>" >> combined-dist/index.html
-
-          for dir in output/*/; do
-            site="$(basename "$dir")"
-            if [ ! -f "${dir}content/overview.md" ]; then
-              echo "skip $site (no content/overview.md)"
-              continue
-            fi
-            echo "building $site"
-            SITE="$site" BASE_PATH="/${{ github.event.repository.name }}/$site/" npm run site:build
-            mkdir -p "combined-dist/$site"
-            cp -r "output/$site/site-dist/." "combined-dist/$site/"
-            echo "<li><a href=\"./$site/\">$site</a></li>" >> combined-dist/index.html
-          done
-
-          echo "</ul></body>" >> combined-dist/index.html
+      # This is a GitHub Pages *project* site, served from
+      # /<repo-name>/... rather than the domain root — NEXT_BASE_PATH bakes
+      # that prefix into every internal link and asset URL at build time
+      # (see web/next.config.ts). The app itself is a static export: every
+      # route is already enumerable at build time from output/<site>/,
+      # read straight off disk (see web/lib/content.ts) — no server needed.
+      - name: Build the Next.js app
+        working-directory: web
+        run: npm run build
+        env:
+          NEXT_BASE_PATH: /${{ github.event.repository.name }}
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: combined-dist
+          path: web/out
 
   deploy:
     needs: build
