@@ -25,7 +25,7 @@ cmsFields:
     description: Tile destination, an exhibition/shop promo on the Homepage, a navigation shortcut on Visitor Info.
 ---
 
-Two side-by-side half-width tiles, each image-led with a short title beneath. This is the **same canonical component reused for two different jobs**: on the Homepage it pairs an exhibition promo with its companion shop/book promo (content marketing), while on the Visitor Info page it's repurposed as a simple 2-item navigation shortcut (Agenda, Praktische info). It's exactly the kind of structural match across differently-named contexts that reconciliation is meant to catch, and the automated pass missed it (it only compared elements one level deep under `<main>`, and the homepage instance sits nested inside the homepage's single wrapping section). The markup and class name are identical between the two.
+Pairs two related pieces of content or navigation side by side, reused for both promotional pairings and simple navigation shortcuts.
 
 ## Variants observed
 

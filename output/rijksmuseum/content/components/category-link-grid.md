@@ -16,7 +16,7 @@ cmsFields:
     description: Ordered list of link items (label + URL), 3 to 5 per instance in this sample.
 ---
 
-A titled group of text links with no imagery, the plainest component found in this test run. Each instance has a heading and a short flat list of links.
+A titled list of links that helps visitors jump straight to content grouped by audience or activity, without needing images or long copy.
 
 Instances observed:
 - **"Speciaal voor"** ("Especially for"): Families en kinderen, Jongvolwassenen, Onderwijs, Toegankelijkheid, Vrienden (5 links)

@@ -24,7 +24,7 @@ cmsFields:
     description: Quote text and star rating, only present on the testimonial variant.
 ---
 
-An unusually tall (900 to 4900px) horizontally-oriented section, almost certainly using `position: sticky` to pin content in place while the user scrolls, revealing a sequence of images/slides. It's a common "storytelling" pattern on marketing-heavy sites, letting a set of full-height panels play out as the visitor scrolls vertically rather than needing horizontal swipe/click controls.
+A scroll-triggered sequence of full-height panels that tells a story as the visitor scrolls, used here for feature highlights and visitor testimonials.
 
 Two instances on this page:
 1. **Feature tiles carousel** (4903px tall): building exterior, gallery views, audio tour, café, shop, gardens, "always a free temporary exhibition."

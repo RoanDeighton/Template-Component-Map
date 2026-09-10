@@ -28,7 +28,7 @@ cmsFields:
     description: "Either a date range (\"t/m 13 september\") or a price (\"Al vanaf €7,50 pp\"), depending on the card type."
 ---
 
-A grid/carousel of current exhibitions, tours, and activities. Each card has an image, a status tag (e.g. "LAATSTE KANS" / "Last chance", "NU TE ZIEN" / "On view now"), a title, and a short secondary line: either a date range ("t/m 13 september") or a price ("Al vanaf €7,50 pp"). A "Zie alle" (See all) link sits above the grid alongside sub-links to "Tentoonstellingen" and "Rondleidingen".
+A scannable grid of current exhibitions and activities, so visitors can see what's on and how urgent or available each one is at a glance.
 
 ## Content pattern
 

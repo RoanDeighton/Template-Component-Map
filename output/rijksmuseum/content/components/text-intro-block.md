@@ -21,7 +21,7 @@ cmsFields:
     description: Destination of the optional read-more link.
 ---
 
-A short orienting paragraph placed directly under the Page Header Banner, with an optional "read more" style link. Kept as two separate but related entries rather than merged into one: the two instances use different class names (`intro-block` vs `minimal-expanding-intro-component`), and the Visitor Info page's class name suggests expand/collapse behavior that a static screenshot or HTML capture can't confirm. Worth checking with a larger sample whether these are the same component under a naming inconsistency, or two different components that happen to serve a similar role.
+A short paragraph that orients visitors right under the page banner, sometimes inviting them to read more.
 
 **Visitor Info instance:**
 

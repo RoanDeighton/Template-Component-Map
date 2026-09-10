@@ -24,9 +24,7 @@ cmsFields:
     description: Destination the entire block links through to, an exhibition, story, or feature page.
 ---
 
-A full-bleed background image with a short eyebrow label and headline overlaid in the bottom-left corner, the entire block acting as one link through to an exhibition, story, or feature. No body copy: this component is a visual entry point, not a content container.
-
-Three instances on the homepage, including a hero variant. Examples seen: the homepage hero ("RIJKSMUSEUM" wordmark over *The Night Watch*), a "Families en kinderen" promo, and a "Fiep Westendorp" exhibition promo.
+A full-bleed visual link into a single exhibition, story, or feature, built to catch attention rather than carry body copy.
 
 ## Variants observed
 

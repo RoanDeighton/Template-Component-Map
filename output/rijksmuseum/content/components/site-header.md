@@ -30,7 +30,7 @@ cmsFields:
     description: Remaining nav links (hamburger menu, search, login, giftshop), count varies 25 to 37 by page.
 ---
 
-Persistent top navigation, transparent background over the page content (no white bar). Left side: hamburger menu icon, search icon, a "back" breadcrumb-style link on interior pages (e.g. "‹ Home" on the Bezoek and Agenda pages, absent on the homepage itself). Right side: language switcher, login, giftshop link, and a filled orange "Rijksmuseum tickets" call-to-action button that's visually distinct from the rest of the nav (only colored element in the header).
+Persistent navigation that keeps search, language switching, and ticket purchasing within reach from anywhere on the site.
 
 ## Variants observed
 

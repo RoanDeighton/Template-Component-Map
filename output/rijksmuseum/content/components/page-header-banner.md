@@ -29,7 +29,7 @@ cmsFields:
     description: "Secondary link docked beside the intro text on the Visitor Info variant, e.g. \"Praktische informatie\"."
 ---
 
-Full-width banner used at the top of interior (non-homepage) pages: a full-bleed photo with the page's H1 title overlaid in large white type, plus a short one-line subtitle/description. Fixed height (900px in both instances measured).
+Introduces an interior page with its title and a short description, and can surface pricing or a practical next step alongside it.
 
 **Visitor Info variant** (with pricing box and secondary link):
 

@@ -38,6 +38,4 @@ cmsFields:
     description: Final row of secondary/legal links.
 ---
 
-Solid black footer, the only section on any of these pages with a fully opaque non-transparent background. Contains, top to bottom: visiting hours and address ("Bezoekersinformatie": Elke dag van 9-17 uur, Museumstraat 1, Amsterdam), a set of primary links (Over ons, Pers, Werken bij, Contact), two buttons ("Doneer ook" / "Nieuwsbrief"), an ANBI charity registration badge, social media icons (5), a row of sponsor/partner logos, and a final row of secondary/legal links.
-
-Identical on all 3 captured pages: 21 links, 10 images, 447px tall in every case, confirming this is a single shared, non-page-specific component.
+Gives visitors practical info, secondary navigation, and trust signals like sponsors and legal links at the end of every page.
