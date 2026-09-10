@@ -12,7 +12,7 @@ export default function HomePage() {
           const meta = getSiteMeta(slug);
           return (
             <li key={slug}>
-              <Link href={`/${slug}`} className="block px-4 py-3 text-sm hover:bg-muted">
+              <Link href={`/${slug}`} prefetch={false} className="block px-4 py-3 text-sm hover:bg-muted">
                 {meta.title}
               </Link>
             </li>

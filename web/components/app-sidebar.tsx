@@ -27,8 +27,13 @@ function NavGroup({ label, links, pathname }: { label?: string; links: SidebarLi
         <SidebarMenu className="gap-1">
           {links.map((link) => (
             <SidebarMenuItem key={link.href}>
+              {/* prefetch={false}: this is a fully static export, so there's
+                  no server-render latency for prefetch to hide — but with
+                  every link in a 10+ item sidebar visible at once, Next's
+                  default prefetch-on-viewport fires a burst of RSC-payload
+                  requests for every one of them on every page load. */}
               <SidebarMenuButton
-                render={<Link href={link.href} />}
+                render={<Link href={link.href} prefetch={false} />}
                 isActive={pathname.endsWith(link.href)}
                 className="w-fit text-xs font-semibold data-active:font-semibold"
               >

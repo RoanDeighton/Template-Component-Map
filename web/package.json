@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "node scripts/generate-thumbnails.mjs",
+    "predev": "node scripts/optimize-content-images.mjs && node scripts/generate-thumbnails.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/generate-thumbnails.mjs",
+    "prebuild": "node scripts/optimize-content-images.mjs && node scripts/generate-thumbnails.mjs",
     "build": "next build",
     "postbuild": "node scripts/clean-exported-assets.mjs",
     "start": "next start",

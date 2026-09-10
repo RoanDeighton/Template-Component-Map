@@ -106,7 +106,7 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
               <TableCell className="whitespace-normal px-4 py-3 text-muted-foreground">
                 {row.previewImage ? (
                   <HoverCard>
-                    <HoverCardTrigger render={<Link href={row.href} />} className="absolute inset-0" />
+                    <HoverCardTrigger render={<Link href={row.href} prefetch={false} />} className="absolute inset-0" />
                     <HoverCardContent className="w-72 p-0" side="right" align="start">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -118,7 +118,7 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
                     </HoverCardContent>
                   </HoverCard>
                 ) : (
-                  <Link href={row.href} className="absolute inset-0" />
+                  <Link href={row.href} prefetch={false} className="absolute inset-0" />
                 )}
                 {row.title}
               </TableCell>

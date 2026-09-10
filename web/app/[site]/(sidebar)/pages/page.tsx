@@ -17,7 +17,7 @@ export default async function PagesOverviewPage(props: PageProps<"/[site]/pages"
       <ul className="divide-y rounded-lg border">
         {pages.map((p) => (
           <li key={p.slug}>
-            <Link href={`/${site}/pages/${p.slug}`} className="block px-4 py-3 text-sm hover:bg-muted">
+            <Link href={`/${site}/pages/${p.slug}`} prefetch={false} className="block px-4 py-3 text-sm hover:bg-muted">
               {p.title}
             </Link>
           </li>

@@ -45,7 +45,14 @@ export interface ContentDoc {
 // next.config.ts).
 function resolveAssetSrc(site: string, mdFileDir: string, src: string): string {
   if (/^(https?:)?\/\//.test(src)) return src;
-  const absoluteFsPath = path.resolve(mdFileDir, src);
+  let absoluteFsPath = path.resolve(mdFileDir, src);
+  // scripts/optimize-content-images.mjs generates a compressed .webp
+  // sibling for any large screenshot — prefer it over the raw PNG/JPEG
+  // capture, which can run into the tens of megabytes.
+  const webpSibling = absoluteFsPath.replace(/\.(png|jpe?g)$/i, ".webp");
+  if (webpSibling !== absoluteFsPath && fs.existsSync(webpSibling)) {
+    absoluteFsPath = webpSibling;
+  }
   const siteRoot = path.join(OUTPUT_ROOT, site);
   const relativeToSite = path.relative(siteRoot, absoluteFsPath).split(path.sep).join("/");
   const basePath = process.env.NEXT_BASE_PATH ?? "";
