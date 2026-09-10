@@ -33,11 +33,14 @@ export function DocPage({
           />
         </article>
       </div>
-      {doc.headings.length > 0 && (
-        <aside className="hidden w-56 shrink-0 xl:block">
-          <TableOfContents headings={doc.headings} />
-        </aside>
-      )}
+      {/* Always reserve this column's width, even with no headings to show
+          in it — omitting the element entirely let the middle column's
+          flex-1 space (and its mx-auto center point) widen on pages
+          without a TOC, so the content visibly jumped sideways navigating
+          between pages that have one and pages that don't. */}
+      <aside className="hidden w-56 shrink-0 xl:block">
+        {doc.headings.length > 0 && <TableOfContents headings={doc.headings} />}
+      </aside>
     </div>
   );
 }

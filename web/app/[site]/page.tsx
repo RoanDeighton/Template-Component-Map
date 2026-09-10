@@ -34,11 +34,10 @@ export default async function OverviewPage(props: PageProps<"/[site]">) {
                 <div className="prose prose-neutral dark:prose-invert" dangerouslySetInnerHTML={{ __html: afterHtml }} />
               </article>
             </div>
-            {headings.length > 0 && (
-              <aside className="hidden w-56 shrink-0 xl:block">
-                <TableOfContents headings={headings} />
-              </aside>
-            )}
+            {/* Always reserve this column's width — see doc-page.tsx for why. */}
+            <aside className="hidden w-56 shrink-0 xl:block">
+              {headings.length > 0 && <TableOfContents headings={headings} />}
+            </aside>
           </div>
         </div>
       </main>
