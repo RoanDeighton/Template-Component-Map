@@ -1,8 +1,9 @@
 ---
 title: Site Header / Navigation
 class: No class listed
-exampleImage: ../../pages/nl/crop-header.png
-capturedFromPage: homepage
+examples:
+  - image: ../../pages/nl/crop-header.png
+    capturedFromPage: homepage
 usedOn:
   - homepage
   - agenda-listing
@@ -31,7 +32,3 @@ cmsFields:
 ---
 
 Persistent navigation that keeps search, language switching, and ticket purchasing within reach from anywhere on the site.
-
-## Variants observed
-
-- Link count varies by page (25 to 37 `<a>` tags counted). The homepage's header has fewer links than interior pages, likely due to an additional in-page breadcrumb/back link present only on non-homepage pages.

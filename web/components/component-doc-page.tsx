@@ -17,11 +17,13 @@ export function ComponentDocPage({
   const showNav = prev !== undefined || next !== undefined;
 
   // Mirrors render order below: whatever headings live inside the doc's
-  // own prose (Measured styles, Variants observed, ...) come first, then
-  // the three structural sections that always render in this fixed order.
+  // own prose come first, then the three structural sections that always
+  // render in this fixed order.
   const headings = [
     ...doc.headings,
-    ...(doc.exampleImage ? [{ id: "example", text: "Example", level: 2 as const }] : []),
+    ...(doc.examples.length > 0
+      ? [{ id: "example", text: doc.examples.length > 1 ? "Examples" : "Example", level: 2 as const }]
+      : []),
     { id: "cms-data-model", text: "CMS-Data model", level: 2 as const },
     ...(doc.usedOn.length > 0 ? [{ id: "used-on-slugs", text: "Used on slugs", level: 2 as const }] : []),
   ];
@@ -46,36 +48,45 @@ export function ComponentDocPage({
             dangerouslySetInnerHTML={{ __html: doc.html }}
           />
 
-          {doc.exampleImage && (
-            <section className="space-y-4">
+          {doc.examples.length > 0 && (
+            <section className="space-y-12">
               <h2 id="example" className="text-xl font-semibold tracking-tight text-foreground">
-                Example
+                {doc.examples.length > 1 ? "Examples" : "Example"}
               </h2>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={doc.exampleImage} alt={`${doc.title} example`} className="w-full rounded-lg border" />
-              {doc.capturedFrom && (
-                <p className="text-sm text-muted-foreground">
-                  Captured live from{" "}
-                  {doc.capturedFrom.liveUrl ? (
-                    <a
-                      href={doc.capturedFrom.liveUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1 text-foreground underline underline-offset-4"
-                    >
-                      {doc.capturedFrom.title}
-                      <ExternalLink className="size-3" />
-                    </a>
-                  ) : (
-                    <span className="text-foreground">{doc.capturedFrom.title}</span>
+              {doc.examples.map((example) => (
+                <div key={example.image} className="space-y-4">
+                  {example.label && <p className="text-sm font-medium text-foreground">{example.label}</p>}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={example.image}
+                    alt={example.label ? `${doc.title}, ${example.label}` : `${doc.title} example`}
+                    className="max-w-full rounded-lg border"
+                  />
+                  {example.capturedFrom && (
+                    <p className="text-sm text-muted-foreground">
+                      Captured live from{" "}
+                      {example.capturedFrom.liveUrl ? (
+                        <a
+                          href={example.capturedFrom.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 text-foreground underline underline-offset-4"
+                        >
+                          {example.capturedFrom.title}
+                          <ExternalLink className="size-3" />
+                        </a>
+                      ) : (
+                        <span className="text-foreground">{example.capturedFrom.title}</span>
+                      )}
+                      {". See the "}
+                      <Link href={example.capturedFrom.href} className="text-foreground underline underline-offset-4">
+                        {example.capturedFrom.title} page
+                      </Link>{" "}
+                      in this inventory.
+                    </p>
                   )}
-                  {". See the "}
-                  <Link href={doc.capturedFrom.href} className="text-foreground underline underline-offset-4">
-                    {doc.capturedFrom.title} page
-                  </Link>{" "}
-                  in this inventory.
-                </p>
-              )}
+                </div>
+              ))}
             </section>
           )}
 

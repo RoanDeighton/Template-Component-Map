@@ -14,11 +14,6 @@ import sharp from "sharp";
 const OUTPUT_ROOT = path.resolve(import.meta.dirname, "..", "..", "output");
 const THUMBNAIL_WIDTH = 480;
 
-function firstImageSrc(markdown) {
-  const match = markdown.match(/!\[[^\]]*\]\(([^)]+)\)/);
-  return match ? match[1] : null;
-}
-
 async function generateForSite(site) {
   const componentsDir = path.join(OUTPUT_ROOT, site, "content", "components");
   if (!fs.existsSync(componentsDir)) return;
@@ -29,8 +24,8 @@ async function generateForSite(site) {
     if (!file.endsWith(".md") || file === "overview.md") continue;
     const slug = file.replace(/\.md$/, "");
     const raw = fs.readFileSync(path.join(componentsDir, file), "utf-8");
-    const { content } = matter(raw);
-    const src = firstImageSrc(content);
+    const { data } = matter(raw);
+    const src = Array.isArray(data.examples) ? data.examples[0]?.image : null;
     if (!src || /^(https?:)?\/\//.test(src)) continue;
 
     const sourcePath = path.resolve(componentsDir, src);

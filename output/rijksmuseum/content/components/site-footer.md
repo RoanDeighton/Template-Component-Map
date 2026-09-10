@@ -1,8 +1,9 @@
 ---
 title: Site Footer
 class: No class listed
-exampleImage: ../../pages/nl/crop-footer.png
-capturedFromPage: homepage
+examples:
+  - image: ../../pages/nl/crop-footer.png
+    capturedFromPage: homepage
 usedOn:
   - homepage
   - agenda-listing

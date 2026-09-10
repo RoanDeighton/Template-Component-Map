@@ -1,8 +1,13 @@
 ---
 title: Page Header Banner
 class: page-header block-full-width-overflow
-exampleImage: ../../pages/nl-zien-en-doen/crop-main-0.png
-capturedFromPage: agenda-listing
+examples:
+  - image: ../../pages/nl-zien-en-doen/crop-main-0.png
+    label: Agenda variant
+    capturedFromPage: agenda-listing
+  - image: ../../pages/nl-bezoek/crop-main-0.png
+    label: Visitor Info variant, with pricing box and secondary link
+    capturedFromPage: visitor-info-page
 usedOn:
   - agenda-listing
   - visitor-info-page
@@ -30,11 +35,3 @@ cmsFields:
 ---
 
 Introduces an interior page with its title and a short description, and can surface pricing or a practical next step alongside it.
-
-**Visitor Info variant** (with pricing box and secondary link):
-
-![Page header banner, Visitor Info variant](../../pages/nl-bezoek/crop-main-0.png)
-
-## Variants observed
-
-- On the **Visitor Info** page, this component also carries a compact pricing summary box (e.g. "Volwassenen €25 / t/m 18 jaar Gratis") and a secondary link ("Praktische informatie") docked beside the intro text. The **Agenda** page's instance is plainer: title and subtitle only, no pricing box. Worth confirming with a larger sample whether the pricing box is specific to ticketed/visit-related pages or a general optional slot in this component.

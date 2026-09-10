@@ -1,8 +1,9 @@
 ---
 title: Sponsor Logo Strip
 class: sponsor-logos
-exampleImage: ../../pages/nl/crop-main-0.png
-capturedFromPage: homepage
+examples:
+  - image: ../../pages/nl/crop-main-0.png
+    capturedFromPage: homepage
 usedOn:
   - homepage
 cmsFields:

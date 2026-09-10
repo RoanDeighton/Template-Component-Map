@@ -1,8 +1,9 @@
 ---
 title: Cookie Bar
 class: cookie-consent-bar
-exampleImage: ../../pages/nl-zien-en-doen/cookie-bar.png
-capturedFromPage: agenda-listing
+examples:
+  - image: ../../pages/nl-zien-en-doen/cookie-bar.png
+    capturedFromPage: agenda-listing
 usedOn:
   - homepage
   - agenda-listing

@@ -1,8 +1,13 @@
 ---
 title: Text Intro Block
 class: intro-block / minimal-expanding-intro-component
-exampleImage: ../../pages/nl-zien-en-doen/crop-main-1.png
-capturedFromPage: agenda-listing
+examples:
+  - image: ../../pages/nl-zien-en-doen/crop-main-1.png
+    label: Agenda instance, plain paragraph with no link
+    capturedFromPage: agenda-listing
+  - image: ../../pages/nl-bezoek/crop-main-1.png
+    label: Visitor Info instance, with a "read more" link
+    capturedFromPage: visitor-info-page
 usedOn:
   - agenda-listing
   - visitor-info-page
@@ -22,12 +27,3 @@ cmsFields:
 ---
 
 A short paragraph that orients visitors right under the page banner, sometimes inviting them to read more.
-
-**Visitor Info instance:**
-
-![Text intro block, Visitor Info instance](../../pages/nl-bezoek/crop-main-1.png)
-
-## Variants observed
-
-- **Agenda instance:** plain paragraph, no visible link, no heading.
-- **Visitor Info instance:** paragraph plus a "Kom meer te weten over je bezoek" (Learn more about your visit) link, 2 links counted vs. 0 on the Agenda page.

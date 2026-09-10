@@ -1,8 +1,9 @@
 ---
 title: Highlights Carousel
 class: whatson-highlights
-exampleImage: ../../pages/nl-zien-en-doen/crop-main-2.png
-capturedFromPage: agenda-listing
+examples:
+  - image: ../../pages/nl-zien-en-doen/crop-main-2.png
+    capturedFromPage: agenda-listing
 usedOn:
   - agenda-listing
 cmsFields:
@@ -29,7 +30,3 @@ cmsFields:
 ---
 
 A scannable grid of current exhibitions and activities, so visitors can see what's on and how urgent or available each one is at a glance.
-
-## Content pattern
-
-Mixes two distinct card types under one visual system: time-limited exhibitions (date-driven) and always-available experiences like guided tours (price-driven). The status tag is what tells them apart, not the layout.

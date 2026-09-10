@@ -6,7 +6,7 @@ title: "Rijksmuseum: Site Inventory Overview"
 
 # Rijksmuseum
 
-<p class="stats-line">3 captured pages, distilled into 3 unique layout templates and 10 reusable components.</p>
+<p class="stats-line">3 captured pages, distilled into 3 unique layout templates and 11 reusable components.</p>
 
 <!-- stat-blocks -->
 

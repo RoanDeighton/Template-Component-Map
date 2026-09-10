@@ -304,8 +304,8 @@ export function isFunctionalComponent(title: string): boolean {
   return FUNCTIONAL_COMPONENT_PATTERNS.some((pattern) => pattern.test(title));
 }
 
-// The first image referenced in a component's own doc — its captured
-// screenshot — used as a small preview thumbnail in the components table's
+// The component's first example image (see the `examples` frontmatter
+// field), used as a small preview thumbnail in the components table's
 // hover card. Prefers the small pre-generated thumbnail (see
 // scripts/generate-thumbnails.mjs — the raw screenshots are full-page
 // captures, several MB each, too slow to load on hover) and only falls
@@ -320,10 +320,10 @@ function getComponentPreviewImage(site: string, slug: string): string | null {
   const mdPath = path.join(OUTPUT_ROOT, site, "content", "components", `${slug}.md`);
   if (!fs.existsSync(mdPath)) return null;
   const raw = fs.readFileSync(mdPath, "utf-8");
-  const { content } = matter(raw);
-  const match = content.match(/!\[[^\]]*\]\(([^)]+)\)/);
-  if (!match) return null;
-  return resolveAssetSrc(site, path.dirname(mdPath), match[1]);
+  const { data } = matter(raw);
+  const firstExample = Array.isArray(data.examples) ? data.examples[0] : null;
+  if (typeof firstExample?.image !== "string") return null;
+  return resolveAssetSrc(site, path.dirname(mdPath), firstExample.image);
 }
 
 export interface ComponentsTable {
@@ -399,14 +399,19 @@ export interface PageRef {
   href: string;
 }
 
+export interface ComponentExample {
+  image: string;
+  label: string | null;
+  capturedFrom: (PageRef & { liveUrl: string | null }) | null;
+}
+
 export interface ComponentDetailDoc {
   slug: string;
   title: string;
   class: string;
   html: string;
   headings: Heading[];
-  exampleImage: string | null;
-  capturedFrom: (PageRef & { liveUrl: string | null }) | null;
+  examples: ComponentExample[];
   usedOn: PageRef[];
   cmsFields: CmsField[];
 }
@@ -440,19 +445,27 @@ export function getComponentDoc(site: string, slug: string): ComponentDetailDoc 
     return page ? { slug: page.slug, title: page.title, href: `/${site}/pages/${page.slug}` } : null;
   };
 
-  const exampleImage = typeof data.exampleImage === "string" ? resolveAssetSrc(site, mdFileDir, data.exampleImage) : null;
+  const toCapturedFrom = (pageSlug: string): ComponentExample["capturedFrom"] => {
+    const ref = toPageRef(pageSlug);
+    if (!ref) return null;
+    const pageMdPath = path.join(OUTPUT_ROOT, site, "content", "pages", `${pageSlug}.md`);
+    const pageData = fs.existsSync(pageMdPath) ? matter(fs.readFileSync(pageMdPath, "utf-8")).data : {};
+    const origin = getSiteOrigin(site);
+    const liveUrl = origin && typeof pageData.url === "string" ? origin + pageData.url : null;
+    return { ...ref, liveUrl };
+  };
 
-  let capturedFrom: ComponentDetailDoc["capturedFrom"] = null;
-  if (typeof data.capturedFromPage === "string") {
-    const ref = toPageRef(data.capturedFromPage);
-    if (ref) {
-      const pageMdPath = path.join(OUTPUT_ROOT, site, "content", "pages", `${data.capturedFromPage}.md`);
-      const pageData = fs.existsSync(pageMdPath) ? matter(fs.readFileSync(pageMdPath, "utf-8")).data : {};
-      const origin = getSiteOrigin(site);
-      const liveUrl = origin && typeof pageData.url === "string" ? origin + pageData.url : null;
-      capturedFrom = { ...ref, liveUrl };
-    }
-  }
+  const examples: ComponentExample[] = Array.isArray(data.examples)
+    ? data.examples
+        .filter((e: unknown): e is { image: string; label?: string; capturedFromPage?: string } =>
+          typeof (e as { image?: unknown })?.image === "string",
+        )
+        .map((e) => ({
+          image: resolveAssetSrc(site, mdFileDir, e.image),
+          label: typeof e.label === "string" ? e.label : null,
+          capturedFrom: typeof e.capturedFromPage === "string" ? toCapturedFrom(e.capturedFromPage) : null,
+        }))
+    : [];
 
   const usedOn = (Array.isArray(data.usedOn) ? data.usedOn : [])
     .map((s: unknown) => (typeof s === "string" ? toPageRef(s) : null))
@@ -473,8 +486,7 @@ export function getComponentDoc(site: string, slug: string): ComponentDetailDoc 
     class: data.class ?? "No class listed",
     html,
     headings,
-    exampleImage,
-    capturedFrom,
+    examples,
     usedOn,
     cmsFields,
   };
