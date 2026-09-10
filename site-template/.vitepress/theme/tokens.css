@@ -15,6 +15,9 @@
   --fg-canvas: #ffffff;
   --fg-surface-1: #f1f1f1;
   --fg-border: #d1d1d1;
+  --fg-accent: #ff4a00;
+  --fg-accent-hover: #e64200;    /* ~10% darker, for hover states */
+  --fg-accent-soft: rgba(255, 74, 0, 0.14); /* translucent tint for active/hover backgrounds */
 
   /* Type */
   --fg-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;

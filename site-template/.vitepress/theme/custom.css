@@ -1,3 +1,24 @@
+/* Site-wide accent color. VitePress's own theme drives every brand accent
+   (link color, active nav/sidebar item, buttons) off these --vp-c-brand-*
+   variables, so redirecting them to our accent token changes all of it at
+   once instead of overriding each selector individually. Declared in both
+   :root and .dark since VitePress's own dark-mode brand values are
+   declared in .dark, at equal specificity to :root — without this, source
+   order alone would decide the tie. */
+:root {
+  --vp-c-brand-1: var(--fg-accent);
+  --vp-c-brand-2: var(--fg-accent-hover);
+  --vp-c-brand-3: var(--fg-accent);
+  --vp-c-brand-soft: var(--fg-accent-soft);
+}
+
+.dark {
+  --vp-c-brand-1: var(--fg-accent);
+  --vp-c-brand-2: var(--fg-accent-hover);
+  --vp-c-brand-3: var(--fg-accent);
+  --vp-c-brand-soft: var(--fg-accent-soft);
+}
+
 /* Site-wide: VitePress's default theme stripes every other table row.
    Flat looks cleaner for these tables (component/page listings), which are
    short lists to scan, not dense data grids that need row-tracking. */
@@ -11,6 +32,66 @@
 .vp-doc h2,
 .vp-doc .prev-next {
   border-top: none;
+}
+
+/* Site-wide: give tables the same radius as the stat-block cards. Default
+   border-collapse ignores border-radius entirely in most browsers, so this
+   switches to separate + border-spacing: 0 and moves the grid lines onto
+   each cell's bottom/right edge only (each cell no longer contributes a
+   top/left border) — otherwise adjacent cells would double up their shared
+   border now that they're no longer collapsed into one. The corners are
+   rounded on the corner cells themselves, not via overflow: hidden on the
+   table — that clips unreliably across browsers when a <table> has its own
+   border-radius, cutting some corners' cell backgrounds but not others.
+   display: table overrides VitePress's own default (display: block +
+   overflow-x: auto, for horizontal-scrolling wide tables) — with the
+   table as a block box, width: 100% sized the outer box only, while the
+   row/column content inside kept sizing itself independently, leaving a
+   dead gap between the last column and the table's own right edge. */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--fg-border);
+  border-radius: var(--fg-radius-md);
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: none;
+  border-bottom: 1px solid var(--fg-border);
+  border-right: 1px solid var(--fg-border);
+}
+
+.vp-doc tr > :last-child {
+  border-right: none;
+}
+
+.vp-doc tr:last-child > * {
+  border-bottom: none;
+}
+
+.vp-doc thead th:first-child {
+  border-top-left-radius: var(--fg-radius-md);
+}
+
+.vp-doc thead th:last-child {
+  border-top-right-radius: var(--fg-radius-md);
+}
+
+.vp-doc tbody tr:last-child td:first-child {
+  border-bottom-left-radius: var(--fg-radius-md);
+}
+
+/* Site-wide: VitePress underlines prose links by default. Color alone
+   (its existing blue) is enough of a signal here; drop the underline. */
+.vp-doc a:not(.header-anchor) {
+  text-decoration: none;
+}
+
+.vp-doc tbody tr:last-child td:last-child {
+  border-bottom-right-radius: var(--fg-radius-md);
 }
 
 /* The one shared presentation layer for every site inventory (see

@@ -104,6 +104,11 @@ export default defineConfig({
       ],
     },
     search: { provider: "local" },
-    outline: { level: [2, 3] },
+    outline: false,
+    // outline: false only empties the "On this page" list — VitePress still
+    // reserves the whole aside column's layout width regardless, which is
+    // exactly the leftover whitespace next to every table. aside: false
+    // removes the column itself so content actually reclaims that space.
+    aside: false,
   },
 });
