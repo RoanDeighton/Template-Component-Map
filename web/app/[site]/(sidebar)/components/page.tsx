@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { TableOfContents } from "@/components/table-of-contents";
 import { ComponentsTable } from "@/components/components-table";
 import { DocNavArrows } from "@/components/doc-nav-arrows";
-import { getComponentsTable, listComponents, listSites } from "@/lib/content";
+import { getComponentsTable, listSites, orderedComponents } from "@/lib/content";
 
 export function generateStaticParams() {
   return listSites().map((site) => ({ site }));
@@ -15,8 +15,9 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
 
   // The same list (and order) getAdjacentDocs() uses for every component
   // doc's own prev/next, so Overview → first → ... → last → (disabled)
-  // forms one consistent chain rather than two independently-ordered ones.
-  const first = listComponents(site)[0];
+  // forms one consistent chain rather than two independently-ordered ones
+  // — functional group first, then editorial, matching the sidebar.
+  const first = orderedComponents(site)[0];
 
   const functionalRows = doc.rows.filter((r) => r.functional);
   const editorialRows = doc.rows.filter((r) => !r.functional);

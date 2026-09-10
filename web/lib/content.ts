@@ -163,6 +163,19 @@ export function listPages(site: string) {
   return docsInDir(site, "pages");
 }
 
+// listComponents() sorted the same way the sidebar (and the overview
+// table's default sort) groups them — functional first, then editorial,
+// alphabetical within each group — so "next" from Overview, and every
+// component's own prev/next, walks in the order a reader actually sees
+// them in the sidebar rather than a flat alphabetical list that cuts
+// across the two groups.
+export function orderedComponents(site: string) {
+  const list = listComponents(site);
+  const functional = list.filter((c) => isFunctionalComponent(c.title));
+  const editorial = list.filter((c) => !isFunctionalComponent(c.title));
+  return [...functional, ...editorial];
+}
+
 // Previous/next within a doc list, by slug — used for the prev/next
 // arrows next to a doc's title. The Overview page is treated as the
 // (virtual) item before the first component/page, so the first doc's
@@ -173,7 +186,7 @@ export function getAdjacentDocs(
   kind: "components" | "pages",
   slug: string,
 ): { prev: { slug: string; title: string; href: string } | null; next: { slug: string; title: string; href: string } | null } {
-  const list = kind === "components" ? listComponents(site) : listPages(site);
+  const list = kind === "components" ? orderedComponents(site) : listPages(site);
   const i = list.findIndex((d) => d.slug === slug);
   const at = (idx: number) => {
     const d = list[idx];

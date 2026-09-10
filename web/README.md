@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site Inventory — presentation layer
 
-## Getting Started
+This is the shared frontend for every site inventory produced by the crawler/analyzer in the repo root — see the [root README](../README.md) for the full pipeline. It's a Next.js App Router app using real shadcn/ui (on Base UI, not Radix), statically exported for GitHub Pages.
 
-First, run the development server:
+It's a **read-only renderer**, not a content editor: it reads `../output/<site>/content/**/*.md` (and the images alongside it) at build time via `lib/content.ts`, generically for every site it finds — no site name is ever hardcoded here. See the root README's "Writing content" section for the exact markdown format this app expects.
+
+## Local development
+
+From the repo root (installs the crawler/analyzer deps too, needed for `output/` to exist):
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm install --prefix web
+npm run dev --prefix web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or from inside `web/` directly: `npm install && npm run dev`. Either way, `predev` runs two asset scripts first (`scripts/optimize-content-images.mjs`, `scripts/generate-thumbnails.mjs`) — see the root README for what they do.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open `http://localhost:3000/<site>` for whichever site exists under `../output/`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Building
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Static export to `out/` (`output: "export"` in `next.config.ts`). Set `NEXT_BASE_PATH=/<repo-name>` when building for GitHub Pages' subpath hosting (the deploy workflow does this automatically) — leave it unset for a build meant to be served from the domain root.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/[site]/` — the dynamic per-site routes: home, `/components`, `/pages`, and their `[slug]` detail pages, all under a shared `(sidebar)` layout group.
+- `components/` — app-specific components (sidebar, search, the components table, doc navigation) plus `components/ui/` — shadcn primitives, installed via the shadcn CLI, not hand-written.
+- `lib/content.ts` — the entire content-reading layer: parses markdown/frontmatter, resolves image paths, classifies components as Functional/Editorial, builds the search index. If you're wondering "where does X get computed", it's here.
+- `scripts/` — build-time asset generation (thumbnails, compressed images), not part of the request path.
