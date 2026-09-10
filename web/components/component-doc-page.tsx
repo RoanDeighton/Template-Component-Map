@@ -69,7 +69,7 @@ export function ComponentDocPage({
                   ) : (
                     <span className="text-foreground">{doc.capturedFrom.title}</span>
                   )}
-                  {" — see the "}
+                  {". See the "}
                   <Link href={doc.capturedFrom.href} className="text-foreground underline underline-offset-4">
                     {doc.capturedFrom.title} page
                   </Link>{" "}

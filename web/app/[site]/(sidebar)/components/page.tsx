@@ -60,7 +60,7 @@ export default async function ComponentsOverviewPage(props: PageProps<"/[site]/c
                 Functional
               </h2>
               <p className="text-sm text-muted-foreground">
-                Structural chrome reused around every page — header, footer, navigation, and the like.
+                Structural chrome reused around every page: header, footer, navigation, and the like.
               </p>
               <ComponentsTable rows={functionalRows} />
             </section>
