@@ -29,7 +29,7 @@ function NavGroup({ label, links, pathname }: { label?: string; links: SidebarLi
             <SidebarMenuItem key={link.href}>
               <SidebarMenuButton
                 render={<Link href={link.href} />}
-                isActive={pathname === link.href}
+                isActive={pathname.endsWith(link.href)}
                 className="w-fit text-xs font-semibold data-active:font-semibold"
               >
                 {link.title}
@@ -51,8 +51,14 @@ export function AppSidebar({
   componentLinks: SidebarLink[];
   pageLinks: SidebarLink[];
 }) {
-  const pathname = usePathname();
-  const section = pathname.startsWith(`/${site}/pages`) ? "pages" : "components";
+  // In this statically-exported, basePath-prefixed deploy, usePathname()
+  // returns the raw window.location.pathname verbatim — basePath and all
+  // (e.g. "/repo-name/site/components/slug/"), not stripped down to the
+  // logical route the way a real Next.js server would. Match against it
+  // with endsWith/includes rather than exact equality so this still works
+  // both there and in plain local dev (no basePath, no trailing slash).
+  const pathname = usePathname().replace(/\/$/, "") || "/";
+  const section = pathname.includes(`/${site}/pages`) ? "pages" : "components";
 
   const overview: SidebarLink[] =
     section === "pages"
