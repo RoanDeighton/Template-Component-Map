@@ -151,7 +151,7 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
                       onMouseLeave={handleRowMouseLeave}
                     />
                     <HoverCardContent
-                      className="w-72 overflow-hidden bg-[#f1f1f1] p-0 ring-0"
+                      className="w-72 overflow-hidden bg-[#f1f1f1] p-0 shadow-none ring-0"
                       side="right"
                       align="start"
                       sideOffset={8}
