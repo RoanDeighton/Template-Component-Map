@@ -248,9 +248,17 @@ export interface ComponentTableRow {
 
 // The first image referenced in a component's own doc — its captured
 // screenshot — used as a small preview thumbnail in the components table's
-// hover card. Reads just the raw markdown rather than running the full
-// remark/rehype pipeline, since that's all a single image src needs.
+// hover card. Prefers the small pre-generated thumbnail (see
+// scripts/generate-thumbnails.mjs — the raw screenshots are full-page
+// captures, several MB each, too slow to load on hover) and only falls
+// back to the original if that hasn't been generated for some reason.
 function getComponentPreviewImage(site: string, slug: string): string | null {
+  const thumbPath = path.join(OUTPUT_ROOT, site, ".thumbnails", `${slug}.webp`);
+  if (fs.existsSync(thumbPath)) {
+    const basePath = process.env.NEXT_BASE_PATH ?? "";
+    return `${basePath}/assets/${site}/.thumbnails/${slug}.webp`;
+  }
+
   const mdPath = path.join(OUTPUT_ROOT, site, "content", "components", `${slug}.md`);
   if (!fs.existsSync(mdPath)) return null;
   const raw = fs.readFileSync(mdPath, "utf-8");

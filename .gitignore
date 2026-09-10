@@ -7,5 +7,7 @@ node_modules/
 output/*/pages/*/page.html
 output/*/pages/*/styles.json
 output/*/site-dist/
+# Regenerated at build time by web/scripts/generate-thumbnails.mjs
+output/*/.thumbnails/
 site-template/.vitepress/cache/
 
