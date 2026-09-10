@@ -386,9 +386,98 @@ export function getComponentsTable(site: string): ComponentsTable | null {
   };
 }
 
-export function getComponentDoc(site: string, slug: string): ContentDoc | null {
-  const p = path.join(OUTPUT_ROOT, site, "content", "components", `${slug}.md`);
-  return fs.existsSync(p) ? readDoc(p, site, { stripFirstHeading: true }) : null;
+export interface CmsField {
+  name: string;
+  type: string;
+  required: boolean;
+  description: string;
+}
+
+export interface PageRef {
+  slug: string;
+  title: string;
+  href: string;
+}
+
+export interface ComponentDetailDoc {
+  slug: string;
+  title: string;
+  class: string;
+  html: string;
+  headings: Heading[];
+  exampleImage: string | null;
+  capturedFrom: (PageRef & { liveUrl: string | null }) | null;
+  usedOn: PageRef[];
+  cmsFields: CmsField[];
+}
+
+// The origin (protocol + host) the crawl started from — manifest.json
+// records the exact URL the crawler was pointed at, so this is read from
+// the crawl's own record rather than duplicated anywhere in content.
+function getSiteOrigin(site: string): string | null {
+  const manifestPath = path.join(OUTPUT_ROOT, site, "manifest.json");
+  if (!fs.existsSync(manifestPath)) return null;
+  try {
+    const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+    return typeof manifest.startUrl === "string" ? new URL(manifest.startUrl).origin : null;
+  } catch {
+    return null;
+  }
+}
+
+export function getComponentDoc(site: string, slug: string): ComponentDetailDoc | null {
+  const mdPath = path.join(OUTPUT_ROOT, site, "content", "components", `${slug}.md`);
+  if (!fs.existsSync(mdPath)) return null;
+  const raw = fs.readFileSync(mdPath, "utf-8");
+  const { data, content } = matter(raw);
+  const mdFileDir = path.dirname(mdPath);
+  const { html, headings } = markdownToHtml(content, site, mdFileDir);
+
+  const pages = listPages(site);
+  const pageBySlug = new Map(pages.map((p) => [p.slug, p]));
+  const toPageRef = (pageSlug: string): PageRef | null => {
+    const page = pageBySlug.get(pageSlug);
+    return page ? { slug: page.slug, title: page.title, href: `/${site}/pages/${page.slug}` } : null;
+  };
+
+  const exampleImage = typeof data.exampleImage === "string" ? resolveAssetSrc(site, mdFileDir, data.exampleImage) : null;
+
+  let capturedFrom: ComponentDetailDoc["capturedFrom"] = null;
+  if (typeof data.capturedFromPage === "string") {
+    const ref = toPageRef(data.capturedFromPage);
+    if (ref) {
+      const pageMdPath = path.join(OUTPUT_ROOT, site, "content", "pages", `${data.capturedFromPage}.md`);
+      const pageData = fs.existsSync(pageMdPath) ? matter(fs.readFileSync(pageMdPath, "utf-8")).data : {};
+      const origin = getSiteOrigin(site);
+      const liveUrl = origin && typeof pageData.url === "string" ? origin + pageData.url : null;
+      capturedFrom = { ...ref, liveUrl };
+    }
+  }
+
+  const usedOn = (Array.isArray(data.usedOn) ? data.usedOn : [])
+    .map((s: unknown) => (typeof s === "string" ? toPageRef(s) : null))
+    .filter((ref: PageRef | null): ref is PageRef => ref !== null);
+
+  const cmsFields: CmsField[] = Array.isArray(data.cmsFields)
+    ? data.cmsFields.map((f: Partial<CmsField>) => ({
+        name: f.name ?? "",
+        type: f.type ?? "",
+        required: Boolean(f.required),
+        description: f.description ?? "",
+      }))
+    : [];
+
+  return {
+    slug,
+    title: data.title ?? slug,
+    class: data.class ?? "No class listed",
+    html,
+    headings,
+    exampleImage,
+    capturedFrom,
+    usedOn,
+    cmsFields,
+  };
 }
 
 export function getPageDoc(site: string, slug: string): ContentDoc | null {

@@ -1,13 +1,20 @@
 ---
 title: Category Link Grid
+class: link-section
+exampleImage: ../../pages/nl-zien-en-doen/crop-main-3.png
+capturedFromPage: agenda-listing
+usedOn:
+  - agenda-listing
+cmsFields:
+  - name: heading
+    type: string
+    required: true
+    description: Section title shown above the link list (e.g. "Speciaal voor").
+  - name: links
+    type: array<object>
+    required: true
+    description: Ordered list of link items (label + URL) — 3 to 5 per instance in this sample.
 ---
-
-# Category Link Grid
-
-**Used on:** Agenda / What's On Listing (2 instances, back-to-back)
-**Class:** `link-section`
-
-![Category link grid, "Speciaal voor" instance](../../pages/nl-zien-en-doen/crop-main-3.png)
 
 A titled group of text links with no imagery — the plainest component found in this test run. Each instance has a heading and a short flat list of links.
 

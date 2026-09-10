@@ -1,19 +1,32 @@
 ---
 title: Full-Width Promo Block
+class: block-full-width-overflow
+exampleImage: ../../pages/nl/crop-main-0.png
+capturedFromPage: homepage
+usedOn:
+  - homepage
+cmsFields:
+  - name: backgroundImage
+    type: image
+    required: true
+    description: Full-bleed background photo the block is built around.
+  - name: eyebrow
+    type: string
+    required: false
+    description: Short label above the headline (absent on the hero variant, which shows the site wordmark instead).
+  - name: heading
+    type: string
+    required: true
+    description: Overlaid headline in the bottom-left corner.
+  - name: ctaUrl
+    type: link
+    required: true
+    description: Destination the entire block links through to — an exhibition, story, or feature page.
 ---
-
-# Full-Width Promo Block
-
-**Used on:** Homepage (3 instances, including a hero variant)
-**Class:** `block-full-width-overflow`
 
 A full-bleed background image with a short eyebrow label and headline overlaid in the bottom-left corner, the entire block acting as one link through to an exhibition, story, or feature. No body copy — this component is a visual entry point, not a content container.
 
-Preview below shows the hero variant (top of the homepage); the [full homepage screenshot](../../pages/nl/screenshot.png) shows all 3 instances in context.
-
-![Full-width promo block, hero variant](../../pages/nl/crop-main-0.png)
-
-Examples seen: the homepage hero ("RIJKSMUSEUM" wordmark over *The Night Watch*), a "Families en kinderen" promo, and a "Fiep Westendorp" exhibition promo.
+Three instances on the homepage, including a hero variant. Examples seen: the homepage hero ("RIJKSMUSEUM" wordmark over *The Night Watch*), a "Families en kinderen" promo, and a "Fiep Westendorp" exhibition promo.
 
 ## Variants observed
 

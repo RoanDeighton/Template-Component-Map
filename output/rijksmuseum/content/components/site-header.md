@@ -1,21 +1,36 @@
 ---
 title: Site Header / Navigation
+class: No class listed
+exampleImage: ../../pages/nl/crop-header.png
+capturedFromPage: homepage
+usedOn:
+  - homepage
+  - agenda-listing
+  - visitor-info-page
+cmsFields:
+  - name: backLink
+    type: link
+    required: false
+    description: "Breadcrumb-style \"back\" link (e.g. \"‹ Home\") — present on interior pages, absent on the homepage."
+  - name: languageOptions
+    type: array<string>
+    required: true
+    description: Language switcher options — NL/EN in this capture.
+  - name: ctaLabel
+    type: string
+    required: true
+    description: "Label on the filled orange call-to-action button — \"Rijksmuseum tickets\" in this capture."
+  - name: ctaUrl
+    type: link
+    required: true
+    description: Destination of the ticketing call-to-action button.
+  - name: navLinks
+    type: array<object>
+    required: true
+    description: Remaining nav links (hamburger menu, search, login, giftshop) — count varies 25–37 by page.
 ---
 
-# Site Header / Navigation
-
-**Used on:** Homepage, Agenda / What's On Listing, Visitor Info Page (all 3 pages in this test run)
-
-![Site header](../../pages/nl/crop-header.png)
-
 Persistent top navigation, transparent background over the page content (no white bar). Left side: hamburger menu icon, search icon, a "back" breadcrumb-style link on interior pages (e.g. "‹ Home" on the Bezoek and Agenda pages, absent on the homepage itself). Right side: language switcher, login, giftshop link, and a filled orange "Rijksmuseum tickets" call-to-action button that's visually distinct from the rest of the nav (only colored element in the header).
-
-## Measured styles
-
-- Font: `RijksText, Arial, sans-serif`, 17.4px, weight 400
-- Text color: white (`rgb(255,255,255)`)
-- Background: transparent (`rgba(0,0,0,0)`) — relies on the page content behind it for contrast
-- Padding: 20px top/bottom
 
 ## Variants observed
 
