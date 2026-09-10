@@ -37,7 +37,9 @@ function sidebarSection(subdir: string, base: string) {
   if (!fs.existsSync(dir)) return [];
   const files = fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith(".md"))
+    // overview.md is that section's index page (linked from the nav item
+    // itself), not one more entry in the alphabetical list below it.
+    .filter((f) => f.endsWith(".md") && f !== "overview.md")
     .sort();
   return files.map((file) => {
     const slug = file.replace(/\.md$/, "");
@@ -87,12 +89,19 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "Overview", link: "/" },
-      { text: "Components", link: componentsSidebarItems[0]?.link || "/components/" },
+      { text: "Components", link: "/components/overview" },
       { text: "Pages", link: pagesSidebarItems[0]?.link || "/pages/" },
     ],
     sidebar: {
       "/pages/": [{ text: `Pages (${pagesSidebarItems.length})`, items: pagesSidebarItems }],
-      "/components/": [{ text: `Components (${componentsSidebarItems.length})`, items: componentsSidebarItems }],
+      "/components/": [
+        {
+          text: `Components (${componentsSidebarItems.length})`,
+          // Overview first so it's reachable from the sidebar itself, not
+          // just the top nav, while browsing individual components.
+          items: [{ text: "Overview", link: "/components/overview" }, ...componentsSidebarItems],
+        },
+      ],
     },
     search: { provider: "local" },
     outline: { level: [2, 3] },

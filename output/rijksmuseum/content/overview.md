@@ -37,7 +37,7 @@ onUnmounted(() => {
 <p class="stats-line">3 captured pages, distilled into 3 unique layout templates and 10 reusable components.</p>
 
 <div class="stat-blocks">
-  <a class="stat-block" href="components/category-link-grid.html">
+  <a class="stat-block" href="components/overview.html">
     <span class="stat-block-count">10</span>
     <span class="stat-block-label">Components</span>
   </a>

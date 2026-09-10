@@ -1,3 +1,18 @@
+/* Site-wide: VitePress's default theme stripes every other table row.
+   Flat looks cleaner for these tables (component/page listings), which are
+   short lists to scan, not dense data grids that need row-tracking. */
+.vp-doc tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+/* Site-wide: VitePress draws a divider line above every h2 and above the
+   prev/next pager. Section breaks read cleaner as plain whitespace — the
+   existing padding/margin already does that job without a rule on top. */
+.vp-doc h2,
+.vp-doc .prev-next {
+  border-top: none;
+}
+
 /* The one shared presentation layer for every site inventory (see
    site-template/.vitepress/config.ts) — only content differs between
    sites, never this CSS. No dark-mode tokens are defined, so this block
