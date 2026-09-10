@@ -28,7 +28,7 @@ export function TableOfContents({ headings }: { headings: Heading[] }) {
   if (headings.length === 0) return null;
 
   return (
-    <nav className="sticky top-20 space-y-3 text-xs">
+    <nav className="sticky top-20 space-y-3 pl-2 text-xs">
       <p className="font-semibold text-muted-foreground">On This Page</p>
       <ul className="space-y-2">
         {headings.map((h) => (

@@ -16,8 +16,8 @@ title: Rijksmuseum — Components
 | whatson-highlights | [Highlights Carousel](highlights-carousel.md) | 1 |
 | page-header block-full-width-overflow | [Page Header Banner](page-header-banner.md) | 2 |
 | carousel-wrapper | [Scroll-Driven Image Carousel](scroll-driven-carousel.md) | 1 |
-| footer (no listed class) | [Site Footer](site-footer.md) | 3 |
-| header (no listed class) | [Site Header / Navigation](site-header.md) | 3 |
+| No class listed | [Site Footer](site-footer.md) | 3 |
+| No class listed | [Site Header / Navigation](site-header.md) | 3 |
 | sponsor-logos | [Sponsor Logo Strip](sponsor-logo-strip.md) | 1 |
 | intro-block / minimal-expanding-intro-component | [Text Intro Block](text-intro-block.md) | 2 |
 | related-content block-row | [Two-Up Content Row](two-up-content-row.md) | 2 |

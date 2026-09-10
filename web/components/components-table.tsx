@@ -169,7 +169,9 @@ export function ComponentsTable({ rows }: { rows: ComponentTableRow[] }) {
                 )}
                 {row.title}
               </TableCell>
-              <TableCell className="whitespace-normal px-4 py-3">{row.class}</TableCell>
+              <TableCell className="whitespace-normal px-4 py-3">
+                <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs">{row.class}</code>
+              </TableCell>
               <TableCell className="px-4 py-3 text-right tabular-nums">{row.pages}</TableCell>
             </TableRow>
           ))}
