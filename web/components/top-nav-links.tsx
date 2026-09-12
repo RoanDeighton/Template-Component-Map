@@ -28,7 +28,7 @@ export function TopNavLinks({ site }: { site: string }) {
             key={l.href}
             href={l.href}
             className={cn(
-              "text-sm font-semibold no-underline transition-colors hover:text-foreground",
+              "text-xs font-semibold no-underline transition-colors hover:text-foreground",
               isActive ? "text-foreground" : "text-muted-foreground",
             )}
           >

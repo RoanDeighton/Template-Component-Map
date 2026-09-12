@@ -1,0 +1,1308 @@
+{
+  "startUrl": "https://www.revolut.com/",
+  "crawledAt": "2026-09-11T10:04:13.416Z",
+  "options": {
+    "url": "https://www.revolut.com/",
+    "output": "output/revolut",
+    "sampleSize": 4,
+    "pageCap": 200,
+    "collapseThreshold": 5,
+    "maxDiscover": 60000,
+    "maxSitemapFiles": 300,
+    "maxUrlsPerSitemapFile": 500,
+    "concurrency": 3,
+    "bfsDepth": 2,
+    "bfsMaxPages": 50,
+    "userAgent": "SiteInventoryBot/0.1 (+https://github.com/; research crawl)",
+    "localePrefix": null,
+    "onlyUrls": [
+      "https://www.revolut.com/",
+      "https://www.revolut.com/business",
+      "https://www.revolut.com/discover-our-company",
+      "https://www.revolut.com/bank-account",
+      "https://www.revolut.com/joint-accounts",
+      "https://www.revolut.com/revolut-pro",
+      "https://www.revolut.com/savings",
+      "https://www.revolut.com/revolut-for-ages-16-17",
+      "https://www.revolut.com/revolut-kids-and-teens-parent-and-guardians",
+      "https://www.revolut.com/cards",
+      "https://www.revolut.com/send-and-receive",
+      "https://www.revolut.com/best-budget-planner",
+      "https://www.revolut.com/rev-points",
+      "https://www.revolut.com/linked-accounts",
+      "https://www.revolut.com/how-we-keep-your-money-safe",
+      "https://www.revolut.com/report-lost-device",
+      "https://www.revolut.com/stock-trading",
+      "https://www.revolut.com/stocks-and-shares-isa",
+      "https://www.revolut.com/commodities-trading",
+      "https://www.revolut.com/crypto",
+      "https://www.revolut.com/ramp",
+      "https://www.revolut.com/revolut-x",
+      "https://www.revolut.com/mobile-plans",
+      "https://www.revolut.com/data-plans",
+      "https://www.revolut.com/international-transfers",
+      "https://www.revolut.com/air-ai-by-revolut",
+      "https://www.revolut.com/contact-us",
+      "https://www.revolut.com/a-radically-better-account",
+      "https://www.revolut.com/revolut-plus",
+      "https://www.revolut.com/revolut-premium",
+      "https://www.revolut.com/metal",
+      "https://www.revolut.com/ultra-plan",
+      "https://www.revolut.com/our-pricing-plans",
+      "https://www.revolut.com/money-transfer",
+      "https://www.revolut.com/money-transfer/send-money-to-india",
+      "https://www.revolut.com/money-transfer/send-money-to-nigeria",
+      "https://www.revolut.com/money-transfer/send-money-to-poland",
+      "https://www.revolut.com/money-transfer/send-money-to-ghana",
+      "https://www.revolut.com/money-transfer/send-money-to-dubai",
+      "https://www.revolut.com/money-transfer/send-money-to-the-uk-from-india",
+      "https://www.revolut.com/money-transfer/send-money-to-saudi-arabia",
+      "https://www.revolut.com/money-transfer/send-money-to-north-macedonia",
+      "https://www.revolut.com/money-transfer/send-money-to-kazakhstan",
+      "https://www.revolut.com/currency-converter",
+      "https://www.revolut.com/currency-converter/convert-gbp-to-inr-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-usd-to-gbp-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-gbp-to-eur-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-gbp-to-usd-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-eur-to-gbp-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-gbp-to-pkr-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-gbp-to-try-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-gbp-to-hkd-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-krw-to-gbp-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-aed-to-gbp-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-inr-to-gbp-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-gbp-to-cad-exchange-rate",
+      "https://www.revolut.com/compare",
+      "https://www.revolut.com/travel",
+      "https://www.revolut.com/lounges",
+      "https://www.revolut.com/global-insurance",
+      "https://www.revolut.com/system-status",
+      "https://www.revolut.com/sustainability",
+      "https://www.revolut.com/code-of-conduct",
+      "https://www.revolut.com/about-fraud-and-scam",
+      "https://www.revolut.com/responsible-disclosure-program",
+      "https://www.revolut.com/revolut-pay",
+      "https://www.revolut.com/shops",
+      "https://www.revolut.com/customer-vulnerability",
+      "https://www.revolut.com/legal/RTL-risk-disclosure",
+      "https://www.revolut.com/legal/clearbank-fscs-information-sheet",
+      "https://www.revolut.com/legal/collinson-lounges",
+      "https://www.revolut.com/money-transfer/large-amounts",
+      "https://www.revolut.com/money-transfer/send-money-to-greece",
+      "https://www.revolut.com/money-transfer/send-money-to-peru",
+      "https://www.revolut.com/currency-converter/convert-aed-to-bgn-exchange-rate",
+      "https://www.revolut.com/currency-converter/convert-gbp-to-aed-exchange-rate?amount=50",
+      "https://www.revolut.com/currency-converter/convert-inr-to-egp-exchange-rate",
+      "https://www.revolut.com/compare/best-chf-exchange-rates",
+      "https://www.revolut.com/compare/best-pln-exchange-rates",
+      "https://www.revolut.com/compare/moneygram-gbp-to-usd"
+    ],
+    "yes": true,
+    "legacyDiscovery": false
+  },
+  "discoveryMode": "onlyUrls",
+  "totalDiscovered": 80,
+  "totalCaptured": 79,
+  "groups": [
+    {
+      "pattern": "/",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/business",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/discover-our-company",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/bank-account",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/joint-accounts",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/revolut-pro",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/savings",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/revolut-for-ages-16-17",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/revolut-kids-and-teens-parent-and-guardians",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/cards",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/send-and-receive",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/best-budget-planner",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/rev-points",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/linked-accounts",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/how-we-keep-your-money-safe",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/report-lost-device",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/stock-trading",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/stocks-and-shares-isa",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/commodities-trading",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/crypto",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/ramp",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/revolut-x",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/mobile-plans",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/data-plans",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/international-transfers",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/air-ai-by-revolut",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/contact-us",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/a-radically-better-account",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/revolut-plus",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/revolut-premium",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/metal",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/ultra-plan",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/our-pricing-plans",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-india",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-nigeria",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-poland",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-ghana",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-dubai",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-the-uk-from-india",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-saudi-arabia",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-north-macedonia",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-kazakhstan",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-gbp-to-inr-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-usd-to-gbp-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-gbp-to-eur-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-gbp-to-usd-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-eur-to-gbp-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-gbp-to-pkr-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-gbp-to-try-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-gbp-to-hkd-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-krw-to-gbp-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-aed-to-gbp-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-inr-to-gbp-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-gbp-to-cad-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/compare",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/travel",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/lounges",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/global-insurance",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/system-status",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/sustainability",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/code-of-conduct",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/about-fraud-and-scam",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/responsible-disclosure-program",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/revolut-pay",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/shops",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/customer-vulnerability",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/legal/RTL-risk-disclosure",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/legal/clearbank-fscs-information-sheet",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/legal/collinson-lounges",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/large-amounts",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-greece",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/money-transfer/send-money-to-peru",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-aed-to-bgn-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-gbp-to-aed-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/currency-converter/convert-inr-to-egp-exchange-rate",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/compare/best-chf-exchange-rates",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/compare/best-pln-exchange-rates",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/compare/moneygram-gbp-to-usd",
+      "totalUrls": 1
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://www.revolut.com/",
+      "pattern": "/",
+      "slug": "home",
+      "title": "Banking & Beyond | Revolut United Kingdom",
+      "screenshot": "pages/home/screenshot.png",
+      "html": "pages/home/page.html",
+      "styles": "pages/home/styles.json",
+      "capturedAt": "2026-09-11T09:35:18.626Z",
+      "blankSectionFlags": [],
+      "cookieBannerScreenshot": "pages/home/cookie-bar.png"
+    },
+    {
+      "url": "https://www.revolut.com/business",
+      "pattern": "/business",
+      "slug": "business",
+      "title": "Business Account | Manage Your Finances | Revolut Business",
+      "screenshot": "pages/business/screenshot.png",
+      "html": "pages/business/page.html",
+      "styles": "pages/business/styles.json",
+      "capturedAt": "2026-09-11T09:35:19.362Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/discover-our-company",
+      "pattern": "/discover-our-company",
+      "slug": "discover-our-company",
+      "title": "About us | Revolut United Kingdom",
+      "screenshot": "pages/discover-our-company/screenshot.png",
+      "html": "pages/discover-our-company/page.html",
+      "styles": "pages/discover-our-company/styles.json",
+      "capturedAt": "2026-09-11T09:35:53.340Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/joint-accounts",
+      "pattern": "/joint-accounts",
+      "slug": "joint-accounts",
+      "title": "Joint accounts | Revolut United Kingdom",
+      "screenshot": "pages/joint-accounts/screenshot.png",
+      "html": "pages/joint-accounts/page.html",
+      "styles": "pages/joint-accounts/styles.json",
+      "capturedAt": "2026-09-11T09:36:02.822Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/savings",
+      "pattern": "/savings",
+      "slug": "savings",
+      "title": "Turn Idle Cash Into Interest | Start Saving Online | Revolut United Kingdom",
+      "screenshot": "pages/savings/screenshot.png",
+      "html": "pages/savings/page.html",
+      "styles": "pages/savings/styles.json",
+      "capturedAt": "2026-09-11T09:36:21.493Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/bank-account",
+      "pattern": "/bank-account",
+      "slug": "bank-account",
+      "title": "All-in-one finance app for your money | Revolut United Kingdom",
+      "screenshot": "pages/bank-account/screenshot.png",
+      "html": "pages/bank-account/page.html",
+      "styles": "pages/bank-account/styles.json",
+      "capturedAt": "2026-09-11T09:36:37.393Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/revolut-pro",
+      "pattern": "/revolut-pro",
+      "slug": "revolut-pro",
+      "title": "Revolut Pro | Earn Cashback, Make Payments | Revolut United Kingdom",
+      "screenshot": "pages/revolut-pro/screenshot.png",
+      "html": "pages/revolut-pro/page.html",
+      "styles": "pages/revolut-pro/styles.json",
+      "capturedAt": "2026-09-11T09:36:59.594Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/revolut-for-ages-16-17",
+      "pattern": "/revolut-for-ages-16-17",
+      "slug": "revolut-for-ages-16-17",
+      "title": "A Revolut account for 16–17 year olds",
+      "screenshot": "pages/revolut-for-ages-16-17/screenshot.png",
+      "html": "pages/revolut-for-ages-16-17/page.html",
+      "styles": "pages/revolut-for-ages-16-17/styles.json",
+      "capturedAt": "2026-09-11T09:37:16.459Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/send-and-receive",
+      "pattern": "/send-and-receive",
+      "slug": "send-and-receive",
+      "title": "Payments | Revolut United Kingdom",
+      "screenshot": "pages/send-and-receive/screenshot.png",
+      "html": "pages/send-and-receive/page.html",
+      "styles": "pages/send-and-receive/styles.json",
+      "capturedAt": "2026-09-11T09:37:23.334Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/revolut-kids-and-teens-parent-and-guardians",
+      "pattern": "/revolut-kids-and-teens-parent-and-guardians",
+      "slug": "revolut-kids-and-teens-parent-and-guardians",
+      "title": "Revolut 6-15 | Parents & Guardians",
+      "screenshot": "pages/revolut-kids-and-teens-parent-and-guardians/screenshot.png",
+      "html": "pages/revolut-kids-and-teens-parent-and-guardians/page.html",
+      "styles": "pages/revolut-kids-and-teens-parent-and-guardians/styles.json",
+      "capturedAt": "2026-09-11T09:37:37.973Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/cards",
+      "pattern": "/cards",
+      "slug": "cards",
+      "title": "Cards | Revolut United Kingdom",
+      "screenshot": "pages/cards/screenshot.png",
+      "html": "pages/cards/page.html",
+      "styles": "pages/cards/styles.json",
+      "capturedAt": "2026-09-11T09:38:05.710Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/best-budget-planner",
+      "pattern": "/best-budget-planner",
+      "slug": "best-budget-planner",
+      "title": "Budget Planner | Budgeting Analytics | Spending Tracker | Revolut United Kingdom",
+      "screenshot": "pages/best-budget-planner/screenshot.png",
+      "html": "pages/best-budget-planner/page.html",
+      "styles": "pages/best-budget-planner/styles.json",
+      "capturedAt": "2026-09-11T09:38:17.569Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/linked-accounts",
+      "pattern": "/linked-accounts",
+      "slug": "linked-accounts",
+      "title": "Link Bank Accounts in One App | Open Banking | Revolut United Kingdom",
+      "screenshot": "pages/linked-accounts/screenshot.png",
+      "html": "pages/linked-accounts/page.html",
+      "styles": "pages/linked-accounts/styles.json",
+      "capturedAt": "2026-09-11T09:38:18.778Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/report-lost-device",
+      "pattern": "/report-lost-device",
+      "slug": "report-lost-device",
+      "title": "Report Lost Device | Revolut United Kingdom",
+      "screenshot": "pages/report-lost-device/screenshot.png",
+      "html": "pages/report-lost-device/page.html",
+      "styles": "pages/report-lost-device/styles.json",
+      "capturedAt": "2026-09-11T09:38:25.744Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/rev-points",
+      "pattern": "/rev-points",
+      "slug": "rev-points",
+      "title": "RevPoints | Revolut United Kingdom",
+      "screenshot": "pages/rev-points/screenshot.png",
+      "html": "pages/rev-points/page.html",
+      "styles": "pages/rev-points/styles.json",
+      "capturedAt": "2026-09-11T09:38:26.971Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/stock-trading",
+      "pattern": "/stock-trading",
+      "slug": "stock-trading",
+      "title": "Investing for Beginners | How to Start Investing in Stocks | Revolut United Kingdom",
+      "screenshot": "pages/stock-trading/screenshot.png",
+      "html": "pages/stock-trading/page.html",
+      "styles": "pages/stock-trading/styles.json",
+      "capturedAt": "2026-09-11T09:39:20.250Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/stocks-and-shares-isa",
+      "pattern": "/stocks-and-shares-isa",
+      "slug": "stocks-and-shares-isa",
+      "title": "Stocks and Shares ISA",
+      "screenshot": "pages/stocks-and-shares-isa/screenshot.png",
+      "html": "pages/stocks-and-shares-isa/page.html",
+      "styles": "pages/stocks-and-shares-isa/styles.json",
+      "capturedAt": "2026-09-11T09:39:33.484Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/how-we-keep-your-money-safe",
+      "pattern": "/how-we-keep-your-money-safe",
+      "slug": "how-we-keep-your-money-safe",
+      "title": "Is Revolut safe? | How we protect your money | Revolut United Kingdom",
+      "screenshot": "pages/how-we-keep-your-money-safe/screenshot.png",
+      "html": "pages/how-we-keep-your-money-safe/page.html",
+      "styles": "pages/how-we-keep-your-money-safe/styles.json",
+      "capturedAt": "2026-09-11T09:39:57.260Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/commodities-trading",
+      "pattern": "/commodities-trading",
+      "slug": "commodities-trading",
+      "title": "How to Invest in Commodities | Invest in Gold, Silver & More | Revolut United Kingdom",
+      "screenshot": "pages/commodities-trading/screenshot.png",
+      "html": "pages/commodities-trading/page.html",
+      "styles": "pages/commodities-trading/styles.json",
+      "capturedAt": "2026-09-11T09:40:11.530Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/mobile-plans",
+      "pattern": "/mobile-plans",
+      "slug": "mobile-plans",
+      "title": "Mobile plans | Revolut United Kingdom",
+      "screenshot": "pages/mobile-plans/screenshot.png",
+      "html": "pages/mobile-plans/page.html",
+      "styles": "pages/mobile-plans/styles.json",
+      "capturedAt": "2026-09-11T09:40:18.791Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/crypto",
+      "pattern": "/crypto",
+      "slug": "crypto",
+      "title": "Koop en verkoop Bitcoin, Ethereum en meer cryptovaluta | Crypto Exchange | Revolut Nederland",
+      "screenshot": "pages/crypto/screenshot.png",
+      "html": "pages/crypto/page.html",
+      "styles": "pages/crypto/styles.json",
+      "capturedAt": "2026-09-11T09:40:47.367Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/international-transfers",
+      "pattern": "/international-transfers",
+      "slug": "international-transfers",
+      "title": "International Transfers | Revolut United Kingdom",
+      "screenshot": "pages/international-transfers/screenshot.png",
+      "html": "pages/international-transfers/page.html",
+      "styles": "pages/international-transfers/styles.json",
+      "capturedAt": "2026-09-11T09:40:55.811Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/air-ai-by-revolut",
+      "pattern": "/air-ai-by-revolut",
+      "slug": "air-ai-by-revolut",
+      "title": "AIR | AI by Revolut | Revolut GB",
+      "screenshot": "pages/air-ai-by-revolut/screenshot.png",
+      "html": "pages/air-ai-by-revolut/page.html",
+      "styles": "pages/air-ai-by-revolut/styles.json",
+      "capturedAt": "2026-09-11T09:41:06.213Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "Box-rui__sc-1475jr3-0 dAuYBJ",
+          "top": 137,
+          "height": 4424,
+          "note": "4424px tall section renders as near-uniform color (stddev 39.0) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
+    },
+    {
+      "url": "https://www.revolut.com/data-plans",
+      "pattern": "/data-plans",
+      "slug": "data-plans",
+      "title": "eSIM: What is an eSIM and how do I get one? | Revolut United Kingdom",
+      "screenshot": "pages/data-plans/screenshot.png",
+      "html": "pages/data-plans/page.html",
+      "styles": "pages/data-plans/styles.json",
+      "capturedAt": "2026-09-11T09:41:07.206Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/revolut-x",
+      "pattern": "/revolut-x",
+      "slug": "revolut-x",
+      "title": "Revolut X Geavanceerd Crypto-Wisselplatform | Platform voor Cryptohandel | Revolut Nederland",
+      "screenshot": "pages/revolut-x/screenshot.png",
+      "html": "pages/revolut-x/page.html",
+      "styles": "pages/revolut-x/styles.json",
+      "capturedAt": "2026-09-11T09:41:27.526Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/contact-us",
+      "pattern": "/contact-us",
+      "slug": "contact-us",
+      "title": "How Do I Contact Revolut Customer Support | Revolut Email, Phone Number | Revolut United Kingdom",
+      "screenshot": "pages/contact-us/screenshot.png",
+      "html": "pages/contact-us/page.html",
+      "styles": "pages/contact-us/styles.json",
+      "capturedAt": "2026-09-11T09:41:53.697Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/a-radically-better-account",
+      "pattern": "/a-radically-better-account",
+      "slug": "a-radically-better-account",
+      "title": "All-in-one finance app for your money | Revolut United Kingdom",
+      "screenshot": "pages/a-radically-better-account/screenshot.png",
+      "html": "pages/a-radically-better-account/page.html",
+      "styles": "pages/a-radically-better-account/styles.json",
+      "capturedAt": "2026-09-11T09:42:24.256Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/revolut-plus",
+      "pattern": "/revolut-plus",
+      "slug": "revolut-plus",
+      "title": "Revolut Plus | Revolut United Kingdom",
+      "screenshot": "pages/revolut-plus/screenshot.png",
+      "html": "pages/revolut-plus/page.html",
+      "styles": "pages/revolut-plus/styles.json",
+      "capturedAt": "2026-09-11T09:42:32.902Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/revolut-premium",
+      "pattern": "/revolut-premium",
+      "slug": "revolut-premium",
+      "title": "Premium | Revolut United Kingdom",
+      "screenshot": "pages/revolut-premium/screenshot.png",
+      "html": "pages/revolut-premium/page.html",
+      "styles": "pages/revolut-premium/styles.json",
+      "capturedAt": "2026-09-11T09:43:16.556Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/our-pricing-plans",
+      "pattern": "/our-pricing-plans",
+      "slug": "our-pricing-plans",
+      "title": "Compare Revolut Plans | Revolut United Kingdom",
+      "screenshot": "pages/our-pricing-plans/screenshot.png",
+      "html": "pages/our-pricing-plans/page.html",
+      "styles": "pages/our-pricing-plans/styles.json",
+      "capturedAt": "2026-09-11T09:43:26.096Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/metal",
+      "pattern": "/metal",
+      "slug": "metal",
+      "title": "Revolut Metal | Revolut United Kingdom",
+      "screenshot": "pages/metal/screenshot.png",
+      "html": "pages/metal/page.html",
+      "styles": "pages/metal/styles.json",
+      "capturedAt": "2026-09-11T09:44:00.143Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/ultra-plan",
+      "pattern": "/ultra-plan",
+      "slug": "ultra-plan",
+      "title": "Revolut Ultra | Revolut United Kingdom",
+      "screenshot": "pages/ultra-plan/screenshot.png",
+      "html": "pages/ultra-plan/page.html",
+      "styles": "pages/ultra-plan/styles.json",
+      "capturedAt": "2026-09-11T09:44:03.949Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer",
+      "pattern": "/money-transfer",
+      "slug": "money-transfer",
+      "title": "International Money Transfer from the UK | Send money abroad online",
+      "screenshot": "pages/money-transfer/screenshot.png",
+      "html": "pages/money-transfer/page.html",
+      "styles": "pages/money-transfer/styles.json",
+      "capturedAt": "2026-09-11T09:45:10.826Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-nigeria",
+      "pattern": "/money-transfer/send-money-to-nigeria",
+      "slug": "money-transfer-send-money-to-nigeria",
+      "title": "Send money to Nigeria from the UK | Money transfer to Nigeria from the UK",
+      "screenshot": "pages/money-transfer-send-money-to-nigeria/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-nigeria/page.html",
+      "styles": "pages/money-transfer-send-money-to-nigeria/styles.json",
+      "capturedAt": "2026-09-11T09:45:25.777Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-india",
+      "pattern": "/money-transfer/send-money-to-india",
+      "slug": "money-transfer-send-money-to-india",
+      "title": "Send money to India from the UK | Money transfer to India from the UK",
+      "screenshot": "pages/money-transfer-send-money-to-india/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-india/page.html",
+      "styles": "pages/money-transfer-send-money-to-india/styles.json",
+      "capturedAt": "2026-09-11T09:45:28.957Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-poland",
+      "pattern": "/money-transfer/send-money-to-poland",
+      "slug": "money-transfer-send-money-to-poland",
+      "title": "Send money to Poland from the UK | Transfer money to Poland from the UK",
+      "screenshot": "pages/money-transfer-send-money-to-poland/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-poland/page.html",
+      "styles": "pages/money-transfer-send-money-to-poland/styles.json",
+      "capturedAt": "2026-09-11T09:46:38.027Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-ghana",
+      "pattern": "/money-transfer/send-money-to-ghana",
+      "slug": "money-transfer-send-money-to-ghana",
+      "title": "Send money to Ghana from the UK | Money transfer to Ghana from the UK",
+      "screenshot": "pages/money-transfer-send-money-to-ghana/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-ghana/page.html",
+      "styles": "pages/money-transfer-send-money-to-ghana/styles.json",
+      "capturedAt": "2026-09-11T09:46:48.297Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-dubai",
+      "pattern": "/money-transfer/send-money-to-dubai",
+      "slug": "money-transfer-send-money-to-dubai",
+      "title": "Send money to Dubai from the UK | Money transfer to Dubai from the UK",
+      "screenshot": "pages/money-transfer-send-money-to-dubai/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-dubai/page.html",
+      "styles": "pages/money-transfer-send-money-to-dubai/styles.json",
+      "capturedAt": "2026-09-11T09:46:56.202Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-the-uk-from-india",
+      "pattern": "/money-transfer/send-money-to-the-uk-from-india",
+      "slug": "money-transfer-send-money-to-the-uk-from-india",
+      "title": "Send money to the UK from India | Transfer money to the UK from India online",
+      "screenshot": "pages/money-transfer-send-money-to-the-uk-from-india/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-the-uk-from-india/page.html",
+      "styles": "pages/money-transfer-send-money-to-the-uk-from-india/styles.json",
+      "capturedAt": "2026-09-11T09:47:20.645Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-saudi-arabia",
+      "pattern": "/money-transfer/send-money-to-saudi-arabia",
+      "slug": "money-transfer-send-money-to-saudi-arabia",
+      "title": "Send money to Saudi Arabia from the UK | Money transfer to Saudi Arabia from the UK",
+      "screenshot": "pages/money-transfer-send-money-to-saudi-arabia/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-saudi-arabia/page.html",
+      "styles": "pages/money-transfer-send-money-to-saudi-arabia/styles.json",
+      "capturedAt": "2026-09-11T09:48:15.474Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-north-macedonia",
+      "pattern": "/money-transfer/send-money-to-north-macedonia",
+      "slug": "money-transfer-send-money-to-north-macedonia",
+      "title": "Send money to North Macedonia from the UK | Money transfer to North Macedonia from the UK",
+      "screenshot": "pages/money-transfer-send-money-to-north-macedonia/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-north-macedonia/page.html",
+      "styles": "pages/money-transfer-send-money-to-north-macedonia/styles.json",
+      "capturedAt": "2026-09-11T09:48:17.581Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-kazakhstan",
+      "pattern": "/money-transfer/send-money-to-kazakhstan",
+      "slug": "money-transfer-send-money-to-kazakhstan",
+      "title": "Send money to Kazakhstan from the UK | Transfer money to Kazakhstan from the UK",
+      "screenshot": "pages/money-transfer-send-money-to-kazakhstan/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-kazakhstan/page.html",
+      "styles": "pages/money-transfer-send-money-to-kazakhstan/styles.json",
+      "capturedAt": "2026-09-11T09:48:42.358Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter",
+      "pattern": "/currency-converter",
+      "slug": "currency-converter",
+      "title": "Currency Converter | Live Foreign Exchange Rates | Money Converter",
+      "screenshot": "pages/currency-converter/screenshot.png",
+      "html": "pages/currency-converter/page.html",
+      "styles": "pages/currency-converter/styles.json",
+      "capturedAt": "2026-09-11T09:49:54.423Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-gbp-to-inr-exchange-rate",
+      "pattern": "/currency-converter/convert-gbp-to-inr-exchange-rate",
+      "slug": "currency-converter-convert-gbp-to-inr-exchange-rate",
+      "title": "Convert GBP to INR | British Pounds to Indian Rupees Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-gbp-to-inr-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-gbp-to-inr-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-gbp-to-inr-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:50:07.997Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-usd-to-gbp-exchange-rate",
+      "pattern": "/currency-converter/convert-usd-to-gbp-exchange-rate",
+      "slug": "currency-converter-convert-usd-to-gbp-exchange-rate",
+      "title": "Convert USD to GBP | US Dollars to British Pounds Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-usd-to-gbp-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-usd-to-gbp-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-usd-to-gbp-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:50:26.673Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-gbp-to-eur-exchange-rate",
+      "pattern": "/currency-converter/convert-gbp-to-eur-exchange-rate",
+      "slug": "currency-converter-convert-gbp-to-eur-exchange-rate",
+      "title": "Convert GBP to EUR | British Pounds to Euros Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-gbp-to-eur-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-gbp-to-eur-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-gbp-to-eur-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:51:38.650Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-gbp-to-usd-exchange-rate",
+      "pattern": "/currency-converter/convert-gbp-to-usd-exchange-rate",
+      "slug": "currency-converter-convert-gbp-to-usd-exchange-rate",
+      "title": "Convert GBP to USD | British Pounds to US Dollars Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-gbp-to-usd-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-gbp-to-usd-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-gbp-to-usd-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:51:52.314Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-eur-to-gbp-exchange-rate",
+      "pattern": "/currency-converter/convert-eur-to-gbp-exchange-rate",
+      "slug": "currency-converter-convert-eur-to-gbp-exchange-rate",
+      "title": "Convert EUR to GBP | Euros to British Pounds Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-eur-to-gbp-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-eur-to-gbp-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-eur-to-gbp-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:52:10.973Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-gbp-to-pkr-exchange-rate",
+      "pattern": "/currency-converter/convert-gbp-to-pkr-exchange-rate",
+      "slug": "currency-converter-convert-gbp-to-pkr-exchange-rate",
+      "title": "Convert GBP to PKR | British Pounds to Pakistani Rupees Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-gbp-to-pkr-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-gbp-to-pkr-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-gbp-to-pkr-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:53:18.231Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-gbp-to-try-exchange-rate",
+      "pattern": "/currency-converter/convert-gbp-to-try-exchange-rate",
+      "slug": "currency-converter-convert-gbp-to-try-exchange-rate",
+      "title": "Convert GBP to TRY | British Pounds to Turkish Liras Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-gbp-to-try-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-gbp-to-try-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-gbp-to-try-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:53:43.479Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-gbp-to-hkd-exchange-rate",
+      "pattern": "/currency-converter/convert-gbp-to-hkd-exchange-rate",
+      "slug": "currency-converter-convert-gbp-to-hkd-exchange-rate",
+      "title": "Convert GBP to HKD | British Pounds to Hong Kong Dollars Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-gbp-to-hkd-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-gbp-to-hkd-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-gbp-to-hkd-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:53:55.352Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-krw-to-gbp-exchange-rate",
+      "pattern": "/currency-converter/convert-krw-to-gbp-exchange-rate",
+      "slug": "currency-converter-convert-krw-to-gbp-exchange-rate",
+      "title": "Convert KRW to GBP | South Korean Won to British Pounds Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-krw-to-gbp-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-krw-to-gbp-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-krw-to-gbp-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:55:04.230Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-aed-to-gbp-exchange-rate",
+      "pattern": "/currency-converter/convert-aed-to-gbp-exchange-rate",
+      "slug": "currency-converter-convert-aed-to-gbp-exchange-rate",
+      "title": "Convert AED to GBP | Emirati Dirhams to British Pounds Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-aed-to-gbp-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-aed-to-gbp-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-aed-to-gbp-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:55:27.908Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-inr-to-gbp-exchange-rate",
+      "pattern": "/currency-converter/convert-inr-to-gbp-exchange-rate",
+      "slug": "currency-converter-convert-inr-to-gbp-exchange-rate",
+      "title": "Convert INR to GBP | Indian Rupees to British Pounds Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-inr-to-gbp-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-inr-to-gbp-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-inr-to-gbp-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:55:39.756Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/travel",
+      "pattern": "/travel",
+      "slug": "travel",
+      "title": "Travel | Revolut United Kingdom",
+      "screenshot": "pages/travel/screenshot.png",
+      "html": "pages/travel/page.html",
+      "styles": "pages/travel/styles.json",
+      "capturedAt": "2026-09-11T09:56:45.428Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-gbp-to-cad-exchange-rate",
+      "pattern": "/currency-converter/convert-gbp-to-cad-exchange-rate",
+      "slug": "currency-converter-convert-gbp-to-cad-exchange-rate",
+      "title": "Convert GBP to CAD | British Pounds to Canadian Dollars Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-gbp-to-cad-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-gbp-to-cad-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-gbp-to-cad-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T09:56:50.072Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/global-insurance",
+      "pattern": "/global-insurance",
+      "slug": "global-insurance",
+      "title": "Insurance | Quotes and Claims | Revolut UK | Revolut United Kingdom",
+      "screenshot": "pages/global-insurance/screenshot.png",
+      "html": "pages/global-insurance/page.html",
+      "styles": "pages/global-insurance/styles.json",
+      "capturedAt": "2026-09-11T09:56:58.545Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/system-status",
+      "pattern": "/system-status",
+      "slug": "system-status",
+      "title": "System status | Revolut United Kingdom",
+      "screenshot": "pages/system-status/screenshot.png",
+      "html": "pages/system-status/page.html",
+      "styles": "pages/system-status/styles.json",
+      "capturedAt": "2026-09-11T09:57:03.563Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/compare",
+      "pattern": "/compare",
+      "slug": "compare",
+      "title": "Money Transfer Comparison | Compare Best Exchange Rates",
+      "screenshot": "pages/compare/screenshot.png",
+      "html": "pages/compare/page.html",
+      "styles": "pages/compare/styles.json",
+      "capturedAt": "2026-09-11T09:57:06.341Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/sustainability",
+      "pattern": "/sustainability",
+      "slug": "sustainability",
+      "title": "Sustainability | Revolut United Kingdom",
+      "screenshot": "pages/sustainability/screenshot.png",
+      "html": "pages/sustainability/page.html",
+      "styles": "pages/sustainability/styles.json",
+      "capturedAt": "2026-09-11T09:57:15.709Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/lounges",
+      "pattern": "/lounges",
+      "slug": "lounges",
+      "title": "Lounges | Revolut United Kingdom",
+      "screenshot": "pages/lounges/screenshot.png",
+      "html": "pages/lounges/page.html",
+      "styles": "pages/lounges/styles.json",
+      "capturedAt": "2026-09-11T09:57:22.786Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/responsible-disclosure-program",
+      "pattern": "/responsible-disclosure-program",
+      "slug": "responsible-disclosure-program",
+      "title": "Responsible Disclosure Program Policy | Revolut United Kingdom",
+      "screenshot": "pages/responsible-disclosure-program/screenshot.png",
+      "html": "pages/responsible-disclosure-program/page.html",
+      "styles": "pages/responsible-disclosure-program/styles.json",
+      "capturedAt": "2026-09-11T09:57:28.369Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/about-fraud-and-scam",
+      "pattern": "/about-fraud-and-scam",
+      "slug": "about-fraud-and-scam",
+      "title": "About fraud and scams | Revolut United Kingdom",
+      "screenshot": "pages/about-fraud-and-scam/screenshot.png",
+      "html": "pages/about-fraud-and-scam/page.html",
+      "styles": "pages/about-fraud-and-scam/styles.json",
+      "capturedAt": "2026-09-11T09:57:35.852Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/revolut-pay",
+      "pattern": "/revolut-pay",
+      "slug": "revolut-pay",
+      "title": "Revolut Pay",
+      "screenshot": "pages/revolut-pay/screenshot.png",
+      "html": "pages/revolut-pay/page.html",
+      "styles": "pages/revolut-pay/styles.json",
+      "capturedAt": "2026-09-11T09:57:43.019Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/code-of-conduct",
+      "pattern": "/code-of-conduct",
+      "slug": "code-of-conduct",
+      "title": "Code of conduct | Revolut United Kingdom",
+      "screenshot": "pages/code-of-conduct/screenshot.png",
+      "html": "pages/code-of-conduct/page.html",
+      "styles": "pages/code-of-conduct/styles.json",
+      "capturedAt": "2026-09-11T09:57:47.587Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/legal/RTL-risk-disclosure",
+      "pattern": "/legal/RTL-risk-disclosure",
+      "slug": "legal-rtl-risk-disclosure",
+      "title": "Revolut Trading Ltd - Risk Disclosure | Revolut United Kingdom",
+      "screenshot": "pages/legal-rtl-risk-disclosure/screenshot.png",
+      "html": "pages/legal-rtl-risk-disclosure/page.html",
+      "styles": "pages/legal-rtl-risk-disclosure/styles.json",
+      "capturedAt": "2026-09-11T09:58:02.388Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/legal/clearbank-fscs-information-sheet",
+      "pattern": "/legal/clearbank-fscs-information-sheet",
+      "slug": "legal-clearbank-fscs-information-sheet",
+      "title": "ClearBank FSCS Information Sheet | Revolut United Kingdom",
+      "screenshot": "pages/legal-clearbank-fscs-information-sheet/screenshot.png",
+      "html": "pages/legal-clearbank-fscs-information-sheet/page.html",
+      "styles": "pages/legal-clearbank-fscs-information-sheet/styles.json",
+      "capturedAt": "2026-09-11T09:58:08.871Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/legal/collinson-lounges",
+      "pattern": "/legal/collinson-lounges",
+      "slug": "legal-collinson-lounges",
+      "title": "Airport Lounge Passes | Revolut United Kingdom",
+      "screenshot": "pages/legal-collinson-lounges/screenshot.png",
+      "html": "pages/legal-collinson-lounges/page.html",
+      "styles": "pages/legal-collinson-lounges/styles.json",
+      "capturedAt": "2026-09-11T09:58:14.912Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/shops",
+      "pattern": "/shops",
+      "slug": "shops",
+      "title": "Shops | Revolut United Kingdom",
+      "screenshot": "pages/shops/screenshot.png",
+      "html": "pages/shops/page.html",
+      "styles": "pages/shops/styles.json",
+      "capturedAt": "2026-09-11T09:58:24.641Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/customer-vulnerability",
+      "pattern": "/customer-vulnerability",
+      "slug": "customer-vulnerability",
+      "title": "Life Challenges & Wellbeing | Revolut United Kingdom",
+      "screenshot": "pages/customer-vulnerability/screenshot.png",
+      "html": "pages/customer-vulnerability/page.html",
+      "styles": "pages/customer-vulnerability/styles.json",
+      "capturedAt": "2026-09-11T09:59:09.475Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/large-amounts",
+      "pattern": "/money-transfer/large-amounts",
+      "slug": "money-transfer-large-amounts",
+      "title": "Large money transfer | How to transfer large amounts of money online",
+      "screenshot": "pages/money-transfer-large-amounts/screenshot.png",
+      "html": "pages/money-transfer-large-amounts/page.html",
+      "styles": "pages/money-transfer-large-amounts/styles.json",
+      "capturedAt": "2026-09-11T09:59:36.477Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-greece",
+      "pattern": "/money-transfer/send-money-to-greece",
+      "slug": "money-transfer-send-money-to-greece",
+      "title": "Send money to Greece from the UK | Transfer money to Greece from the UK",
+      "screenshot": "pages/money-transfer-send-money-to-greece/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-greece/page.html",
+      "styles": "pages/money-transfer-send-money-to-greece/styles.json",
+      "capturedAt": "2026-09-11T09:59:52.028Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-peru",
+      "pattern": "/money-transfer/send-money-to-peru",
+      "slug": "money-transfer-send-money-to-peru",
+      "title": "Send money to Peru from the UK | Transfer money to Peru from the UK",
+      "screenshot": "pages/money-transfer-send-money-to-peru/screenshot.png",
+      "html": "pages/money-transfer-send-money-to-peru/page.html",
+      "styles": "pages/money-transfer-send-money-to-peru/styles.json",
+      "capturedAt": "2026-09-11T10:00:31.674Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-aed-to-bgn-exchange-rate",
+      "pattern": "/currency-converter/convert-aed-to-bgn-exchange-rate",
+      "slug": "currency-converter-convert-aed-to-bgn-exchange-rate",
+      "title": "Convert AED to BGN | Emirati Dirhams to Bulgarian Leva Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-aed-to-bgn-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-aed-to-bgn-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-aed-to-bgn-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T10:01:22.083Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-gbp-to-aed-exchange-rate?amount=50",
+      "pattern": "/currency-converter/convert-gbp-to-aed-exchange-rate",
+      "slug": "currency-converter-convert-gbp-to-aed-exchange-rate",
+      "title": "Convert 50 GBP to AED | British Pounds to Emirati Dirhams Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-gbp-to-aed-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-gbp-to-aed-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-gbp-to-aed-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T10:01:37.392Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/currency-converter/convert-inr-to-egp-exchange-rate",
+      "pattern": "/currency-converter/convert-inr-to-egp-exchange-rate",
+      "slug": "currency-converter-convert-inr-to-egp-exchange-rate",
+      "title": "Convert INR to EGP | Indian Rupees to Egyptian Pounds Exchange Rates",
+      "screenshot": "pages/currency-converter-convert-inr-to-egp-exchange-rate/screenshot.png",
+      "html": "pages/currency-converter-convert-inr-to-egp-exchange-rate/page.html",
+      "styles": "pages/currency-converter-convert-inr-to-egp-exchange-rate/styles.json",
+      "capturedAt": "2026-09-11T10:02:16.742Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/compare/best-chf-exchange-rates",
+      "pattern": "/compare/best-chf-exchange-rates",
+      "slug": "compare-best-chf-exchange-rates",
+      "title": "Best Swiss Franc Exchange Rate | Money Transfer Comparison",
+      "screenshot": "pages/compare-best-chf-exchange-rates/screenshot.png",
+      "html": "pages/compare-best-chf-exchange-rates/page.html",
+      "styles": "pages/compare-best-chf-exchange-rates/styles.json",
+      "capturedAt": "2026-09-11T10:03:24.370Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/compare/best-pln-exchange-rates",
+      "pattern": "/compare/best-pln-exchange-rates",
+      "slug": "compare-best-pln-exchange-rates",
+      "title": "Best Polish Zloty Exchange Rate | Money Transfer Comparison",
+      "screenshot": "pages/compare-best-pln-exchange-rates/screenshot.png",
+      "html": "pages/compare-best-pln-exchange-rates/page.html",
+      "styles": "pages/compare-best-pln-exchange-rates/styles.json",
+      "capturedAt": "2026-09-11T10:03:44.615Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://www.revolut.com/compare/moneygram-gbp-to-usd",
+      "pattern": "/compare/moneygram-gbp-to-usd",
+      "slug": "compare-moneygram-gbp-to-usd",
+      "title": "Compare MoneyGram GBP to USD Exchange Rate",
+      "screenshot": "pages/compare-moneygram-gbp-to-usd/screenshot.png",
+      "html": "pages/compare-moneygram-gbp-to-usd/page.html",
+      "styles": "pages/compare-moneygram-gbp-to-usd/styles.json",
+      "capturedAt": "2026-09-11T10:04:13.365Z",
+      "blankSectionFlags": []
+    }
+  ]
+}

@@ -6,13 +6,17 @@
   "scripts": {
     "crawl": "tsx src/crawl.ts",
     "analyze": "tsx src/analyze.ts",
+    "content:scaffold": "tsx scripts/content-authoring/build-scaffold.ts",
+    "content:validate": "tsx scripts/content-authoring/validate-content.ts",
     "site:dev": "vitepress dev site-template",
     "site:build": "vitepress build site-template"
   },
   "dependencies": {
+    "@inquirer/prompts": "^7.0.0",
     "cheerio": "^1.0.0",
     "commander": "^12.1.0",
     "fast-xml-parser": "^4.5.0",
+    "gray-matter": "^4.0.3",
     "playwright": "^1.48.0",
     "robots-parser": "^3.0.1",
     "sharp": "^0.35.4"

@@ -11,6 +11,11 @@ import sharp from "sharp";
 
 const OUTPUT_ROOT = path.resolve(import.meta.dirname, "..", "..", "output");
 const MAX_WIDTH = 1600;
+// WebP caps each side at 16383px. A stitched full-page screenshot can be
+// very tall (a long page at 1440px wide easily exceeds 15000px), and
+// resizing to MAX_WIDTH alone (with no height bound) can still land over
+// that limit — cap height too so sharp scales to fit inside both.
+const MAX_HEIGHT = 16000;
 const MIN_SOURCE_BYTES = 150 * 1024; // skip images already small enough
 const SOURCE_EXTENSIONS = new Set([".png", ".jpg", ".jpeg"]);
 
@@ -36,7 +41,10 @@ async function optimizeSite(site) {
     const webpPath = sourcePath.replace(/\.(png|jpe?g)$/i, ".webp");
     if (fs.existsSync(webpPath) && fs.statSync(webpPath).mtimeMs >= sourceStat.mtimeMs) continue;
 
-    await sharp(sourcePath).resize({ width: MAX_WIDTH, withoutEnlargement: true }).webp({ quality: 75 }).toFile(webpPath);
+    await sharp(sourcePath)
+      .resize({ width: MAX_WIDTH, height: MAX_HEIGHT, fit: "inside", withoutEnlargement: true })
+      .webp({ quality: 75 })
+      .toFile(webpPath);
     const savedKb = Math.round((sourceStat.size - fs.statSync(webpPath).size) / 1024);
     console.log(`  ${path.relative(OUTPUT_ROOT, sourcePath)} → .webp (-${savedKb}KB)`);
   }

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(eval \"$(/opt/homebrew/bin/brew shellenv)\")",
+      "Bash(npx tsc --noEmit *)",
+      "mcp__Claude_Browser__get_page_text",
+      "mcp__Claude_Browser__preview_logs",
+      "mcp__Claude_Browser__find",
+      "mcp__Claude_Browser__read_console_messages",
+      "Bash(curl -s https://roandeighton.github.io/*)",
+      "Bash(curl -s -A \"Mozilla/5.0 SiteInventoryBot-Research\" *)",
+      "mcp__Claude_Browser__tabs_context",
+      "Read(output/revolut/**)",
+      "Read(/tmp/revolut-content-work/**)",
+      "Write(output/revolut/content/**)"
+    ]
+  }
+}

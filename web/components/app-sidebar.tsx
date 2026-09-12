@@ -36,9 +36,17 @@ function NavGroup({ label, links, pathname }: { label?: string; links: SidebarLi
               <SidebarMenuButton
                 render={<Link href={link.href} prefetch={false} />}
                 isActive={pathname.endsWith(link.href)}
-                className="w-fit text-xs font-semibold data-active:font-semibold"
+                className="w-full min-w-0 text-xs font-semibold data-active:font-semibold"
               >
-                {link.title}
+                {/* The shadcn sidebar primitive's truncate rule only targets a
+                    `<span>` last child — a bare text child (as this was)
+                    never truncates, so a title long enough to wrap (common
+                    on a real site's page/component names, unlike this
+                    project's short original test titles) overflows the
+                    button's fixed row height into the next item. */}
+                <span className="truncate" title={link.title}>
+                  {link.title}
+                </span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}

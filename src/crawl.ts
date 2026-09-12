@@ -4,7 +4,22 @@ import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { loadRobots, isAllowed, RobotsInfo } from "./lib/robots.js";
 import { normalizeUrl, isSameSite, looksLikeAsset, slugFromUrl } from "./lib/urls.js";
-import { groupUrlsByPattern } from "./lib/patternGroup.js";
+import { groupUrlsByPattern, GroupedUrls } from "./lib/patternGroup.js";
+import { buildCaptureListFromGroups, CaptureCandidate } from "./lib/captureList.js";
+import {
+  discoverViaNavAndListings,
+  buildCaptureListFromNavDiscovery,
+  FilterContext,
+} from "./lib/navDiscovery.js";
+import {
+  promptForUrl,
+  promptForOnlyUrls,
+  promptForLocalePrefix,
+  printNavDiscoverySummary,
+  printGroupedCaptureSummary,
+  promptCheckpoint,
+  CheckpointDecision,
+} from "./lib/interactivePrompts.js";
 import { dismissCookieBanner } from "./lib/cookies.js";
 import { sampleStyles } from "./lib/styleSample.js";
 import { captureStitchedScreenshot } from "./lib/stitchedScreenshot.js";
@@ -29,11 +44,13 @@ interface Options {
   userAgent: string;
   localePrefix: string | null;
   onlyUrls: string[] | null;
+  yes: boolean;
+  legacyDiscovery: boolean;
 }
 
 const program = new Command();
 program
-  .requiredOption("--url <url>", "Starting URL for the site")
+  .option("--url <url>", "Starting URL for the site")
   .option("--sitemap <url>", "Explicit sitemap.xml URL (auto-discovered from robots.txt otherwise)")
   .option("--output <dir>", "Output directory", "")
   .option("--sample-size <n>", "Pages to sample per repeating pattern group", "4")
@@ -43,17 +60,20 @@ program
   .option("--max-sitemap-files <n>", "Max sub-sitemap files to fetch from a sitemap index", "300")
   .option("--max-urls-per-sitemap-file <n>", "Max URLs to take from any single sitemap file, so one huge file can't starve others of discovery budget", "500")
   .option("--concurrency <n>", "Concurrent browser pages while capturing", "3")
-  .option("--bfs-depth <n>", "Extra link-following crawl depth to supplement the sitemap", "2")
-  .option("--bfs-max-pages <n>", "Max pages to visit during the supplementary link crawl", "50")
+  .option("--bfs-depth <n>", "Extra link-following crawl depth to supplement the sitemap (legacy discovery only)", "2")
+  .option("--bfs-max-pages <n>", "Max pages to visit during the supplementary link crawl (legacy discovery only)", "50")
   .option("--user-agent <ua>", "User-Agent header to send", "SiteInventoryBot/0.1 (+https://github.com/; research crawl)")
   .option("--locale-prefix <code>", "Restrict crawl to this locale path segment (e.g. 'nl'). Auto-detected from --url when it starts with a locale-looking segment; pass 'none' to disable.")
-  .option("--only-urls <urls>", "Comma-separated list of exact URLs to capture, skipping discovery/sampling entirely (for small targeted test runs)");
+  .option("--only-urls <urls>", "Comma-separated list of exact URLs to capture, skipping discovery/sampling entirely (for small targeted test runs)")
+  .option("--yes", "Skip the review checkpoint prompt and proceed with capture automatically")
+  .option("--legacy-discovery", "Skip nav/footer discovery and use the original sitemap + link-crawl discovery directly, with no prompts");
 
 program.parse(process.argv);
 const opts = program.opts();
 
-const rootUrl = new URL(opts.url);
-const rootHost = rootUrl.hostname;
+let options: Options;
+let rootUrl: URL;
+let rootHost: string;
 
 function detectLocalePrefix(): string | null {
   if (opts.localePrefix === "none") return null;
@@ -63,26 +83,51 @@ function detectLocalePrefix(): string | null {
   return null;
 }
 
-const options: Options = {
-  url: opts.url,
-  sitemap: opts.sitemap,
-  output: opts.output || path.join("output", rootHost.replace(/^www\./, "").replace(/\./g, "-")),
-  sampleSize: parseInt(opts.sampleSize, 10),
-  pageCap: parseInt(opts.pageCap, 10),
-  collapseThreshold: parseInt(opts.collapseThreshold, 10),
-  maxDiscover: parseInt(opts.maxDiscover, 10),
-  maxSitemapFiles: parseInt(opts.maxSitemapFiles, 10),
-  maxUrlsPerSitemapFile: parseInt(opts.maxUrlsPerSitemapFile, 10),
-  concurrency: parseInt(opts.concurrency, 10),
-  bfsDepth: parseInt(opts.bfsDepth, 10),
-  bfsMaxPages: parseInt(opts.bfsMaxPages, 10),
-  userAgent: opts.userAgent,
-  localePrefix: detectLocalePrefix(),
-  onlyUrls: opts.onlyUrls ? opts.onlyUrls.split(",").map((u: string) => u.trim()).filter(Boolean) : null,
-};
+// Resolves --url/--only-urls from flags where given, prompting for whichever
+// is missing. --legacy-discovery implies "no prompts beyond the URL itself"
+// since it runs its own full discovery rather than an exact page list.
+async function initOptions(): Promise<void> {
+  const urlInput = opts.url || (await promptForUrl());
+  rootUrl = new URL(urlInput);
+  rootHost = rootUrl.hostname;
 
-if (options.localePrefix) {
-  console.log(`Locale filter: restricting to /${options.localePrefix}/* paths (pass --locale-prefix none to disable)`);
+  let onlyUrls: string[] | null = opts.onlyUrls
+    ? opts.onlyUrls.split(",").map((u: string) => u.trim()).filter(Boolean)
+    : null;
+  if (!onlyUrls && !opts.legacyDiscovery) {
+    onlyUrls = await promptForOnlyUrls();
+  }
+
+  // Locale only matters for discovery (it filters which found links count);
+  // an exact --only-urls list has nothing to filter, so skip asking. A
+  // --locale-prefix flag is taken as-is, same as before, with no prompt.
+  const localePrefix = opts.localePrefix || onlyUrls
+    ? detectLocalePrefix()
+    : await promptForLocalePrefix(detectLocalePrefix());
+
+  options = {
+    url: urlInput,
+    sitemap: opts.sitemap,
+    output: opts.output || path.join("output", rootHost.replace(/^www\./, "").replace(/\./g, "-")),
+    sampleSize: parseInt(opts.sampleSize, 10),
+    pageCap: parseInt(opts.pageCap, 10),
+    collapseThreshold: parseInt(opts.collapseThreshold, 10),
+    maxDiscover: parseInt(opts.maxDiscover, 10),
+    maxSitemapFiles: parseInt(opts.maxSitemapFiles, 10),
+    maxUrlsPerSitemapFile: parseInt(opts.maxUrlsPerSitemapFile, 10),
+    concurrency: parseInt(opts.concurrency, 10),
+    bfsDepth: parseInt(opts.bfsDepth, 10),
+    bfsMaxPages: parseInt(opts.bfsMaxPages, 10),
+    userAgent: opts.userAgent,
+    localePrefix,
+    onlyUrls,
+    yes: !!opts.yes,
+    legacyDiscovery: !!opts.legacyDiscovery,
+  };
+
+  if (options.localePrefix) {
+    console.log(`Locale filter: restricting to /${options.localePrefix}/* paths (pass --locale-prefix none to disable)`);
+  }
 }
 
 interface Failure {
@@ -205,15 +250,58 @@ async function discoverFromLinks(browser: Browser, robots: RobotsInfo, seedUrls:
   return Array.from(discovered);
 }
 
-function pickSamples<T>(items: T[], n: number): T[] {
-  if (items.length <= n) return items;
-  const sorted = [...items].sort();
-  const step = sorted.length / n;
-  const picked: T[] = [];
-  for (let i = 0; i < n; i++) {
-    picked.push(sorted[Math.floor(i * step)]);
+interface LegacyDiscoveryResult {
+  allDiscovered: Set<string>;
+  groups: GroupedUrls[];
+  captureList: CaptureCandidate[];
+}
+
+// The original sitemap + generic link-crawl discovery, unchanged in
+// behavior — reachable either directly via --legacy-discovery, or as the
+// "expand search" fallback offered at the nav-first review checkpoint.
+async function runLegacyDiscovery(browser: Browser, robots: RobotsInfo): Promise<LegacyDiscoveryResult> {
+  console.log("Discovering URLs from sitemap...");
+  const sitemapUrls = await discoverFromSitemap(robots);
+  console.log(`  found ${sitemapUrls.length} URLs from sitemap`);
+
+  console.log(`Discovering additional URLs via link crawl (depth ${options.bfsDepth}, up to ${options.bfsMaxPages} pages)...`);
+  const linkUrls = await discoverFromLinks(browser, robots, [options.url]);
+  console.log(`  found ${linkUrls.length} additional URLs from link crawl`);
+
+  const allDiscovered = new Set<string>();
+  for (const u of [...sitemapUrls, ...linkUrls]) {
+    const normalized = normalizeUrl(u, rootUrl.origin);
+    if (!normalized) continue;
+    if (!isSameSite(normalized, rootHost)) continue;
+    if (looksLikeAsset(normalized)) continue;
+    if (!isAllowed(robots, normalized, options.userAgent)) continue;
+    if (options.localePrefix) {
+      const first = new URL(normalized).pathname.split("/").filter(Boolean)[0];
+      if (first && /^[a-z]{2}(-[a-z]{2})?$/i.test(first) && first.toLowerCase() !== options.localePrefix) continue;
+    }
+    allDiscovered.add(normalized);
   }
-  return picked;
+
+  console.log(`Total unique discovered URLs: ${allDiscovered.size}`);
+
+  const groups = groupUrlsByPattern(Array.from(allDiscovered), options.collapseThreshold);
+  groups.sort((a, b) => b.urls.length - a.urls.length);
+
+  console.log(`Grouped into ${groups.length} path patterns`);
+
+  const totalDesired = groups.reduce(
+    (sum, g) => sum + (g.pattern.endsWith("/[*]") ? Math.min(g.urls.length, options.sampleSize) : g.urls.length),
+    0,
+  );
+  if (totalDesired > options.pageCap) {
+    console.log(
+      `Desired captures (${totalDesired}: full unique coverage + pattern samples) exceed page cap (${options.pageCap}); filling round-robin across all ${groups.length} distinct shapes so coverage breadth isn't lost to one category.`,
+    );
+  }
+
+  const captureList = buildCaptureListFromGroups(groups, options);
+
+  return { allDiscovered, groups, captureList };
 }
 
 async function withConcurrency<T>(items: T[], limit: number, worker: (item: T, index: number) => Promise<void>) {
@@ -228,6 +316,8 @@ async function withConcurrency<T>(items: T[], limit: number, worker: (item: T, i
 }
 
 async function main() {
+  await initOptions();
+
   console.log(`Starting crawl of ${rootUrl.origin}`);
   await fs.mkdir(options.output, { recursive: true });
   await fs.mkdir(path.join(options.output, "pages"), { recursive: true });
@@ -236,77 +326,86 @@ async function main() {
   const browser = await chromium.launch({ headless: true });
 
   let allDiscovered: Set<string>;
-  let groups: { pattern: string; urls: string[] }[];
-  let finalCaptureList: { url: string; pattern: string }[];
+  let groups: GroupedUrls[];
+  let finalCaptureList: CaptureCandidate[];
+  let discoveryMode: "onlyUrls" | "legacyDiscovery" | "navFooter" | "navFooterExpanded";
 
   if (options.onlyUrls) {
     console.log(`Explicit URL list provided: capturing exactly ${options.onlyUrls.length} pages, skipping discovery/sampling.`);
     allDiscovered = new Set(options.onlyUrls);
     groups = options.onlyUrls.map((u) => ({ pattern: new URL(u).pathname, urls: [u] }));
     finalCaptureList = options.onlyUrls.map((u) => ({ url: u, pattern: new URL(u).pathname }));
+    discoveryMode = "onlyUrls";
+  } else if (options.legacyDiscovery) {
+    const legacy = await runLegacyDiscovery(browser, robots);
+    allDiscovered = legacy.allDiscovered;
+    groups = legacy.groups;
+    finalCaptureList = legacy.captureList;
+    discoveryMode = "legacyDiscovery";
   } else {
-    console.log("Discovering URLs from sitemap...");
-    const sitemapUrls = await discoverFromSitemap(robots);
-    console.log(`  found ${sitemapUrls.length} URLs from sitemap`);
+    const ctx: FilterContext = {
+      rootHost,
+      robots,
+      userAgent: options.userAgent,
+      localePrefix: options.localePrefix,
+    };
 
-    console.log(`Discovering additional URLs via link crawl (depth ${options.bfsDepth}, up to ${options.bfsMaxPages} pages)...`);
-    const linkUrls = await discoverFromLinks(browser, robots, [options.url]);
-    console.log(`  found ${linkUrls.length} additional URLs from link crawl`);
+    console.log("Discovering pages from header/nav and footer links...");
+    const navResult = await discoverViaNavAndListings(browser, options.url, ctx, {
+      collapseThreshold: options.collapseThreshold,
+      sampleSize: options.sampleSize,
+    });
+    for (const f of navResult.failures) failures.push({ url: f.url, stage: "discover", error: f.error });
 
-    allDiscovered = new Set<string>();
-    for (const u of [...sitemapUrls, ...linkUrls]) {
-      const normalized = normalizeUrl(u, rootUrl.origin);
-      if (!normalized) continue;
-      if (!isSameSite(normalized, rootHost)) continue;
-      if (looksLikeAsset(normalized)) continue;
-      if (!isAllowed(robots, normalized, options.userAgent)) continue;
-      if (options.localePrefix) {
-        const first = new URL(normalized).pathname.split("/").filter(Boolean)[0];
-        if (first && /^[a-z]{2}(-[a-z]{2})?$/i.test(first) && first.toLowerCase() !== options.localePrefix) continue;
+    let mergedGroups: GroupedUrls[] | null = null;
+    let mergedDiscovered: Set<string> | null = null;
+    let decision: CheckpointDecision = "proceed";
+
+    for (;;) {
+      if (mergedGroups) {
+        printGroupedCaptureSummary(mergedGroups, buildCaptureListFromGroups(mergedGroups, options));
+      } else {
+        printNavDiscoverySummary(navResult);
       }
-      allDiscovered.add(normalized);
+
+      decision = options.yes ? "proceed" : await promptCheckpoint();
+      if (decision !== "expand") break;
+
+      console.log("Expanding search: running legacy sitemap + link-crawl discovery...");
+      const legacy = await runLegacyDiscovery(browser, robots);
+      const combined = new Set<string>([
+        ...navResult.navFooterPages,
+        ...navResult.listings.flatMap((l) => l.allUrls),
+        ...legacy.allDiscovered,
+      ]);
+      mergedDiscovered = combined;
+      mergedGroups = groupUrlsByPattern(Array.from(combined), options.collapseThreshold);
     }
 
-    console.log(`Total unique discovered URLs: ${allDiscovered.size}`);
-
-    groups = groupUrlsByPattern(Array.from(allDiscovered), options.collapseThreshold);
-    groups.sort((a, b) => b.urls.length - a.urls.length);
-
-    console.log(`Grouped into ${groups.length} path patterns`);
-
-    // Every distinct URL shape (unique one-off, or repeating pattern) is a quota
-    // bucket. Unique groups need only 1 page (fully captured); repeating groups
-    // want up to sampleSize. We fill round-robin, one page per bucket per round,
-    // so a page cap smaller than the total desired captures still spreads
-    // coverage across every distinct shape first rather than exhausting the
-    // budget on one category (e.g. hundreds of one-off pages) before the other
-    // (e.g. the site's largest, most important repeating template) gets a look.
-    const buckets = groups.map((g) => ({
-      pattern: g.pattern,
-      isRepeating: g.pattern.endsWith("/[*]"),
-      pool: g.pattern.endsWith("/[*]") ? pickSamples(g.urls, options.sampleSize) : g.urls,
-      taken: 0,
-    }));
-
-    const totalDesired = buckets.reduce((sum, b) => sum + b.pool.length, 0);
-    if (totalDesired > options.pageCap) {
-      console.log(`Desired captures (${totalDesired}: full unique coverage + pattern samples) exceed page cap (${options.pageCap}); filling round-robin across all ${buckets.length} distinct shapes so coverage breadth isn't lost to one category.`);
+    if (decision === "cancel") {
+      console.log("Crawl cancelled.");
+      await browser.close();
+      return;
     }
 
-    const captureList: { url: string; pattern: string }[] = [];
-    let addedThisPass = true;
-    while (captureList.length < options.pageCap && addedThisPass) {
-      addedThisPass = false;
-      for (const bucket of buckets) {
-        if (captureList.length >= options.pageCap) break;
-        if (bucket.taken >= bucket.pool.length) continue;
-        captureList.push({ url: bucket.pool[bucket.taken], pattern: bucket.pattern });
-        bucket.taken++;
-        addedThisPass = true;
+    if (mergedGroups) {
+      groups = mergedGroups;
+      finalCaptureList = buildCaptureListFromGroups(mergedGroups, options);
+      allDiscovered = mergedDiscovered!;
+      discoveryMode = "navFooterExpanded";
+    } else {
+      groups = [
+        ...navResult.navFooterPages.map((u) => ({ pattern: new URL(u).pathname || "/", urls: [u] })),
+        ...navResult.listings.map((l) => ({ pattern: l.pattern, urls: l.allUrls })),
+      ];
+      finalCaptureList = buildCaptureListFromNavDiscovery(navResult);
+      if (finalCaptureList.length > options.pageCap) {
+        console.log(`Capture list (${finalCaptureList.length}) exceeds page cap (${options.pageCap}); truncating.`);
+        finalCaptureList = finalCaptureList.slice(0, options.pageCap);
       }
+      allDiscovered = new Set([...navResult.navFooterPages, ...navResult.listings.flatMap((l) => l.allUrls)]);
+      discoveryMode = "navFooter";
     }
-
-    finalCaptureList = captureList;
   }
 
   console.log(`Capturing ${finalCaptureList.length} pages (screenshot + HTML)...`);
@@ -416,6 +515,7 @@ async function main() {
     startUrl: options.url,
     crawledAt: new Date().toISOString(),
     options,
+    discoveryMode,
     totalDiscovered: allDiscovered.size,
     totalCaptured: capturedPages.length,
     groups: groups.map((g) => ({ pattern: g.pattern, totalUrls: g.urls.length })),

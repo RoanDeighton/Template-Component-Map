@@ -1,9 +1,10 @@
 {
-  "analyzedAt": "2026-09-07T12:56:11.779Z",
+  "analyzedAt": "2026-09-12T20:51:40.401Z",
   "input": "output/rijksmuseum",
   "totalPages": 3,
   "totalTemplates": 3,
-  "totalComponents": 10,
+  "totalComponents": 11,
+  "stableIdAttr": null,
   "pages": [
     {
       "slug": "nl",
@@ -17,6 +18,8 @@
           "tag": "header",
           "classes": "header grid-row",
           "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:1-1|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:1-1|els:51-150|form:0|media:1",
           "heading": "Bezoek het Rijksmuseum",
           "textSnippet": "Language Inloggen Giftshop Rijksmuseum Bezoek het Rijksmuseum Het museum neemt je mee naar Rembrandt, Vermeer en Van Gogh FOUNDER HOOFDPARTNERS Bezoek en ticket",
           "linkCount": 27,
@@ -39,17 +42,20 @@
             "height": 90
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>0",
           "tag": "section",
-          "classes": "homepage blocks-full-height",
-          "primaryClass": "homepage",
-          "heading": "Highlights en tickets",
-          "textSnippet": "FOUNDER HOOFDPARTNERS Rijksmuseum Highlights en tickets Vandaag open van 9 tot 17u Families en kinderen Kom samen ontdekken Gratis t/m 18 jaar Ed van der Elsken",
-          "linkCount": 9,
-          "imageCount": 13,
+          "classes": "sponsor-logos grid-row",
+          "primaryClass": "sponsor-logos",
+          "fingerprint": "img:1|a:1|h:0|els:1-50|form:0|media:0",
+          "templateFingerprint": "section|img:1|a:1|h:0|els:16-50|form:0|media:0",
+          "heading": null,
+          "textSnippet": "FOUNDER HOOFDPARTNERS",
+          "linkCount": 4,
+          "imageCount": 4,
           "style": {
             "path": "main>0",
             "tag": "section",
@@ -68,13 +74,80 @@
             "height": 3600
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "div",
+          "classes": "page-header-home block-full-width-overflow",
+          "primaryClass": "page-header-home",
+          "fingerprint": "img:1|a:1|h:1-1|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:1-1|els:16-50|form:0|media:1",
+          "heading": "Highlights en tickets",
+          "textSnippet": "Rijksmuseum Highlights en tickets Vandaag open van 9 tot 17u",
+          "linkCount": 1,
+          "imageCount": 1,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "block-full-width-overflow",
+          "primaryClass": "block-full-width-overflow",
+          "fingerprint": "img:1|a:1|h:1-1|els:1-50|form:0|media:0",
+          "templateFingerprint": "div|img:1|a:1|h:1-1|els:16-50|form:0|media:0",
+          "heading": "Families en kinderen",
+          "textSnippet": "Families en kinderen Kom samen ontdekken Gratis t/m 18 jaar",
+          "linkCount": 1,
+          "imageCount": 2,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "section",
+          "classes": "related-content block-row",
+          "primaryClass": "related-content",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:0",
+          "templateFingerprint": "section|img:1|a:1|h:2-3|els:51-150|form:0|media:0",
+          "heading": "Ed van der Elsken. Up Close",
+          "textSnippet": "Ed van der Elsken. Up Close t/m 13 september Laatste kans Ed van der Elsken Boek nu verkrijgbaar in de Rijksmuseum shop",
+          "linkCount": 2,
+          "imageCount": 4,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>4",
+          "tag": "div",
+          "classes": "block-full-width-overflow",
+          "primaryClass": "block-full-width-overflow",
+          "fingerprint": "img:1|a:1|h:1-1|els:1-50|form:0|media:0",
+          "templateFingerprint": "div|img:1|a:1|h:1-1|els:16-50|form:0|media:0",
+          "heading": "Fiep Westendorp",
+          "textSnippet": "Fiep Westendorp t/m 13 september Laatste kans",
+          "linkCount": 1,
+          "imageCount": 2,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "footer",
           "tag": "footer",
           "classes": "grid-row footer",
           "primaryClass": "grid-row",
+          "fingerprint": "footer|img:1|a:1|h:1-1|els:51+|form:0|media:0",
+          "templateFingerprint": "footer|img:1|a:1|h:1-1|els:51-150|form:0|media:0",
           "heading": "Bezoekersinformatie",
           "textSnippet": "Bezoekersinformatie Elke dag van 9-17 uur Museumstraat 1, Amsterdam Over ons Pers Werken bij Contact Doneer ook Nieuwsbrief FOUNDER HOOFDPARTNERS Algemene voorw",
           "linkCount": 21,
@@ -97,11 +170,16 @@
             "height": 447
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         }
       ],
       "signature": [
-        "homepage"
+        "section|img:1|a:1|h:0|els:16-50|form:0|media:0",
+        "div|img:1|a:1|h:1-1|els:16-50|form:0|media:1",
+        "div|img:1|a:1|h:1-1|els:16-50|form:0|media:0",
+        "section|img:1|a:1|h:2-3|els:51-150|form:0|media:0",
+        "div|img:1|a:1|h:1-1|els:16-50|form:0|media:0"
       ]
     },
     {
@@ -116,6 +194,8 @@
           "tag": "header",
           "classes": "header grid-row",
           "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:1-1|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:1-1|els:51-150|form:0|media:1",
           "heading": "Bezoek het Rijksmuseum",
           "textSnippet": "Language Inloggen Giftshop Rijksmuseum Bezoek het Rijksmuseum Het museum neemt je mee naar Rembrandt, Vermeer en Van Gogh FOUNDER HOOFDPARTNERS Home Language Ne",
           "linkCount": 25,
@@ -138,13 +218,16 @@
             "height": 90
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>0",
           "tag": "section",
           "classes": "page-header block-full-width-overflow",
           "primaryClass": "page-header",
+          "fingerprint": "img:1|a:0|h:1-1|els:1-50|form:0|media:0",
+          "templateFingerprint": "section|img:1|a:0|h:1-1|els:16-50|form:0|media:0",
           "heading": "Agenda en activiteiten",
           "textSnippet": "Agenda en activiteiten Al onze tentoonstellingen en programmering",
           "linkCount": 0,
@@ -167,13 +250,16 @@
             "height": 900
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>1",
           "tag": "section",
           "classes": "intro-block grid-row inline-block",
           "primaryClass": "intro-block",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:0",
+          "templateFingerprint": "section|img:0|a:0|h:0|els:1-15|form:0|media:0",
           "heading": null,
           "textSnippet": "Ontdek wat er op dit moment te zien of te doen is in het Rijksmuseum. Hieronder lichten we de mooiste tentoonstellingen en activiteiten uit voor jou.",
           "linkCount": 0,
@@ -196,13 +282,16 @@
             "height": 55
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>2",
           "tag": "section",
           "classes": "whatson-highlights",
           "primaryClass": "whatson-highlights",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:0",
+          "templateFingerprint": "section|img:1|a:1|h:4+|els:151+|form:0|media:0",
           "heading": "Uitgelicht",
           "textSnippet": "Uitgelicht Ed van der Elsken. Up Close t/m 13 september Laatste kans Fiep Westendorp t/m 13 september Laatste kans Carel Visser in de Rijksmuseumtuinen t/m 25 o",
           "linkCount": 7,
@@ -225,13 +314,16 @@
             "height": 1492
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>3",
           "tag": "section",
           "classes": "link-section",
           "primaryClass": "link-section",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:0",
+          "templateFingerprint": "section|img:1|a:1|h:4+|els:151+|form:0|media:0",
           "heading": "Speciaal voor",
           "textSnippet": "Speciaal voor Families en kinderen Jongvolwassenen Onderwijs Toegankelijkheid Vrienden",
           "linkCount": 5,
@@ -254,13 +346,16 @@
             "height": 1398
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>4",
           "tag": "section",
           "classes": "link-section",
           "primaryClass": "link-section",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:0",
+          "templateFingerprint": "section|img:1|a:1|h:4+|els:51-150|form:0|media:0",
           "heading": "Cursussen, workshops en lezingen",
           "textSnippet": "Cursussen, workshops en lezingen Cursussen Workshops Lezingen, symposia en filmvertoningen",
           "linkCount": 3,
@@ -283,13 +378,16 @@
             "height": 651
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "footer",
           "tag": "footer",
           "classes": "grid-row footer",
           "primaryClass": "grid-row",
+          "fingerprint": "footer|img:1|a:1|h:1-1|els:51+|form:0|media:0",
+          "templateFingerprint": "footer|img:1|a:1|h:1-1|els:51-150|form:0|media:0",
           "heading": "Bezoekersinformatie",
           "textSnippet": "Bezoekersinformatie Elke dag van 9-17 uur Museumstraat 1, Amsterdam Over ons Pers Werken bij Contact Doneer ook Nieuwsbrief FOUNDER HOOFDPARTNERS Algemene voorw",
           "linkCount": 21,
@@ -312,15 +410,16 @@
             "height": 447
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         }
       ],
       "signature": [
-        "page-header",
-        "intro-block",
-        "whatson-highlights",
-        "link-section",
-        "link-section"
+        "section|img:1|a:0|h:1-1|els:16-50|form:0|media:0",
+        "section|img:0|a:0|h:0|els:1-15|form:0|media:0",
+        "section|img:1|a:1|h:4+|els:151+|form:0|media:0",
+        "section|img:1|a:1|h:4+|els:151+|form:0|media:0",
+        "section|img:1|a:1|h:4+|els:51-150|form:0|media:0"
       ]
     },
     {
@@ -335,6 +434,8 @@
           "tag": "header",
           "classes": "header grid-row",
           "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:1-1|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:1-1|els:151+|form:0|media:1",
           "heading": "Bezoek het Rijksmuseum",
           "textSnippet": "Language Inloggen Giftshop Rijksmuseum Bezoek het Rijksmuseum Het museum neemt je mee naar Rembrandt, Vermeer en Van Gogh FOUNDER HOOFDPARTNERS Home Language Ne",
           "linkCount": 37,
@@ -357,13 +458,16 @@
             "height": 90
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>0",
           "tag": "section",
           "classes": "page-header block-full-width-overflow",
           "primaryClass": "page-header",
+          "fingerprint": "img:1|a:0|h:1-1|els:1-50|form:0|media:0",
+          "templateFingerprint": "section|img:1|a:0|h:1-1|els:16-50|form:0|media:0",
           "heading": "Bezoek het Rijksmuseum",
           "textSnippet": "Vandaag open Bezoek het Rijksmuseum Het museum neemt je mee naar Rembrandt, Vermeer en Van Gogh",
           "linkCount": 0,
@@ -386,13 +490,16 @@
             "height": 900
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>1",
           "tag": "section",
           "classes": "minimal-expanding-intro-component grid-row",
           "primaryClass": "minimal-expanding-intro-component",
+          "fingerprint": "img:0|a:1|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "section|img:0|a:1|h:0|els:16-50|form:0|media:1",
           "heading": null,
           "textSnippet": "In Amsterdam is veel te doen, maar je dag is pas compleet met een bezoek aan het Rijksmuseum. Met ruim 8000 werken nemen we je mee door 800 jaar Nederlandse kun",
           "linkCount": 2,
@@ -415,13 +522,16 @@
             "height": 223
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>2",
           "tag": "div",
           "classes": "carousel-wrapper",
           "primaryClass": "carousel-wrapper",
+          "fingerprint": "img:1|a:0|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:0|h:0|els:151+|form:0|media:1",
           "heading": null,
           "textSnippet": "800 jaar Nederlandse geschiedenis in één gebouw De Eregalerij: met meesterwerken van Rembrandt, Vermeer en Frans Hals Altijd gratis toegang t/m 18 jaar Honderde",
           "linkCount": 0,
@@ -444,13 +554,16 @@
             "height": 4903
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>3",
           "tag": "div",
           "classes": "carousel-wrapper",
           "primaryClass": "carousel-wrapper",
+          "fingerprint": "img:1|a:0|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:0|h:2-3|els:51-150|form:0|media:1",
           "heading": "Ongetwijfeld het mooiste museum ter wereld. Als je in Amsterdam bent moet dat je eerste bezoek zijn.",
           "textSnippet": "Ongetwijfeld het mooiste museum ter wereld. Als je in Amsterdam bent moet dat je eerste bezoek zijn. Tripadvisor, ***** 2 | 2 HET MUSEUM WAT JE MINIMAAL EEN KEE",
           "linkCount": 0,
@@ -473,13 +586,16 @@
             "height": 900
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "main>4",
           "tag": "section",
           "classes": "related-content block-row",
           "primaryClass": "related-content",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:0",
+          "templateFingerprint": "section|img:1|a:1|h:2-3|els:51-150|form:0|media:0",
           "heading": "Agenda en activiteiten",
           "textSnippet": "Agenda en activiteiten Ontdek de programmering Praktische info Alles wat je moet weten voor je bezoek",
           "linkCount": 2,
@@ -502,13 +618,16 @@
             "height": 594
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         },
         {
           "path": "footer",
           "tag": "footer",
           "classes": "grid-row footer",
           "primaryClass": "grid-row",
+          "fingerprint": "footer|img:1|a:1|h:1-1|els:51+|form:0|media:0",
+          "templateFingerprint": "footer|img:1|a:1|h:1-1|els:51-150|form:0|media:0",
           "heading": "Bezoekersinformatie",
           "textSnippet": "Bezoekersinformatie Elke dag van 9-17 uur Museumstraat 1, Amsterdam Over ons Pers Werken bij Contact Doneer ook Nieuwsbrief FOUNDER HOOFDPARTNERS Algemene voorw",
           "linkCount": 21,
@@ -531,15 +650,16 @@
             "height": 447
           },
           "isBlankFlagged": false,
-          "blankNote": null
+          "blankNote": null,
+          "candidateIdAttrs": {}
         }
       ],
       "signature": [
-        "page-header",
-        "minimal-expanding-intro-component",
-        "carousel-wrapper",
-        "carousel-wrapper",
-        "related-content"
+        "section|img:1|a:0|h:1-1|els:16-50|form:0|media:0",
+        "section|img:0|a:1|h:0|els:16-50|form:0|media:1",
+        "div|img:1|a:0|h:0|els:151+|form:0|media:1",
+        "div|img:1|a:0|h:2-3|els:51-150|form:0|media:1",
+        "section|img:1|a:1|h:2-3|els:51-150|form:0|media:0"
       ]
     }
   ],
@@ -550,7 +670,11 @@
         "nl"
       ],
       "signature": [
-        "homepage"
+        "section|img:1|a:1|h:0|els:16-50|form:0|media:0",
+        "div|img:1|a:1|h:1-1|els:16-50|form:0|media:1",
+        "div|img:1|a:1|h:1-1|els:16-50|form:0|media:0",
+        "section|img:1|a:1|h:2-3|els:51-150|form:0|media:0",
+        "div|img:1|a:1|h:1-1|els:16-50|form:0|media:0"
       ]
     },
     {
@@ -559,11 +683,11 @@
         "nl-zien-en-doen"
       ],
       "signature": [
-        "page-header",
-        "intro-block",
-        "whatson-highlights",
-        "link-section",
-        "link-section"
+        "section|img:1|a:0|h:1-1|els:16-50|form:0|media:0",
+        "section|img:0|a:0|h:0|els:1-15|form:0|media:0",
+        "section|img:1|a:1|h:4+|els:151+|form:0|media:0",
+        "section|img:1|a:1|h:4+|els:151+|form:0|media:0",
+        "section|img:1|a:1|h:4+|els:51-150|form:0|media:0"
       ]
     },
     {
@@ -572,18 +696,21 @@
         "nl-bezoek"
       ],
       "signature": [
-        "page-header",
-        "minimal-expanding-intro-component",
-        "carousel-wrapper",
-        "carousel-wrapper",
-        "related-content"
+        "section|img:1|a:0|h:1-1|els:16-50|form:0|media:0",
+        "section|img:0|a:1|h:0|els:16-50|form:0|media:1",
+        "div|img:1|a:0|h:0|els:151+|form:0|media:1",
+        "div|img:1|a:0|h:2-3|els:51-150|form:0|media:1",
+        "section|img:1|a:1|h:2-3|els:51-150|form:0|media:0"
       ]
     }
   ],
   "components": [
     {
-      "key": "header",
+      "key": "header:header|img:1|a:1|h:1-1|els:51+|form:0|media:1",
       "tag": "header",
+      "classesSeen": [
+        "header"
+      ],
       "occurrences": [
         {
           "pageSlug": "nl",
@@ -603,79 +730,71 @@
       ]
     },
     {
-      "key": "homepage",
+      "key": "main:img:1|a:1|h:0|els:1-50|form:0|media:0",
       "tag": "section",
+      "classesSeen": [
+        "sponsor-logos"
+      ],
       "occurrences": [
         {
           "pageSlug": "nl",
           "path": "main>0",
-          "heading": "Highlights en tickets"
-        }
-      ]
-    },
-    {
-      "key": "grid-row",
-      "tag": "footer",
-      "occurrences": [
-        {
-          "pageSlug": "nl",
-          "path": "footer",
-          "heading": "Bezoekersinformatie"
-        },
-        {
-          "pageSlug": "nl-zien-en-doen",
-          "path": "footer",
-          "heading": "Bezoekersinformatie"
-        },
-        {
-          "pageSlug": "nl-bezoek",
-          "path": "footer",
-          "heading": "Bezoekersinformatie"
-        }
-      ]
-    },
-    {
-      "key": "page-header",
-      "tag": "section",
-      "occurrences": [
-        {
-          "pageSlug": "nl-zien-en-doen",
-          "path": "main>0",
-          "heading": "Agenda en activiteiten"
-        },
-        {
-          "pageSlug": "nl-bezoek",
-          "path": "main>0",
-          "heading": "Bezoek het Rijksmuseum"
-        }
-      ]
-    },
-    {
-      "key": "intro-block",
-      "tag": "section",
-      "occurrences": [
-        {
-          "pageSlug": "nl-zien-en-doen",
-          "path": "main>1",
           "heading": null
         }
       ]
     },
     {
-      "key": "whatson-highlights",
-      "tag": "section",
+      "key": "main:img:1|a:1|h:1-1|els:1-50|form:0|media:1",
+      "tag": "div",
+      "classesSeen": [
+        "page-header-home"
+      ],
       "occurrences": [
         {
-          "pageSlug": "nl-zien-en-doen",
-          "path": "main>2",
-          "heading": "Uitgelicht"
+          "pageSlug": "nl",
+          "path": "main>1",
+          "heading": "Highlights en tickets"
         }
       ]
     },
     {
-      "key": "link-section",
-      "tag": "section",
+      "key": "main:img:1|a:1|h:1-1|els:1-50|form:0|media:0",
+      "tag": "div",
+      "classesSeen": [
+        "block-full-width-overflow"
+      ],
       "occurrences": [
+        {
+          "pageSlug": "nl",
+          "path": "main>2",
+          "heading": "Families en kinderen"
+        },
+        {
+          "pageSlug": "nl",
+          "path": "main>4",
+          "heading": "Fiep Westendorp"
+        }
+      ]
+    },
+    {
+      "key": "main:img:1|a:1|h:2+|els:51+|form:0|media:0",
+      "tag": "section",
+      "classesSeen": [
+        "related-content",
+        "whatson-highlights",
+        "link-section"
+      ],
+      "occurrences": [
+        {
+          "pageSlug": "nl",
+          "path": "main>3",
+          "heading": "Ed van der Elsken. Up Close"
+        },
+        {
+          "pageSlug": "nl-zien-en-doen",
+          "path": "main>2",
+          "heading": "Uitgelicht"
+        },
         {
           "pageSlug": "nl-zien-en-doen",
           "path": "main>3",
@@ -685,12 +804,77 @@
           "pageSlug": "nl-zien-en-doen",
           "path": "main>4",
           "heading": "Cursussen, workshops en lezingen"
+        },
+        {
+          "pageSlug": "nl-bezoek",
+          "path": "main>4",
+          "heading": "Agenda en activiteiten"
         }
       ]
     },
     {
-      "key": "minimal-expanding-intro-component",
+      "key": "footer:footer|img:1|a:1|h:1-1|els:51+|form:0|media:0",
+      "tag": "footer",
+      "classesSeen": [
+        "grid-row"
+      ],
+      "occurrences": [
+        {
+          "pageSlug": "nl",
+          "path": "footer",
+          "heading": "Bezoekersinformatie"
+        },
+        {
+          "pageSlug": "nl-zien-en-doen",
+          "path": "footer",
+          "heading": "Bezoekersinformatie"
+        },
+        {
+          "pageSlug": "nl-bezoek",
+          "path": "footer",
+          "heading": "Bezoekersinformatie"
+        }
+      ]
+    },
+    {
+      "key": "main:img:1|a:0|h:1-1|els:1-50|form:0|media:0",
       "tag": "section",
+      "classesSeen": [
+        "page-header"
+      ],
+      "occurrences": [
+        {
+          "pageSlug": "nl-zien-en-doen",
+          "path": "main>0",
+          "heading": "Agenda en activiteiten"
+        },
+        {
+          "pageSlug": "nl-bezoek",
+          "path": "main>0",
+          "heading": "Bezoek het Rijksmuseum"
+        }
+      ]
+    },
+    {
+      "key": "main:img:0|a:0|h:0|els:1-50|form:0|media:0",
+      "tag": "section",
+      "classesSeen": [
+        "intro-block"
+      ],
+      "occurrences": [
+        {
+          "pageSlug": "nl-zien-en-doen",
+          "path": "main>1",
+          "heading": null
+        }
+      ]
+    },
+    {
+      "key": "main:img:0|a:1|h:0|els:1-50|form:0|media:1",
+      "tag": "section",
+      "classesSeen": [
+        "minimal-expanding-intro-component"
+      ],
       "occurrences": [
         {
           "pageSlug": "nl-bezoek",
@@ -700,29 +884,30 @@
       ]
     },
     {
-      "key": "carousel-wrapper",
+      "key": "main:img:1|a:0|h:0|els:51+|form:0|media:1",
       "tag": "div",
+      "classesSeen": [
+        "carousel-wrapper"
+      ],
       "occurrences": [
         {
           "pageSlug": "nl-bezoek",
           "path": "main>2",
           "heading": null
-        },
-        {
-          "pageSlug": "nl-bezoek",
-          "path": "main>3",
-          "heading": "Ongetwijfeld het mooiste museum ter wereld. Als je in Amsterdam bent moet dat je eerste bezoek zijn."
         }
       ]
     },
     {
-      "key": "related-content",
-      "tag": "section",
+      "key": "main:img:1|a:0|h:2+|els:51+|form:0|media:1",
+      "tag": "div",
+      "classesSeen": [
+        "carousel-wrapper"
+      ],
       "occurrences": [
         {
           "pageSlug": "nl-bezoek",
-          "path": "main>4",
-          "heading": "Agenda en activiteiten"
+          "path": "main>3",
+          "heading": "Ongetwijfeld het mooiste museum ter wereld. Als je in Amsterdam bent moet dat je eerste bezoek zijn."
         }
       ]
     }
