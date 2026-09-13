@@ -1,6 +1,5 @@
 import { Browser, BrowserContext, Page } from "playwright";
-import { normalizeUrl, isSameSite, looksLikeAsset } from "./urls.js";
-import { isAllowed, RobotsInfo } from "./robots.js";
+import { normalizeUrl, filterCandidateUrl, FilterContext } from "./urls.js";
 import { groupUrlsByPattern } from "./patternGroup.js";
 import { pickSamples, CaptureCandidate } from "./captureList.js";
 
@@ -21,13 +20,6 @@ const FOOTER_UTILITY_DENYLIST = [
   /disclaimer/i,
   /gdpr/i,
 ];
-
-export interface FilterContext {
-  rootHost: string;
-  robots: RobotsInfo;
-  userAgent: string;
-  localePrefix: string | null;
-}
 
 export interface DiscoveryFailure {
   url: string;
@@ -51,22 +43,6 @@ export interface NavDiscoveryResult {
   navFooterPages: string[];
   listings: ListingResult[];
   failures: DiscoveryFailure[];
-}
-
-// The same normalize -> same-site -> not-an-asset -> robots-allowed ->
-// locale-match chain used throughout crawl.ts, in one place so nav
-// discovery and listing detection don't each carry their own copy.
-export function filterCandidateUrl(raw: string, baseUrl: string, ctx: FilterContext): string | null {
-  const normalized = normalizeUrl(raw, baseUrl);
-  if (!normalized) return null;
-  if (!isSameSite(normalized, ctx.rootHost)) return null;
-  if (looksLikeAsset(normalized)) return null;
-  if (!isAllowed(ctx.robots, normalized, ctx.userAgent)) return null;
-  if (ctx.localePrefix) {
-    const first = new URL(normalized).pathname.split("/").filter(Boolean)[0];
-    if (first && /^[a-z]{2}(-[a-z]{2})?$/i.test(first) && first.toLowerCase() !== ctx.localePrefix) return null;
-  }
-  return normalized;
 }
 
 async function extractLinks(page: Page, selector: string): Promise<{ href: string; text: string }[]> {

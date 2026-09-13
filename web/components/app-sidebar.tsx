@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import {
   Sidebar,
   SidebarContent,
@@ -82,9 +83,37 @@ export function AppSidebar({
   const functionalLinks = componentLinks.filter((c) => c.functional);
   const editorialLinks = componentLinks.filter((c) => !c.functional);
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [showBottomFade, setShowBottomFade] = useState(false);
+
+  // Shows a fade at the bottom edge only while there's more list below the
+  // fold — recomputed on scroll and on content/section changes, not just
+  // once, since switching between Components and Pages changes the list
+  // length under the same scroll container.
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const updateFade = () => {
+      setShowBottomFade(el.scrollHeight - el.scrollTop - el.clientHeight > 1);
+    };
+
+    updateFade();
+    el.addEventListener("scroll", updateFade);
+    const observer = new ResizeObserver(updateFade);
+    observer.observe(el);
+    return () => {
+      el.removeEventListener("scroll", updateFade);
+      observer.disconnect();
+    };
+  }, [section]);
+
   return (
-    <Sidebar collapsible="none" className="border-r-0 bg-transparent">
-      <SidebarContent className="relative pt-10 after:absolute after:inset-y-0 after:right-0 after:w-px after:bg-gradient-to-b after:from-transparent after:via-border after:to-transparent">
+    <Sidebar
+      collapsible="none"
+      className="relative border-r-0 bg-transparent after:absolute after:inset-y-0 after:right-0 after:w-px after:bg-gradient-to-b after:from-transparent after:via-border after:to-transparent"
+    >
+      <SidebarContent ref={scrollRef} className="pt-10">
         <NavGroup links={overview} pathname={pathname} />
         {section === "components" ? (
           <>
@@ -99,6 +128,12 @@ export function AppSidebar({
           <NavGroup label={`Pages (${pageLinks.length})`} links={pageLinks} pathname={pathname} />
         )}
       </SidebarContent>
+      <div
+        aria-hidden
+        className={`pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-sidebar to-transparent transition-opacity duration-200 ${
+          showBottomFade ? "opacity-100" : "opacity-0"
+        }`}
+      />
     </Sidebar>
   );
 }

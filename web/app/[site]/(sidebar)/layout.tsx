@@ -24,9 +24,9 @@ export default async function SidebarLayout(props: LayoutProps<"/[site]">) {
   }));
 
   return (
-    <SidebarProvider className="min-h-0 flex-1">
+    <SidebarProvider className="min-h-0 flex-1 overflow-hidden">
       <AppSidebar site={site} componentLinks={componentLinks} pageLinks={pageLinks} />
-      <SidebarInset>
+      <SidebarInset className="min-h-0 overflow-y-auto">
         <div className="w-full px-12 py-12">{props.children}</div>
       </SidebarInset>
     </SidebarProvider>

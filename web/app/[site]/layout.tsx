@@ -11,7 +11,7 @@ export default async function SiteLayout(props: LayoutProps<"/[site]">) {
   if (!listSites().includes(site)) notFound();
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex h-screen flex-col overflow-hidden">
       <TopNav site={site} />
       {props.children}
     </div>

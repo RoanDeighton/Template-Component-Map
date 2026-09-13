@@ -2,15 +2,11 @@ import { Command } from "commander";
 import { chromium, Browser } from "playwright";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { loadRobots, isAllowed, RobotsInfo } from "./lib/robots.js";
-import { normalizeUrl, isSameSite, looksLikeAsset, slugFromUrl } from "./lib/urls.js";
+import { loadRobots, RobotsInfo } from "./lib/robots.js";
+import { slugFromUrl, filterCandidateUrl, FilterContext } from "./lib/urls.js";
 import { groupUrlsByPattern, GroupedUrls } from "./lib/patternGroup.js";
 import { buildCaptureListFromGroups, CaptureCandidate } from "./lib/captureList.js";
-import {
-  discoverViaNavAndListings,
-  buildCaptureListFromNavDiscovery,
-  FilterContext,
-} from "./lib/navDiscovery.js";
+import { discoverViaNavAndListings, buildCaptureListFromNavDiscovery } from "./lib/navDiscovery.js";
 import {
   promptForUrl,
   promptForOnlyUrls,
@@ -218,6 +214,7 @@ async function discoverFromLinks(browser: Browser, robots: RobotsInfo, seedUrls:
   const visited = new Set<string>();
   const queue: { url: string; depth: number }[] = seedUrls.map((u) => ({ url: u, depth: 0 }));
   const context = await browser.newContext({ userAgent: options.userAgent });
+  const filterCtx: FilterContext = { rootHost, robots, userAgent: options.userAgent, localePrefix: options.localePrefix };
 
   while (queue.length > 0 && visited.size < options.bfsMaxPages) {
     const { url, depth } = queue.shift()!;
@@ -229,11 +226,8 @@ async function discoverFromLinks(browser: Browser, robots: RobotsInfo, seedUrls:
       await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 });
       const hrefs: string[] = await page.$$eval("a[href]", (as) => as.map((a) => (a as HTMLAnchorElement).href));
       for (const href of hrefs) {
-        const normalized = normalizeUrl(href, url);
+        const normalized = filterCandidateUrl(href, url, filterCtx);
         if (!normalized) continue;
-        if (!isSameSite(normalized, rootHost)) continue;
-        if (looksLikeAsset(normalized)) continue;
-        if (!isAllowed(robots, normalized, options.userAgent)) continue;
         discovered.add(normalized);
         if (depth + 1 <= options.bfsDepth && !visited.has(normalized)) {
           queue.push({ url: normalized, depth: depth + 1 });
@@ -268,17 +262,11 @@ async function runLegacyDiscovery(browser: Browser, robots: RobotsInfo): Promise
   const linkUrls = await discoverFromLinks(browser, robots, [options.url]);
   console.log(`  found ${linkUrls.length} additional URLs from link crawl`);
 
+  const filterCtx: FilterContext = { rootHost, robots, userAgent: options.userAgent, localePrefix: options.localePrefix };
   const allDiscovered = new Set<string>();
   for (const u of [...sitemapUrls, ...linkUrls]) {
-    const normalized = normalizeUrl(u, rootUrl.origin);
+    const normalized = filterCandidateUrl(u, rootUrl.origin, filterCtx);
     if (!normalized) continue;
-    if (!isSameSite(normalized, rootHost)) continue;
-    if (looksLikeAsset(normalized)) continue;
-    if (!isAllowed(robots, normalized, options.userAgent)) continue;
-    if (options.localePrefix) {
-      const first = new URL(normalized).pathname.split("/").filter(Boolean)[0];
-      if (first && /^[a-z]{2}(-[a-z]{2})?$/i.test(first) && first.toLowerCase() !== options.localePrefix) continue;
-    }
     allDiscovered.add(normalized);
   }
 
