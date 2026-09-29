@@ -1,0 +1,52 @@
+---
+title: "Partou: Site Inventory Overview"
+---
+
+<p class="eyebrow">Component inventory</p>
+
+# Partou
+
+<p class="stats-line">41 captured pages: every page reachable from the header, footer, and blog, plus 5 sample pages from partou's individual childcare-location template.</p>
+
+<!-- stat-blocks -->
+
+<p class="callout"><strong>Light pass.</strong> This run covers the site's structural chrome (header, footer, skip link, cookie bar) but not per-page or per-template descriptions yet. Component and page detail pages aren't written up individually. Partou also runs 1,319 separate childcare-location pages (one per city and address, e.g. "Kinderopvang in Apeldoorn"), found through the "Locatie vinden" search tool rather than the main nav. Only 5 are sampled here to cover that template; the rest weren't captured.</p>
+
+## How this was made
+
+<ol class="how-steps">
+  <li>
+    <div>
+      <p class="step-title">Crawl the site</p>
+      <p class="step-body">Discover its pages, group similar ones by URL pattern, and sample a few from each group instead of visiting every page. Each sampled page gets a screenshot.</p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p class="step-title">Analyze the structure</p>
+      <p class="step-body">Break each captured page down into its underlying structure, cluster the pages that share a layout into templates, and spot the components that get reused across different templates.</p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p class="step-title">Document what's there</p>
+      <p class="step-body">Turn that structural breakdown into write-ups of what each component actually is, what it holds, and how it varies. For this pass, only the header, footer, skip link, and cookie bar are documented.</p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p class="step-title">Publish it</p>
+      <p class="step-body">Assemble everything into this browsable site.</p>
+    </div>
+  </li>
+</ol>
+
+## Site identity, at a glance
+
+Pulled from actual computed styles, not estimated from screenshots:
+
+<ul class="identity-list">
+  <li><strong>Base typeface:</strong> <code>"Cera Pro", Arial, sans-serif</code>, 18px / weight 400</li>
+  <li><strong>Body text color:</strong> near-black (<code>rgb(29, 29, 29)</code>) on a white background</li>
+  <li><strong>Header and footer background:</strong> solid white (<code>rgb(255, 255, 255)</code>)</li>
+</ul>
