@@ -10,7 +10,7 @@ title: "Partou: Site Inventory Overview"
 
 <!-- stat-blocks -->
 
-<p class="callout"><strong>Light pass.</strong> Every captured page is placed and linked here with its own screenshot, and 15 components are identified and linked with a preview image each: the site's structural chrome (header, footer, skip link, cookie bar) plus the recurring content blocks spotted across a sample of pages (hero banners, image/text rows, card grids, CTA banners, the location finder, the blog templates). None of it has a full written description yet, and the editorial components were found by eye rather than an exhaustive pass over all 41 pages — see the Notes on the components page. Partou also runs 1,319 separate childcare-location pages (one per city and address, e.g. "Kinderopvang in Apeldoorn"), found through the "Locatie vinden" search tool rather than the main nav. Only 5 are sampled here to cover that template; the rest weren't captured.</p>
+<p class="callout"><strong>Light pass.</strong> Every captured page is placed and linked here with its own screenshot, and 19 components are identified and linked with a preview image each: the site's structural chrome (header, footer, skip link, cookie bar) plus every recurring content block found in a full pass over all 41 pages (hero banners, image/text rows, card and icon-tile grids, CTA banners, the location finder, directory, and profile card, the cost calculator, the blog templates). None of it has a full written description yet, and the editorial components were found by eye, not by the automated reconciliation, which only looks one level under a page's main content — see the Notes on the components page. Partou also runs 1,319 separate childcare-location pages (one per city and address, e.g. "Kinderopvang in Apeldoorn"), found through the "Locatie vinden" search tool rather than the main nav. Only 5 are sampled here to cover that template; the rest weren't captured.</p>
 
 ## How this was made
 
@@ -30,7 +30,7 @@ title: "Partou: Site Inventory Overview"
   <li>
     <div>
       <p class="step-title">Document what's there</p>
-      <p class="step-body">Turn that structural breakdown into write-ups of what each component actually is, what it holds, and how it varies. For this pass, every page is placed and linked with its screenshot, and 15 components (chrome plus the main recurring content blocks) are placed and linked with a preview image and a one-line description — none have the deeper CMS-field or variants write-up yet.</p>
+      <p class="step-body">Turn that structural breakdown into write-ups of what each component actually is, what it holds, and how it varies. For this pass, every page is placed and linked with its screenshot, and all 19 components found across them (chrome plus every recurring content block) are placed and linked with a preview image and a one-line description — none have the deeper CMS-field or variants write-up yet.</p>
     </div>
   </li>
   <li>

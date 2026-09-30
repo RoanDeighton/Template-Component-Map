@@ -7,7 +7,13 @@ examples:
 usedOn:
   - home
   - kinderdagverblijf
+  - bso
+  - peuteropvang
   - kinderopvang-apeldoorn
+  - kinderopvang-arnhem-bso-callunastraat-54
+  - kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171
+  - kinderopvang-vught-bso-koninginnelaan-1a
+  - kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158
   - actueel-6-voordelen-van-een-kinderdagverblijf
 ---
 

@@ -6,8 +6,26 @@ examples:
     capturedFromPage: kinderdagverblijf
 usedOn:
   - kinderdagverblijf
-  - contact
+  - bso
+  - peuteropvang
+  - ontwikkeling
+  - voeding
+  - activiteiten
+  - app
+  - onderzoek-wetenschap
+  - over-partou
+  - b-corp
+  - 50-jaar
+  - rekentool
+  - rondleiding
+  - inschrijven
+  - al-klant-en-nog-een-kind-inschrijven
+  - kosten-kinderopvang
+  - kinderopvangtoeslag
   - privacy-en-cookies
+  - voorwaarden
+  - herroepingsrecht
+  - contact
   - kinderopvang-apeldoorn
 ---
 

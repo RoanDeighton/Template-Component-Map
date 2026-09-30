@@ -9,12 +9,10 @@ usedOn:
   - actueel-handig-ouderapp-van-partou
   - actueel-waarom-mabelle-kinderopvang-partou
   - actueel-reis-door-de-tijd-in-de-herfstvakantie
-  - actueel-leeftijd-0-2-jaar
-  - actueel-leeftijd-4-6-jaar
-  - actueel-leeftijd-6-8-jaar
-  - actueel-leeftijd-10-12-jaar
   - actueel-vakantie-op-de-buitenschoolse-opvang
   - actueel-voordelen-van-de-peuteropvang
+  - 5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby
+  - hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit
 ---
 
 Long-form article text under numbered or plain headings, alternating white and light-pink section backgrounds. Ends with a "Lees ook" related-articles row (a [Card Grid (3-up)](card-grid-3up.md)) and social share icons.

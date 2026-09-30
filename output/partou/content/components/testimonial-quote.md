@@ -7,6 +7,8 @@ examples:
 usedOn:
   - home
   - kinderdagverblijf
+  - bso
+  - peuteropvang
   - kinderopvang-apeldoorn
 ---
 
