@@ -169,9 +169,17 @@ export function ComponentsTable({ rows, showAmount = true }: { rows: ComponentTa
                       sideOffset={8}
                       anchor={cursorAnchor}
                     >
-                      <div className="flex aspect-video items-center justify-center p-3">
+                      {/* Was a fixed aspect-video box: fine for a roughly-16:9 crop, but
+                          object-contain shrinks the whole image to fit BOTH dimensions of
+                          that box — a much shorter/wider crop (a thin banner strip) or a
+                          much taller one (a full card) ends up tiny and letterboxed/
+                          pillarboxed inside mostly empty space. A min/max height range
+                          instead of a fixed aspect ratio lets each crop's own natural
+                          shape set its size, capped so an extreme crop doesn't blow out
+                          the hover card. */}
+                      <div className="flex min-h-24 max-h-64 items-center justify-center p-3">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={row.previewImage} alt={row.title} className="max-h-full max-w-full object-contain" />
+                        <img src={row.previewImage} alt={row.title} className="max-h-56 max-w-full object-contain" />
                       </div>
                       <p className="bg-[#e7e7e7] p-2.5 text-sm font-medium text-foreground">{row.title}</p>
                     </HoverCardContent>

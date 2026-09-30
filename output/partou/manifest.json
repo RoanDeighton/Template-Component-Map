@@ -1,6 +1,6 @@
 {
   "startUrl": "https://partou.nl/",
-  "crawledAt": "2026-09-30T09:20:12.316Z",
+  "crawledAt": "2026-09-30T11:50:31.093Z",
   "options": {
     "url": "https://partou.nl/",
     "output": "output/partou",
@@ -62,8 +62,8 @@
     "legacyDiscovery": false
   },
   "discoveryMode": "onlyUrls",
-  "totalDiscovered": 41,
-  "totalCaptured": 41,
+  "totalDiscovered": 54,
+  "totalCaptured": 54,
   "groups": [
     {
       "pattern": "/ontwikkeling",
@@ -257,7 +257,7 @@
           "classes": "html-renderer",
           "top": 0,
           "height": 5163,
-          "note": "5163px tall section renders as near-uniform color (stddev 41.8) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+          "note": "5163px tall section renders as near-uniform color (stddev 41.8) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
         }
       ]
     },
@@ -287,7 +287,7 @@
       "url": "https://partou.nl/bso",
       "pattern": "/bso",
       "slug": "bso",
-      "title": "Bso – buitenschoolse opvang I Partou",
+      "title": "Bso \u2013 buitenschoolse opvang I Partou",
       "screenshot": "pages/bso/screenshot.png",
       "html": "pages/bso/page.html",
       "styles": "pages/bso/styles.json",
@@ -298,7 +298,7 @@
       "url": "https://partou.nl/voeding",
       "pattern": "/voeding",
       "slug": "voeding",
-      "title": "Gezond én lekker eten bij Partou",
+      "title": "Gezond \u00e9n lekker eten bij Partou",
       "screenshot": "pages/voeding/screenshot.png",
       "html": "pages/voeding/page.html",
       "styles": "pages/voeding/styles.json",
@@ -364,7 +364,7 @@
           "classes": "html-renderer",
           "top": 0,
           "height": 6687,
-          "note": "6687px tall section renders as near-uniform color (stddev 44.3) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+          "note": "6687px tall section renders as near-uniform color (stddev 44.3) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
         }
       ]
     },
@@ -405,7 +405,7 @@
           "classes": "html-renderer",
           "top": 0,
           "height": 7291,
-          "note": "7291px tall section renders as near-uniform color (stddev 41.2) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+          "note": "7291px tall section renders as near-uniform color (stddev 41.2) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
         }
       ]
     },
@@ -435,7 +435,7 @@
           "classes": "html-renderer",
           "top": 0,
           "height": 8843,
-          "note": "8843px tall section renders as near-uniform color (stddev 41.9) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+          "note": "8843px tall section renders as near-uniform color (stddev 41.9) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
         }
       ]
     },
@@ -454,7 +454,7 @@
       "url": "https://partou.nl/b-corp",
       "pattern": "/b-corp",
       "slug": "b-corp",
-      "title": "Partou kinderopvang: héél blij met B Corp certificering",
+      "title": "Partou kinderopvang: h\u00e9\u00e9l blij met B Corp certificering",
       "screenshot": "pages/b-corp/screenshot.png",
       "html": "pages/b-corp/page.html",
       "styles": "pages/b-corp/styles.json",
@@ -674,7 +674,7 @@
       "url": "https://partou.nl/kinderopvang/arnhem/bso-callunastraat-54",
       "pattern": "/kinderopvang/arnhem/bso-callunastraat-54",
       "slug": "kinderopvang-arnhem-bso-callunastraat-54",
-      "title": "Bso Arnhem – Callunastraat 54 | Partou",
+      "title": "Bso Arnhem \u2013 Callunastraat 54 | Partou",
       "screenshot": "pages/kinderopvang-arnhem-bso-callunastraat-54/screenshot.png",
       "html": "pages/kinderopvang-arnhem-bso-callunastraat-54/page.html",
       "styles": "pages/kinderopvang-arnhem-bso-callunastraat-54/styles.json",
@@ -707,11 +707,170 @@
       "url": "https://partou.nl/kinderopvang/apeldoorn/peuteropvang-1e-wormenseweg-158",
       "pattern": "/kinderopvang/apeldoorn/peuteropvang-1e-wormenseweg-158",
       "slug": "kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158",
-      "title": "Peuteropvang Apeldoorn – Eerste Wormenseweg 158 | Partou",
+      "title": "Peuteropvang Apeldoorn \u2013 Eerste Wormenseweg 158 | Partou",
       "screenshot": "pages/kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158/screenshot.png",
       "html": "pages/kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158/page.html",
       "styles": "pages/kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158/styles.json",
       "capturedAt": "2026-09-30T09:20:12.268Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/diy-wortelcakejes-zonder-suiker",
+      "pattern": "/actueel/diy-wortelcakejes-zonder-suiker",
+      "slug": "actueel-diy-wortelcakejes-zonder-suiker",
+      "title": "DIY: wortelcakejes zonder suiker | Partou kinderopvang",
+      "screenshot": "pages/actueel-diy-wortelcakejes-zonder-suiker/screenshot.png",
+      "html": "pages/actueel-diy-wortelcakejes-zonder-suiker/page.html",
+      "styles": "pages/actueel-diy-wortelcakejes-zonder-suiker/styles.json",
+      "capturedAt": "2026-09-30T11:48:11.237Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "html-renderer",
+          "top": 0,
+          "height": 3238,
+          "note": "3238px tall section renders as near-uniform color (stddev 37.1) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
+    },
+    {
+      "url": "https://partou.nl/actueel/je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+      "pattern": "/actueel/je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+      "slug": "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+      "title": "Je baby voor het eerst naar het kinderdagverblijf: hoe bereid je je voor? | Partou kinderopvang",
+      "screenshot": "pages/actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor/screenshot.png",
+      "html": "pages/actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor/page.html",
+      "styles": "pages/actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor/styles.json",
+      "capturedAt": "2026-09-30T11:48:12.305Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/13-voorleesboeken-over-vriendschap",
+      "pattern": "/actueel/13-voorleesboeken-over-vriendschap",
+      "slug": "actueel-13-voorleesboeken-over-vriendschap",
+      "title": "Voorleesboeken tips over vriendschap | Partou",
+      "screenshot": "pages/actueel-13-voorleesboeken-over-vriendschap/screenshot.png",
+      "html": "pages/actueel-13-voorleesboeken-over-vriendschap/page.html",
+      "styles": "pages/actueel-13-voorleesboeken-over-vriendschap/styles.json",
+      "capturedAt": "2026-09-30T11:48:15.622Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "html-renderer",
+          "top": 0,
+          "height": 6382,
+          "note": "6382px tall section renders as near-uniform color (stddev 43.6) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
+    },
+    {
+      "url": "https://partou.nl/actueel/zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+      "pattern": "/actueel/zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+      "slug": "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+      "title": "Zo houdt het kinderdagverblijf je up-to-date over je kind | Partou",
+      "screenshot": "pages/actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind/screenshot.png",
+      "html": "pages/actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind/page.html",
+      "styles": "pages/actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind/styles.json",
+      "capturedAt": "2026-09-30T11:48:39.995Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/gezond-en-lekker-eten",
+      "pattern": "/actueel/gezond-en-lekker-eten",
+      "slug": "actueel-gezond-en-lekker-eten",
+      "title": "Zo doe je dat: gezond en lekker eten met dreumesen en peuters",
+      "screenshot": "pages/actueel-gezond-en-lekker-eten/screenshot.png",
+      "html": "pages/actueel-gezond-en-lekker-eten/page.html",
+      "styles": "pages/actueel-gezond-en-lekker-eten/styles.json",
+      "capturedAt": "2026-09-30T11:48:49.395Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+      "pattern": "/actueel/slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+      "slug": "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+      "title": "Slapen op de kinderopvang | Partou",
+      "screenshot": "pages/actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat/screenshot.png",
+      "html": "pages/actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat/page.html",
+      "styles": "pages/actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat/styles.json",
+      "capturedAt": "2026-09-30T11:48:58.042Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/maak-je-kind-mediawijs",
+      "pattern": "/actueel/maak-je-kind-mediawijs",
+      "slug": "actueel-maak-je-kind-mediawijs",
+      "title": "Maak je kind mediawijs",
+      "screenshot": "pages/actueel-maak-je-kind-mediawijs/screenshot.png",
+      "html": "pages/actueel-maak-je-kind-mediawijs/page.html",
+      "styles": "pages/actueel-maak-je-kind-mediawijs/styles.json",
+      "capturedAt": "2026-09-30T11:49:14.026Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/gezond-in-de-herfst-tips",
+      "pattern": "/actueel/gezond-in-de-herfst-tips",
+      "slug": "actueel-gezond-in-de-herfst-tips",
+      "title": "Zomer uit, weerstand aan! | Partou",
+      "screenshot": "pages/actueel-gezond-in-de-herfst-tips/screenshot.png",
+      "html": "pages/actueel-gezond-in-de-herfst-tips/page.html",
+      "styles": "pages/actueel-gezond-in-de-herfst-tips/styles.json",
+      "capturedAt": "2026-09-30T11:49:29.355Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+      "pattern": "/actueel/mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+      "slug": "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+      "title": "Mediawijs opgroeien: zo geven we samen het goede voorbeeld",
+      "screenshot": "pages/actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld/screenshot.png",
+      "html": "pages/actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld/page.html",
+      "styles": "pages/actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld/styles.json",
+      "capturedAt": "2026-09-30T11:49:37.950Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/liefdevol",
+      "pattern": "/liefdevol",
+      "slug": "liefdevol",
+      "title": "Liefdevol kinderdagverblijf | Partou",
+      "screenshot": "pages/liefdevol/screenshot.png",
+      "html": "pages/liefdevol/page.html",
+      "styles": "pages/liefdevol/styles.json",
+      "capturedAt": "2026-09-30T11:49:44.750Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/samen-sterker",
+      "pattern": "/samen-sterker",
+      "slug": "samen-sterker",
+      "title": "Samen sterker : partou",
+      "screenshot": "pages/samen-sterker/screenshot.png",
+      "html": "pages/samen-sterker/page.html",
+      "styles": "pages/samen-sterker/styles.json",
+      "capturedAt": "2026-09-30T11:49:59.542Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/een-tegen-eenzaamheid",
+      "pattern": "/een-tegen-eenzaamheid",
+      "slug": "een-tegen-eenzaamheid",
+      "title": "Week tegen Eenzaamheid: Partou brengt jong en oud samen | Partou",
+      "screenshot": "pages/een-tegen-eenzaamheid/screenshot.png",
+      "html": "pages/een-tegen-eenzaamheid/page.html",
+      "styles": "pages/een-tegen-eenzaamheid/styles.json",
+      "capturedAt": "2026-09-30T11:50:02.062Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/wasbare-luiers",
+      "pattern": "/wasbare-luiers",
+      "slug": "wasbare-luiers",
+      "title": "Wasbare luiers bij Partou",
+      "screenshot": "pages/wasbare-luiers/screenshot.png",
+      "html": "pages/wasbare-luiers/page.html",
+      "styles": "pages/wasbare-luiers/styles.json",
+      "capturedAt": "2026-09-30T11:50:31.038Z",
       "blankSectionFlags": []
     }
   ]

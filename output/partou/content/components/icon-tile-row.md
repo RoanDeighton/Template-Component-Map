@@ -9,8 +9,6 @@ usedOn:
   - voeding
   - onderzoek-wetenschap
   - bso
-  - kinderopvang-arnhem-bso-callunastraat-54
-  - kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171
 ---
 
-A row of 3-4 tiles, each a colored rounded icon over a short heading and one or two lines of text — no photos. Distinct from the [Card Grid (3-up)](card-grid-3up.md), which always uses photos.
+A row of 3-4 tiles, each a colored rounded icon over a short heading and one or two lines of text below it — no photos. Distinct from the [Card Grid (3-up)](card-grid-3up.md), which always uses photos, and from the [Benefit Checklist](benefit-checklist.md), which stacks icon+text vertically as a list instead of side-by-side tiles.

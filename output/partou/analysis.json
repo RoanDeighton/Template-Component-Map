@@ -1,9 +1,9 @@
 {
-  "analyzedAt": "2026-09-30T10:42:32.356Z",
+  "analyzedAt": "2026-09-30T11:53:35.228Z",
   "input": "output/partou",
-  "totalPages": 41,
+  "totalPages": 54,
   "totalTemplates": 2,
-  "totalComponents": 9,
+  "totalComponents": 10,
   "stableIdAttr": null,
   "pages": [
     {
@@ -39,7 +39,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 111
+            "height": 105
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -71,7 +71,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 5702
+            "height": 5696
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -167,7 +167,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 5194,
+            "top": 5188,
             "width": 1440,
             "height": 508
           },
@@ -1139,7 +1139,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 6609
+            "height": 6610
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -1235,7 +1235,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 6101,
+            "top": 6102,
             "width": 1440,
             "height": 508
           },
@@ -1285,7 +1285,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 109
+            "height": 105
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -1317,7 +1317,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 5594
+            "height": 5590
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -1413,7 +1413,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 5086,
+            "top": 5082,
             "width": 1440,
             "height": 508
           },
@@ -7303,6 +7303,2320 @@
         "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
         "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
       ]
+    },
+    {
+      "slug": "actueel-diy-wortelcakejes-zonder-suiker",
+      "url": "https://partou.nl/actueel/diy-wortelcakejes-zonder-suiker",
+      "pattern": "/actueel/diy-wortelcakejes-zonder-suiker",
+      "title": "DIY: wortelcakejes zonder suiker | Partou kinderopvang",
+      "screenshot": "pages/actueel-diy-wortelcakejes-zonder-suiker/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 88
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 3238
+          },
+          "isBlankFlagged": true,
+          "blankNote": "3238px tall section renders as near-uniform color (stddev 37.1) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+          "heading": "DIY: wortelcakejes zonder suiker",
+          "textSnippet": "Actueel Diy wortelcakejes zonder suiker DIY: wortelcakejes zonder suiker Hoera, voor de wortel! Deze groente is een echte klassieker. Niet gek, want deze groent",
+          "linkCount": 12,
+          "imageCount": 1,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 2730,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+      "url": "https://partou.nl/actueel/je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+      "pattern": "/actueel/je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+      "title": "Je baby voor het eerst naar het kinderdagverblijf: hoe bereid je je voor? | Partou kinderopvang",
+      "screenshot": "pages/actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 88
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 4350
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+          "heading": "Je baby voor het eerst naar het kinderdagverblijf: hoe bereid je je voor?",
+          "textSnippet": "Actueel Je baby voor het eerst naar het kinderdagverblijf hoe bereid je je voor Je baby voor het eerst naar het kinderdagverblijf: hoe bereid je je voor? Het le",
+          "linkCount": 9,
+          "imageCount": 1,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 3842,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "actueel-13-voorleesboeken-over-vriendschap",
+      "url": "https://partou.nl/actueel/13-voorleesboeken-over-vriendschap",
+      "pattern": "/actueel/13-voorleesboeken-over-vriendschap",
+      "title": "Voorleesboeken tips over vriendschap | Partou",
+      "screenshot": "pages/actueel-13-voorleesboeken-over-vriendschap/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 109
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 6382
+          },
+          "isBlankFlagged": true,
+          "blankNote": "6382px tall section renders as near-uniform color (stddev 43.6) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+          "heading": "13 voorleesboeken over vriendschap",
+          "textSnippet": "Actueel 13 voorleesboeken over vriendschap 13 voorleesboeken over vriendschap Bij Partou vieren we elk jaar Vriendjesweek en besteden we graag aandacht aan het ",
+          "linkCount": 32,
+          "imageCount": 1,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 5874,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+      "url": "https://partou.nl/actueel/zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+      "pattern": "/actueel/zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+      "title": "Zo houdt het kinderdagverblijf je up-to-date over je kind | Partou",
+      "screenshot": "pages/actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 88
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 3206
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+          "heading": "Zo houdt het kinderdagverblijf je up-to-date over je kind",
+          "textSnippet": "Actueel Zo houdt het kinderdagverblijf je date over je kind Zo houdt het kinderdagverblijf je up-to-date over je kind Word je ook altijd zo blij als het kinderd",
+          "linkCount": 11,
+          "imageCount": 1,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 2698,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "actueel-gezond-en-lekker-eten",
+      "url": "https://partou.nl/actueel/gezond-en-lekker-eten",
+      "pattern": "/actueel/gezond-en-lekker-eten",
+      "title": "Zo doe je dat: gezond en lekker eten met dreumesen en peuters",
+      "screenshot": "pages/actueel-gezond-en-lekker-eten/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 99
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 3894
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+          "heading": "Zo doe je dat: gezond en lekker eten met dreumesen en peuters",
+          "textSnippet": "Actueel Gezond en lekker eten Zo doe je dat: gezond en lekker eten met dreumesen en peuters Gezonde voeding vinden we belangrijk. Want het is goed voor de licha",
+          "linkCount": 10,
+          "imageCount": 2,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 3386,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+      "url": "https://partou.nl/actueel/slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+      "pattern": "/actueel/slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+      "title": "Slapen op de kinderopvang | Partou",
+      "screenshot": "pages/actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 105
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 5549
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+          "heading": "Slapen op het kinderdagverblijf: hoe werkt dat?",
+          "textSnippet": "Actueel Slapen op het kinderdagverblijf hoe werkt dat Slapen op het kinderdagverblijf: hoe werkt dat? Jij weet als geen ander wanneer je kind overdag moe is, we",
+          "linkCount": 16,
+          "imageCount": 7,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 5041,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "actueel-maak-je-kind-mediawijs",
+      "url": "https://partou.nl/actueel/maak-je-kind-mediawijs",
+      "pattern": "/actueel/maak-je-kind-mediawijs",
+      "title": "Maak je kind mediawijs",
+      "screenshot": "pages/actueel-maak-je-kind-mediawijs/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 105
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 4250
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+          "heading": "Maak je kind mediawijs",
+          "textSnippet": "Actueel Maak je kind mediawijs Maak je kind mediawijs Hoe maak je je kind in deze tijden mediawijs? Een leven zonder schermpjes is, ook voor kinderen, niet meer",
+          "linkCount": 13,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 3742,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "actueel-gezond-in-de-herfst-tips",
+      "url": "https://partou.nl/actueel/gezond-in-de-herfst-tips",
+      "pattern": "/actueel/gezond-in-de-herfst-tips",
+      "title": "Zomer uit, weerstand aan! | Partou",
+      "screenshot": "pages/actueel-gezond-in-de-herfst-tips/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 109
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 4521
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+          "heading": "Zomer uit, weerstand aan! 5 tips voor een gezond najaar.",
+          "textSnippet": "Actueel Gezond in de herfst tips Zomer uit, weerstand aan! 5 tips voor een gezond najaar. De zomer is voorbij en we stappen weer in het ritme van school, opvang",
+          "linkCount": 14,
+          "imageCount": 7,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 4013,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+      "url": "https://partou.nl/actueel/mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+      "pattern": "/actueel/mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+      "title": "Mediawijs opgroeien: zo geven we samen het goede voorbeeld",
+      "screenshot": "pages/actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 105
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 4807
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+          "heading": "Mediawijs opgroeien: zo geven we samen het goede voorbeeld",
+          "textSnippet": "Actueel Mediawijs opgroeien: zo geven we samen het goede voorbeeld Mediawijs opgroeien: zo geven we samen het goede voorbeeld Bij Partou willen we dat elk kind ",
+          "linkCount": 13,
+          "imageCount": 8,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 4299,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "liefdevol",
+      "url": "https://partou.nl/liefdevol",
+      "pattern": "/liefdevol",
+      "title": "Liefdevol kinderdagverblijf | Partou",
+      "screenshot": "pages/liefdevol/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 76
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 1661
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:16-50|form:0|media:1",
+          "heading": "Liefdevol",
+          "textSnippet": "Liefdevol Liefdevol Wij zijn speciaal opgeleid om te zien welke stappen je een kind doormaakt. Daarnaast weten we hoe we kinderen het beste aandacht moeten geve",
+          "linkCount": 1,
+          "imageCount": 1,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 1153,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:2-3|els:16-50|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "samen-sterker",
+      "url": "https://partou.nl/samen-sterker",
+      "pattern": "/samen-sterker",
+      "title": "Samen sterker : partou",
+      "screenshot": "pages/samen-sterker/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 76
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 1912
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+          "heading": "Samen sterker",
+          "textSnippet": "Samen sterker Samen sterker Met het samengaan van Smallsteps en Partou ontstaat een sterkere kinderopvangorganisatie. Een organisatie die nog meer kan investere",
+          "linkCount": 2,
+          "imageCount": 1,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 1404,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "een-tegen-eenzaamheid",
+      "url": "https://partou.nl/een-tegen-eenzaamheid",
+      "pattern": "/een-tegen-eenzaamheid",
+      "title": "Week tegen Eenzaamheid: Partou brengt jong en oud samen | Partou",
+      "screenshot": "pages/een-tegen-eenzaamheid/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 112
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 5499
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Week tegen Eenzaamheid: Partou brengt jong en oud samen",
+          "textSnippet": "Een tegen eenzaamheid Week tegen Eenzaamheid: Partou brengt jong en oud samen Eén op de vier ouderen voelt zich eenzaam. Dat is veel te veel! Daarom dragen wij ",
+          "linkCount": 3,
+          "imageCount": 14,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 4991,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "wasbare-luiers",
+      "url": "https://partou.nl/wasbare-luiers",
+      "pattern": "/wasbare-luiers",
+      "title": "Wasbare luiers bij Partou",
+      "screenshot": "pages/wasbare-luiers/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 109
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 5624
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+          "heading": "Wasbare luiers bij Partou",
+          "textSnippet": "Wasbare luiers Wasbare luiers bij Partou Jouw kinderopvanglocatie doet mee met een vervolgpilot met wasbare luiers! Het afgelopen jaar is gewerkt aan de ontwikk",
+          "linkCount": 3,
+          "imageCount": 4,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 5116,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
     }
   ],
   "templates": [
@@ -7345,7 +9659,20 @@
         "kinderopvang-arnhem-bso-callunastraat-54",
         "kinderopvang-vught-bso-koninginnelaan-1a",
         "kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171",
-        "kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158"
+        "kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158",
+        "actueel-diy-wortelcakejes-zonder-suiker",
+        "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+        "actueel-13-voorleesboeken-over-vriendschap",
+        "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+        "actueel-gezond-en-lekker-eten",
+        "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+        "actueel-maak-je-kind-mediawijs",
+        "actueel-gezond-in-de-herfst-tips",
+        "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+        "liefdevol",
+        "samen-sterker",
+        "een-tegen-eenzaamheid",
+        "wasbare-luiers"
       ],
       "signature": [
         "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
@@ -7584,6 +9911,71 @@
           "pageSlug": "kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158",
           "path": "header",
           "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-diy-wortelcakejes-zonder-suiker",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-13-voorleesboeken-over-vriendschap",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-gezond-en-lekker-eten",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-maak-je-kind-mediawijs",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-gezond-in-de-herfst-tips",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "liefdevol",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "samen-sterker",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "een-tegen-eenzaamheid",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "wasbare-luiers",
+          "path": "header",
+          "heading": "Not available in English"
         }
       ]
     },
@@ -7798,6 +10190,71 @@
           "pageSlug": "kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158",
           "path": "main>0",
           "heading": null
+        },
+        {
+          "pageSlug": "actueel-diy-wortelcakejes-zonder-suiker",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-13-voorleesboeken-over-vriendschap",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-gezond-en-lekker-eten",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-maak-je-kind-mediawijs",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-gezond-in-de-herfst-tips",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "liefdevol",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "samen-sterker",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "een-tegen-eenzaamheid",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "wasbare-luiers",
+          "path": "main>0",
+          "heading": null
         }
       ]
     },
@@ -8010,6 +10467,71 @@
         },
         {
           "pageSlug": "kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-diy-wortelcakejes-zonder-suiker",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-13-voorleesboeken-over-vriendschap",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-gezond-en-lekker-eten",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-maak-je-kind-mediawijs",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-gezond-in-de-herfst-tips",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "liefdevol",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "samen-sterker",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "een-tegen-eenzaamheid",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "wasbare-luiers",
           "path": "main>1",
           "heading": null
         }
@@ -8391,6 +10913,131 @@
           "pageSlug": "kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158",
           "path": "main>3",
           "heading": "Peuteropvang"
+        },
+        {
+          "pageSlug": "actueel-diy-wortelcakejes-zonder-suiker",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-diy-wortelcakejes-zonder-suiker",
+          "path": "main>3",
+          "heading": "DIY: wortelcakejes zonder suiker"
+        },
+        {
+          "pageSlug": "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+          "path": "main>3",
+          "heading": "Je baby voor het eerst naar het kinderdagverblijf: hoe bereid je je voor?"
+        },
+        {
+          "pageSlug": "actueel-13-voorleesboeken-over-vriendschap",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-13-voorleesboeken-over-vriendschap",
+          "path": "main>3",
+          "heading": "13 voorleesboeken over vriendschap"
+        },
+        {
+          "pageSlug": "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+          "path": "main>3",
+          "heading": "Zo houdt het kinderdagverblijf je up-to-date over je kind"
+        },
+        {
+          "pageSlug": "actueel-gezond-en-lekker-eten",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-gezond-en-lekker-eten",
+          "path": "main>3",
+          "heading": "Zo doe je dat: gezond en lekker eten met dreumesen en peuters"
+        },
+        {
+          "pageSlug": "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+          "path": "main>3",
+          "heading": "Slapen op het kinderdagverblijf: hoe werkt dat?"
+        },
+        {
+          "pageSlug": "actueel-maak-je-kind-mediawijs",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-maak-je-kind-mediawijs",
+          "path": "main>3",
+          "heading": "Maak je kind mediawijs"
+        },
+        {
+          "pageSlug": "actueel-gezond-in-de-herfst-tips",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-gezond-in-de-herfst-tips",
+          "path": "main>3",
+          "heading": "Zomer uit, weerstand aan! 5 tips voor een gezond najaar."
+        },
+        {
+          "pageSlug": "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+          "path": "main>3",
+          "heading": "Mediawijs opgroeien: zo geven we samen het goede voorbeeld"
+        },
+        {
+          "pageSlug": "liefdevol",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "samen-sterker",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "samen-sterker",
+          "path": "main>3",
+          "heading": "Samen sterker"
+        },
+        {
+          "pageSlug": "een-tegen-eenzaamheid",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "een-tegen-eenzaamheid",
+          "path": "main>3",
+          "heading": "Week tegen Eenzaamheid: Partou brengt jong en oud samen"
+        },
+        {
+          "pageSlug": "wasbare-luiers",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "wasbare-luiers",
+          "path": "main>3",
+          "heading": "Wasbare luiers bij Partou"
         }
       ]
     },
@@ -8573,6 +11220,71 @@
         },
         {
           "pageSlug": "kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-diy-wortelcakejes-zonder-suiker",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-13-voorleesboeken-over-vriendschap",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-gezond-en-lekker-eten",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-maak-je-kind-mediawijs",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-gezond-in-de-herfst-tips",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "liefdevol",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "samen-sterker",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "een-tegen-eenzaamheid",
+          "path": "main>4",
+          "heading": null
+        },
+        {
+          "pageSlug": "wasbare-luiers",
           "path": "main>4",
           "heading": null
         }
@@ -8759,6 +11471,71 @@
           "pageSlug": "kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158",
           "path": "footer",
           "heading": null
+        },
+        {
+          "pageSlug": "actueel-diy-wortelcakejes-zonder-suiker",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-13-voorleesboeken-over-vriendschap",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-gezond-en-lekker-eten",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-maak-je-kind-mediawijs",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-gezond-in-de-herfst-tips",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "liefdevol",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "samen-sterker",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "een-tegen-eenzaamheid",
+          "path": "footer",
+          "heading": null
+        },
+        {
+          "pageSlug": "wasbare-luiers",
+          "path": "footer",
+          "heading": null
         }
       ]
     },
@@ -8884,6 +11661,18 @@
           "pageSlug": "home",
           "path": "footer",
           "heading": "Klantenservice"
+        }
+      ]
+    },
+    {
+      "key": "main:img:1|a:1|h:2+|els:1-50|form:0|media:1",
+      "tag": "div",
+      "classesSeen": [],
+      "occurrences": [
+        {
+          "pageSlug": "liefdevol",
+          "path": "main>3",
+          "heading": "Liefdevol"
         }
       ]
     }
