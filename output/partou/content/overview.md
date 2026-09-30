@@ -10,7 +10,7 @@ title: "Partou: Site Inventory Overview"
 
 <!-- stat-blocks -->
 
-<p class="callout"><strong>Light pass.</strong> This run covers the site's structural chrome (header, footer, skip link, cookie bar) but not per-page or per-template descriptions yet. Component and page detail pages aren't written up individually. Partou also runs 1,319 separate childcare-location pages (one per city and address, e.g. "Kinderopvang in Apeldoorn"), found through the "Locatie vinden" search tool rather than the main nav. Only 5 are sampled here to cover that template; the rest weren't captured.</p>
+<p class="callout"><strong>Light pass.</strong> Every captured page is placed and linked here with its own screenshot, and the site's structural chrome (header, footer, skip link, cookie bar) is documented. Neither has a written description yet: pages show their screenshot with no write-up, and no editorial (non-chrome) components have been broken out. Partou also runs 1,319 separate childcare-location pages (one per city and address, e.g. "Kinderopvang in Apeldoorn"), found through the "Locatie vinden" search tool rather than the main nav. Only 5 are sampled here to cover that template; the rest weren't captured.</p>
 
 ## How this was made
 
@@ -30,7 +30,7 @@ title: "Partou: Site Inventory Overview"
   <li>
     <div>
       <p class="step-title">Document what's there</p>
-      <p class="step-body">Turn that structural breakdown into write-ups of what each component actually is, what it holds, and how it varies. For this pass, only the header, footer, skip link, and cookie bar are documented.</p>
+      <p class="step-body">Turn that structural breakdown into write-ups of what each component actually is, what it holds, and how it varies. For this pass, every page is placed and linked with its screenshot, and only the header, footer, skip link, and cookie bar have a written description.</p>
     </div>
   </li>
   <li>
