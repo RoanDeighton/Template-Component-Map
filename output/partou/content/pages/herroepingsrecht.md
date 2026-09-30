@@ -1,6 +1,7 @@
 ---
 title: "Herroepingsrecht"
 url: /herroepingsrecht
+section: "Legal & contact"
 screenshot: ../../pages/herroepingsrecht/screenshot.png
 ---
 

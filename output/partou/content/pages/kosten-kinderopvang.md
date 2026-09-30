@@ -1,6 +1,7 @@
 ---
 title: "Kosten kinderopvang: wat betaal je echt?"
 url: /kosten-kinderopvang
+section: "Kosten & tools"
 screenshot: ../../pages/kosten-kinderopvang/screenshot.png
 ---
 

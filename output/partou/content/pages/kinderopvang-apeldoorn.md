@@ -1,6 +1,7 @@
 ---
 title: "Kinderopvang in Apeldoorn"
 url: /kinderopvang/apeldoorn
+section: "Locatiepagina's"
 screenshot: ../../pages/kinderopvang-apeldoorn/screenshot.png
 ---
 

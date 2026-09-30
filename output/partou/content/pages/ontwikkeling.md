@@ -1,6 +1,7 @@
 ---
 title: "Ontwikkeling op maat bij Partou"
 url: /ontwikkeling
+section: "Kinderdagverblijf"
 screenshot: ../../pages/ontwikkeling/screenshot.png
 ---
 

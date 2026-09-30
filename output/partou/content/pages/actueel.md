@@ -1,6 +1,7 @@
 ---
 title: "Actueel"
 url: /actueel
+section: "Actueel"
 screenshot: ../../pages/actueel/screenshot.png
 ---
 

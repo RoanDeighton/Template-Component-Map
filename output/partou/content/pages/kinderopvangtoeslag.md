@@ -1,6 +1,7 @@
 ---
 title: "Kinderopvangtoeslag 2025: wat je moet weten"
 url: /kinderopvangtoeslag
+section: "Kosten & tools"
 screenshot: ../../pages/kinderopvangtoeslag/screenshot.png
 ---
 

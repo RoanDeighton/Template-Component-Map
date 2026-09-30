@@ -1,6 +1,7 @@
 ---
 title: "Waarom Mabelle kiest voor kinderopvang bij Partou"
 url: /actueel/waarom-mabelle-kinderopvang-partou
+section: "Actueel"
 screenshot: ../../pages/actueel-waarom-mabelle-kinderopvang-partou/screenshot.png
 ---
 

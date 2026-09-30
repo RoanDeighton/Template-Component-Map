@@ -1,6 +1,7 @@
 ---
 title: "Vakantie op de buitenschoolse opvang"
 url: /actueel/vakantie-op-de-buitenschoolse-opvang
+section: "Buitenschoolse opvang"
 screenshot: ../../pages/actueel-vakantie-op-de-buitenschoolse-opvang/screenshot.png
 ---
 

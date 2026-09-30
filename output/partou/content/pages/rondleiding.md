@@ -1,6 +1,7 @@
 ---
 title: "Plan een rondleiding bij Partou"
 url: /rondleiding
+section: "Vind & inschrijven"
 screenshot: ../../pages/rondleiding/screenshot.png
 ---
 

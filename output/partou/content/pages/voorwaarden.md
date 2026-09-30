@@ -1,6 +1,7 @@
 ---
 title: "Voorwaarden, factuur, incasso en privacy"
 url: /voorwaarden
+section: "Legal & contact"
 screenshot: ../../pages/voorwaarden/screenshot.png
 ---
 

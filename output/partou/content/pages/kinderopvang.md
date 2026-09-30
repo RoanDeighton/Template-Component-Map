@@ -1,6 +1,7 @@
 ---
 title: "Vind jouw Partou"
 url: /kinderopvang
+section: "Vind & inschrijven"
 screenshot: ../../pages/kinderopvang/screenshot.png
 ---
 

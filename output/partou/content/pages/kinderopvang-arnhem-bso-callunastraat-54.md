@@ -1,6 +1,7 @@
 ---
 title: "Bso Arnhem – Callunastraat 54"
 url: /kinderopvang/arnhem/bso-callunastraat-54
+section: "Locatiepagina's"
 screenshot: ../../pages/kinderopvang-arnhem-bso-callunastraat-54/screenshot.png
 ---
 

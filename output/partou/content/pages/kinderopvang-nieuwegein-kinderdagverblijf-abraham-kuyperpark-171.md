@@ -1,6 +1,7 @@
 ---
 title: "Kinderdagverblijf Nieuwegein - Abraham Kuyperpark"
 url: /kinderopvang/nieuwegein/kinderdagverblijf-abraham-kuyperpark-171
+section: "Locatiepagina's"
 screenshot: ../../pages/kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171/screenshot.png
 ---
 

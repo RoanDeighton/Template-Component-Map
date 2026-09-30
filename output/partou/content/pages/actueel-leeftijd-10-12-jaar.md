@@ -1,6 +1,7 @@
 ---
 title: "Actueel: 10-12 jaar"
 url: /actueel/leeftijd/10---12-jaar
+section: "Actueel"
 screenshot: ../../pages/actueel-leeftijd-10-12-jaar/screenshot.png
 ---
 

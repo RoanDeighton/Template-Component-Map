@@ -1,6 +1,7 @@
 ---
 title: "Over Partou kinderopvang"
 url: /over-partou
+section: "Over Partou"
 screenshot: ../../pages/over-partou/screenshot.png
 ---
 

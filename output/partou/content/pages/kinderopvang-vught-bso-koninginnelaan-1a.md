@@ -1,6 +1,7 @@
 ---
 title: "Bso Vught - Koninginnelaan 1a"
 url: /kinderopvang/vught/bso-koninginnelaan-1a
+section: "Locatiepagina's"
 screenshot: ../../pages/kinderopvang-vught-bso-koninginnelaan-1a/screenshot.png
 ---
 

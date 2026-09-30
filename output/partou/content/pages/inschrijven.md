@@ -1,6 +1,7 @@
 ---
 title: "Je kind inschrijven voor kinderopvang"
 url: /inschrijven
+section: "Vind & inschrijven"
 screenshot: ../../pages/inschrijven/screenshot.png
 ---
 

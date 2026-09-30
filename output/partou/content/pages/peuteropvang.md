@@ -1,6 +1,7 @@
 ---
 title: "Peuteropvang / peuterspeelzaal"
 url: /peuteropvang
+section: "Peuteropvang"
 screenshot: ../../pages/peuteropvang/screenshot.png
 ---
 

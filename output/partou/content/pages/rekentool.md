@@ -1,6 +1,7 @@
 ---
 title: "Bereken je kinderopvangkosten: eenvoudig en snel"
 url: /rekentool
+section: "Kosten & tools"
 screenshot: ../../pages/rekentool/screenshot.png
 ---
 

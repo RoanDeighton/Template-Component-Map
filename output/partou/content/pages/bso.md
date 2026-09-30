@@ -1,6 +1,7 @@
 ---
 title: "Bso – buitenschoolse opvang"
 url: /bso
+section: "Buitenschoolse opvang"
 screenshot: ../../pages/bso/screenshot.png
 ---
 

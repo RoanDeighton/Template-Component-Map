@@ -1,6 +1,7 @@
 ---
 title: "Home"
 url: /
+section: "Home"
 screenshot: ../../pages/home/screenshot.png
 ---
 

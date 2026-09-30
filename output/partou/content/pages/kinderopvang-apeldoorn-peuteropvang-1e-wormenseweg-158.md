@@ -1,6 +1,7 @@
 ---
 title: "Peuteropvang Apeldoorn – Eerste Wormenseweg 158"
 url: /kinderopvang/apeldoorn/peuteropvang-1e-wormenseweg-158
+section: "Locatiepagina's"
 screenshot: ../../pages/kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158/screenshot.png
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Activiteiten bij Partou"
 url: /activiteiten
+section: "Buitenschoolse opvang"
 screenshot: ../../pages/activiteiten/screenshot.png
 ---
 
