@@ -2,7 +2,7 @@
 title: "Partou: Components"
 ---
 
-# Components (22)
+# Components (24)
 
 The site's structural chrome (header, footer, skip link, cookie bar) plus every recurring content block found across a full pass over all 54 captured pages: hero banners, alternating image/text rows, card and icon-tile grids, testimonials, CTA banners, the location finder and its directory/profile-card pages, the cost calculator, a recipe card and a video embed found in the wider blog-article sample, and the blog templates.
 
@@ -33,7 +33,9 @@ The site's structural chrome (header, footer, skip link, cookie bar) plus every 
 | No class listed | [Location Directory List](location-directory-list.md) | 1 |
 | No class listed | [Recipe Card](recipe-card.md) | 1 |
 | No class listed | [Video Embed Block](video-embed-block.md) | 1 |
+| No class listed | [App Store Download Block](app-store-download-block.md) | 1 |
+| No class listed | [Pull Quote Block](pull-quote-block.md) | 1 |
 
 ## Notes
 
-Component reconciliation only looks one level under `<main>` (see the root README's "Known limitations"), so none of the 18 editorial components above were auto-detected — they're identified by eye, from a full pass over all 54 captured pages (41 from the site's nav/footer graph, plus 13 pulled specifically for blog-article variety — see the site overview). Each `usedOn` list reflects a page actually inspected against that pattern; a handful of pages sharing an obviously identical template (the four `/actueel/leeftijd/*` filtered listings, the four individual location pages, several `/actueel/*` articles) were extended by template match rather than pixel-by-pixel re-verification of every one. Two components — Recipe Card and Video Embed Block — surfaced only once each in this sample; the full ~400-article blog archive almost certainly holds more of both, and likely other formats not seen yet (interviews, quizzes). No CMS-field write-ups or per-page "variants observed" documentation yet — that's a further, deeper pass.
+Component reconciliation only looks one level under `<main>` (see the root README's "Known limitations"), so none of the 20 editorial components above were auto-detected — they're identified by eye, from a full pass over all 54 captured pages (41 from the site's nav/footer graph, plus 13 pulled specifically for blog-article variety — see the site overview). Each `usedOn` list reflects a page actually inspected against that pattern; a handful of pages sharing an obviously identical template (the four `/actueel/leeftijd/*` filtered listings, the four individual location pages, several `/actueel/*` articles) were extended by template match rather than pixel-by-pixel re-verification of every one. Four components — Recipe Card, Video Embed Block, App Store Download Block, and Pull Quote Block — surfaced only once each in this sample; the full ~400-article blog archive almost certainly holds more of some of these, and likely other formats not seen yet (interviews, quizzes). No CMS-field write-ups or per-page "variants observed" documentation yet — that's a further, deeper pass.
