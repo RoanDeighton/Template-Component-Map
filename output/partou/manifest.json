@@ -1,0 +1,877 @@
+{
+  "startUrl": "https://partou.nl/",
+  "crawledAt": "2026-09-30T11:50:31.093Z",
+  "options": {
+    "url": "https://partou.nl/",
+    "output": "output/partou",
+    "sampleSize": 4,
+    "pageCap": 200,
+    "collapseThreshold": 5,
+    "maxDiscover": 60000,
+    "maxSitemapFiles": 300,
+    "maxUrlsPerSitemapFile": 500,
+    "concurrency": 3,
+    "bfsDepth": 2,
+    "bfsMaxPages": 50,
+    "userAgent": "SiteInventoryBot/0.1 (+https://github.com/; research crawl)",
+    "localePrefix": null,
+    "onlyUrls": [
+      "https://partou.nl/ontwikkeling",
+      "https://partou.nl/kinderdagverblijf",
+      "https://partou.nl/rekentool",
+      "https://partou.nl/voeding",
+      "https://partou.nl/app",
+      "https://partou.nl/bso",
+      "https://partou.nl/activiteiten",
+      "https://partou.nl/actueel/vakantie-op-de-buitenschoolse-opvang",
+      "https://partou.nl/actueel/voordelen-van-de-peuteropvang",
+      "https://partou.nl/peuteropvang",
+      "https://partou.nl/inschrijven",
+      "https://partou.nl/actueel",
+      "https://partou.nl/kosten-kinderopvang",
+      "https://partou.nl/kinderopvangtoeslag",
+      "https://partou.nl/onderzoek-wetenschap",
+      "https://partou.nl/herroepingsrecht",
+      "https://partou.nl/contact",
+      "https://partou.nl/b-corp",
+      "https://partou.nl/voorwaarden",
+      "https://partou.nl/actueel/6-voordelen-van-een-kinderdagverblijf",
+      "https://partou.nl/actueel/reis-door-de-tijd-in-de-herfstvakantie",
+      "https://partou.nl/actueel/handig-ouderapp-van-partou",
+      "https://partou.nl/actueel/waarom-mabelle-kinderopvang-partou",
+      "https://partou.nl/5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+      "https://partou.nl/al-klant-en-nog-een-kind-inschrijven",
+      "https://partou.nl/hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit",
+      "https://partou.nl/privacy-en-cookies",
+      "https://partou.nl/actueel/leeftijd/0---2-jaar",
+      "https://partou.nl/actueel/leeftijd/10---12-jaar",
+      "https://partou.nl/actueel/leeftijd/4---6-jaar",
+      "https://partou.nl/actueel/leeftijd/6---8-jaar",
+      "https://partou.nl/50-jaar",
+      "https://partou.nl/",
+      "https://partou.nl/over-partou",
+      "https://partou.nl/rondleiding",
+      "https://partou.nl/kinderopvang",
+      "https://partou.nl/kinderopvang/apeldoorn",
+      "https://partou.nl/kinderopvang/arnhem/bso-callunastraat-54",
+      "https://partou.nl/kinderopvang/vught/bso-koninginnelaan-1a",
+      "https://partou.nl/kinderopvang/nieuwegein/kinderdagverblijf-abraham-kuyperpark-171",
+      "https://partou.nl/kinderopvang/apeldoorn/peuteropvang-1e-wormenseweg-158"
+    ],
+    "yes": true,
+    "legacyDiscovery": false
+  },
+  "discoveryMode": "onlyUrls",
+  "totalDiscovered": 54,
+  "totalCaptured": 54,
+  "groups": [
+    {
+      "pattern": "/ontwikkeling",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/kinderdagverblijf",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/rekentool",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/voeding",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/app",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/bso",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/activiteiten",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel/vakantie-op-de-buitenschoolse-opvang",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel/voordelen-van-de-peuteropvang",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/peuteropvang",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/inschrijven",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/kosten-kinderopvang",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/kinderopvangtoeslag",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/onderzoek-wetenschap",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/herroepingsrecht",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/contact",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/b-corp",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/voorwaarden",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel/6-voordelen-van-een-kinderdagverblijf",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel/reis-door-de-tijd-in-de-herfstvakantie",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel/handig-ouderapp-van-partou",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel/waarom-mabelle-kinderopvang-partou",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/al-klant-en-nog-een-kind-inschrijven",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/privacy-en-cookies",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel/leeftijd/0---2-jaar",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel/leeftijd/10---12-jaar",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel/leeftijd/4---6-jaar",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/actueel/leeftijd/6---8-jaar",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/50-jaar",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/over-partou",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/rondleiding",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/kinderopvang",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/kinderopvang/apeldoorn",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/kinderopvang/arnhem/bso-callunastraat-54",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/kinderopvang/vught/bso-koninginnelaan-1a",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/kinderopvang/nieuwegein/kinderdagverblijf-abraham-kuyperpark-171",
+      "totalUrls": 1
+    },
+    {
+      "pattern": "/kinderopvang/apeldoorn/peuteropvang-1e-wormenseweg-158",
+      "totalUrls": 1
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://partou.nl/ontwikkeling",
+      "pattern": "/ontwikkeling",
+      "slug": "ontwikkeling",
+      "title": "Ontwikkeling op maat bij Partou | Partou",
+      "screenshot": "pages/ontwikkeling/screenshot.png",
+      "html": "pages/ontwikkeling/page.html",
+      "styles": "pages/ontwikkeling/styles.json",
+      "capturedAt": "2026-09-30T09:10:32.807Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/rekentool",
+      "pattern": "/rekentool",
+      "slug": "rekentool",
+      "title": "Bereken je kinderopvangkosten: eenvoudig en snel",
+      "screenshot": "pages/rekentool/screenshot.png",
+      "html": "pages/rekentool/page.html",
+      "styles": "pages/rekentool/styles.json",
+      "capturedAt": "2026-09-30T09:10:33.754Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "html-renderer",
+          "top": 0,
+          "height": 5163,
+          "note": "5163px tall section renders as near-uniform color (stddev 41.8) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
+    },
+    {
+      "url": "https://partou.nl/kinderdagverblijf",
+      "pattern": "/kinderdagverblijf",
+      "slug": "kinderdagverblijf",
+      "title": "Kinderdagverblijf | Partou kinderopvang",
+      "screenshot": "pages/kinderdagverblijf/screenshot.png",
+      "html": "pages/kinderdagverblijf/page.html",
+      "styles": "pages/kinderdagverblijf/styles.json",
+      "capturedAt": "2026-09-30T09:10:37.316Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/app",
+      "pattern": "/app",
+      "slug": "app",
+      "title": "Ouder-app | Partou kinderopvang",
+      "screenshot": "pages/app/screenshot.png",
+      "html": "pages/app/page.html",
+      "styles": "pages/app/styles.json",
+      "capturedAt": "2026-09-30T09:11:08.931Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/bso",
+      "pattern": "/bso",
+      "slug": "bso",
+      "title": "Bso \u2013 buitenschoolse opvang I Partou",
+      "screenshot": "pages/bso/screenshot.png",
+      "html": "pages/bso/page.html",
+      "styles": "pages/bso/styles.json",
+      "capturedAt": "2026-09-30T09:11:35.793Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/voeding",
+      "pattern": "/voeding",
+      "slug": "voeding",
+      "title": "Gezond \u00e9n lekker eten bij Partou",
+      "screenshot": "pages/voeding/screenshot.png",
+      "html": "pages/voeding/page.html",
+      "styles": "pages/voeding/styles.json",
+      "capturedAt": "2026-09-30T09:11:56.791Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/activiteiten",
+      "pattern": "/activiteiten",
+      "slug": "activiteiten",
+      "title": "Activiteiten bij Partou | Partou",
+      "screenshot": "pages/activiteiten/screenshot.png",
+      "html": "pages/activiteiten/page.html",
+      "styles": "pages/activiteiten/styles.json",
+      "capturedAt": "2026-09-30T09:12:01.293Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/vakantie-op-de-buitenschoolse-opvang",
+      "pattern": "/actueel/vakantie-op-de-buitenschoolse-opvang",
+      "slug": "actueel-vakantie-op-de-buitenschoolse-opvang",
+      "title": "Vakantie op de buitenschoolse opvang | Partou",
+      "screenshot": "pages/actueel-vakantie-op-de-buitenschoolse-opvang/screenshot.png",
+      "html": "pages/actueel-vakantie-op-de-buitenschoolse-opvang/page.html",
+      "styles": "pages/actueel-vakantie-op-de-buitenschoolse-opvang/styles.json",
+      "capturedAt": "2026-09-30T09:12:22.068Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/voordelen-van-de-peuteropvang",
+      "pattern": "/actueel/voordelen-van-de-peuteropvang",
+      "slug": "actueel-voordelen-van-de-peuteropvang",
+      "title": "5x Voordelen van de peuteropvang | Partou",
+      "screenshot": "pages/actueel-voordelen-van-de-peuteropvang/screenshot.png",
+      "html": "pages/actueel-voordelen-van-de-peuteropvang/page.html",
+      "styles": "pages/actueel-voordelen-van-de-peuteropvang/styles.json",
+      "capturedAt": "2026-09-30T09:12:46.560Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/peuteropvang",
+      "pattern": "/peuteropvang",
+      "slug": "peuteropvang",
+      "title": "Peuteropvang / peuterspeelzaal | Partou kinderopvang",
+      "screenshot": "pages/peuteropvang/screenshot.png",
+      "html": "pages/peuteropvang/page.html",
+      "styles": "pages/peuteropvang/styles.json",
+      "capturedAt": "2026-09-30T09:12:57.635Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/inschrijven",
+      "pattern": "/inschrijven",
+      "slug": "inschrijven",
+      "title": "Je kind inschrijven voor kinderopvang | Partou",
+      "screenshot": "pages/inschrijven/screenshot.png",
+      "html": "pages/inschrijven/page.html",
+      "styles": "pages/inschrijven/styles.json",
+      "capturedAt": "2026-09-30T09:13:14.319Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "html-renderer",
+          "top": 0,
+          "height": 6687,
+          "note": "6687px tall section renders as near-uniform color (stddev 44.3) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
+    },
+    {
+      "url": "https://partou.nl/actueel",
+      "pattern": "/actueel",
+      "slug": "actueel",
+      "title": "Actueel",
+      "screenshot": "pages/actueel/screenshot.png",
+      "html": "pages/actueel/page.html",
+      "styles": "pages/actueel/styles.json",
+      "capturedAt": "2026-09-30T09:13:14.386Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/onderzoek-wetenschap",
+      "pattern": "/onderzoek-wetenschap",
+      "slug": "onderzoek-wetenschap",
+      "title": "Onderzoek en wetenschap bij Partou",
+      "screenshot": "pages/onderzoek-wetenschap/screenshot.png",
+      "html": "pages/onderzoek-wetenschap/page.html",
+      "styles": "pages/onderzoek-wetenschap/styles.json",
+      "capturedAt": "2026-09-30T09:13:42.191Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/kosten-kinderopvang",
+      "pattern": "/kosten-kinderopvang",
+      "slug": "kosten-kinderopvang",
+      "title": "Kosten kinderopvang: wat betaal je echt? | Partou",
+      "screenshot": "pages/kosten-kinderopvang/screenshot.png",
+      "html": "pages/kosten-kinderopvang/page.html",
+      "styles": "pages/kosten-kinderopvang/styles.json",
+      "capturedAt": "2026-09-30T09:13:55.870Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "html-renderer",
+          "top": 0,
+          "height": 7291,
+          "note": "7291px tall section renders as near-uniform color (stddev 41.2) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
+    },
+    {
+      "url": "https://partou.nl/herroepingsrecht",
+      "pattern": "/herroepingsrecht",
+      "slug": "herroepingsrecht",
+      "title": "Herroepingsrecht | Partou",
+      "screenshot": "pages/herroepingsrecht/screenshot.png",
+      "html": "pages/herroepingsrecht/page.html",
+      "styles": "pages/herroepingsrecht/styles.json",
+      "capturedAt": "2026-09-30T09:14:10.018Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/kinderopvangtoeslag",
+      "pattern": "/kinderopvangtoeslag",
+      "slug": "kinderopvangtoeslag",
+      "title": "Kinderopvangtoeslag 2025: wat je moet weten | Partou",
+      "screenshot": "pages/kinderopvangtoeslag/screenshot.png",
+      "html": "pages/kinderopvangtoeslag/page.html",
+      "styles": "pages/kinderopvangtoeslag/styles.json",
+      "capturedAt": "2026-09-30T09:14:18.553Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "html-renderer",
+          "top": 0,
+          "height": 8843,
+          "note": "8843px tall section renders as near-uniform color (stddev 41.9) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
+    },
+    {
+      "url": "https://partou.nl/contact",
+      "pattern": "/contact",
+      "slug": "contact",
+      "title": "Contact | Partou kinderopvang",
+      "screenshot": "pages/contact/screenshot.png",
+      "html": "pages/contact/page.html",
+      "styles": "pages/contact/styles.json",
+      "capturedAt": "2026-09-30T09:14:23.641Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/b-corp",
+      "pattern": "/b-corp",
+      "slug": "b-corp",
+      "title": "Partou kinderopvang: h\u00e9\u00e9l blij met B Corp certificering",
+      "screenshot": "pages/b-corp/screenshot.png",
+      "html": "pages/b-corp/page.html",
+      "styles": "pages/b-corp/styles.json",
+      "capturedAt": "2026-09-30T09:14:43.844Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/voorwaarden",
+      "pattern": "/voorwaarden",
+      "slug": "voorwaarden",
+      "title": "Voorwaarden, factuur, incasso en privacy | Partou",
+      "screenshot": "pages/voorwaarden/screenshot.png",
+      "html": "pages/voorwaarden/page.html",
+      "styles": "pages/voorwaarden/styles.json",
+      "capturedAt": "2026-09-30T09:14:58.477Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/6-voordelen-van-een-kinderdagverblijf",
+      "pattern": "/actueel/6-voordelen-van-een-kinderdagverblijf",
+      "slug": "actueel-6-voordelen-van-een-kinderdagverblijf",
+      "title": "De voordelen van een kinderdagverblijf | Partou",
+      "screenshot": "pages/actueel-6-voordelen-van-een-kinderdagverblijf/screenshot.png",
+      "html": "pages/actueel-6-voordelen-van-een-kinderdagverblijf/page.html",
+      "styles": "pages/actueel-6-voordelen-van-een-kinderdagverblijf/styles.json",
+      "capturedAt": "2026-09-30T09:15:15.784Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/reis-door-de-tijd-in-de-herfstvakantie",
+      "pattern": "/actueel/reis-door-de-tijd-in-de-herfstvakantie",
+      "slug": "actueel-reis-door-de-tijd-in-de-herfstvakantie",
+      "title": "Reis door de tijd in de herfstvakantie!",
+      "screenshot": "pages/actueel-reis-door-de-tijd-in-de-herfstvakantie/screenshot.png",
+      "html": "pages/actueel-reis-door-de-tijd-in-de-herfstvakantie/page.html",
+      "styles": "pages/actueel-reis-door-de-tijd-in-de-herfstvakantie/styles.json",
+      "capturedAt": "2026-09-30T09:15:17.612Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/handig-ouderapp-van-partou",
+      "pattern": "/actueel/handig-ouderapp-van-partou",
+      "slug": "actueel-handig-ouderapp-van-partou",
+      "title": "Zo leuk en handig is de ouder-app van Partou",
+      "screenshot": "pages/actueel-handig-ouderapp-van-partou/screenshot.png",
+      "html": "pages/actueel-handig-ouderapp-van-partou/page.html",
+      "styles": "pages/actueel-handig-ouderapp-van-partou/styles.json",
+      "capturedAt": "2026-09-30T09:15:44.478Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+      "pattern": "/5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+      "slug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+      "title": "5x Voordelen van het kinderdagverblijf | Partou",
+      "screenshot": "pages/5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby/screenshot.png",
+      "html": "pages/5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby/page.html",
+      "styles": "pages/5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby/styles.json",
+      "capturedAt": "2026-09-30T09:15:57.641Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/waarom-mabelle-kinderopvang-partou",
+      "pattern": "/actueel/waarom-mabelle-kinderopvang-partou",
+      "slug": "actueel-waarom-mabelle-kinderopvang-partou",
+      "title": "Waarom Mabelle kiest voor kinderopvang bij Partou",
+      "screenshot": "pages/actueel-waarom-mabelle-kinderopvang-partou/screenshot.png",
+      "html": "pages/actueel-waarom-mabelle-kinderopvang-partou/page.html",
+      "styles": "pages/actueel-waarom-mabelle-kinderopvang-partou/styles.json",
+      "capturedAt": "2026-09-30T09:16:01.757Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/al-klant-en-nog-een-kind-inschrijven",
+      "pattern": "/al-klant-en-nog-een-kind-inschrijven",
+      "slug": "al-klant-en-nog-een-kind-inschrijven",
+      "title": "Al klant en nog een kind inschrijven?",
+      "screenshot": "pages/al-klant-en-nog-een-kind-inschrijven/screenshot.png",
+      "html": "pages/al-klant-en-nog-een-kind-inschrijven/page.html",
+      "styles": "pages/al-klant-en-nog-een-kind-inschrijven/styles.json",
+      "capturedAt": "2026-09-30T09:16:12.170Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/privacy-en-cookies",
+      "pattern": "/privacy-en-cookies",
+      "slug": "privacy-en-cookies",
+      "title": "Privacy | Partou kinderopvang",
+      "screenshot": "pages/privacy-en-cookies/screenshot.png",
+      "html": "pages/privacy-en-cookies/page.html",
+      "styles": "pages/privacy-en-cookies/styles.json",
+      "capturedAt": "2026-09-30T09:16:23.523Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/leeftijd/0---2-jaar",
+      "pattern": "/actueel/leeftijd/0---2-jaar",
+      "slug": "actueel-leeftijd-0-2-jaar",
+      "title": "Actueel",
+      "screenshot": "pages/actueel-leeftijd-0-2-jaar/screenshot.png",
+      "html": "pages/actueel-leeftijd-0-2-jaar/page.html",
+      "styles": "pages/actueel-leeftijd-0-2-jaar/styles.json",
+      "capturedAt": "2026-09-30T09:16:40.006Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit",
+      "pattern": "/hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit",
+      "slug": "hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit",
+      "title": "Dag op de kinderopvang | Partou",
+      "screenshot": "pages/hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit/screenshot.png",
+      "html": "pages/hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit/page.html",
+      "styles": "pages/hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit/styles.json",
+      "capturedAt": "2026-09-30T09:16:43.858Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/leeftijd/10---12-jaar",
+      "pattern": "/actueel/leeftijd/10---12-jaar",
+      "slug": "actueel-leeftijd-10-12-jaar",
+      "title": "Actueel",
+      "screenshot": "pages/actueel-leeftijd-10-12-jaar/screenshot.png",
+      "html": "pages/actueel-leeftijd-10-12-jaar/page.html",
+      "styles": "pages/actueel-leeftijd-10-12-jaar/styles.json",
+      "capturedAt": "2026-09-30T09:16:51.331Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/leeftijd/4---6-jaar",
+      "pattern": "/actueel/leeftijd/4---6-jaar",
+      "slug": "actueel-leeftijd-4-6-jaar",
+      "title": "Actueel",
+      "screenshot": "pages/actueel-leeftijd-4-6-jaar/screenshot.png",
+      "html": "pages/actueel-leeftijd-4-6-jaar/page.html",
+      "styles": "pages/actueel-leeftijd-4-6-jaar/styles.json",
+      "capturedAt": "2026-09-30T09:17:07.911Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/leeftijd/6---8-jaar",
+      "pattern": "/actueel/leeftijd/6---8-jaar",
+      "slug": "actueel-leeftijd-6-8-jaar",
+      "title": "Actueel",
+      "screenshot": "pages/actueel-leeftijd-6-8-jaar/screenshot.png",
+      "html": "pages/actueel-leeftijd-6-8-jaar/page.html",
+      "styles": "pages/actueel-leeftijd-6-8-jaar/styles.json",
+      "capturedAt": "2026-09-30T09:17:11.597Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/50-jaar",
+      "pattern": "/50-jaar",
+      "slug": "50-jaar",
+      "title": "50 jaar Partou kinderopvang: een halve eeuw groei, spel en ontwikkeling",
+      "screenshot": "pages/50-jaar/screenshot.png",
+      "html": "pages/50-jaar/page.html",
+      "styles": "pages/50-jaar/styles.json",
+      "capturedAt": "2026-09-30T09:17:37.479Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/over-partou",
+      "pattern": "/over-partou",
+      "slug": "over-partou",
+      "title": "Over Partou kinderopvang",
+      "screenshot": "pages/over-partou/screenshot.png",
+      "html": "pages/over-partou/page.html",
+      "styles": "pages/over-partou/styles.json",
+      "capturedAt": "2026-09-30T09:18:03.786Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/",
+      "pattern": "/",
+      "slug": "home",
+      "title": "Partou kinderopvang",
+      "screenshot": "pages/home/screenshot.png",
+      "html": "pages/home/page.html",
+      "styles": "pages/home/styles.json",
+      "capturedAt": "2026-09-30T09:18:06.783Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/kinderopvang",
+      "pattern": "/kinderopvang",
+      "slug": "kinderopvang",
+      "title": "Vind jouw Partou",
+      "screenshot": "pages/kinderopvang/screenshot.png",
+      "html": "pages/kinderopvang/page.html",
+      "styles": "pages/kinderopvang/styles.json",
+      "capturedAt": "2026-09-30T09:18:25.613Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/rondleiding",
+      "pattern": "/rondleiding",
+      "slug": "rondleiding",
+      "title": "Plan een rondleiding bij Partou",
+      "screenshot": "pages/rondleiding/screenshot.png",
+      "html": "pages/rondleiding/page.html",
+      "styles": "pages/rondleiding/styles.json",
+      "capturedAt": "2026-09-30T09:18:35.899Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/kinderopvang/apeldoorn",
+      "pattern": "/kinderopvang/apeldoorn",
+      "slug": "kinderopvang-apeldoorn",
+      "title": "Kinderopvang in Apeldoorn | Partou",
+      "screenshot": "pages/kinderopvang-apeldoorn/screenshot.png",
+      "html": "pages/kinderopvang-apeldoorn/page.html",
+      "styles": "pages/kinderopvang-apeldoorn/styles.json",
+      "capturedAt": "2026-09-30T09:18:59.324Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/kinderopvang/arnhem/bso-callunastraat-54",
+      "pattern": "/kinderopvang/arnhem/bso-callunastraat-54",
+      "slug": "kinderopvang-arnhem-bso-callunastraat-54",
+      "title": "Bso Arnhem \u2013 Callunastraat 54 | Partou",
+      "screenshot": "pages/kinderopvang-arnhem-bso-callunastraat-54/screenshot.png",
+      "html": "pages/kinderopvang-arnhem-bso-callunastraat-54/page.html",
+      "styles": "pages/kinderopvang-arnhem-bso-callunastraat-54/styles.json",
+      "capturedAt": "2026-09-30T09:19:25.715Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/kinderopvang/vught/bso-koninginnelaan-1a",
+      "pattern": "/kinderopvang/vught/bso-koninginnelaan-1a",
+      "slug": "kinderopvang-vught-bso-koninginnelaan-1a",
+      "title": "Bso Vught - Koninginnelaan 1a | Partou",
+      "screenshot": "pages/kinderopvang-vught-bso-koninginnelaan-1a/screenshot.png",
+      "html": "pages/kinderopvang-vught-bso-koninginnelaan-1a/page.html",
+      "styles": "pages/kinderopvang-vught-bso-koninginnelaan-1a/styles.json",
+      "capturedAt": "2026-09-30T09:19:34.611Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/kinderopvang/nieuwegein/kinderdagverblijf-abraham-kuyperpark-171",
+      "pattern": "/kinderopvang/nieuwegein/kinderdagverblijf-abraham-kuyperpark-171",
+      "slug": "kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171",
+      "title": "Kinderdagverblijf Nieuwegein - Abraham Kuyperpark | Partou",
+      "screenshot": "pages/kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171/screenshot.png",
+      "html": "pages/kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171/page.html",
+      "styles": "pages/kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171/styles.json",
+      "capturedAt": "2026-09-30T09:19:52.084Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/kinderopvang/apeldoorn/peuteropvang-1e-wormenseweg-158",
+      "pattern": "/kinderopvang/apeldoorn/peuteropvang-1e-wormenseweg-158",
+      "slug": "kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158",
+      "title": "Peuteropvang Apeldoorn \u2013 Eerste Wormenseweg 158 | Partou",
+      "screenshot": "pages/kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158/screenshot.png",
+      "html": "pages/kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158/page.html",
+      "styles": "pages/kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158/styles.json",
+      "capturedAt": "2026-09-30T09:20:12.268Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/diy-wortelcakejes-zonder-suiker",
+      "pattern": "/actueel/diy-wortelcakejes-zonder-suiker",
+      "slug": "actueel-diy-wortelcakejes-zonder-suiker",
+      "title": "DIY: wortelcakejes zonder suiker | Partou kinderopvang",
+      "screenshot": "pages/actueel-diy-wortelcakejes-zonder-suiker/screenshot.png",
+      "html": "pages/actueel-diy-wortelcakejes-zonder-suiker/page.html",
+      "styles": "pages/actueel-diy-wortelcakejes-zonder-suiker/styles.json",
+      "capturedAt": "2026-09-30T11:48:11.237Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "html-renderer",
+          "top": 0,
+          "height": 3238,
+          "note": "3238px tall section renders as near-uniform color (stddev 37.1) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
+    },
+    {
+      "url": "https://partou.nl/actueel/je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+      "pattern": "/actueel/je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+      "slug": "actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor",
+      "title": "Je baby voor het eerst naar het kinderdagverblijf: hoe bereid je je voor? | Partou kinderopvang",
+      "screenshot": "pages/actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor/screenshot.png",
+      "html": "pages/actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor/page.html",
+      "styles": "pages/actueel-je-baby-voor-het-eerst-naar-het-kinderdagverblijf-hoe-bereid-je-je-voor/styles.json",
+      "capturedAt": "2026-09-30T11:48:12.305Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/13-voorleesboeken-over-vriendschap",
+      "pattern": "/actueel/13-voorleesboeken-over-vriendschap",
+      "slug": "actueel-13-voorleesboeken-over-vriendschap",
+      "title": "Voorleesboeken tips over vriendschap | Partou",
+      "screenshot": "pages/actueel-13-voorleesboeken-over-vriendschap/screenshot.png",
+      "html": "pages/actueel-13-voorleesboeken-over-vriendschap/page.html",
+      "styles": "pages/actueel-13-voorleesboeken-over-vriendschap/styles.json",
+      "capturedAt": "2026-09-30T11:48:15.622Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "html-renderer",
+          "top": 0,
+          "height": 6382,
+          "note": "6382px tall section renders as near-uniform color (stddev 43.6) \u2014 likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
+    },
+    {
+      "url": "https://partou.nl/actueel/zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+      "pattern": "/actueel/zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+      "slug": "actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind",
+      "title": "Zo houdt het kinderdagverblijf je up-to-date over je kind | Partou",
+      "screenshot": "pages/actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind/screenshot.png",
+      "html": "pages/actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind/page.html",
+      "styles": "pages/actueel-zo-houdt-het-kinderdagverblijf-je-date-over-je-kind/styles.json",
+      "capturedAt": "2026-09-30T11:48:39.995Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/gezond-en-lekker-eten",
+      "pattern": "/actueel/gezond-en-lekker-eten",
+      "slug": "actueel-gezond-en-lekker-eten",
+      "title": "Zo doe je dat: gezond en lekker eten met dreumesen en peuters",
+      "screenshot": "pages/actueel-gezond-en-lekker-eten/screenshot.png",
+      "html": "pages/actueel-gezond-en-lekker-eten/page.html",
+      "styles": "pages/actueel-gezond-en-lekker-eten/styles.json",
+      "capturedAt": "2026-09-30T11:48:49.395Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+      "pattern": "/actueel/slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+      "slug": "actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat",
+      "title": "Slapen op de kinderopvang | Partou",
+      "screenshot": "pages/actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat/screenshot.png",
+      "html": "pages/actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat/page.html",
+      "styles": "pages/actueel-slapen-op-het-kinderdagverblijf-hoe-werkt-dat/styles.json",
+      "capturedAt": "2026-09-30T11:48:58.042Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/maak-je-kind-mediawijs",
+      "pattern": "/actueel/maak-je-kind-mediawijs",
+      "slug": "actueel-maak-je-kind-mediawijs",
+      "title": "Maak je kind mediawijs",
+      "screenshot": "pages/actueel-maak-je-kind-mediawijs/screenshot.png",
+      "html": "pages/actueel-maak-je-kind-mediawijs/page.html",
+      "styles": "pages/actueel-maak-je-kind-mediawijs/styles.json",
+      "capturedAt": "2026-09-30T11:49:14.026Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/gezond-in-de-herfst-tips",
+      "pattern": "/actueel/gezond-in-de-herfst-tips",
+      "slug": "actueel-gezond-in-de-herfst-tips",
+      "title": "Zomer uit, weerstand aan! | Partou",
+      "screenshot": "pages/actueel-gezond-in-de-herfst-tips/screenshot.png",
+      "html": "pages/actueel-gezond-in-de-herfst-tips/page.html",
+      "styles": "pages/actueel-gezond-in-de-herfst-tips/styles.json",
+      "capturedAt": "2026-09-30T11:49:29.355Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+      "pattern": "/actueel/mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+      "slug": "actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld",
+      "title": "Mediawijs opgroeien: zo geven we samen het goede voorbeeld",
+      "screenshot": "pages/actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld/screenshot.png",
+      "html": "pages/actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld/page.html",
+      "styles": "pages/actueel-mediawijs-opgroeien-zo-geven-we-samen-het-goede-voorbeeld/styles.json",
+      "capturedAt": "2026-09-30T11:49:37.950Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/liefdevol",
+      "pattern": "/liefdevol",
+      "slug": "liefdevol",
+      "title": "Liefdevol kinderdagverblijf | Partou",
+      "screenshot": "pages/liefdevol/screenshot.png",
+      "html": "pages/liefdevol/page.html",
+      "styles": "pages/liefdevol/styles.json",
+      "capturedAt": "2026-09-30T11:49:44.750Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/samen-sterker",
+      "pattern": "/samen-sterker",
+      "slug": "samen-sterker",
+      "title": "Samen sterker : partou",
+      "screenshot": "pages/samen-sterker/screenshot.png",
+      "html": "pages/samen-sterker/page.html",
+      "styles": "pages/samen-sterker/styles.json",
+      "capturedAt": "2026-09-30T11:49:59.542Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/een-tegen-eenzaamheid",
+      "pattern": "/een-tegen-eenzaamheid",
+      "slug": "een-tegen-eenzaamheid",
+      "title": "Week tegen Eenzaamheid: Partou brengt jong en oud samen | Partou",
+      "screenshot": "pages/een-tegen-eenzaamheid/screenshot.png",
+      "html": "pages/een-tegen-eenzaamheid/page.html",
+      "styles": "pages/een-tegen-eenzaamheid/styles.json",
+      "capturedAt": "2026-09-30T11:50:02.062Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/wasbare-luiers",
+      "pattern": "/wasbare-luiers",
+      "slug": "wasbare-luiers",
+      "title": "Wasbare luiers bij Partou",
+      "screenshot": "pages/wasbare-luiers/screenshot.png",
+      "html": "pages/wasbare-luiers/page.html",
+      "styles": "pages/wasbare-luiers/styles.json",
+      "capturedAt": "2026-09-30T11:50:31.038Z",
+      "blankSectionFlags": []
+    }
+  ]
+}

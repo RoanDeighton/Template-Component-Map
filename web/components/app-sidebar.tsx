@@ -57,14 +57,19 @@ function NavGroup({ label, links, pathname }: { label?: string; links: SidebarLi
   );
 }
 
+export interface PageLinkGroup {
+  label: string;
+  links: SidebarLink[];
+}
+
 export function AppSidebar({
   site,
   componentLinks,
-  pageLinks,
+  pageGroups,
 }: {
   site: string;
   componentLinks: SidebarLink[];
-  pageLinks: SidebarLink[];
+  pageGroups: PageLinkGroup[];
 }) {
   // In this statically-exported, basePath-prefixed deploy, usePathname()
   // returns the raw window.location.pathname verbatim — basePath and all
@@ -124,8 +129,10 @@ export function AppSidebar({
               <NavGroup label={`Editorial (${editorialLinks.length})`} links={editorialLinks} pathname={pathname} />
             )}
           </>
+        ) : pageGroups.length === 1 && pageGroups[0].label === "" ? (
+          <NavGroup label={`Pages (${pageGroups[0].links.length})`} links={pageGroups[0].links} pathname={pathname} />
         ) : (
-          <NavGroup label={`Pages (${pageLinks.length})`} links={pageLinks} pathname={pathname} />
+          pageGroups.map((g) => <NavGroup key={g.label} label={`${g.label} (${g.links.length})`} links={g.links} pathname={pathname} />)
         )}
       </SidebarContent>
       <div

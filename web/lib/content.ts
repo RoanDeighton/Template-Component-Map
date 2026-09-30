@@ -140,7 +140,7 @@ export function getSiteMeta(site: string): SiteMeta {
   return { slug: site, title: meta.title ?? site, description: meta.description ?? "" };
 }
 
-function docsInDir(site: string, subdir: "components" | "pages"): { slug: string; title: string }[] {
+function docsInDir(site: string, subdir: "components" | "pages"): { slug: string; title: string; section?: string }[] {
   const dir = path.join(OUTPUT_ROOT, site, "content", subdir);
   if (!fs.existsSync(dir)) return [];
   return fs
@@ -151,7 +151,8 @@ function docsInDir(site: string, subdir: "components" | "pages"): { slug: string
       const slug = f.replace(/\.md$/, "");
       const { data } = matter(fs.readFileSync(path.join(dir, f), "utf-8"));
       const fallback = slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-      return { slug, title: data.title ?? fallback };
+      const section = typeof data.section === "string" && data.section.trim() ? data.section.trim() : undefined;
+      return { slug, title: data.title ?? fallback, section };
     });
 }
 
@@ -161,6 +162,53 @@ export function listComponents(site: string) {
 
 export function listPages(site: string) {
   return docsInDir(site, "pages");
+}
+
+export interface PageGroup {
+  label: string;
+  pages: { slug: string; title: string }[];
+}
+
+// Groups pages by their optional `section` frontmatter field — e.g. which
+// nav dropdown or footer column a page actually lives under on the real
+// site. Same idea as the Functional/Editorial split for components,
+// generalized to any number of named groups since a site's own nav
+// structure isn't a fixed two-way split. A site that doesn't set `section`
+// on any page gets one unlabeled group (today's flat list), so this is
+// fully backward compatible with every site authored before this existed.
+// A page missing `section` on a site where others do have one lands in a
+// trailing "Other" group rather than silently vanishing from the list.
+export function groupedPages(site: string): PageGroup[] {
+  const pages = listPages(site);
+  if (pages.every((p) => !p.section)) {
+    return pages.length > 0 ? [{ label: "", pages }] : [];
+  }
+
+  const bySection = new Map<string, { slug: string; title: string }[]>();
+  const other: { slug: string; title: string }[] = [];
+  for (const p of pages) {
+    if (!p.section) {
+      other.push(p);
+      continue;
+    }
+    if (!bySection.has(p.section)) bySection.set(p.section, []);
+    bySection.get(p.section)!.push(p);
+  }
+
+  const groups = Array.from(bySection.entries())
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([label, ps]) => ({ label, pages: ps.sort((a, b) => a.title.localeCompare(b.title)) }));
+  if (other.length > 0) {
+    groups.push({ label: "Other", pages: other.sort((a, b) => a.title.localeCompare(b.title)) });
+  }
+  return groups;
+}
+
+// Flattened groupedPages() order — used for prev/next adjacency and the
+// sidebar, so both walk pages in the same grouped order a reader sees
+// rather than a flat alphabetical list that cuts across groups.
+export function orderedPages(site: string) {
+  return groupedPages(site).flatMap((g) => g.pages);
 }
 
 // listComponents() sorted the same way the sidebar (and the overview
@@ -194,7 +242,7 @@ export function getAdjacentDocs(
   kind: "components" | "pages",
   slug: string,
 ): { prev: { slug: string; title: string; href: string } | null; next: { slug: string; title: string; href: string } | null } {
-  const list = kind === "components" ? orderedComponents(site) : listPages(site);
+  const list = kind === "components" ? orderedComponents(site) : orderedPages(site);
   const i = list.findIndex((d) => d.slug === slug);
   const at = (idx: number) => {
     const d = list[idx];
