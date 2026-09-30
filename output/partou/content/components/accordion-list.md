@@ -2,8 +2,8 @@
 title: Accordion / Expandable List
 class: "No class listed"
 examples:
-  - image: ../../pages/privacy-en-cookies/crop-accordion-list.png
-    capturedFromPage: privacy-en-cookies
+  - image: ../../pages/contact/crop-accordion-list.png
+    capturedFromPage: contact
 usedOn:
   - privacy-en-cookies
   - contact

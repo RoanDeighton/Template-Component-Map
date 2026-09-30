@@ -10,7 +10,7 @@ title: "Partou: Site Inventory Overview"
 
 <!-- stat-blocks -->
 
-<p class="callout"><strong>Light pass.</strong> Every captured page is placed and linked here with its own screenshot, and 22 components are identified and linked with a preview image each: the site's structural chrome (header, footer, skip link, cookie bar) plus every recurring content block found in a full pass over all 54 pages (hero banners, image/text rows, card and icon-tile grids, a benefit checklist, CTA banners, the location finder, directory, and profile card, the cost calculator, a recipe card, a video embed, and the blog templates). None of it has a full written description yet, and the editorial components were found by eye, not by the automated reconciliation, which only looks one level under a page's main content — see the Notes on the components page. Partou also runs 1,319 separate childcare-location pages (one per city and address) and roughly 400 blog articles under `/actueel/*` and scattered top-level URLs; only 5 and 22 are sampled here respectively, picked for format variety (a recipe post, a video post) rather than a proportional slice.</p>
+<p class="callout"><strong>Light pass.</strong> Every captured page is placed and linked here with its own screenshot, and 25 components are identified and linked with a preview image each: the site's structural chrome (header, footer, skip link, cookie bar) plus every recurring content block found in a full pass over all 54 pages, plus a follow-up sweep of the remaining pages for anything still missed (hero banners, image/text rows, card and icon-tile grids, a benefit checklist, a pull quote, CTA banners, the location finder, directory, and profile card, the cost calculator, a recipe card, two video embeds, an app-store download block, a standalone photo block, and the blog templates). None of it has a full written description yet, and the editorial components were found by eye, not by the automated reconciliation, which only looks one level under a page's main content — see the Notes on the components page. Partou also runs 1,319 separate childcare-location pages (one per city and address) and roughly 400 blog articles under `/actueel/*` and scattered top-level URLs; only 5 and 22 are sampled here respectively, picked for format variety (a recipe post, a video post) rather than a proportional slice.</p>
 
 ## How this was made
 
@@ -30,7 +30,7 @@ title: "Partou: Site Inventory Overview"
   <li>
     <div>
       <p class="step-title">Document what's there</p>
-      <p class="step-body">Turn that structural breakdown into write-ups of what each component actually is, what it holds, and how it varies. For this pass, every page is placed and linked with its screenshot, and all 22 components found across them (chrome plus every recurring content block) are placed and linked with a preview image and a one-line description — none have the deeper CMS-field or variants write-up yet.</p>
+      <p class="step-body">Turn that structural breakdown into write-ups of what each component actually is, what it holds, and how it varies. For this pass, every page is placed and linked with its screenshot, and all 25 components found across them (chrome plus every recurring content block) are placed and linked with a preview image and a one-line description — none have the deeper CMS-field or variants write-up yet.</p>
     </div>
   </li>
   <li>
