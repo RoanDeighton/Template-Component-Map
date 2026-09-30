@@ -1,189 +1,11 @@
 {
-  "analyzedAt": "2026-09-29T12:25:06.625Z",
+  "analyzedAt": "2026-09-30T10:42:32.356Z",
   "input": "output/partou",
   "totalPages": 41,
   "totalTemplates": 2,
   "totalComponents": 9,
   "stableIdAttr": null,
   "pages": [
-    {
-      "slug": "rekentool",
-      "url": "https://partou.nl/rekentool",
-      "pattern": "/rekentool",
-      "title": "Bereken je kinderopvangkosten: eenvoudig en snel",
-      "screenshot": "pages/rekentool/screenshot.png",
-      "outline": [
-        {
-          "path": "header",
-          "tag": "header",
-          "classes": "header transition-all lg:h-28",
-          "primaryClass": "header",
-          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-          "heading": "Not available in English",
-          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
-          "linkCount": 54,
-          "imageCount": 16,
-          "style": {
-            "path": "header",
-            "tag": "header",
-            "classes": "header transition-all lg:h-28",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "0px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 0,
-            "width": 1440,
-            "height": 109
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>0",
-          "tag": "div",
-          "classes": "browser-message is-hidden",
-          "primaryClass": "browser-message",
-          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
-          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
-          "heading": null,
-          "textSnippet": "",
-          "linkCount": 0,
-          "imageCount": 0,
-          "style": {
-            "path": "main>0",
-            "tag": "section",
-            "classes": "html-renderer",
-            "backgroundColor": "rgba(0, 0, 0, 0)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "0px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 0,
-            "width": 1440,
-            "height": 5167
-          },
-          "isBlankFlagged": true,
-          "blankNote": "5167px tall section renders as near-uniform color (stddev 42.0) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>1",
-          "tag": "a",
-          "classes": "sr-only",
-          "primaryClass": "sr-only",
-          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
-          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
-          "heading": null,
-          "textSnippet": "Skip to content",
-          "linkCount": 0,
-          "imageCount": 0,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>2",
-          "tag": "div",
-          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
-          "primaryClass": "flex",
-          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-          "heading": "Not available in English",
-          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
-          "linkCount": 54,
-          "imageCount": 16,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>3",
-          "tag": "div",
-          "classes": "",
-          "primaryClass": "",
-          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
-          "heading": "Bereken je kinderopvangkosten: eenvoudig en snel",
-          "textSnippet": "Rekentool Bereken je kinderopvangkosten: eenvoudig en snel Benieuwd wat kinderopvang jou straks gaat kosten? Met onze rekentool zie je het binnen een paar minut",
-          "linkCount": 8,
-          "imageCount": 2,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {
-            "id": "main"
-          }
-        },
-        {
-          "path": "main>4",
-          "tag": "footer",
-          "classes": "footer overflow-hidden",
-          "primaryClass": "footer",
-          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
-          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
-          "heading": null,
-          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
-          "linkCount": 25,
-          "imageCount": 3,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "footer",
-          "tag": "footer",
-          "classes": "footer overflow-hidden",
-          "primaryClass": "footer",
-          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
-          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
-          "heading": null,
-          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
-          "linkCount": 25,
-          "imageCount": 3,
-          "style": {
-            "path": "footer",
-            "tag": "footer",
-            "classes": "footer overflow-hidden",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "80px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 4659,
-            "width": 1440,
-            "height": 508
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        }
-      ],
-      "signature": [
-        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
-        "a|img:0|a:0|h:0|els:0|form:0|media:0",
-        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
-        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
-      ]
-    },
     {
       "slug": "ontwikkeling",
       "url": "https://partou.nl/ontwikkeling",
@@ -217,7 +39,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 109
+            "height": 111
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -249,7 +71,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 5700
+            "height": 5702
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -345,7 +167,185 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 5192,
+            "top": 5194,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "rekentool",
+      "url": "https://partou.nl/rekentool",
+      "pattern": "/rekentool",
+      "title": "Bereken je kinderopvangkosten: eenvoudig en snel",
+      "screenshot": "pages/rekentool/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 105
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 5163
+          },
+          "isBlankFlagged": true,
+          "blankNote": "5163px tall section renders as near-uniform color (stddev 41.8) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+          "heading": "Bereken je kinderopvangkosten: eenvoudig en snel",
+          "textSnippet": "Rekentool Bereken je kinderopvangkosten: eenvoudig en snel Benieuwd wat kinderopvang jou straks gaat kosten? Met onze rekentool zie je het binnen een paar minut",
+          "linkCount": 8,
+          "imageCount": 2,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 4655,
             "width": 1440,
             "height": 508
           },
@@ -573,7 +573,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 88
+            "height": 99
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -605,7 +605,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 4203
+            "height": 4214
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -701,185 +701,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 3695,
-            "width": 1440,
-            "height": 508
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        }
-      ],
-      "signature": [
-        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
-        "a|img:0|a:0|h:0|els:0|form:0|media:0",
-        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
-        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
-      ]
-    },
-    {
-      "slug": "voeding",
-      "url": "https://partou.nl/voeding",
-      "pattern": "/voeding",
-      "title": "Gezond én lekker eten bij Partou",
-      "screenshot": "pages/voeding/screenshot.png",
-      "outline": [
-        {
-          "path": "header",
-          "tag": "header",
-          "classes": "header transition-all lg:h-28",
-          "primaryClass": "header",
-          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-          "heading": "Not available in English",
-          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
-          "linkCount": 54,
-          "imageCount": 16,
-          "style": {
-            "path": "header",
-            "tag": "header",
-            "classes": "header transition-all lg:h-28",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "0px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 0,
-            "width": 1440,
-            "height": 112
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>0",
-          "tag": "div",
-          "classes": "browser-message is-hidden",
-          "primaryClass": "browser-message",
-          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
-          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
-          "heading": null,
-          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
-          "linkCount": 0,
-          "imageCount": 0,
-          "style": {
-            "path": "main>0",
-            "tag": "section",
-            "classes": "html-renderer",
-            "backgroundColor": "rgba(0, 0, 0, 0)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "0px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 0,
-            "width": 1440,
-            "height": 11658
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>1",
-          "tag": "a",
-          "classes": "sr-only",
-          "primaryClass": "sr-only",
-          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
-          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
-          "heading": null,
-          "textSnippet": "Skip to content",
-          "linkCount": 0,
-          "imageCount": 0,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>2",
-          "tag": "div",
-          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
-          "primaryClass": "flex",
-          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-          "heading": "Not available in English",
-          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
-          "linkCount": 54,
-          "imageCount": 16,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>3",
-          "tag": "div",
-          "classes": "",
-          "primaryClass": "",
-          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
-          "heading": "Gezond én lekker eten bij Partou",
-          "textSnippet": "Voeding Gezond én lekker eten bij Partou Bij Partou vinden we gezonde voeding ontzettend belangrijk. Ons voedingsbeleid is gebaseerd op drie pijlers: bouwstenen",
-          "linkCount": 9,
-          "imageCount": 32,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {
-            "id": "main"
-          }
-        },
-        {
-          "path": "main>4",
-          "tag": "footer",
-          "classes": "footer overflow-hidden",
-          "primaryClass": "footer",
-          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
-          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
-          "heading": null,
-          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
-          "linkCount": 25,
-          "imageCount": 3,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "footer",
-          "tag": "footer",
-          "classes": "footer overflow-hidden",
-          "primaryClass": "footer",
-          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
-          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
-          "heading": null,
-          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
-          "linkCount": 25,
-          "imageCount": 3,
-          "style": {
-            "path": "footer",
-            "tag": "footer",
-            "classes": "footer overflow-hidden",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "80px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 11150,
+            "top": 3706,
             "width": 1440,
             "height": 508
           },
@@ -1075,6 +897,184 @@
       ]
     },
     {
+      "slug": "voeding",
+      "url": "https://partou.nl/voeding",
+      "pattern": "/voeding",
+      "title": "Gezond én lekker eten bij Partou",
+      "screenshot": "pages/voeding/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 112
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 11658
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+          "heading": "Gezond én lekker eten bij Partou",
+          "textSnippet": "Voeding Gezond én lekker eten bij Partou Bij Partou vinden we gezonde voeding ontzettend belangrijk. Ons voedingsbeleid is gebaseerd op drie pijlers: bouwstenen",
+          "linkCount": 9,
+          "imageCount": 32,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 11150,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
       "slug": "activiteiten",
       "url": "https://partou.nl/activiteiten",
       "pattern": "/activiteiten",
@@ -1107,7 +1107,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 111
+            "height": 112
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -1139,7 +1139,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 6608
+            "height": 6609
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -1235,7 +1235,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 6100,
+            "top": 6101,
             "width": 1440,
             "height": 508
           },
@@ -1285,7 +1285,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 105
+            "height": 109
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -1317,7 +1317,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 5590
+            "height": 5594
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -1413,7 +1413,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 5082,
+            "top": 5086,
             "width": 1440,
             "height": 508
           },
@@ -1463,7 +1463,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 109
+            "height": 105
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -1495,7 +1495,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 5944
+            "height": 5940
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -1591,7 +1591,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 5436,
+            "top": 5432,
             "width": 1440,
             "height": 508
           },
@@ -1787,184 +1787,6 @@
       ]
     },
     {
-      "slug": "actueel",
-      "url": "https://partou.nl/actueel",
-      "pattern": "/actueel",
-      "title": "Actueel",
-      "screenshot": "pages/actueel/screenshot.png",
-      "outline": [
-        {
-          "path": "header",
-          "tag": "header",
-          "classes": "header transition-all lg:h-28",
-          "primaryClass": "header",
-          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-          "heading": "Not available in English",
-          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
-          "linkCount": 54,
-          "imageCount": 16,
-          "style": {
-            "path": "header",
-            "tag": "header",
-            "classes": "header transition-all lg:h-28",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "0px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 0,
-            "width": 1440,
-            "height": 99
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>0",
-          "tag": "div",
-          "classes": "browser-message is-hidden",
-          "primaryClass": "browser-message",
-          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
-          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
-          "heading": null,
-          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
-          "linkCount": 0,
-          "imageCount": 0,
-          "style": {
-            "path": "main>0",
-            "tag": "section",
-            "classes": "html-renderer",
-            "backgroundColor": "rgba(0, 0, 0, 0)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "0px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 0,
-            "width": 1440,
-            "height": 2872
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>1",
-          "tag": "a",
-          "classes": "sr-only",
-          "primaryClass": "sr-only",
-          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
-          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
-          "heading": null,
-          "textSnippet": "Skip to content",
-          "linkCount": 0,
-          "imageCount": 0,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>2",
-          "tag": "div",
-          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
-          "primaryClass": "flex",
-          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-          "heading": "Not available in English",
-          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
-          "linkCount": 54,
-          "imageCount": 16,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>3",
-          "tag": "div",
-          "classes": "",
-          "primaryClass": "",
-          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
-          "heading": "Actueel",
-          "textSnippet": "Actueel Actueel Toon: Alle leeftijden 0 - 2 jaar 2 - 4 jaar 4 - 6 jaar 6 - 8 jaar 8 - 10 jaar 10 - 12 jaar Reis door de tijd in de herfstvakantie! Wat was het w",
-          "linkCount": 31,
-          "imageCount": 18,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {
-            "id": "main"
-          }
-        },
-        {
-          "path": "main>4",
-          "tag": "footer",
-          "classes": "footer overflow-hidden",
-          "primaryClass": "footer",
-          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
-          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
-          "heading": null,
-          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
-          "linkCount": 25,
-          "imageCount": 3,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "footer",
-          "tag": "footer",
-          "classes": "footer overflow-hidden",
-          "primaryClass": "footer",
-          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
-          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
-          "heading": null,
-          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
-          "linkCount": 25,
-          "imageCount": 3,
-          "style": {
-            "path": "footer",
-            "tag": "footer",
-            "classes": "footer overflow-hidden",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "80px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 2364,
-            "width": 1440,
-            "height": 508
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        }
-      ],
-      "signature": [
-        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
-        "a|img:0|a:0|h:0|els:0|form:0|media:0",
-        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
-        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
-      ]
-    },
-    {
       "slug": "inschrijven",
       "url": "https://partou.nl/inschrijven",
       "pattern": "/inschrijven",
@@ -2032,7 +1854,7 @@
             "height": 6687
           },
           "isBlankFlagged": true,
-          "blankNote": "6687px tall section renders as near-uniform color (stddev 44.5) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
+          "blankNote": "6687px tall section renders as near-uniform color (stddev 44.3) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
           "candidateIdAttrs": {}
         },
         {
@@ -2143,11 +1965,11 @@
       ]
     },
     {
-      "slug": "kosten-kinderopvang",
-      "url": "https://partou.nl/kosten-kinderopvang",
-      "pattern": "/kosten-kinderopvang",
-      "title": "Kosten kinderopvang: wat betaal je echt? | Partou",
-      "screenshot": "pages/kosten-kinderopvang/screenshot.png",
+      "slug": "actueel",
+      "url": "https://partou.nl/actueel",
+      "pattern": "/actueel",
+      "title": "Actueel",
+      "screenshot": "pages/actueel/screenshot.png",
       "outline": [
         {
           "path": "header",
@@ -2175,7 +1997,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 105
+            "height": 99
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -2189,7 +2011,7 @@
           "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
           "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
           "heading": null,
-          "textSnippet": "",
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
           "linkCount": 0,
           "imageCount": 0,
           "style": {
@@ -2207,10 +2029,10 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 7286
+            "height": 2872
           },
-          "isBlankFlagged": true,
-          "blankNote": "7286px tall section renders as near-uniform color (stddev 41.5) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
+          "isBlankFlagged": false,
+          "blankNote": null,
           "candidateIdAttrs": {}
         },
         {
@@ -2252,10 +2074,10 @@
           "primaryClass": "",
           "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
           "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
-          "heading": "Kosten kinderopvang: wat betaal je echt?",
-          "textSnippet": "Kosten kinderopvang Kosten kinderopvang: wat betaal je echt? Wat kost kinderopvang in Nederland? En hoeveel betaal je straks per maand? De kosten van kinderopva",
-          "linkCount": 18,
-          "imageCount": 1,
+          "heading": "Actueel",
+          "textSnippet": "Actueel Actueel Toon: Alle leeftijden 0 - 2 jaar 2 - 4 jaar 4 - 6 jaar 6 - 8 jaar 8 - 10 jaar 10 - 12 jaar Mediawijs opgroeien: zo geven we samen het goede voor",
+          "linkCount": 31,
+          "imageCount": 18,
           "style": null,
           "isBlankFlagged": false,
           "blankNote": null,
@@ -2303,7 +2125,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 6778,
+            "top": 2364,
             "width": 1440,
             "height": 508
           },
@@ -2353,7 +2175,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 105
+            "height": 99
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -2385,7 +2207,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 3559
+            "height": 3553
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -2481,7 +2303,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 3051,
+            "top": 3044,
             "width": 1440,
             "height": 508
           },
@@ -2499,11 +2321,11 @@
       ]
     },
     {
-      "slug": "kinderopvangtoeslag",
-      "url": "https://partou.nl/kinderopvangtoeslag",
-      "pattern": "/kinderopvangtoeslag",
-      "title": "Kinderopvangtoeslag 2025: wat je moet weten | Partou",
-      "screenshot": "pages/kinderopvangtoeslag/screenshot.png",
+      "slug": "kosten-kinderopvang",
+      "url": "https://partou.nl/kosten-kinderopvang",
+      "pattern": "/kosten-kinderopvang",
+      "title": "Kosten kinderopvang: wat betaal je echt? | Partou",
+      "screenshot": "pages/kosten-kinderopvang/screenshot.png",
       "outline": [
         {
           "path": "header",
@@ -2531,7 +2353,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 109
+            "height": 111
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -2563,10 +2385,10 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 8841
+            "height": 7291
           },
           "isBlankFlagged": true,
-          "blankNote": "8841px tall section renders as near-uniform color (stddev 42.1) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
+          "blankNote": "7291px tall section renders as near-uniform color (stddev 41.2) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
           "candidateIdAttrs": {}
         },
         {
@@ -2608,10 +2430,10 @@
           "primaryClass": "",
           "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
           "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
-          "heading": "Kinderopvangtoeslag",
-          "textSnippet": "Kinderopvangtoeslag Kinderopvangtoeslag Werk of studeer je en combineer je dat met de zorg voor je kind(eren)? Dan heb je waarschijnlijk recht op kinderopvangto",
-          "linkCount": 21,
-          "imageCount": 8,
+          "heading": "Kosten kinderopvang: wat betaal je echt?",
+          "textSnippet": "Kosten kinderopvang Kosten kinderopvang: wat betaal je echt? Wat kost kinderopvang in Nederland? En hoeveel betaal je straks per maand? De kosten van kinderopva",
+          "linkCount": 18,
+          "imageCount": 1,
           "style": null,
           "isBlankFlagged": false,
           "blankNote": null,
@@ -2659,7 +2481,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 8333,
+            "top": 6783,
             "width": 1440,
             "height": 508
           },
@@ -2709,7 +2531,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 99
+            "height": 88
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -2741,7 +2563,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 2845
+            "height": 2834
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -2837,7 +2659,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 1999,
+            "top": 1988,
             "width": 1440,
             "height": 846
           },
@@ -2852,6 +2674,184 @@
         "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
         "div|img:1|a:1|h:4+|els:51-150|form:0|media:1",
         "footer|img:1|a:1|h:1-1|els:51-150|form:0|media:1"
+      ]
+    },
+    {
+      "slug": "kinderopvangtoeslag",
+      "url": "https://partou.nl/kinderopvangtoeslag",
+      "pattern": "/kinderopvangtoeslag",
+      "title": "Kinderopvangtoeslag 2025: wat je moet weten | Partou",
+      "screenshot": "pages/kinderopvangtoeslag/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 111
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 8843
+          },
+          "isBlankFlagged": true,
+          "blankNote": "8843px tall section renders as near-uniform color (stddev 41.9) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+          "heading": "Kinderopvangtoeslag",
+          "textSnippet": "Kinderopvangtoeslag Kinderopvangtoeslag Werk of studeer je en combineer je dat met de zorg voor je kind(eren)? Dan heb je waarschijnlijk recht op kinderopvangto",
+          "linkCount": 21,
+          "imageCount": 8,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 8335,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
       ]
     },
     {
@@ -2887,7 +2887,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 105
+            "height": 88
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -2919,7 +2919,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 3347
+            "height": 3330
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3015,7 +3015,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 2501,
+            "top": 2484,
             "width": 1440,
             "height": 846
           },
@@ -3065,7 +3065,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 105
+            "height": 99
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3097,7 +3097,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 4172
+            "height": 4166
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3193,7 +3193,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 3664,
+            "top": 3658,
             "width": 1440,
             "height": 508
           },
@@ -3243,7 +3243,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 105
+            "height": 99
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3275,7 +3275,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 4692
+            "height": 4686
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3371,7 +3371,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 3846,
+            "top": 3840,
             "width": 1440,
             "height": 846
           },
@@ -3421,7 +3421,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 109
+            "height": 105
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3453,7 +3453,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 6849
+            "height": 6846
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3549,7 +3549,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 6341,
+            "top": 6338,
             "width": 1440,
             "height": 508
           },
@@ -3599,7 +3599,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 105
+            "height": 88
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3631,7 +3631,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 4222
+            "height": 4206
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3727,7 +3727,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 3714,
+            "top": 3698,
             "width": 1440,
             "height": 508
           },
@@ -3777,7 +3777,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 109
+            "height": 105
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3809,7 +3809,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 5741
+            "height": 5737
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -3905,185 +3905,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 5233,
-            "width": 1440,
-            "height": 508
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        }
-      ],
-      "signature": [
-        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
-        "a|img:0|a:0|h:0|els:0|form:0|media:0",
-        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
-        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
-      ]
-    },
-    {
-      "slug": "actueel-waarom-mabelle-kinderopvang-partou",
-      "url": "https://partou.nl/actueel/waarom-mabelle-kinderopvang-partou",
-      "pattern": "/actueel/waarom-mabelle-kinderopvang-partou",
-      "title": "Waarom Mabelle kiest voor kinderopvang bij Partou",
-      "screenshot": "pages/actueel-waarom-mabelle-kinderopvang-partou/screenshot.png",
-      "outline": [
-        {
-          "path": "header",
-          "tag": "header",
-          "classes": "header transition-all lg:h-28",
-          "primaryClass": "header",
-          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-          "heading": "Not available in English",
-          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
-          "linkCount": 54,
-          "imageCount": 16,
-          "style": {
-            "path": "header",
-            "tag": "header",
-            "classes": "header transition-all lg:h-28",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "0px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 0,
-            "width": 1440,
-            "height": 109
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>0",
-          "tag": "div",
-          "classes": "browser-message is-hidden",
-          "primaryClass": "browser-message",
-          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
-          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
-          "heading": null,
-          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
-          "linkCount": 0,
-          "imageCount": 0,
-          "style": {
-            "path": "main>0",
-            "tag": "section",
-            "classes": "html-renderer",
-            "backgroundColor": "rgba(0, 0, 0, 0)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "0px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 0,
-            "width": 1440,
-            "height": 5744
-          },
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>1",
-          "tag": "a",
-          "classes": "sr-only",
-          "primaryClass": "sr-only",
-          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
-          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
-          "heading": null,
-          "textSnippet": "Skip to content",
-          "linkCount": 0,
-          "imageCount": 0,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>2",
-          "tag": "div",
-          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
-          "primaryClass": "flex",
-          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
-          "heading": "Not available in English",
-          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
-          "linkCount": 54,
-          "imageCount": 16,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "main>3",
-          "tag": "div",
-          "classes": "",
-          "primaryClass": "",
-          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
-          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
-          "heading": "Waarom Mabelle kiest voor kinderopvang bij Partou",
-          "textSnippet": "Actueel waarom mabelle kinderopvang partou Waarom Mabelle kiest voor kinderopvang bij Partou “Je brengt je kind niet zomaar ergens naartoe. Het moet goed voelen",
-          "linkCount": 20,
-          "imageCount": 9,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {
-            "id": "main"
-          }
-        },
-        {
-          "path": "main>4",
-          "tag": "footer",
-          "classes": "footer overflow-hidden",
-          "primaryClass": "footer",
-          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
-          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
-          "heading": null,
-          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
-          "linkCount": 25,
-          "imageCount": 3,
-          "style": null,
-          "isBlankFlagged": false,
-          "blankNote": null,
-          "candidateIdAttrs": {}
-        },
-        {
-          "path": "footer",
-          "tag": "footer",
-          "classes": "footer overflow-hidden",
-          "primaryClass": "footer",
-          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
-          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
-          "heading": null,
-          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
-          "linkCount": 25,
-          "imageCount": 3,
-          "style": {
-            "path": "footer",
-            "tag": "footer",
-            "classes": "footer overflow-hidden",
-            "backgroundColor": "rgb(255, 255, 255)",
-            "color": "rgb(29, 29, 29)",
-            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
-            "fontSize": "18px",
-            "fontWeight": "400",
-            "paddingTop": "80px",
-            "paddingBottom": "0px",
-            "marginTop": "0px",
-            "marginBottom": "0px",
-            "top": 5236,
+            "top": 5229,
             "width": 1440,
             "height": 508
           },
@@ -4279,6 +4101,184 @@
       ]
     },
     {
+      "slug": "actueel-waarom-mabelle-kinderopvang-partou",
+      "url": "https://partou.nl/actueel/waarom-mabelle-kinderopvang-partou",
+      "pattern": "/actueel/waarom-mabelle-kinderopvang-partou",
+      "title": "Waarom Mabelle kiest voor kinderopvang bij Partou",
+      "screenshot": "pages/actueel-waarom-mabelle-kinderopvang-partou/screenshot.png",
+      "outline": [
+        {
+          "path": "header",
+          "tag": "header",
+          "classes": "header transition-all lg:h-28",
+          "primaryClass": "header",
+          "fingerprint": "header|img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "header|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": {
+            "path": "header",
+            "tag": "header",
+            "classes": "header transition-all lg:h-28",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 109
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>0",
+          "tag": "div",
+          "classes": "browser-message is-hidden",
+          "primaryClass": "browser-message",
+          "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
+          "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+          "heading": null,
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": {
+            "path": "main>0",
+            "tag": "section",
+            "classes": "html-renderer",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 0,
+            "width": 1440,
+            "height": 5744
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>1",
+          "tag": "a",
+          "classes": "sr-only",
+          "primaryClass": "sr-only",
+          "fingerprint": "img:0|a:0|h:0|els:0|form:0|media:0",
+          "templateFingerprint": "a|img:0|a:0|h:0|els:0|form:0|media:0",
+          "heading": null,
+          "textSnippet": "Skip to content",
+          "linkCount": 0,
+          "imageCount": 0,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>2",
+          "tag": "div",
+          "classes": "flex justify-center sticky z-[410] header-sticky-wrapper",
+          "primaryClass": "flex",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+          "heading": "Not available in English",
+          "textSnippet": ".cls-3{fill:#fff}.cls-4{fill:none} Over Partou Partou 50 jaar Service Werken bij en|nl Not available in English This page is only available in Dutch. You can ei",
+          "linkCount": 54,
+          "imageCount": 16,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "main>3",
+          "tag": "div",
+          "classes": "",
+          "primaryClass": "",
+          "fingerprint": "img:1|a:1|h:2+|els:51+|form:0|media:1",
+          "templateFingerprint": "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+          "heading": "Waarom Mabelle kiest voor kinderopvang bij Partou",
+          "textSnippet": "Actueel waarom mabelle kinderopvang partou Waarom Mabelle kiest voor kinderopvang bij Partou “Je brengt je kind niet zomaar ergens naartoe. Het moet goed voelen",
+          "linkCount": 20,
+          "imageCount": 9,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {
+            "id": "main"
+          }
+        },
+        {
+          "path": "main>4",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": null,
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        },
+        {
+          "path": "footer",
+          "tag": "footer",
+          "classes": "footer overflow-hidden",
+          "primaryClass": "footer",
+          "fingerprint": "footer|img:1|a:1|h:0|els:51+|form:0|media:1",
+          "templateFingerprint": "footer|img:1|a:1|h:0|els:51-150|form:0|media:1",
+          "heading": null,
+          "textSnippet": "Vind jouw Partou Vraag een rondleiding aan Schrijf je kind in Rekentool Kosten kinderopvang Kinderopvangtoeslag Zelf regelen Veelgestelde vragen Nieuws & blogs ",
+          "linkCount": 25,
+          "imageCount": 3,
+          "style": {
+            "path": "footer",
+            "tag": "footer",
+            "classes": "footer overflow-hidden",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(29, 29, 29)",
+            "fontFamily": "\"Cera Pro\", Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "paddingTop": "80px",
+            "paddingBottom": "0px",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "top": 5236,
+            "width": 1440,
+            "height": 508
+          },
+          "isBlankFlagged": false,
+          "blankNote": null,
+          "candidateIdAttrs": {}
+        }
+      ],
+      "signature": [
+        "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
+        "a|img:0|a:0|h:0|els:0|form:0|media:0",
+        "div|img:1|a:1|h:2-3|els:151+|form:0|media:1",
+        "div|img:1|a:1|h:4+|els:151+|form:0|media:1",
+        "footer|img:1|a:1|h:0|els:51-150|form:0|media:1"
+      ]
+    },
+    {
       "slug": "al-klant-en-nog-een-kind-inschrijven",
       "url": "https://partou.nl/al-klant-en-nog-een-kind-inschrijven",
       "pattern": "/al-klant-en-nog-een-kind-inschrijven",
@@ -4311,7 +4311,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 105
+            "height": 99
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -4343,7 +4343,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 3029
+            "height": 3023
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -4439,7 +4439,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 2521,
+            "top": 2515,
             "width": 1440,
             "height": 508
           },
@@ -4489,7 +4489,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 99
+            "height": 88
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -4521,7 +4521,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 2230
+            "height": 2219
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -4617,7 +4617,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 1384,
+            "top": 1373,
             "width": 1440,
             "height": 846
           },
@@ -5023,7 +5023,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 99
+            "height": 105
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -5055,7 +5055,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 2898
+            "height": 2904
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -5151,7 +5151,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 2390,
+            "top": 2396,
             "width": 1440,
             "height": 508
           },
@@ -5201,7 +5201,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 88
+            "height": 105
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -5233,7 +5233,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 2888
+            "height": 2904
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -5329,7 +5329,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 2380,
+            "top": 2396,
             "width": 1440,
             "height": 508
           },
@@ -5557,7 +5557,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 112
+            "height": 111
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -5589,7 +5589,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 6035
+            "height": 6034
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -5685,7 +5685,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 5527,
+            "top": 5526,
             "width": 1440,
             "height": 508
           },
@@ -5735,7 +5735,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 112
+            "height": 111
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -5767,7 +5767,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 6697
+            "height": 6696
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -5863,7 +5863,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 6189,
+            "top": 6188,
             "width": 1440,
             "height": 508
           },
@@ -6269,7 +6269,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 105
+            "height": 109
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -6301,7 +6301,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 7755
+            "height": 7759
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -6397,7 +6397,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 7247,
+            "top": 7251,
             "width": 1440,
             "height": 508
           },
@@ -6447,7 +6447,7 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 112
+            "height": 111
           },
           "isBlankFlagged": false,
           "blankNote": null,
@@ -6461,7 +6461,7 @@
           "fingerprint": "img:0|a:0|h:0|els:1-50|form:0|media:1",
           "templateFingerprint": "div|img:0|a:0|h:0|els:1-15|form:0|media:1",
           "heading": null,
-          "textSnippet": "",
+          "textSnippet": "This website is only available in English and Dutch. We noticed your browser language is different. We are happy to help you in your own language through the li",
           "linkCount": 0,
           "imageCount": 0,
           "style": {
@@ -6479,10 +6479,10 @@
             "marginBottom": "0px",
             "top": 0,
             "width": 1440,
-            "height": 6853
+            "height": 6852
           },
-          "isBlankFlagged": true,
-          "blankNote": "6853px tall section renders as near-uniform color (stddev 44.5) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup.",
+          "isBlankFlagged": false,
+          "blankNote": null,
           "candidateIdAttrs": {}
         },
         {
@@ -6575,7 +6575,7 @@
             "paddingBottom": "0px",
             "marginTop": "0px",
             "marginBottom": "0px",
-            "top": 6345,
+            "top": 6343,
             "width": 1440,
             "height": 508
           },
@@ -7307,30 +7307,30 @@
   ],
   "templates": [
     {
-      "slug": "rekentool",
+      "slug": "ontwikkeling",
       "pageSlugs": [
-        "rekentool",
         "ontwikkeling",
+        "rekentool",
         "kinderdagverblijf",
         "app",
-        "voeding",
         "bso",
+        "voeding",
         "activiteiten",
         "actueel-vakantie-op-de-buitenschoolse-opvang",
         "actueel-voordelen-van-de-peuteropvang",
         "peuteropvang",
-        "actueel",
         "inschrijven",
-        "kosten-kinderopvang",
+        "actueel",
         "onderzoek-wetenschap",
+        "kosten-kinderopvang",
         "kinderopvangtoeslag",
         "b-corp",
         "voorwaarden",
         "actueel-6-voordelen-van-een-kinderdagverblijf",
         "actueel-reis-door-de-tijd-in-de-herfstvakantie",
         "actueel-handig-ouderapp-van-partou",
-        "actueel-waarom-mabelle-kinderopvang-partou",
         "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+        "actueel-waarom-mabelle-kinderopvang-partou",
         "al-klant-en-nog-een-kind-inschrijven",
         "actueel-leeftijd-0-2-jaar",
         "hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit",
@@ -7381,12 +7381,12 @@
       ],
       "occurrences": [
         {
-          "pageSlug": "rekentool",
+          "pageSlug": "ontwikkeling",
           "path": "header",
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "ontwikkeling",
+          "pageSlug": "rekentool",
           "path": "header",
           "heading": "Not available in English"
         },
@@ -7401,12 +7401,12 @@
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "voeding",
+          "pageSlug": "bso",
           "path": "header",
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "bso",
+          "pageSlug": "voeding",
           "path": "header",
           "heading": "Not available in English"
         },
@@ -7431,17 +7431,12 @@
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "actueel",
-          "path": "header",
-          "heading": "Not available in English"
-        },
-        {
           "pageSlug": "inschrijven",
           "path": "header",
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "kosten-kinderopvang",
+          "pageSlug": "actueel",
           "path": "header",
           "heading": "Not available in English"
         },
@@ -7451,12 +7446,17 @@
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "kinderopvangtoeslag",
+          "pageSlug": "kosten-kinderopvang",
           "path": "header",
           "heading": "Not available in English"
         },
         {
           "pageSlug": "herroepingsrecht",
+          "path": "header",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "kinderopvangtoeslag",
           "path": "header",
           "heading": "Not available in English"
         },
@@ -7491,12 +7491,12 @@
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
+          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
           "path": "header",
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+          "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
           "path": "header",
           "heading": "Not available in English"
         },
@@ -7595,12 +7595,12 @@
       ],
       "occurrences": [
         {
-          "pageSlug": "rekentool",
+          "pageSlug": "ontwikkeling",
           "path": "main>0",
           "heading": null
         },
         {
-          "pageSlug": "ontwikkeling",
+          "pageSlug": "rekentool",
           "path": "main>0",
           "heading": null
         },
@@ -7615,12 +7615,12 @@
           "heading": null
         },
         {
-          "pageSlug": "voeding",
+          "pageSlug": "bso",
           "path": "main>0",
           "heading": null
         },
         {
-          "pageSlug": "bso",
+          "pageSlug": "voeding",
           "path": "main>0",
           "heading": null
         },
@@ -7645,17 +7645,12 @@
           "heading": null
         },
         {
-          "pageSlug": "actueel",
-          "path": "main>0",
-          "heading": null
-        },
-        {
           "pageSlug": "inschrijven",
           "path": "main>0",
           "heading": null
         },
         {
-          "pageSlug": "kosten-kinderopvang",
+          "pageSlug": "actueel",
           "path": "main>0",
           "heading": null
         },
@@ -7665,12 +7660,17 @@
           "heading": null
         },
         {
-          "pageSlug": "kinderopvangtoeslag",
+          "pageSlug": "kosten-kinderopvang",
           "path": "main>0",
           "heading": null
         },
         {
           "pageSlug": "herroepingsrecht",
+          "path": "main>0",
+          "heading": null
+        },
+        {
+          "pageSlug": "kinderopvangtoeslag",
           "path": "main>0",
           "heading": null
         },
@@ -7705,12 +7705,12 @@
           "heading": null
         },
         {
-          "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
+          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
           "path": "main>0",
           "heading": null
         },
         {
-          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+          "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
           "path": "main>0",
           "heading": null
         },
@@ -7809,12 +7809,12 @@
       ],
       "occurrences": [
         {
-          "pageSlug": "rekentool",
+          "pageSlug": "ontwikkeling",
           "path": "main>1",
           "heading": null
         },
         {
-          "pageSlug": "ontwikkeling",
+          "pageSlug": "rekentool",
           "path": "main>1",
           "heading": null
         },
@@ -7829,12 +7829,12 @@
           "heading": null
         },
         {
-          "pageSlug": "voeding",
+          "pageSlug": "bso",
           "path": "main>1",
           "heading": null
         },
         {
-          "pageSlug": "bso",
+          "pageSlug": "voeding",
           "path": "main>1",
           "heading": null
         },
@@ -7859,17 +7859,12 @@
           "heading": null
         },
         {
-          "pageSlug": "actueel",
-          "path": "main>1",
-          "heading": null
-        },
-        {
           "pageSlug": "inschrijven",
           "path": "main>1",
           "heading": null
         },
         {
-          "pageSlug": "kosten-kinderopvang",
+          "pageSlug": "actueel",
           "path": "main>1",
           "heading": null
         },
@@ -7879,12 +7874,17 @@
           "heading": null
         },
         {
-          "pageSlug": "kinderopvangtoeslag",
+          "pageSlug": "kosten-kinderopvang",
           "path": "main>1",
           "heading": null
         },
         {
           "pageSlug": "herroepingsrecht",
+          "path": "main>1",
+          "heading": null
+        },
+        {
+          "pageSlug": "kinderopvangtoeslag",
           "path": "main>1",
           "heading": null
         },
@@ -7919,12 +7919,12 @@
           "heading": null
         },
         {
-          "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
+          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
           "path": "main>1",
           "heading": null
         },
         {
-          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+          "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
           "path": "main>1",
           "heading": null
         },
@@ -8023,16 +8023,6 @@
       ],
       "occurrences": [
         {
-          "pageSlug": "rekentool",
-          "path": "main>2",
-          "heading": "Not available in English"
-        },
-        {
-          "pageSlug": "rekentool",
-          "path": "main>3",
-          "heading": "Bereken je kinderopvangkosten: eenvoudig en snel"
-        },
-        {
           "pageSlug": "ontwikkeling",
           "path": "main>2",
           "heading": "Not available in English"
@@ -8041,6 +8031,16 @@
           "pageSlug": "ontwikkeling",
           "path": "main>3",
           "heading": "Ontwikkeling op maat bij Partou"
+        },
+        {
+          "pageSlug": "rekentool",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "rekentool",
+          "path": "main>3",
+          "heading": "Bereken je kinderopvangkosten: eenvoudig en snel"
         },
         {
           "pageSlug": "kinderdagverblijf",
@@ -8058,6 +8058,11 @@
           "heading": "Partou ouder-app"
         },
         {
+          "pageSlug": "bso",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
           "pageSlug": "voeding",
           "path": "main>2",
           "heading": "Not available in English"
@@ -8066,11 +8071,6 @@
           "pageSlug": "voeding",
           "path": "main>3",
           "heading": "Gezond én lekker eten bij Partou"
-        },
-        {
-          "pageSlug": "bso",
-          "path": "main>2",
-          "heading": "Not available in English"
         },
         {
           "pageSlug": "activiteiten",
@@ -8108,16 +8108,6 @@
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "actueel",
-          "path": "main>2",
-          "heading": "Not available in English"
-        },
-        {
-          "pageSlug": "actueel",
-          "path": "main>3",
-          "heading": "Actueel"
-        },
-        {
           "pageSlug": "inschrijven",
           "path": "main>2",
           "heading": "Not available in English"
@@ -8128,14 +8118,14 @@
           "heading": "Je kind inschrijven voor kinderopvang"
         },
         {
-          "pageSlug": "kosten-kinderopvang",
+          "pageSlug": "actueel",
           "path": "main>2",
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "kosten-kinderopvang",
+          "pageSlug": "actueel",
           "path": "main>3",
-          "heading": "Kosten kinderopvang: wat betaal je echt?"
+          "heading": "Actueel"
         },
         {
           "pageSlug": "onderzoek-wetenschap",
@@ -8148,14 +8138,14 @@
           "heading": "Onderzoek & wetenschap"
         },
         {
-          "pageSlug": "kinderopvangtoeslag",
+          "pageSlug": "kosten-kinderopvang",
           "path": "main>2",
           "heading": "Not available in English"
         },
         {
-          "pageSlug": "kinderopvangtoeslag",
+          "pageSlug": "kosten-kinderopvang",
           "path": "main>3",
-          "heading": "Kinderopvangtoeslag"
+          "heading": "Kosten kinderopvang: wat betaal je echt?"
         },
         {
           "pageSlug": "herroepingsrecht",
@@ -8166,6 +8156,16 @@
           "pageSlug": "herroepingsrecht",
           "path": "main>3",
           "heading": "Herroepingsrecht"
+        },
+        {
+          "pageSlug": "kinderopvangtoeslag",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
+          "pageSlug": "kinderopvangtoeslag",
+          "path": "main>3",
+          "heading": "Kinderopvangtoeslag"
         },
         {
           "pageSlug": "contact",
@@ -8228,6 +8228,11 @@
           "heading": "Zo leuk en handig is de ouder-app van Partou"
         },
         {
+          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+          "path": "main>2",
+          "heading": "Not available in English"
+        },
+        {
           "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
           "path": "main>2",
           "heading": "Not available in English"
@@ -8236,11 +8241,6 @@
           "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
           "path": "main>3",
           "heading": "Waarom Mabelle kiest voor kinderopvang bij Partou"
-        },
-        {
-          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
-          "path": "main>2",
-          "heading": "Not available in English"
         },
         {
           "pageSlug": "al-klant-en-nog-een-kind-inschrijven",
@@ -8402,12 +8402,12 @@
       ],
       "occurrences": [
         {
-          "pageSlug": "rekentool",
+          "pageSlug": "ontwikkeling",
           "path": "main>4",
           "heading": null
         },
         {
-          "pageSlug": "ontwikkeling",
+          "pageSlug": "rekentool",
           "path": "main>4",
           "heading": null
         },
@@ -8422,12 +8422,12 @@
           "heading": null
         },
         {
-          "pageSlug": "voeding",
+          "pageSlug": "bso",
           "path": "main>4",
           "heading": null
         },
         {
-          "pageSlug": "bso",
+          "pageSlug": "voeding",
           "path": "main>4",
           "heading": null
         },
@@ -8457,12 +8457,12 @@
           "heading": null
         },
         {
-          "pageSlug": "kosten-kinderopvang",
+          "pageSlug": "onderzoek-wetenschap",
           "path": "main>4",
           "heading": null
         },
         {
-          "pageSlug": "onderzoek-wetenschap",
+          "pageSlug": "kosten-kinderopvang",
           "path": "main>4",
           "heading": null
         },
@@ -8492,12 +8492,12 @@
           "heading": null
         },
         {
-          "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
+          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
           "path": "main>4",
           "heading": null
         },
         {
-          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+          "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
           "path": "main>4",
           "heading": null
         },
@@ -8586,12 +8586,12 @@
       ],
       "occurrences": [
         {
-          "pageSlug": "rekentool",
+          "pageSlug": "ontwikkeling",
           "path": "footer",
           "heading": null
         },
         {
-          "pageSlug": "ontwikkeling",
+          "pageSlug": "rekentool",
           "path": "footer",
           "heading": null
         },
@@ -8606,12 +8606,12 @@
           "heading": null
         },
         {
-          "pageSlug": "voeding",
+          "pageSlug": "bso",
           "path": "footer",
           "heading": null
         },
         {
-          "pageSlug": "bso",
+          "pageSlug": "voeding",
           "path": "footer",
           "heading": null
         },
@@ -8641,12 +8641,12 @@
           "heading": null
         },
         {
-          "pageSlug": "kosten-kinderopvang",
+          "pageSlug": "onderzoek-wetenschap",
           "path": "footer",
           "heading": null
         },
         {
-          "pageSlug": "onderzoek-wetenschap",
+          "pageSlug": "kosten-kinderopvang",
           "path": "footer",
           "heading": null
         },
@@ -8676,12 +8676,12 @@
           "heading": null
         },
         {
-          "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
+          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
           "path": "footer",
           "heading": null
         },
         {
-          "pageSlug": "5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby",
+          "pageSlug": "actueel-waarom-mabelle-kinderopvang-partou",
           "path": "footer",
           "heading": null
         },

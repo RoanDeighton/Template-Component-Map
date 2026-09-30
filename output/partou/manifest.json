@@ -1,6 +1,6 @@
 {
   "startUrl": "https://partou.nl/",
-  "crawledAt": "2026-09-29T12:25:02.650Z",
+  "crawledAt": "2026-09-30T09:20:12.316Z",
   "options": {
     "url": "https://partou.nl/",
     "output": "output/partou",
@@ -232,25 +232,6 @@
   ],
   "pages": [
     {
-      "url": "https://partou.nl/rekentool",
-      "pattern": "/rekentool",
-      "slug": "rekentool",
-      "title": "Bereken je kinderopvangkosten: eenvoudig en snel",
-      "screenshot": "pages/rekentool/screenshot.png",
-      "html": "pages/rekentool/page.html",
-      "styles": "pages/rekentool/styles.json",
-      "capturedAt": "2026-09-29T12:23:34.174Z",
-      "blankSectionFlags": [
-        {
-          "path": "main>0",
-          "classes": "html-renderer",
-          "top": 0,
-          "height": 5167,
-          "note": "5167px tall section renders as near-uniform color (stddev 42.0) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
-        }
-      ]
-    },
-    {
       "url": "https://partou.nl/ontwikkeling",
       "pattern": "/ontwikkeling",
       "slug": "ontwikkeling",
@@ -258,9 +239,27 @@
       "screenshot": "pages/ontwikkeling/screenshot.png",
       "html": "pages/ontwikkeling/page.html",
       "styles": "pages/ontwikkeling/styles.json",
-      "capturedAt": "2026-09-29T12:23:34.470Z",
-      "blankSectionFlags": [],
-      "cookieBannerScreenshot": "pages/ontwikkeling/cookie-bar.png"
+      "capturedAt": "2026-09-30T09:10:32.807Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/rekentool",
+      "pattern": "/rekentool",
+      "slug": "rekentool",
+      "title": "Bereken je kinderopvangkosten: eenvoudig en snel",
+      "screenshot": "pages/rekentool/screenshot.png",
+      "html": "pages/rekentool/page.html",
+      "styles": "pages/rekentool/styles.json",
+      "capturedAt": "2026-09-30T09:10:33.754Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "html-renderer",
+          "top": 0,
+          "height": 5163,
+          "note": "5163px tall section renders as near-uniform color (stddev 41.8) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
     },
     {
       "url": "https://partou.nl/kinderdagverblijf",
@@ -270,7 +269,7 @@
       "screenshot": "pages/kinderdagverblijf/screenshot.png",
       "html": "pages/kinderdagverblijf/page.html",
       "styles": "pages/kinderdagverblijf/styles.json",
-      "capturedAt": "2026-09-29T12:23:37.451Z",
+      "capturedAt": "2026-09-30T09:10:37.316Z",
       "blankSectionFlags": []
     },
     {
@@ -281,18 +280,7 @@
       "screenshot": "pages/app/screenshot.png",
       "html": "pages/app/page.html",
       "styles": "pages/app/styles.json",
-      "capturedAt": "2026-09-29T12:23:39.954Z",
-      "blankSectionFlags": []
-    },
-    {
-      "url": "https://partou.nl/voeding",
-      "pattern": "/voeding",
-      "slug": "voeding",
-      "title": "Gezond én lekker eten bij Partou",
-      "screenshot": "pages/voeding/screenshot.png",
-      "html": "pages/voeding/page.html",
-      "styles": "pages/voeding/styles.json",
-      "capturedAt": "2026-09-29T12:23:45.748Z",
+      "capturedAt": "2026-09-30T09:11:08.931Z",
       "blankSectionFlags": []
     },
     {
@@ -303,7 +291,18 @@
       "screenshot": "pages/bso/screenshot.png",
       "html": "pages/bso/page.html",
       "styles": "pages/bso/styles.json",
-      "capturedAt": "2026-09-29T12:23:46.296Z",
+      "capturedAt": "2026-09-30T09:11:35.793Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/voeding",
+      "pattern": "/voeding",
+      "slug": "voeding",
+      "title": "Gezond én lekker eten bij Partou",
+      "screenshot": "pages/voeding/screenshot.png",
+      "html": "pages/voeding/page.html",
+      "styles": "pages/voeding/styles.json",
+      "capturedAt": "2026-09-30T09:11:56.791Z",
       "blankSectionFlags": []
     },
     {
@@ -314,7 +313,7 @@
       "screenshot": "pages/activiteiten/screenshot.png",
       "html": "pages/activiteiten/page.html",
       "styles": "pages/activiteiten/styles.json",
-      "capturedAt": "2026-09-29T12:23:47.640Z",
+      "capturedAt": "2026-09-30T09:12:01.293Z",
       "blankSectionFlags": []
     },
     {
@@ -325,7 +324,7 @@
       "screenshot": "pages/actueel-vakantie-op-de-buitenschoolse-opvang/screenshot.png",
       "html": "pages/actueel-vakantie-op-de-buitenschoolse-opvang/page.html",
       "styles": "pages/actueel-vakantie-op-de-buitenschoolse-opvang/styles.json",
-      "capturedAt": "2026-09-29T12:23:52.475Z",
+      "capturedAt": "2026-09-30T09:12:22.068Z",
       "blankSectionFlags": []
     },
     {
@@ -336,7 +335,7 @@
       "screenshot": "pages/actueel-voordelen-van-de-peuteropvang/screenshot.png",
       "html": "pages/actueel-voordelen-van-de-peuteropvang/page.html",
       "styles": "pages/actueel-voordelen-van-de-peuteropvang/styles.json",
-      "capturedAt": "2026-09-29T12:23:53.099Z",
+      "capturedAt": "2026-09-30T09:12:46.560Z",
       "blankSectionFlags": []
     },
     {
@@ -347,18 +346,7 @@
       "screenshot": "pages/peuteropvang/screenshot.png",
       "html": "pages/peuteropvang/page.html",
       "styles": "pages/peuteropvang/styles.json",
-      "capturedAt": "2026-09-29T12:23:55.264Z",
-      "blankSectionFlags": []
-    },
-    {
-      "url": "https://partou.nl/actueel",
-      "pattern": "/actueel",
-      "slug": "actueel",
-      "title": "Actueel",
-      "screenshot": "pages/actueel/screenshot.png",
-      "html": "pages/actueel/page.html",
-      "styles": "pages/actueel/styles.json",
-      "capturedAt": "2026-09-29T12:23:57.693Z",
+      "capturedAt": "2026-09-30T09:12:57.635Z",
       "blankSectionFlags": []
     },
     {
@@ -369,35 +357,27 @@
       "screenshot": "pages/inschrijven/screenshot.png",
       "html": "pages/inschrijven/page.html",
       "styles": "pages/inschrijven/styles.json",
-      "capturedAt": "2026-09-29T12:23:59.737Z",
+      "capturedAt": "2026-09-30T09:13:14.319Z",
       "blankSectionFlags": [
         {
           "path": "main>0",
           "classes": "html-renderer",
           "top": 0,
           "height": 6687,
-          "note": "6687px tall section renders as near-uniform color (stddev 44.5) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+          "note": "6687px tall section renders as near-uniform color (stddev 44.3) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
         }
       ]
     },
     {
-      "url": "https://partou.nl/kosten-kinderopvang",
-      "pattern": "/kosten-kinderopvang",
-      "slug": "kosten-kinderopvang",
-      "title": "Kosten kinderopvang: wat betaal je echt? | Partou",
-      "screenshot": "pages/kosten-kinderopvang/screenshot.png",
-      "html": "pages/kosten-kinderopvang/page.html",
-      "styles": "pages/kosten-kinderopvang/styles.json",
-      "capturedAt": "2026-09-29T12:24:02.993Z",
-      "blankSectionFlags": [
-        {
-          "path": "main>0",
-          "classes": "html-renderer",
-          "top": 0,
-          "height": 7286,
-          "note": "7286px tall section renders as near-uniform color (stddev 41.5) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
-        }
-      ]
+      "url": "https://partou.nl/actueel",
+      "pattern": "/actueel",
+      "slug": "actueel",
+      "title": "Actueel",
+      "screenshot": "pages/actueel/screenshot.png",
+      "html": "pages/actueel/page.html",
+      "styles": "pages/actueel/styles.json",
+      "capturedAt": "2026-09-30T09:13:14.386Z",
+      "blankSectionFlags": []
     },
     {
       "url": "https://partou.nl/onderzoek-wetenschap",
@@ -407,25 +387,25 @@
       "screenshot": "pages/onderzoek-wetenschap/screenshot.png",
       "html": "pages/onderzoek-wetenschap/page.html",
       "styles": "pages/onderzoek-wetenschap/styles.json",
-      "capturedAt": "2026-09-29T12:24:04.307Z",
+      "capturedAt": "2026-09-30T09:13:42.191Z",
       "blankSectionFlags": []
     },
     {
-      "url": "https://partou.nl/kinderopvangtoeslag",
-      "pattern": "/kinderopvangtoeslag",
-      "slug": "kinderopvangtoeslag",
-      "title": "Kinderopvangtoeslag 2025: wat je moet weten | Partou",
-      "screenshot": "pages/kinderopvangtoeslag/screenshot.png",
-      "html": "pages/kinderopvangtoeslag/page.html",
-      "styles": "pages/kinderopvangtoeslag/styles.json",
-      "capturedAt": "2026-09-29T12:24:06.432Z",
+      "url": "https://partou.nl/kosten-kinderopvang",
+      "pattern": "/kosten-kinderopvang",
+      "slug": "kosten-kinderopvang",
+      "title": "Kosten kinderopvang: wat betaal je echt? | Partou",
+      "screenshot": "pages/kosten-kinderopvang/screenshot.png",
+      "html": "pages/kosten-kinderopvang/page.html",
+      "styles": "pages/kosten-kinderopvang/styles.json",
+      "capturedAt": "2026-09-30T09:13:55.870Z",
       "blankSectionFlags": [
         {
           "path": "main>0",
           "classes": "html-renderer",
           "top": 0,
-          "height": 8841,
-          "note": "8841px tall section renders as near-uniform color (stddev 42.1) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+          "height": 7291,
+          "note": "7291px tall section renders as near-uniform color (stddev 41.2) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
         }
       ]
     },
@@ -437,8 +417,27 @@
       "screenshot": "pages/herroepingsrecht/screenshot.png",
       "html": "pages/herroepingsrecht/page.html",
       "styles": "pages/herroepingsrecht/styles.json",
-      "capturedAt": "2026-09-29T12:24:07.529Z",
+      "capturedAt": "2026-09-30T09:14:10.018Z",
       "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/kinderopvangtoeslag",
+      "pattern": "/kinderopvangtoeslag",
+      "slug": "kinderopvangtoeslag",
+      "title": "Kinderopvangtoeslag 2025: wat je moet weten | Partou",
+      "screenshot": "pages/kinderopvangtoeslag/screenshot.png",
+      "html": "pages/kinderopvangtoeslag/page.html",
+      "styles": "pages/kinderopvangtoeslag/styles.json",
+      "capturedAt": "2026-09-30T09:14:18.553Z",
+      "blankSectionFlags": [
+        {
+          "path": "main>0",
+          "classes": "html-renderer",
+          "top": 0,
+          "height": 8843,
+          "note": "8843px tall section renders as near-uniform color (stddev 41.9) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
+        }
+      ]
     },
     {
       "url": "https://partou.nl/contact",
@@ -448,7 +447,7 @@
       "screenshot": "pages/contact/screenshot.png",
       "html": "pages/contact/page.html",
       "styles": "pages/contact/styles.json",
-      "capturedAt": "2026-09-29T12:24:08.728Z",
+      "capturedAt": "2026-09-30T09:14:23.641Z",
       "blankSectionFlags": []
     },
     {
@@ -459,7 +458,7 @@
       "screenshot": "pages/b-corp/screenshot.png",
       "html": "pages/b-corp/page.html",
       "styles": "pages/b-corp/styles.json",
-      "capturedAt": "2026-09-29T12:24:11.917Z",
+      "capturedAt": "2026-09-30T09:14:43.844Z",
       "blankSectionFlags": []
     },
     {
@@ -470,7 +469,7 @@
       "screenshot": "pages/voorwaarden/screenshot.png",
       "html": "pages/voorwaarden/page.html",
       "styles": "pages/voorwaarden/styles.json",
-      "capturedAt": "2026-09-29T12:24:13.687Z",
+      "capturedAt": "2026-09-30T09:14:58.477Z",
       "blankSectionFlags": []
     },
     {
@@ -481,7 +480,7 @@
       "screenshot": "pages/actueel-6-voordelen-van-een-kinderdagverblijf/screenshot.png",
       "html": "pages/actueel-6-voordelen-van-een-kinderdagverblijf/page.html",
       "styles": "pages/actueel-6-voordelen-van-een-kinderdagverblijf/styles.json",
-      "capturedAt": "2026-09-29T12:24:16.239Z",
+      "capturedAt": "2026-09-30T09:15:15.784Z",
       "blankSectionFlags": []
     },
     {
@@ -492,7 +491,7 @@
       "screenshot": "pages/actueel-reis-door-de-tijd-in-de-herfstvakantie/screenshot.png",
       "html": "pages/actueel-reis-door-de-tijd-in-de-herfstvakantie/page.html",
       "styles": "pages/actueel-reis-door-de-tijd-in-de-herfstvakantie/styles.json",
-      "capturedAt": "2026-09-29T12:24:17.373Z",
+      "capturedAt": "2026-09-30T09:15:17.612Z",
       "blankSectionFlags": []
     },
     {
@@ -503,18 +502,7 @@
       "screenshot": "pages/actueel-handig-ouderapp-van-partou/screenshot.png",
       "html": "pages/actueel-handig-ouderapp-van-partou/page.html",
       "styles": "pages/actueel-handig-ouderapp-van-partou/styles.json",
-      "capturedAt": "2026-09-29T12:24:20.617Z",
-      "blankSectionFlags": []
-    },
-    {
-      "url": "https://partou.nl/actueel/waarom-mabelle-kinderopvang-partou",
-      "pattern": "/actueel/waarom-mabelle-kinderopvang-partou",
-      "slug": "actueel-waarom-mabelle-kinderopvang-partou",
-      "title": "Waarom Mabelle kiest voor kinderopvang bij Partou",
-      "screenshot": "pages/actueel-waarom-mabelle-kinderopvang-partou/screenshot.png",
-      "html": "pages/actueel-waarom-mabelle-kinderopvang-partou/page.html",
-      "styles": "pages/actueel-waarom-mabelle-kinderopvang-partou/styles.json",
-      "capturedAt": "2026-09-29T12:24:22.811Z",
+      "capturedAt": "2026-09-30T09:15:44.478Z",
       "blankSectionFlags": []
     },
     {
@@ -525,7 +513,18 @@
       "screenshot": "pages/5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby/screenshot.png",
       "html": "pages/5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby/page.html",
       "styles": "pages/5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby/styles.json",
-      "capturedAt": "2026-09-29T12:24:23.485Z",
+      "capturedAt": "2026-09-30T09:15:57.641Z",
+      "blankSectionFlags": []
+    },
+    {
+      "url": "https://partou.nl/actueel/waarom-mabelle-kinderopvang-partou",
+      "pattern": "/actueel/waarom-mabelle-kinderopvang-partou",
+      "slug": "actueel-waarom-mabelle-kinderopvang-partou",
+      "title": "Waarom Mabelle kiest voor kinderopvang bij Partou",
+      "screenshot": "pages/actueel-waarom-mabelle-kinderopvang-partou/screenshot.png",
+      "html": "pages/actueel-waarom-mabelle-kinderopvang-partou/page.html",
+      "styles": "pages/actueel-waarom-mabelle-kinderopvang-partou/styles.json",
+      "capturedAt": "2026-09-30T09:16:01.757Z",
       "blankSectionFlags": []
     },
     {
@@ -536,7 +535,7 @@
       "screenshot": "pages/al-klant-en-nog-een-kind-inschrijven/screenshot.png",
       "html": "pages/al-klant-en-nog-een-kind-inschrijven/page.html",
       "styles": "pages/al-klant-en-nog-een-kind-inschrijven/styles.json",
-      "capturedAt": "2026-09-29T12:24:25.149Z",
+      "capturedAt": "2026-09-30T09:16:12.170Z",
       "blankSectionFlags": []
     },
     {
@@ -547,7 +546,7 @@
       "screenshot": "pages/privacy-en-cookies/screenshot.png",
       "html": "pages/privacy-en-cookies/page.html",
       "styles": "pages/privacy-en-cookies/styles.json",
-      "capturedAt": "2026-09-29T12:24:27.643Z",
+      "capturedAt": "2026-09-30T09:16:23.523Z",
       "blankSectionFlags": []
     },
     {
@@ -558,7 +557,7 @@
       "screenshot": "pages/actueel-leeftijd-0-2-jaar/screenshot.png",
       "html": "pages/actueel-leeftijd-0-2-jaar/page.html",
       "styles": "pages/actueel-leeftijd-0-2-jaar/styles.json",
-      "capturedAt": "2026-09-29T12:24:29.906Z",
+      "capturedAt": "2026-09-30T09:16:40.006Z",
       "blankSectionFlags": []
     },
     {
@@ -569,7 +568,7 @@
       "screenshot": "pages/hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit/screenshot.png",
       "html": "pages/hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit/page.html",
       "styles": "pages/hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit/styles.json",
-      "capturedAt": "2026-09-29T12:24:30.079Z",
+      "capturedAt": "2026-09-30T09:16:43.858Z",
       "blankSectionFlags": []
     },
     {
@@ -580,7 +579,7 @@
       "screenshot": "pages/actueel-leeftijd-10-12-jaar/screenshot.png",
       "html": "pages/actueel-leeftijd-10-12-jaar/page.html",
       "styles": "pages/actueel-leeftijd-10-12-jaar/styles.json",
-      "capturedAt": "2026-09-29T12:24:32.176Z",
+      "capturedAt": "2026-09-30T09:16:51.331Z",
       "blankSectionFlags": []
     },
     {
@@ -591,7 +590,7 @@
       "screenshot": "pages/actueel-leeftijd-4-6-jaar/screenshot.png",
       "html": "pages/actueel-leeftijd-4-6-jaar/page.html",
       "styles": "pages/actueel-leeftijd-4-6-jaar/styles.json",
-      "capturedAt": "2026-09-29T12:24:34.391Z",
+      "capturedAt": "2026-09-30T09:17:07.911Z",
       "blankSectionFlags": []
     },
     {
@@ -602,7 +601,7 @@
       "screenshot": "pages/actueel-leeftijd-6-8-jaar/screenshot.png",
       "html": "pages/actueel-leeftijd-6-8-jaar/page.html",
       "styles": "pages/actueel-leeftijd-6-8-jaar/styles.json",
-      "capturedAt": "2026-09-29T12:24:34.659Z",
+      "capturedAt": "2026-09-30T09:17:11.597Z",
       "blankSectionFlags": []
     },
     {
@@ -613,7 +612,7 @@
       "screenshot": "pages/50-jaar/screenshot.png",
       "html": "pages/50-jaar/page.html",
       "styles": "pages/50-jaar/styles.json",
-      "capturedAt": "2026-09-29T12:24:39.128Z",
+      "capturedAt": "2026-09-30T09:17:37.479Z",
       "blankSectionFlags": []
     },
     {
@@ -624,7 +623,7 @@
       "screenshot": "pages/over-partou/screenshot.png",
       "html": "pages/over-partou/page.html",
       "styles": "pages/over-partou/styles.json",
-      "capturedAt": "2026-09-29T12:24:42.634Z",
+      "capturedAt": "2026-09-30T09:18:03.786Z",
       "blankSectionFlags": []
     },
     {
@@ -635,7 +634,7 @@
       "screenshot": "pages/home/screenshot.png",
       "html": "pages/home/page.html",
       "styles": "pages/home/styles.json",
-      "capturedAt": "2026-09-29T12:24:43.494Z",
+      "capturedAt": "2026-09-30T09:18:06.783Z",
       "blankSectionFlags": []
     },
     {
@@ -646,7 +645,7 @@
       "screenshot": "pages/kinderopvang/screenshot.png",
       "html": "pages/kinderopvang/page.html",
       "styles": "pages/kinderopvang/styles.json",
-      "capturedAt": "2026-09-29T12:24:46.555Z",
+      "capturedAt": "2026-09-30T09:18:25.613Z",
       "blankSectionFlags": []
     },
     {
@@ -657,7 +656,7 @@
       "screenshot": "pages/rondleiding/screenshot.png",
       "html": "pages/rondleiding/page.html",
       "styles": "pages/rondleiding/styles.json",
-      "capturedAt": "2026-09-29T12:24:47.501Z",
+      "capturedAt": "2026-09-30T09:18:35.899Z",
       "blankSectionFlags": []
     },
     {
@@ -668,16 +667,8 @@
       "screenshot": "pages/kinderopvang-apeldoorn/screenshot.png",
       "html": "pages/kinderopvang-apeldoorn/page.html",
       "styles": "pages/kinderopvang-apeldoorn/styles.json",
-      "capturedAt": "2026-09-29T12:24:51.134Z",
-      "blankSectionFlags": [
-        {
-          "path": "main>0",
-          "classes": "html-renderer",
-          "top": 0,
-          "height": 6853,
-          "note": "6853px tall section renders as near-uniform color (stddev 44.5) — likely a scroll-driven/sticky component whose content can't be captured by a static full-page screenshot. Check page.html for this section's actual markup."
-        }
-      ]
+      "capturedAt": "2026-09-30T09:18:59.324Z",
+      "blankSectionFlags": []
     },
     {
       "url": "https://partou.nl/kinderopvang/arnhem/bso-callunastraat-54",
@@ -687,7 +678,7 @@
       "screenshot": "pages/kinderopvang-arnhem-bso-callunastraat-54/screenshot.png",
       "html": "pages/kinderopvang-arnhem-bso-callunastraat-54/page.html",
       "styles": "pages/kinderopvang-arnhem-bso-callunastraat-54/styles.json",
-      "capturedAt": "2026-09-29T12:24:55.476Z",
+      "capturedAt": "2026-09-30T09:19:25.715Z",
       "blankSectionFlags": []
     },
     {
@@ -698,7 +689,7 @@
       "screenshot": "pages/kinderopvang-vught-bso-koninginnelaan-1a/screenshot.png",
       "html": "pages/kinderopvang-vught-bso-koninginnelaan-1a/page.html",
       "styles": "pages/kinderopvang-vught-bso-koninginnelaan-1a/styles.json",
-      "capturedAt": "2026-09-29T12:24:56.471Z",
+      "capturedAt": "2026-09-30T09:19:34.611Z",
       "blankSectionFlags": []
     },
     {
@@ -709,7 +700,7 @@
       "screenshot": "pages/kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171/screenshot.png",
       "html": "pages/kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171/page.html",
       "styles": "pages/kinderopvang-nieuwegein-kinderdagverblijf-abraham-kuyperpark-171/styles.json",
-      "capturedAt": "2026-09-29T12:24:59.500Z",
+      "capturedAt": "2026-09-30T09:19:52.084Z",
       "blankSectionFlags": []
     },
     {
@@ -720,7 +711,7 @@
       "screenshot": "pages/kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158/screenshot.png",
       "html": "pages/kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158/page.html",
       "styles": "pages/kinderopvang-apeldoorn-peuteropvang-1e-wormenseweg-158/styles.json",
-      "capturedAt": "2026-09-29T12:25:02.617Z",
+      "capturedAt": "2026-09-30T09:20:12.268Z",
       "blankSectionFlags": []
     }
   ]
