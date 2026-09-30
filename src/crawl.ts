@@ -20,9 +20,15 @@ import { dismissCookieBanner } from "./lib/cookies.js";
 import { sampleStyles } from "./lib/styleSample.js";
 import { captureStitchedScreenshot } from "./lib/stitchedScreenshot.js";
 import { flagBlankSections } from "./lib/flagBlankSections.js";
+import { withTimeout } from "./lib/withTimeout.js";
 
 const CAPTURE_WIDTH = 1440;
 const CAPTURE_VIEWPORT_HEIGHT = 900;
+// Generous ceiling for the scroll/screenshot/stitch pass on one page — normal
+// pages finish in 10-20s even with the pre-scroll pass. This exists purely
+// as a backstop against a page whose JS hangs (see withTimeout.ts), not as a
+// tuning knob for slow-but-working pages.
+const STITCHED_CAPTURE_TIMEOUT_MS = 90000;
 
 interface Options {
   url: string;
@@ -462,7 +468,11 @@ async function main() {
       // layout bugs a page might have, since a normal screenshot is always
       // exactly viewport-width regardless of the document's scrollWidth.
       const screenshotPath = path.join(pageDir, "screenshot.png");
-      await captureStitchedScreenshot(page, screenshotPath, CAPTURE_WIDTH, CAPTURE_VIEWPORT_HEIGHT);
+      await withTimeout(
+        captureStitchedScreenshot(page, screenshotPath, CAPTURE_WIDTH, CAPTURE_VIEWPORT_HEIGHT),
+        STITCHED_CAPTURE_TIMEOUT_MS,
+        `captureStitchedScreenshot(${url})`,
+      );
       const html = await page.content();
       await fs.writeFile(path.join(pageDir, "page.html"), html, "utf-8");
 
@@ -492,7 +502,11 @@ async function main() {
       failures.push({ url, stage: "capture", error: String(e?.message || e) });
       console.log(`  FAILED: ${url} (${String(e?.message || e)})`);
     } finally {
-      await page.close();
+      // A page whose own JS is what hung above can leave close() hanging
+      // too (still the same wedged execution context) — don't let that
+      // stall the crawl either. If it doesn't close in time, move on and
+      // let it get cleaned up when the browser context itself closes.
+      await withTimeout(page.close(), 10000, `page.close(${url})`).catch(() => {});
     }
   });
 
