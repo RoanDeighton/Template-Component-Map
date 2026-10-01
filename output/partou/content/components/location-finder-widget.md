@@ -4,6 +4,9 @@ class: "No class listed"
 examples:
   - image: ../../pages/kinderopvang-apeldoorn/crop-location-finder-widget.png
     capturedFromPage: kinderopvang-apeldoorn
+  - image: ../../pages/home/crop-location-finder-compact.png
+    label: Compact variant (homepage hero, search field only)
+    capturedFromPage: home
 usedOn:
   - home
   - kinderopvang-apeldoorn

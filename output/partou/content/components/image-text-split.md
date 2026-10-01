@@ -4,6 +4,9 @@ class: "No class listed"
 examples:
   - image: ../../pages/contact/crop-image-text-split.png
     capturedFromPage: contact
+  - image: ../../pages/kinderdagverblijf/crop-image-text-split-right.png
+    label: Photo-right variant (mirrored)
+    capturedFromPage: kinderdagverblijf
 usedOn:
   - kinderdagverblijf
   - bso
@@ -32,7 +35,4 @@ usedOn:
 
 A photo on one side and a heading, short paragraph, and sometimes a pill-shaped CTA button on the other. The most repeated content pattern on the site.
 
-## Variants observed
-
-- **Photo side**: alternates left/right from row to row on the same page — not a separate component, the same block mirrored. `hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit` stacks ten of these as a left/right-alternating timeline (7.30 uur, 9.00 uur, ...), one per time slot.
-- **CTA button**: present on some instances, absent on others (plain text + photo, no button).
+The photo side alternates left/right from row to row on the same page — see Variants below, not a separate component, the same block mirrored. `hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit` stacks ten of these as a left/right-alternating timeline (7.30 uur, 9.00 uur, ...), one per time slot. The pill-shaped CTA button is also optional: present on some instances, absent on others (plain text + photo, no button).

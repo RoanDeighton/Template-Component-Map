@@ -1,9 +1,49 @@
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
+import { ChevronDown, ExternalLink } from "lucide-react";
 import { TableOfContents } from "@/components/table-of-contents";
 import { DocNavArrows, type AdjacentDoc } from "@/components/doc-nav-arrows";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { isFunctionalComponent, type ComponentDetailDoc } from "@/lib/content";
+import { isFunctionalComponent, type ComponentDetailDoc, type ComponentExample } from "@/lib/content";
+
+// Shared by the Example section's single image and each image inside the
+// Variants disclosure — same markup either way, just reused instead of
+// duplicated.
+function ExampleFigure({ doc, example }: { doc: ComponentDetailDoc; example: ComponentExample }) {
+  return (
+    <div className="space-y-4">
+      {example.label && <p className="text-sm font-medium text-foreground">{example.label}</p>}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={example.image}
+        alt={example.label ? `${doc.title}, ${example.label}` : `${doc.title} example`}
+        className="max-w-full rounded-lg border"
+      />
+      {example.capturedFrom && (
+        <p className="text-sm text-muted-foreground">
+          Captured live from{" "}
+          {example.capturedFrom.liveUrl ? (
+            <a
+              href={example.capturedFrom.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 text-foreground underline underline-offset-4"
+            >
+              {example.capturedFrom.title}
+              <ExternalLink className="size-3" />
+            </a>
+          ) : (
+            <span className="text-foreground">{example.capturedFrom.title}</span>
+          )}
+          {". See the "}
+          <Link href={example.capturedFrom.href} className="text-foreground underline underline-offset-4">
+            {example.capturedFrom.title} page
+          </Link>{" "}
+          in this inventory.
+        </p>
+      )}
+    </div>
+  );
+}
 
 export function ComponentDocPage({
   doc,
@@ -21,14 +61,21 @@ export function ComponentDocPage({
   // know from the component's own description.
   const showAmount = !isFunctionalComponent(doc.title);
 
+  // The first example is the component's normal, representative shape;
+  // any further ones are a genuinely different shape of the same
+  // component (image on the other side, a bigger/smaller size, with vs.
+  // without an optional part) rather than another ordinary instance —
+  // those go in a separate, collapsed-by-default Variants section
+  // instead of stacking every example as equally prominent.
+  const [primaryExample, ...variantExamples] = doc.examples;
+
   // Mirrors render order below: whatever headings live inside the doc's
-  // own prose come first, then the three structural sections that always
+  // own prose come first, then the structural sections that always
   // render in this fixed order.
   const headings = [
     ...doc.headings,
-    ...(doc.examples.length > 0
-      ? [{ id: "example", text: doc.examples.length > 1 ? "Examples" : "Example", level: 2 as const }]
-      : []),
+    ...(primaryExample ? [{ id: "example", text: "Example", level: 2 as const }] : []),
+    ...(variantExamples.length > 0 ? [{ id: "variants", text: "Variants", level: 2 as const }] : []),
     { id: "cms-data-model", text: "CMS-Data model", level: 2 as const },
     ...(doc.usedOn.length > 0 ? [{ id: "used-on-slugs", text: "Used on slugs", level: 2 as const }] : []),
   ];
@@ -59,47 +106,34 @@ export function ComponentDocPage({
             dangerouslySetInnerHTML={{ __html: doc.html }}
           />
 
-          {doc.examples.length > 0 && (
+          {primaryExample && (
             <section className="space-y-4">
               <h2 id="example" className="text-xl font-semibold tracking-tight text-foreground">
-                {doc.examples.length > 1 ? "Examples" : "Example"}
+                Example
               </h2>
-              <div className="space-y-12">
-                {doc.examples.map((example) => (
-                  <div key={example.image} className="space-y-4">
-                    {example.label && <p className="text-sm font-medium text-foreground">{example.label}</p>}
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={example.image}
-                      alt={example.label ? `${doc.title}, ${example.label}` : `${doc.title} example`}
-                      className="max-w-full rounded-lg border"
-                    />
-                    {example.capturedFrom && (
-                      <p className="text-sm text-muted-foreground">
-                        Captured live from{" "}
-                        {example.capturedFrom.liveUrl ? (
-                          <a
-                            href={example.capturedFrom.liveUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-1 text-foreground underline underline-offset-4"
-                          >
-                            {example.capturedFrom.title}
-                            <ExternalLink className="size-3" />
-                          </a>
-                        ) : (
-                          <span className="text-foreground">{example.capturedFrom.title}</span>
-                        )}
-                        {". See the "}
-                        <Link href={example.capturedFrom.href} className="text-foreground underline underline-offset-4">
-                          {example.capturedFrom.title} page
-                        </Link>{" "}
-                        in this inventory.
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <ExampleFigure doc={doc} example={primaryExample} />
+            </section>
+          )}
+
+          {variantExamples.length > 0 && (
+            <section className="space-y-4">
+              <h2 id="variants" className="text-xl font-semibold tracking-tight text-foreground">
+                Variants
+              </h2>
+              {/* Native <details> rather than a JS-driven collapsible: no
+                  client component needed, and it works (open, just not
+                  animated) even if JS fails to load. */}
+              <details className="group rounded-lg border">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-3 text-sm font-medium text-foreground select-none">
+                  {`${variantExamples.length} variant${variantExamples.length > 1 ? "s" : ""}`}
+                  <ChevronDown className="size-4 text-muted-foreground transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="space-y-12 border-t px-4 py-6">
+                  {variantExamples.map((example) => (
+                    <ExampleFigure key={example.image} doc={doc} example={example} />
+                  ))}
+                </div>
+              </details>
             </section>
           )}
 

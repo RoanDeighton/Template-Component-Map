@@ -4,6 +4,9 @@ class: "No class listed"
 examples:
   - image: ../../pages/kinderdagverblijf/crop-page-header-banner.png
     capturedFromPage: kinderdagverblijf
+  - image: ../../pages/contact/crop-page-header-banner-no-search.png
+    label: Without the search field (simpler pages)
+    capturedFromPage: contact
 usedOn:
   - kinderdagverblijf
   - bso
