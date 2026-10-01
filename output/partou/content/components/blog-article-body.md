@@ -12,7 +12,6 @@ usedOn:
   - actueel-vakantie-op-de-buitenschoolse-opvang
   - actueel-voordelen-van-de-peuteropvang
   - 5x-waarom-een-kinderdagverblijf-een-fijne-plek-is-voor-je-baby
-  - hoe-ziet-een-dag-op-het-kinderdagverblijf-eruit
 ---
 
 Long-form article text under numbered or plain headings, alternating white and light-pink section backgrounds. Ends with a "Lees ook" related-articles row (a [Card Grid (3-up)](card-grid-3up.md)) and social share icons.
