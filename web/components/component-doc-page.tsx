@@ -61,13 +61,14 @@ export function ComponentDocPage({
   // know from the component's own description.
   const showAmount = !isFunctionalComponent(doc.title);
 
-  // The first example is the component's normal, representative shape;
-  // any further ones are a genuinely different shape of the same
-  // component (image on the other side, a bigger/smaller size, with vs.
-  // without an optional part) rather than another ordinary instance —
-  // those go in a separate, collapsed-by-default Variants section
-  // instead of stacking every example as equally prominent.
-  const [primaryExample, ...variantExamples] = doc.examples;
+  // The first example is the component's normal, representative shape,
+  // shown on its own under Example so a reader sees it without having to
+  // open anything. When there's more than one, the full set (including
+  // that same first one again) also goes in a collapsed-by-default
+  // Variants section, so opening it shows every shape side by side for
+  // comparison rather than needing to scroll back up to the one above it.
+  const hasVariants = doc.examples.length > 1;
+  const primaryExample = doc.examples[0];
 
   // Mirrors render order below: whatever headings live inside the doc's
   // own prose come first, then the structural sections that always
@@ -75,7 +76,7 @@ export function ComponentDocPage({
   const headings = [
     ...doc.headings,
     ...(primaryExample ? [{ id: "example", text: "Example", level: 2 as const }] : []),
-    ...(variantExamples.length > 0 ? [{ id: "variants", text: "Variants", level: 2 as const }] : []),
+    ...(hasVariants ? [{ id: "variants", text: "Variants", level: 2 as const }] : []),
     { id: "cms-data-model", text: "CMS-Data model", level: 2 as const },
     ...(doc.usedOn.length > 0 ? [{ id: "used-on-slugs", text: "Used on slugs", level: 2 as const }] : []),
   ];
@@ -115,21 +116,24 @@ export function ComponentDocPage({
             </section>
           )}
 
-          {variantExamples.length > 0 && (
+          {hasVariants && (
             <section className="space-y-4">
               <h2 id="variants" className="text-xl font-semibold tracking-tight text-foreground">
                 Variants
               </h2>
               {/* Native <details> rather than a JS-driven collapsible: no
                   client component needed, and it works (open, just not
-                  animated) even if JS fails to load. */}
+                  animated) even if JS fails to load. Shows the full
+                  example set, including the one already visible above
+                  under Example, so every shape is here to compare side
+                  by side rather than needing to scroll back up for it. */}
               <details className="group rounded-lg border">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-3 text-sm font-medium text-foreground select-none">
-                  {`${variantExamples.length} variant${variantExamples.length > 1 ? "s" : ""}`}
+                  {`${doc.examples.length} variants`}
                   <ChevronDown className="size-4 text-muted-foreground transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="space-y-12 border-t px-4 py-6">
-                  {variantExamples.map((example) => (
+                  {doc.examples.map((example) => (
                     <ExampleFigure key={example.image} doc={doc} example={example} />
                   ))}
                 </div>

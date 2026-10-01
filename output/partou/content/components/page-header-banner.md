@@ -3,6 +3,7 @@ title: Page Header Banner
 class: "No class listed"
 examples:
   - image: ../../pages/kinderdagverblijf/crop-page-header-banner.png
+    label: With the search field (default)
     capturedFromPage: kinderdagverblijf
   - image: ../../pages/contact/crop-page-header-banner-no-search.png
     label: Without the search field (simpler pages)

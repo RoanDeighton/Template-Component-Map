@@ -3,6 +3,7 @@ title: Image + Text Split Block
 class: "No class listed"
 examples:
   - image: ../../pages/contact/crop-image-text-split.png
+    label: Photo-left (default)
     capturedFromPage: contact
   - image: ../../pages/kinderdagverblijf/crop-image-text-split-right.png
     label: Photo-right variant (mirrored)

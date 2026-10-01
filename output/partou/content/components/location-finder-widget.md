@@ -3,6 +3,7 @@ title: Location Finder Widget
 class: "No class listed"
 examples:
   - image: ../../pages/kinderopvang-apeldoorn/crop-location-finder-widget.png
+    label: Full variant with map and results (default)
     capturedFromPage: kinderopvang-apeldoorn
   - image: ../../pages/home/crop-location-finder-compact.png
     label: Compact variant (homepage hero, search field only)
