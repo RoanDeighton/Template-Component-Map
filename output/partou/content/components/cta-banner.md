@@ -3,7 +3,11 @@ title: CTA Banner
 class: "No class listed"
 examples:
   - image: ../../pages/home/crop-cta-banner.png
+    label: Full-bleed photo background (default)
     capturedFromPage: home
+  - image: ../../pages/kinderopvang-arnhem-bso-callunastraat-54/crop-cta-banner-plain.png
+    label: Plain variant — no photo, no colored background
+    capturedFromPage: kinderopvang-arnhem-bso-callunastraat-54
 usedOn:
   - home
   - kinderdagverblijf
@@ -17,4 +21,4 @@ usedOn:
   - actueel-6-voordelen-van-een-kinderdagverblijf
 ---
 
-Full-width, dark red/pink photo background with a short heading, one line of copy, and a single pill button. Used as a closing call-to-action ("Kom werken bij Partou", "Vind een Partou bij jou in de buurt", "Op zoek naar een kinderdagverblijf").
+A closing call-to-action: a short heading, a line or two of copy, and a pill button. Usually full-width with a dark red/pink photo background, but the four location pages sampled use a plain variant instead — same heading/copy/button, no photo or background color at all. See Variants.
